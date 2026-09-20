@@ -1,0 +1,282 @@
+{
+	"topics": [
+		{
+			"id": "hardware",
+			"icon": "hardware",
+			"title": {
+				"en": "Hardware",
+				"ja": "ハードウェア"
+			},
+			"description": {
+				"en": "The sensors and devices that measure your fields, greenhouses and facilities.",
+				"ja": "圃場、ハウス、施設を計測するセンサーと機器。"
+			},
+			"pages": [
+				"air-temperature-humidity-sensors",
+				"soil-moisture-sensors"
+			]
+		},
+		{
+			"id": "software",
+			"icon": "software",
+			"title": {
+				"en": "Software",
+				"ja": "ソフトウェア"
+			},
+			"description": {
+				"en": "The CropWatch dashboard, alert rules and reports.",
+				"ja": "CropWatchのダッシュボード、アラートルール、レポート。"
+			},
+			"pages": [
+				"reading-the-dashboard",
+				"setting-up-alert-rules"
+			]
+		},
+		{
+			"id": "gateways",
+			"icon": "gateway",
+			"title": {
+				"en": "Gateways",
+				"ja": "ゲートウェイ"
+			},
+			"description": {
+				"en": "Connect your sensors to the internet over LoRaWAN, from unboxing to online.",
+				"ja": "LoRaWANでセンサーをインターネットにつなぎます。開封からオンラインまで。"
+			},
+			"pages": [
+				"installing-a-gateway",
+				"choosing-a-mounting-location"
+			]
+		},
+		{
+			"id": "concepts",
+			"icon": "concepts",
+			"title": {
+				"en": "Concepts",
+				"ja": "基礎知識"
+			},
+			"description": {
+				"en": "Plain-language explanations of the terms you see in CropWatch.",
+				"ja": "CropWatchに出てくる用語をわかりやすく解説します。"
+			},
+			"pages": [
+				"what-is-lorawan",
+				"vpd-explained",
+				"dli-and-ppfd"
+			]
+		}
+	],
+	"pages": {
+		"installing-a-gateway": {
+			"topic": "gateways",
+			"title": {
+				"en": "Installing a gateway",
+				"ja": "ゲートウェイの設置"
+			},
+			"summary": {
+				"en": "Unbox, mount and connect your gateway, then confirm it is online.",
+				"ja": "ゲートウェイを開封して設置・接続し、オンラインになったことを確認します。"
+			},
+			"hasVideo": false,
+			"keywords": {
+				"en": [
+					"install",
+					"setup",
+					"set up",
+					"antenna",
+					"ethernet"
+				],
+				"ja": [
+					"インストール",
+					"セットアップ",
+					"設定",
+					"アンテナ"
+				]
+			}
+		},
+		"choosing-a-mounting-location": {
+			"topic": "gateways",
+			"title": {
+				"en": "Choosing a mounting location",
+				"ja": "設置場所の選び方"
+			},
+			"summary": {
+				"en": "Where you put the gateway decides how far your sensors can reach it.",
+				"ja": "ゲートウェイの設置場所で、センサーの電波が届く距離が決まります。"
+			},
+			"hasVideo": false,
+			"keywords": {
+				"en": [
+					"range",
+					"signal",
+					"placement",
+					"height"
+				],
+				"ja": [
+					"電波",
+					"通信距離",
+					"高さ"
+				]
+			}
+		},
+		"what-is-lorawan": {
+			"topic": "concepts",
+			"title": {
+				"en": "What is LoRaWAN?",
+				"ja": "LoRaWANとは？"
+			},
+			"summary": {
+				"en": "The long-range, low-power radio network that carries your sensor readings.",
+				"ja": "センサーのデータを運ぶ、長距離・低消費電力の無線ネットワークです。"
+			},
+			"hasVideo": false,
+			"keywords": {
+				"en": [
+					"lora",
+					"radio",
+					"wireless",
+					"network",
+					"range"
+				],
+				"ja": [
+					"LoRa",
+					"無線",
+					"ネットワーク",
+					"通信"
+				]
+			}
+		},
+		"vpd-explained": {
+			"topic": "concepts",
+			"title": {
+				"en": "VPD explained",
+				"ja": "VPD（飽差）とは"
+			},
+			"summary": {
+				"en": "How temperature and humidity combine into one number that tells you how hard the air pulls water from your plants.",
+				"ja": "温度と湿度を1つの数値にまとめ、空気が植物から水分を奪う強さを表します。"
+			},
+			"hasVideo": false,
+			"keywords": {
+				"en": [
+					"vapour pressure deficit",
+					"vapor pressure deficit",
+					"humidity",
+					"transpiration",
+					"kpa"
+				],
+				"ja": [
+					"飽差",
+					"湿度",
+					"蒸散",
+					"kPa"
+				]
+			}
+		},
+		"dli-and-ppfd": {
+			"topic": "concepts",
+			"title": {
+				"en": "DLI and PPFD"
+			},
+			"summary": {
+				"en": "PPFD is the usable light reaching your plants right now. DLI adds it up over a whole day."
+			},
+			"hasVideo": false,
+			"keywords": {
+				"en": [
+					"light",
+					"daily light integral",
+					"photosynthesis",
+					"par"
+				]
+			}
+		},
+		"air-temperature-humidity-sensors": {
+			"topic": "hardware",
+			"title": {
+				"en": "Air temperature and humidity sensors"
+			},
+			"summary": {
+				"en": "What an air sensor measures, and where to place it for readings you can trust."
+			},
+			"hasVideo": false,
+			"keywords": {
+				"en": [
+					"air",
+					"temperature",
+					"humidity",
+					"placement",
+					"vpd"
+				]
+			}
+		},
+		"soil-moisture-sensors": {
+			"topic": "hardware",
+			"title": {
+				"en": "Soil moisture sensors"
+			},
+			"summary": {
+				"en": "See how much water is available around the roots, and water by need instead of by habit."
+			},
+			"hasVideo": false,
+			"keywords": {
+				"en": [
+					"soil",
+					"moisture",
+					"irrigation",
+					"watering",
+					"probe"
+				]
+			}
+		},
+		"reading-the-dashboard": {
+			"topic": "software",
+			"title": {
+				"en": "Reading the dashboard"
+			},
+			"summary": {
+				"en": "Find your locations and sensors, check they are reporting, and look back over time."
+			},
+			"hasVideo": false,
+			"keywords": {
+				"en": [
+					"dashboard",
+					"locations",
+					"chart",
+					"history",
+					"offline"
+				]
+			}
+		},
+		"setting-up-alert-rules": {
+			"topic": "software",
+			"title": {
+				"en": "Setting up alert rules"
+			},
+			"summary": {
+				"en": "Get notified when a reading goes above or below the limit you choose."
+			},
+			"hasVideo": false,
+			"keywords": {
+				"en": [
+					"alert",
+					"alarm",
+					"notification",
+					"rule",
+					"threshold",
+					"limit"
+				]
+			}
+		}
+	},
+	"featured": [
+		"installing-a-gateway",
+		"what-is-lorawan",
+		"vpd-explained"
+	],
+	"popular": [
+		"installing-a-gateway",
+		"setting-up-alert-rules",
+		"vpd-explained"
+	]
+}

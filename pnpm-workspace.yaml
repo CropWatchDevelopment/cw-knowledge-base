@@ -1,0 +1,4 @@
+packages:
+  - editor
+onlyBuiltDependencies:
+  - esbuild

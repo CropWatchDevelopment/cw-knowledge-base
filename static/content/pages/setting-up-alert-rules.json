@@ -1,0 +1,86 @@
+{
+	"slug": "setting-up-alert-rules",
+	"topic": "software",
+	"title": {
+		"en": "Setting up alert rules"
+	},
+	"intro": {
+		"en": "An alert rule watches one reading and notifies you when it crosses a limit you choose, so you hear about a problem before it costs you."
+	},
+	"sections": [
+		{
+			"id": "how-a-rule-works",
+			"heading": {
+				"en": "How a rule works"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "A rule has three parts:"
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": true,
+						"items": [
+							[
+								{
+									"text": "The sensor and the reading to watch, for example air temperature."
+								}
+							],
+							[
+								{
+									"text": "The condition: above or below a value."
+								}
+							],
+							[
+								{
+									"text": "Who is notified when the condition is met."
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": null,
+				"alt": {
+					"en": "Screenshot of the alert rule editor in CropWatch"
+				},
+				"side": "right"
+			}
+		},
+		{
+			"id": "choosing-limits",
+			"heading": {
+				"en": "Choosing limits"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Set the limit slightly inside the point where damage starts, so that you have time to act. Avoid limits so tight that normal daily swings trigger them."
+							}
+						]
+					}
+				]
+			}
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "reading-the-dashboard"
+		},
+		{
+			"kind": "page",
+			"slug": "vpd-explained"
+		}
+	]
+}

@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@import '@fontsource-variable/inter';
+@import '../lib/styles/cropwatch-theme.css';

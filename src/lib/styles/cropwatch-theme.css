@@ -1,0 +1,107 @@
+/*
+ * Shared by the site (src/routes/layout.css) and the local editor (editor/src/app.css).
+ * Import it after 'tailwindcss'.
+ */
+
+/*
+ * CropWatch light theme, from the CWUI design tokens
+ * (@cropwatchdevelopment/cwui: tokens.css + theme-light.css).
+ */
+@theme {
+	--font-sans:
+		'Inter Variable', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Noto Sans JP',
+		Meiryo, system-ui, sans-serif;
+	--font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+
+	/* Brand */
+	--color-brand: #006045;
+	--color-brand-mist: #cfe9df;
+	--color-brand-soft: #dcfce7;
+	--color-brand-line: #86efac;
+
+	/* Surfaces, darkest page ground to lightest raised card */
+	--color-canvas: #d6e0ea;
+	--color-muted: #dee7f0;
+	--color-sunken: #e8eff5;
+	--color-surface: #f7fafc;
+	--color-raised: #fbfdff;
+	--color-night: #0f172b;
+
+	/* Text */
+	--color-ink: #07111d;
+	--color-ink-2: #1f3144;
+	--color-ink-3: #465b72;
+
+	/* Borders */
+	--color-line: #99aec1;
+	--color-line-soft: #b0c0ce;
+	--color-line-strong: #70869d;
+
+	/* Accent (links, focus, selection) */
+	--color-accent: #2c6cb7;
+	--color-accent-hover: #255f9d;
+	--color-accent-ink: #1d4f8e;
+	--color-accent-soft: #dbeafe;
+	--color-accent-line: #93c5fd;
+
+	/* Side navigation */
+	--color-nav-text: #37495f;
+	--color-nav-group: #26394f;
+	--color-nav-hover: #d7e1eb;
+	--color-nav-active: #cadef1;
+	--color-nav-active-ink: #124b88;
+
+	/* Tones */
+	--color-info-soft: #e0f2fe;
+	--color-info-line: #7dd3fc;
+	--color-info-ink: #075985;
+	--color-warn-soft: #fff7db;
+	--color-warn-line: #f3d983;
+	--color-warn-ink: #92400e;
+	--color-neutral-soft: #e2e8f0;
+	--color-neutral-line: #b2c0cf;
+	--color-neutral-ink: #334155;
+
+	--shadow-card: 0 14px 24px -18px rgb(25 41 61 / 0.28);
+
+	/* Height of the sticky header; anchors and sticky side panels clear it. */
+	--spacing-header: 5rem;
+}
+
+@layer base {
+	html {
+		scroll-padding-top: calc(var(--spacing-header) + 1rem);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		html {
+			scroll-behavior: smooth;
+		}
+	}
+
+	body {
+		@apply bg-canvas font-sans text-ink antialiased;
+	}
+
+	:focus-visible {
+		@apply outline-2 outline-offset-2 outline-accent;
+	}
+}
+
+/* CWUI buttons: 12px radius, medium weight, soft vertical gradient. */
+@utility btn {
+	@apply inline-flex min-h-9 shrink-0 cursor-pointer items-center justify-center gap-2 rounded-xl border px-4 py-2 text-sm leading-none font-medium whitespace-nowrap no-underline;
+}
+
+@utility btn-primary {
+	@apply border-[#223140] bg-linear-to-b from-[#40546b] to-[#2d3d4f] text-[#f8fbfd] shadow-[0_12px_22px_-16px_rgb(16_27_40/0.58)] hover:from-[#4a6079] hover:to-[#36485d] hover:text-white;
+}
+
+@utility btn-secondary {
+	@apply border-[#98adbf] bg-linear-to-b from-[#f8fbfd] to-[#edf3f8] text-[#13253a] shadow-[0_8px_18px_-16px_rgb(36_54_74/0.42)] hover:border-[#889fb4] hover:from-[#eef4f9] hover:to-[#e2ebf3];
+}
+
+/* Small rounded label, e.g. a topic name or "Video demo". */
+@utility chip {
+	@apply inline-flex h-6 items-center gap-1 rounded-full border px-2.5 text-xs font-semibold whitespace-nowrap;
+}

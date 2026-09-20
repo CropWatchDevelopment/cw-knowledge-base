@@ -1,0 +1,79 @@
+{
+	"slug": "reading-the-dashboard",
+	"topic": "software",
+	"title": {
+		"en": "Reading the dashboard"
+	},
+	"intro": {
+		"en": "The dashboard is the first screen you see in CropWatch. It shows the locations and sensors you have access to, with the latest reading from each."
+	},
+	"sections": [
+		{
+			"id": "locations-and-sensors",
+			"heading": {
+				"en": "Locations and sensors"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Sensors are grouped by location, such as a greenhouse or a field. Open a location to see the sensors in it."
+							}
+						]
+					}
+				]
+			},
+			"image": {
+				"src": null,
+				"alt": {
+					"en": "Screenshot of the CropWatch dashboard with sensors grouped by location"
+				},
+				"side": "right"
+			}
+		},
+		{
+			"id": "is-it-reporting",
+			"heading": {
+				"en": "Is it reporting?"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Each sensor shows whether it is reporting. A sensor that has stopped sending readings is marked as offline."
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "looking-back",
+			"heading": {
+				"en": "Looking back over time"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Open a sensor to see its readings as a chart, and choose the date range you want to look at."
+							}
+						]
+					}
+				]
+			}
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		}
+	]
+}

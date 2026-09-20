@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@import '@fontsource-variable/inter';
+@import '../../src/lib/styles/cropwatch-theme.css';
+
+/* Form controls, matching the CropWatch inputs. */
+@utility field {
+	@apply h-11 w-full rounded-md border border-line bg-raised px-3 text-base text-ink placeholder:text-ink-3 focus:border-accent focus:ring-1 focus:ring-accent;
+}
+
+@utility card {
+	@apply rounded-lg border border-line bg-surface p-6;
+}
+
+/* What the writer sees inside the text editor should look like the published page. */
+.rich-text {
+	@apply min-h-32 px-3.5 py-3 text-[0.9375rem] leading-6 text-ink outline-none;
+
+	& p {
+		@apply my-2 first:mt-0 last:mb-0;
+	}
+
+	& ul {
+		@apply my-2 list-disc pl-6;
+	}
+
+	& ol {
+		@apply my-2 list-decimal pl-6;
+	}
+
+	& li p {
+		@apply my-0.5;
+	}
+
+	& a {
+		@apply font-medium text-accent underline;
+	}
+
+	& blockquote {
+		@apply my-2 rounded-lg border border-info-line bg-info-soft px-4 py-3 text-info-ink;
+	}
+}
