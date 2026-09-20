@@ -252,22 +252,30 @@
 		"setting-up-alert-rules": {
 			"topic": "software",
 			"title": {
-				"en": "Setting up alert rules"
+				"en": "Creating an alert rule"
 			},
 			"summary": {
-				"en": "Get notified when a reading goes above or below the limit you choose."
+				"en": "Step by step, with pictures: watch a reading, set the limit, and choose who is told."
 			},
 			"hasVideo": false,
 			"keywords": {
 				"en": [
 					"alert",
 					"alarm",
-					"notification",
 					"rule",
+					"notification",
 					"threshold",
-					"limit"
+					"limit",
+					"trigger",
+					"reset",
+					"email",
+					"line",
+					"push",
+					"too cold",
+					"too hot"
 				]
-			}
+			},
+			"image": "images/setting-up-alert-rules/01-rules-page.svg"
 		}
 	},
 	"featured": [

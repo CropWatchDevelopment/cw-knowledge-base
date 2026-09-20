@@ -2,16 +2,16 @@
 	"slug": "setting-up-alert-rules",
 	"topic": "software",
 	"title": {
-		"en": "Setting up alert rules"
+		"en": "Creating an alert rule"
 	},
 	"intro": {
-		"en": "An alert rule watches one reading and notifies you when it crosses a limit you choose, so you hear about a problem before it costs you."
+		"en": "A rule watches a reading and tells you when it goes outside the range you are happy with. This guide makes one from start to finish, in the order the screen asks for it."
 	},
 	"sections": [
 		{
-			"id": "how-a-rule-works",
+			"id": "what-a-rule-does",
 			"heading": {
-				"en": "How a rule works"
+				"en": "What a rule does"
 			},
 			"body": {
 				"en": [
@@ -19,7 +19,380 @@
 						"type": "paragraph",
 						"content": [
 							{
-								"text": "A rule has three parts:"
+								"text": "A rule watches one reading from one or more of your sensors and tells you when it goes outside the range you are happy with."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Here is the example used all the way through this guide. A greenhouse must not get colder than 5 °C at night. A rule can watch the air sensor in that greenhouse and send a message the moment the temperature drops below 5 °C, so somebody can do something about it before the plants are damaged."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Until you create a rule, CropWatch records readings but never contacts you. Rules are the part that reaches out."
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "before-you-start",
+			"heading": {
+				"en": "Before you start"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "You need:"
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "A sensor that is already sending readings. If it is not, start with "
+								},
+								{
+									"text": "Installing a gateway",
+									"href": "page:installing-a-gateway"
+								},
+								{
+									"text": "."
+								}
+							],
+							[
+								{
+									"text": "Your CropWatch sign-in."
+								}
+							],
+							[
+								{
+									"text": "An answer to four questions: which sensor, which reading, at what number, and who should be told."
+								}
+							]
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Making a rule takes about five minutes. Nothing you do here can harm the sensor."
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "open-the-rules-page",
+			"heading": {
+				"en": "Open the Rules page"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "list",
+						"ordered": true,
+						"items": [
+							[
+								{
+									"text": "Sign in to CropWatch."
+								}
+							],
+							[
+								{
+									"text": "Go to "
+								},
+								{
+									"text": "Rules",
+									"bold": true
+								},
+								{
+									"text": " in the menu. You will see a list headed "
+								},
+								{
+									"text": "Rule Templates",
+									"bold": true
+								},
+								{
+									"text": ", with any rules you already have."
+								}
+							],
+							[
+								{
+									"text": "Press the "
+								},
+								{
+									"text": "+",
+									"bold": true
+								},
+								{
+									"text": " button above the list, on the right."
+								}
+							]
+						]
+					},
+					{
+						"type": "note",
+						"content": [
+							{
+								"text": "CropWatch calls a rule a “rule template” because one rule can watch several sensors at once. It is the same thing."
+							}
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/setting-up-alert-rules/01-rules-page.svg",
+				"alt": {
+					"en": "The Rules page listing existing rules, with the plus button above the list"
+				},
+				"caption": {
+					"en": "The + button above the list starts a new rule."
+				},
+				"side": "right",
+				"width": 680,
+				"height": 330
+			}
+		},
+		{
+			"id": "name-the-rule",
+			"heading": {
+				"en": "Step 1: Name the rule"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "The first card is headed “1. Template”. Two boxes and a switch:"
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "Rule Name",
+									"bold": true
+								},
+								{
+									"text": " — what you want to read in a message at two in the morning. “Greenhouse too cold” tells you more than “Temp rule 3”. This name appears in the alert you receive."
+								}
+							],
+							[
+								{
+									"text": "Description",
+									"bold": true
+								},
+								{
+									"text": " — optional. A note for whoever looks at this rule next, which might be you in six months."
+								}
+							],
+							[
+								{
+									"text": "Active rule",
+									"bold": true
+								},
+								{
+									"text": " — leave this switched on. Switched off, the rule is kept but never checked. That is how you pause a rule without losing it."
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/setting-up-alert-rules/02-step-1-name.svg",
+				"alt": {
+					"en": "Step one of the form showing Rule Name, Description and the Active rule switch"
+				},
+				"caption": {
+					"en": "Give the rule a name you would recognise in a message."
+				},
+				"side": "left",
+				"width": 680,
+				"height": 340
+			}
+		},
+		{
+			"id": "choose-the-devices",
+			"heading": {
+				"en": "Step 2: Choose the devices"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "The second card is headed “2. Device Assignments”. Open the “Device” box and tick the sensors this rule should watch. They are grouped by location, and you can type in the box to filter the list."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "You can tick more than one. Each sensor is then watched on its own: if two greenhouses both get too cold, you are told about each of them separately."
+							}
+						]
+					},
+					{
+						"type": "note",
+						"content": [
+							{
+								"text": "The long code in brackets after each name is the sensor's serial number. It is there so you can tell apart two sensors with the same name."
+							}
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/setting-up-alert-rules/03-step-2-devices.svg",
+				"alt": {
+					"en": "Step two of the form, showing sensors grouped by location with one ticked"
+				},
+				"caption": {
+					"en": "Sensors are grouped by location. Tick as many as the rule should watch."
+				},
+				"side": "right",
+				"width": 680,
+				"height": 330
+			}
+		},
+		{
+			"id": "set-the-condition",
+			"heading": {
+				"en": "Step 3: Say when it should alert"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "The third card is headed “3. Alert Criteria”. This is where you set the limit, and it has four parts:"
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "Data Field",
+									"bold": true
+								},
+								{
+									"text": " — which reading to watch: Temperature (°C), Humidity (%), CO₂ (ppm), Soil Moisture, Water Depth (cm) and others. Pick one your sensor actually measures."
+								}
+							],
+							[
+								{
+									"text": "Operator",
+									"bold": true
+								},
+								{
+									"text": " — how to compare it: “Less than (<)”, “Greater than (>)”, “Less than or equal (<=)”, “Greater than or equal (>=)” or “Equals (=)”."
+								}
+							],
+							[
+								{
+									"text": "Trigger Value",
+									"bold": true
+								},
+								{
+									"text": " — the number that sets the alert off."
+								}
+							],
+							[
+								{
+									"text": "Reset Value",
+									"bold": true
+								},
+								{
+									"text": " — the number the reading must come back to before the alert can happen again. The next section explains this one properly."
+								}
+							]
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "For the cold greenhouse: Data Field “Temperature (°C)”, Operator “Less than (<)”, Trigger Value 5, Reset Value 7."
+							}
+						]
+					},
+					{
+						"type": "note",
+						"content": [
+							{
+								"text": "The “Range” choice in the Operator list cannot be saved. If you pick it, the form says “Unsupported operator.” and the save button stays greyed out. To watch a band of values, use two conditions instead — see below."
+							}
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/setting-up-alert-rules/04-step-3-condition.svg",
+				"alt": {
+					"en": "Step three of the form with Temperature, Less than, trigger 5 and reset 7"
+				},
+				"caption": {
+					"en": "Watch the temperature, alert below 5 °C, reset at 7 °C."
+				},
+				"side": "left",
+				"width": 680,
+				"height": 400
+			}
+		},
+		{
+			"id": "trigger-and-reset",
+			"heading": {
+				"en": "Trigger value and reset value"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "This is the part people find confusing, and it is worth two minutes because it decides whether you get one useful message or forty useless ones."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "A sensor might send a reading every ten minutes. On a cold night the temperature could sit below 5 °C for six hours. You do not want thirty-six messages."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "So CropWatch does this:"
 							}
 						]
 					},
@@ -29,35 +402,113 @@
 						"items": [
 							[
 								{
-									"text": "The sensor and the reading to watch, for example air temperature."
+									"text": "The temperature drops below 5 °C. You get one message."
 								}
 							],
 							[
 								{
-									"text": "The condition: above or below a value."
+									"text": "It stays below 5 °C. Nothing more is sent. The rule is holding."
 								}
 							],
 							[
 								{
-									"text": "Who is notified when the condition is met."
+									"text": "It climbs back to 7 °C. The rule resets, and you get a message saying it is back to normal."
+								}
+							],
+							[
+								{
+									"text": "If it drops below 5 °C again after that, you get a new message."
 								}
 							]
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "The reset value is what re-arms the rule. Put it on the safe side of the trigger, with a gap:"
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "Watching for "
+								},
+								{
+									"text": "too low",
+									"bold": true
+								},
+								{
+									"text": " (Less than 5), the reset must be "
+								},
+								{
+									"text": "higher",
+									"bold": true
+								},
+								{
+									"text": " — 7, say."
+								}
+							],
+							[
+								{
+									"text": "Watching for "
+								},
+								{
+									"text": "too high",
+									"bold": true
+								},
+								{
+									"text": " (Greater than 30), the reset must be "
+								},
+								{
+									"text": "lower",
+									"bold": true
+								},
+								{
+									"text": " — 28, say."
+								}
+							]
+						]
+					},
+					{
+						"type": "note",
+						"content": [
+							{
+								"text": "Put the reset on the wrong side — Greater than 30 resetting at 35 — and the rule alerts and resets on every single reading. That is the flood of messages everyone wants to avoid."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "How big a gap? Enough that normal wobble does not cross it. A degree or two for temperature is usually right."
+							}
 						]
 					}
 				]
 			},
 			"image": {
-				"src": null,
+				"src": "images/setting-up-alert-rules/05-trigger-and-reset.svg",
 				"alt": {
-					"en": "Screenshot of the alert rule editor in CropWatch"
+					"en": "A temperature line falling through 5 degrees where the alert is sent, then rising back through 7 degrees where the rule resets"
 				},
-				"side": "right"
+				"caption": {
+					"en": "One message on the way down, one when it is back to normal."
+				},
+				"side": "right",
+				"width": 680,
+				"height": 380
 			}
 		},
 		{
-			"id": "choosing-limits",
+			"id": "more-than-one-condition",
 			"heading": {
-				"en": "Choosing limits"
+				"en": "Using more than one condition"
 			},
 			"body": {
 				"en": [
@@ -65,8 +516,396 @@
 						"type": "paragraph",
 						"content": [
 							{
-								"text": "Set the limit slightly inside the point where damage starts, so that you have time to act. Avoid limits so tight that normal daily swings trigger them."
+								"text": "“+ Add Another Condition” adds a second test. Everything you add must be true at the same moment for the alert to happen."
 							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "That makes some things easy and one thing impossible, so it is worth knowing which is which."
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "Both at once",
+									"bold": true
+								},
+								{
+									"text": " — “CO₂ above 1000 and humidity above 80%” is one rule with two conditions."
+								}
+							],
+							[
+								{
+									"text": "A band of values",
+									"bold": true
+								},
+								{
+									"text": " — “between 20 °C and 30 °C” is one rule with two conditions: Greater than 20, and Less than 30."
+								}
+							],
+							[
+								{
+									"text": "Either one or the other",
+									"bold": true
+								},
+								{
+									"text": " — “colder than 5 °C or hotter than 35 °C” cannot be one rule, because the two can never both be true. Make two rules."
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "choose-who-is-told",
+			"heading": {
+				"en": "Step 4: Choose who is told"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "The fourth card is headed “4. Alert Actions”. CropWatch has already added one for you: a push notification to yourself. Change it or add more."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Open “Action Type” and pick one:"
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "Push",
+									"bold": true
+								},
+								{
+									"text": " — a notification on the phone or computer of the people you choose. Anyone who has not set up notifications is shown as “Push not set up” and will not get anything."
+								}
+							],
+							[
+								{
+									"text": "EMail",
+									"bold": true
+								},
+								{
+									"text": " — type one address in the “Recipient” box. For a second address, add a second action rather than typing two addresses in one box."
+								}
+							],
+							[
+								{
+									"text": "LINE",
+									"bold": true
+								},
+								{
+									"text": " — pick people from the list. Anyone shown as “LINE not linked” has not connected LINE to CropWatch yet and will not receive the message."
+								}
+							],
+							[
+								{
+									"text": "LoRaWAN",
+									"bold": true
+								},
+								{
+									"text": " — switches a relay instead of telling a person: turn on a heater, open a vent. It asks which device to switch and for how long. Ask us before using this one."
+								}
+							]
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Use “Add Action” for as many as you need. A rule can email one person, push to another and switch a heater, all at once."
+							}
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/setting-up-alert-rules/06-step-4-actions.svg",
+				"alt": {
+					"en": "Step four of the form with Action Type set to EMail and a Recipient box, and the other choices LINE, Push and LoRaWAN"
+				},
+				"caption": {
+					"en": "Each action is one way of telling someone. Add as many as you need."
+				},
+				"side": "left",
+				"width": 680,
+				"height": 400
+			}
+		},
+		{
+			"id": "check-and-create",
+			"heading": {
+				"en": "Check the summary, then create the rule"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "The last card shows “Rule Summary”: the name, whether it is active, the sensors it watches and the conditions. Read it once. It is written the way the rule will actually behave, which is the best chance to catch a slip."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "If you see “Complete all required fields above to see a preview of your rule.” instead, something is still missing. It is almost always one of these:"
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "No name."
+								}
+							],
+							[
+								{
+									"text": "No sensor ticked."
+								}
+							],
+							[
+								{
+									"text": "A trigger or reset value left empty."
+								}
+							],
+							[
+								{
+									"text": "An action with nobody to send to."
+								}
+							],
+							[
+								{
+									"text": "The “Range” operator, which cannot be saved."
+								}
+							]
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Then press “Create Rule”. A green message confirms it and you are taken back to the list, where your rule now appears."
+							}
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/setting-up-alert-rules/07-review-and-create.svg",
+				"alt": {
+					"en": "The Rule Summary panel listing name, status, devices and conditions, with the Create Rule button"
+				},
+				"caption": {
+					"en": "Read the summary, then press Create Rule."
+				},
+				"side": "right",
+				"width": 680,
+				"height": 390
+			}
+		},
+		{
+			"id": "after-you-create",
+			"heading": {
+				"en": "What happens next"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "The rule starts working straight away, but nothing happens until a sensor sends a reading that crosses your limit. Readings from before you made the rule are not looked at."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "When it does fire, everyone on the action list is told, with the rule's name and which sensor it was. When the reading comes back past the reset value, a second message says it is back to normal."
+							}
+						]
+					},
+					{
+						"type": "note",
+						"content": [
+							{
+								"text": "A rule can only see readings that arrive. If a sensor stops reporting — flat battery, gateway offline — a “too cold” rule stays silent, because nothing is coming in to be too cold. Check the dashboard for sensors that have gone quiet."
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "change-or-remove",
+			"heading": {
+				"en": "Changing, pausing or removing a rule"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Each row on the Rules page has three small buttons on the right:"
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "The pencil",
+									"bold": true
+								},
+								{
+									"text": " opens the rule so you can change it. It is the same form; the last button now says “Save Changes”."
+								}
+							],
+							[
+								{
+									"text": "The clock",
+									"bold": true
+								},
+								{
+									"text": " shows the history: when this rule fired, and for which sensor."
+								}
+							],
+							[
+								{
+									"text": "The bin",
+									"bold": true
+								},
+								{
+									"text": " deletes the rule. It asks first, and it cannot be undone."
+								}
+							]
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "To stop a rule for a while without losing it — you are working in the greenhouse and the door is open — open it with the pencil and switch “Active rule” off. Switch it back on when you are done."
+							}
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/setting-up-alert-rules/08-row-buttons.svg",
+				"alt": {
+					"en": "A row in the rules list with three small buttons: a pencil to change the rule, a clock to see its history, and a bin to delete it"
+				},
+				"caption": {
+					"en": "The three buttons on each row of the list."
+				},
+				"side": "left",
+				"width": 680,
+				"height": 300
+			}
+		},
+		{
+			"id": "common-mistakes",
+			"heading": {
+				"en": "Things that catch people out"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "The reset value on the wrong side.",
+									"bold": true
+								},
+								{
+									"text": " The commonest mistake, and it produces a stream of messages. See "
+								},
+								{
+									"text": "Trigger value and reset value",
+									"href": "page:setting-up-alert-rules#trigger-and-reset"
+								},
+								{
+									"text": "."
+								}
+							],
+							[
+								{
+									"text": "Expecting “or”.",
+									"bold": true
+								},
+								{
+									"text": " Conditions in one rule must all be true together. Too cold or too hot needs two rules."
+								}
+							],
+							[
+								{
+									"text": "A rule left switched off.",
+									"bold": true
+								},
+								{
+									"text": " If a rule never fires, check “Active rule” first."
+								}
+							],
+							[
+								{
+									"text": "A mistyped email address.",
+									"bold": true
+								},
+								{
+									"text": " Nothing warns you. The message is simply sent into nowhere."
+								}
+							],
+							[
+								{
+									"text": "Someone who has not linked LINE.",
+									"bold": true
+								},
+								{
+									"text": " They appear in the list, they can be selected, and they receive nothing."
+								}
+							],
+							[
+								{
+									"text": "Too tight a limit.",
+									"bold": true
+								},
+								{
+									"text": " A limit set where the reading normally sits means constant messages, and messages people ignore are worse than none."
+								}
+							]
 						]
 					}
 				]
@@ -80,7 +919,14 @@
 		},
 		{
 			"kind": "page",
-			"slug": "vpd-explained"
+			"slug": "air-temperature-humidity-sensors"
+		},
+		{
+			"kind": "url",
+			"href": "https://app.cropwatch.io/rules",
+			"label": {
+				"en": "Open the Rules page in CropWatch"
+			}
 		}
 	]
 }
