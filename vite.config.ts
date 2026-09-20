@@ -15,9 +15,9 @@ export default defineConfig({
 				experimental: { async: true }
 			},
 			adapter: adapter(),
-			prerender: {
-				// Absolute URLs (hreflang, canonical) need the real domain while prerendering.
-				// Vercel provides it at build time; elsewhere SvelteKit's default is used.
+			paths: {
+				// The hreflang links are absolute, so prerendering needs the real domain.
+				// Vercel provides it at build time; elsewhere SvelteKit's placeholder is used.
 				origin: process.env.VERCEL_PROJECT_PRODUCTION_URL
 					? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
 					: undefined
