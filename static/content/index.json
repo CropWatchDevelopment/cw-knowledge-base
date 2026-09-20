@@ -47,7 +47,8 @@
 			},
 			"pages": [
 				"installing-a-gateway",
-				"choosing-a-mounting-location"
+				"choosing-a-mounting-location",
+				"installing-an-outdoor-gateway"
 			]
 		},
 		{
@@ -72,13 +73,14 @@
 		"installing-a-gateway": {
 			"topic": "gateways",
 			"title": {
-				"en": "Installing a gateway",
+				"en": "Installing an indoor gateway",
 				"ja": "ゲートウェイの設置"
 			},
 			"summary": {
 				"en": "Unbox, mount and connect your gateway, then confirm it is online.",
 				"ja": "ゲートウェイを開封して設置・接続し、オンラインになったことを確認します。"
 			},
+			"image": null,
 			"hasVideo": false,
 			"keywords": {
 				"en": [
@@ -336,6 +338,17 @@
 					"approved"
 				]
 			}
+		},
+		"installing-an-outdoor-gateway": {
+			"topic": "gateways",
+			"title": {
+				"en": "Installing an Outdoor Gateway"
+			},
+			"summary": {
+				"en": ""
+			},
+			"image": null,
+			"hasVideo": false
 		}
 	},
 	"featured": [

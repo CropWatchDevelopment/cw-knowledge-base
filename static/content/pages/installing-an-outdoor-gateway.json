@@ -1,0 +1,21 @@
+{
+	"slug": "installing-an-outdoor-gateway",
+	"topic": "gateways",
+	"title": {
+		"en": "Installing an Outdoor Gateway"
+	},
+	"intro": {
+		"en": ""
+	},
+	"sections": [
+		{
+			"id": "inspecting-your-gateway",
+			"heading": {
+				"en": "Inspecting your gateway"
+			},
+			"body": {
+				"en": []
+			}
+		}
+	]
+}
