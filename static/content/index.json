@@ -181,6 +181,7 @@
 			"summary": {
 				"en": "PPFD is the usable light reaching your plants right now. DLI adds it up over a whole day."
 			},
+			"image": null,
 			"hasVideo": false,
 			"keywords": {
 				"en": [

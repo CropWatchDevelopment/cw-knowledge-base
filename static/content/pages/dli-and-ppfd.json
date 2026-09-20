@@ -5,7 +5,7 @@
 		"en": "DLI and PPFD"
 	},
 	"intro": {
-		"en": "PPFD tells you how much usable light is reaching your plants right now. DLI adds that up over a whole day."
+		"en": "PPFD tells you how much usable light is reaching your plants right now. DLI adds that up over a whole day. Both are measured by a light sensor."
 	},
 	"sections": [
 		{
