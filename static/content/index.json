@@ -30,7 +30,8 @@
 			"pages": [
 				"reading-the-dashboard",
 				"setting-up-alert-rules",
-				"creating-a-report"
+				"creating-a-report",
+				"reading-a-report"
 			]
 		},
 		{
@@ -300,6 +301,32 @@
 					"recipients",
 					"summary",
 					"export"
+				]
+			}
+		},
+		"reading-a-report": {
+			"topic": "software",
+			"title": {
+				"en": "Reading a report"
+			},
+			"summary": {
+				"en": "What is inside the PDF: the colours, the two panels, the chart, the readings and the notes."
+			},
+			"image": "images/reading-a-report/01-whole-page.svg",
+			"hasVideo": false,
+			"keywords": {
+				"en": [
+					"report",
+					"pdf",
+					"chart",
+					"average",
+					"std dev",
+					"standard deviation",
+					"notes",
+					"comments",
+					"download",
+					"samples",
+					"approved"
 				]
 			}
 		}
