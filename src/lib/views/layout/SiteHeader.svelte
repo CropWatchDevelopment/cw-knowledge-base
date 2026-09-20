@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import logo from '#lib/assets/cropwatch-logo.svg';
+	import logo from '#lib/assets/cropwatch-knowledge-base.svg';
 	import { getLocale } from '#lib/controllers/locale-context.ts';
 	import type { NavTopic } from '#lib/controllers/shell.controller.ts';
 	import type { SearchEntry } from '#lib/models/search.ts';

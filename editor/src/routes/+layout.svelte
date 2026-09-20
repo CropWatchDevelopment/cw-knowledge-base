@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import logo from '../../../src/lib/assets/cropwatch-logo.svg';
+	import logo from '../../../src/lib/assets/cropwatch-knowledge-base.svg';
 	import { siteUrl } from '#lib/site-url.ts';
 	import Icon from '#lib/views/Icon.svelte';
 	import PublishButton from '#lib/views/PublishButton.svelte';
