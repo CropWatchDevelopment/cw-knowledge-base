@@ -2,7 +2,13 @@
 
 A multilingual help site for CropWatch hardware, software, gateways and concepts. Built with SvelteKit 3 and Svelte 5, styled with the CropWatch light theme, deployed on Vercel.
 
+- **Live site:** https://cw-knowledge-base.vercel.app
+- **Repository:** https://github.com/CropWatchDevelopment/cw-knowledge-base
+- **Vercel project:** `cw-knowledge-base`, in the CropWatch Team
+
 There is no database. Every page is a JSON file under `static/content/`, and the site is prerendered from those files at build time. In the browser, moving between pages fetches the same JSON directly.
+
+GitHub holds the content as well as the code: every push to `main` makes Vercel rebuild and deploy, so publishing a page and backing it up are the same action. Past versions of a page can be recovered from the repository's history.
 
 ## Commands
 
@@ -190,6 +196,10 @@ Add the code to `LOCALES` and `LOCALE_INFO` in `src/lib/models/locale.ts`, then 
 
 ## Deployment
 
-The project uses `@sveltejs/adapter-vercel`. All pages are static files; `/` is one small serverless function for the language redirect. `vite.config.ts` reads `VERCEL_PROJECT_PRODUCTION_URL` during the build so the `hreflang` links carry the production domain.
+Pushing to `main` deploys. Vercel builds the project, prerenders every page and publishes it; a build takes about 20 seconds. Pull requests get their own preview URL.
 
-Outbound links (app, support) are in `src/lib/models/site.ts`.
+The project uses `@sveltejs/adapter-vercel`. All pages are static files; `/` is one small serverless function for the language redirect. `vite.config.ts` reads `VERCEL_PROJECT_PRODUCTION_URL` during the build and passes it as `paths.origin`, so the `hreflang` links carry the production domain.
+
+To point a real address at the site (`help.cropwatch.io`, say), add the domain to the `cw-knowledge-base` project in Vercel and add the DNS record it asks for.
+
+Outbound links (app, support) are in `src/lib/models/site.ts` and still point at `www.cropwatch.io`.
