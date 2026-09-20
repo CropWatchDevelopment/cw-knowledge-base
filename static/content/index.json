@@ -29,7 +29,8 @@
 			},
 			"pages": [
 				"reading-the-dashboard",
-				"setting-up-alert-rules"
+				"setting-up-alert-rules",
+				"creating-a-report"
 			]
 		},
 		{
@@ -276,6 +277,31 @@
 				]
 			},
 			"image": "images/setting-up-alert-rules/01-rules-page.svg"
+		},
+		"creating-a-report": {
+			"topic": "software",
+			"title": {
+				"en": "Creating a report"
+			},
+			"summary": {
+				"en": "Step by step, with pictures: choose the sensors, set the schedule, and say who receives it."
+			},
+			"image": "images/creating-a-report/01-reports-page.svg",
+			"hasVideo": false,
+			"keywords": {
+				"en": [
+					"report",
+					"reports",
+					"scheduled",
+					"weekly",
+					"monthly",
+					"daily",
+					"email",
+					"recipients",
+					"summary",
+					"export"
+				]
+			}
 		}
 	},
 	"featured": [
