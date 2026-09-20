@@ -45,6 +45,8 @@ const en = {
 	playVideo: (title: string) => `Play demo video: ${title}`,
 	videoNote: 'Plays here on the page. The video is hosted on YouTube.',
 	pictureComing: 'Picture coming soon',
+	expandPicture: 'Open this picture larger',
+	closePicture: 'Close the picture',
 	notTranslated: 'This page is not available in English yet.',
 
 	notFoundTitle: 'Page not found',
@@ -97,6 +99,8 @@ const ja: Messages = {
 	playVideo: (title) => `デモ動画を再生：${title}`,
 	videoNote: 'このページ上で再生されます。動画はYouTubeで公開されています。',
 	pictureComing: '画像準備中',
+	expandPicture: 'この画像を拡大する',
+	closePicture: '画像を閉じる',
 	notTranslated: 'このページはまだ日本語に翻訳されていないため、英語で表示しています。',
 
 	notFoundTitle: 'ページが見つかりません',

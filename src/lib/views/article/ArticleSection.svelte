@@ -31,7 +31,9 @@
 					alt={section.image.alt}
 					width={section.image.width}
 					height={section.image.height}
+					caption={section.image.caption}
 					class="rounded-lg"
+					expandable
 				/>
 				{#if section.image.caption}
 					<figcaption class="text-[0.8125rem] leading-5 text-ink-3">

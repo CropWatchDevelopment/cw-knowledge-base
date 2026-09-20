@@ -59,3 +59,29 @@ test('an unknown guide is a 404 in the reader’s language', async ({ page }) =>
 	expect(response?.status()).toBe(404);
 	await expect(page.getByRole('heading', { level: 1 })).toHaveText('ページが見つかりません');
 });
+
+test('a picture in a guide opens large, and closes three ways', async ({ page }) => {
+	await page.goto('/en/software/setting-up-alert-rules');
+
+	const open = page.getByRole('button', { name: /Open this picture larger/ }).first();
+	const lightbox = page.locator('dialog[open]');
+
+	await open.click();
+	await expect(lightbox).toHaveCount(1);
+	await lightbox.getByRole('button', { name: 'Close the picture' }).click();
+	await expect(lightbox).toHaveCount(0);
+
+	await open.click();
+	await page.keyboard.press('Escape');
+	await expect(lightbox).toHaveCount(0);
+
+	// A click on the grey area around the picture, rather than on the picture itself.
+	await open.click();
+	await lightbox.click({ position: { x: 8, y: 8 } });
+	await expect(lightbox).toHaveCount(0);
+});
+
+test('a picture on a card is not clickable on its own', async ({ page }) => {
+	await page.goto('/en/software');
+	await expect(page.locator('a button')).toHaveCount(0);
+});

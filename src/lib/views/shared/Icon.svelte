@@ -10,6 +10,7 @@
 		check: '<path d="m5 12 5 5 9-10"/>',
 		menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
 		close: '<path d="M6 6l12 12M18 6 6 18"/>',
+		expand: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8.5v5M8.5 11h5"/>',
 		video: '<rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/>',
 		image:
 			'<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5L5 20"/>',
