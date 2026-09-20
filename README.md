@@ -194,6 +194,25 @@ What it does:
 
 Add the code to `LOCALES` and `LOCALE_INFO` in `src/lib/models/locale.ts`, then add a block to `src/lib/models/messages.ts`. TypeScript reports every label that is still missing. Content files need no structural change: add the new language key next to `en` and `ja`.
 
+## Who can reach the site
+
+The site is restricted to visitors in the **United States and Japan**. Everyone else gets a 403.
+
+This is a Vercel Firewall rule, not code, so it is not in this repository:
+
+```sh
+vercel firewall rules list --scope crop-watch-team          # "Allow United States and Japan only"
+vercel firewall rules inspect "Allow United States and Japan only" --scope crop-watch-team
+```
+
+It matches `geo country is not any of US, JP` and denies. It covers every address of the project — `kb.cropwatch.io`, the `.vercel.app` URLs and preview deployments — and every file, pages and pictures alike. Vercel is not billed for blocked requests.
+
+Worth knowing:
+
+- The country comes from the visitor's IP address, so a VPN decides the answer. Someone in Tokyo on a European exit node is blocked; someone in Berlin on a US exit node is not.
+- Googlebot and Bingbot crawl from the United States, so indexing still works.
+- To change the countries, edit the rule's condition and publish; to lift the restriction, `vercel firewall rules disable "Allow United States and Japan only"` and publish. Changes are staged until `vercel firewall publish`.
+
 ## Deployment
 
 Pushing to `main` deploys. Vercel builds the project, prerenders every page and publishes it; a build takes about 20 seconds. Pull requests get their own preview URL.
