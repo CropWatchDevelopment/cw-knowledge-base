@@ -238,18 +238,25 @@
 				"en": "Reading the dashboard"
 			},
 			"summary": {
-				"en": "Find your locations and sensors, check they are reporting, and look back over time."
+				"en": "What every part of the dashboard means, and what to do when a sensor goes quiet."
 			},
 			"hasVideo": false,
 			"keywords": {
 				"en": [
 					"dashboard",
-					"locations",
-					"chart",
-					"history",
-					"offline"
+					"cards",
+					"table",
+					"status",
+					"online",
+					"offline",
+					"last seen",
+					"sensor error",
+					"no data",
+					"search",
+					"overview"
 				]
-			}
+			},
+			"image": "images/reading-the-dashboard/01-dashboard.svg"
 		},
 		"setting-up-alert-rules": {
 			"topic": "software",

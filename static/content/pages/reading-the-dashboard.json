@@ -5,13 +5,13 @@
 		"en": "Reading the dashboard"
 	},
 	"intro": {
-		"en": "The dashboard is the first screen you see in CropWatch. It shows the locations and sensors you have access to, with the latest reading from each."
+		"en": "The dashboard answers one question: is everything all right? This guide explains every part of it, and what to do when something is not."
 	},
 	"sections": [
 		{
-			"id": "locations-and-sensors",
+			"id": "what-you-see",
 			"heading": {
-				"en": "Locations and sensors"
+				"en": "What you see when you sign in"
 			},
 			"body": {
 				"en": [
@@ -19,24 +19,45 @@
 						"type": "paragraph",
 						"content": [
 							{
-								"text": "Sensors are grouped by location, such as a greenhouse or a field. Open a location to see the sensors in it."
+								"text": "The dashboard is the first thing CropWatch shows you, and it answers one question above all others: is everything all right?"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Every sensor you have access to appears as a card, with its latest readings and a coloured dot. Nothing needs to be opened or set up. If all the dots are green and the numbers look normal, you can close the page again."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Across the top are a search box and two buttons that change how the page is laid out."
 							}
 						]
 					}
 				]
 			},
 			"image": {
-				"src": null,
+				"src": "images/reading-the-dashboard/01-dashboard.svg",
 				"alt": {
-					"en": "Screenshot of the CropWatch dashboard with sensors grouped by location"
+					"en": "The dashboard in Sensor Cards view: a search box, the Table and Sensor Cards buttons, and four sensor cards, one of them showing Sensor Error"
 				},
-				"side": "right"
+				"caption": {
+					"en": "Every sensor, with its latest readings."
+				},
+				"side": "right",
+				"width": 680,
+				"height": 470
 			}
 		},
 		{
-			"id": "is-it-reporting",
+			"id": "one-card",
 			"heading": {
-				"en": "Is it reporting?"
+				"en": "What one card tells you"
 			},
 			"body": {
 				"en": [
@@ -44,7 +65,174 @@
 						"type": "paragraph",
 						"content": [
 							{
-								"text": "Each sensor shows whether it is reporting. A sensor that has stopped sending readings is marked as offline."
+								"text": "Each card holds three things, and it is worth knowing which is which."
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "The dot and the name",
+									"bold": true
+								},
+								{
+									"text": " — whether the sensor is reporting, and which sensor this is."
+								}
+							],
+							[
+								{
+									"text": "The readings",
+									"bold": true
+								},
+								{
+									"text": " — the latest values. An air sensor shows temperature and humidity; a water sensor shows a level; a soil sensor shows moisture. The labels say which is which."
+								}
+							],
+							[
+								{
+									"text": "“Last Seen”",
+									"bold": true
+								},
+								{
+									"text": " — when those readings arrived. This is not the time you opened the page."
+								}
+							]
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "“Details” at the bottom of a card opens the rest of that sensor's readings — battery, signal and anything else it sends — without leaving the dashboard."
+							}
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/reading-the-dashboard/02-one-card.svg",
+				"alt": {
+					"en": "A single sensor card with three things marked: the coloured dot, the two readings, and the Last Seen line"
+				},
+				"caption": {
+					"en": "The dot, the readings, and when they arrived."
+				},
+				"side": "left",
+				"width": 680,
+				"height": 330
+			}
+		},
+		{
+			"id": "the-dot",
+			"heading": {
+				"en": "The coloured dot"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "The dot beside each name is the quickest thing on the page to read."
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "Green — Online.",
+									"bold": true
+								},
+								{
+									"text": " Readings are arriving as expected."
+								}
+							],
+							[
+								{
+									"text": "Amber — Warning.",
+									"bold": true
+								},
+								{
+									"text": " Some sensors in this group are reporting and some are not."
+								}
+							],
+							[
+								{
+									"text": "Red — Offline.",
+									"bold": true
+								},
+								{
+									"text": " Nothing has arrived for longer than it should have."
+								}
+							],
+							[
+								{
+									"text": "Blue — Loading.",
+									"bold": true
+								},
+								{
+									"text": " CropWatch is still fetching it. It settles in a moment."
+								}
+							]
+						]
+					},
+					{
+						"type": "note",
+						"content": [
+							{
+								"text": "Amber usually appears on something that covers several sensors. It means “not all of them”, so look inside to see which one has gone quiet."
+							}
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/reading-the-dashboard/03-status-dots.svg",
+				"alt": {
+					"en": "The four dot colours: green Online, amber Warning, red Offline and blue Loading, each with what it means"
+				},
+				"caption": {
+					"en": "Green, amber, red and blue."
+				},
+				"side": "right",
+				"width": 680,
+				"height": 330
+			}
+		},
+		{
+			"id": "last-seen",
+			"heading": {
+				"en": "“Last Seen”, and when to worry"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Sensors do not report constantly. Each one sends a reading on its own schedule — every ten minutes, every half hour, whatever it was set to. So “Last Seen: 12 minutes ago” is perfectly healthy for a sensor that reports every fifteen."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "CropWatch knows each sensor's schedule and turns the dot red once nothing has arrived for longer than that. If a sensor has no schedule recorded, it allows an hour."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "In other words: you do not have to work out whether a gap is normal. The colour has already done it."
 							}
 						]
 					}
@@ -52,9 +240,9 @@
 			}
 		},
 		{
-			"id": "looking-back",
+			"id": "not-reporting",
 			"heading": {
-				"en": "Looking back over time"
+				"en": "When a sensor stops"
 			},
 			"body": {
 				"en": [
@@ -62,8 +250,320 @@
 						"type": "paragraph",
 						"content": [
 							{
-								"text": "Open a sensor to see its readings as a chart, and choose the date range you want to look at."
+								"text": "A red dot, “Sensor Error”, or dashes where the numbers should be all mean the same thing: nothing recent has arrived. “Last Seen” tells you when it stopped, which is usually the clue."
 							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "The usual causes, in the order worth checking:"
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": true,
+						"items": [
+							[
+								{
+									"text": "The gateway is off or has lost its internet connection. If several sensors went quiet at the same moment, this is almost always why."
+								}
+							],
+							[
+								{
+									"text": "The sensor's battery is flat. One sensor, gone quiet on its own, often means this."
+								}
+							],
+							[
+								{
+									"text": "Something has changed between the sensor and the gateway — a door closed, a vehicle parked, equipment moved."
+								}
+							]
+						]
+					},
+					{
+						"type": "note",
+						"content": [
+							{
+								"text": "Alert rules cannot help here. A rule watches readings, so when readings stop, it has nothing to look at and stays silent. The dashboard is where a quiet sensor shows up."
+							}
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/reading-the-dashboard/05-not-reporting.svg",
+				"alt": {
+					"en": "A sensor card with a red dot reading Sensor Error, and a Last Seen of three hours ago"
+				},
+				"caption": {
+					"en": "The time is the clue: what happened three hours ago?"
+				},
+				"side": "left",
+				"width": 680,
+				"height": 300
+			}
+		},
+		{
+			"id": "finding-things",
+			"heading": {
+				"en": "Finding one sensor"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Once there are more than a screenful of sensors, use the search box at the top. It matches on location, device name or EUI, so any of these work:"
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "The sensor's name, such as “Greenhouse 1”."
+								}
+							],
+							[
+								{
+									"text": "The location, such as “North Field”, which brings up everything there."
+								}
+							],
+							[
+								{
+									"text": "The long serial number, if you are holding the sensor and reading the label."
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "table-view",
+			"heading": {
+				"en": "The table view"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "“Table” swaps the cards for a list: Name, Location, Primary, Secondary and Last Updated, one row per sensor."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "It is the better view when you have many sensors, when you want them sorted, or when you are printing. “Sensor Cards” brings the cards back, and CropWatch remembers which you chose."
+							}
+						]
+					},
+					{
+						"type": "note",
+						"content": [
+							{
+								"text": "“Primary” and “Secondary” are simply the first and second readings a sensor sends. For an air sensor those are temperature and humidity."
+							}
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/reading-the-dashboard/04-table-view.svg",
+				"alt": {
+					"en": "The dashboard in Table view: columns for Name, Location, Primary, Secondary and Last Updated"
+				},
+				"caption": {
+					"en": "The same sensors as a sortable list."
+				},
+				"side": "right",
+				"width": 680,
+				"height": 330
+			}
+		},
+		{
+			"id": "one-sensor",
+			"heading": {
+				"en": "Opening one sensor"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Clicking a sensor opens its own page: the current readings, and a chart of how they have moved over time. Change the dates to look further back."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "This is the screen for questions the dashboard cannot answer — whether last night was colder than the one before, whether the humidity always climbs at four in the morning, whether a problem is new."
+							}
+						]
+					},
+					{
+						"type": "note",
+						"content": [
+							{
+								"text": "“No data yet for this device.” means nothing has ever arrived from this sensor. For a sensor that has just been installed, that is expected for the first little while."
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "getting-around",
+			"heading": {
+				"en": "The rest of the menu"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "paragraph",
+						"content": [
+							{
+								"text": "Down the left are the other screens:"
+							}
+						]
+					},
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "Dashboard",
+									"bold": true
+								},
+								{
+									"text": " — this page."
+								}
+							],
+							[
+								{
+									"text": "Locations",
+									"bold": true
+								},
+								{
+									"text": " — your sites and what is installed at each, which is the tidier way in when you have several."
+								}
+							],
+							[
+								{
+									"text": "Rules",
+									"bold": true
+								},
+								{
+									"text": " — being told when a reading crosses a limit. See "
+								},
+								{
+									"text": "Creating an alert rule",
+									"href": "page:setting-up-alert-rules"
+								},
+								{
+									"text": "."
+								}
+							],
+							[
+								{
+									"text": "Reports",
+									"bold": true
+								},
+								{
+									"text": " — regular summaries by email. See "
+								},
+								{
+									"text": "Creating a report",
+									"href": "page:creating-a-report"
+								},
+								{
+									"text": "."
+								}
+							],
+							[
+								{
+									"text": "Gateways",
+									"bold": true
+								},
+								{
+									"text": " — the boxes that carry your sensors' readings to the internet."
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "quick-answers",
+			"heading": {
+				"en": "Quick answers"
+			},
+			"body": {
+				"en": [
+					{
+						"type": "list",
+						"ordered": false,
+						"items": [
+							[
+								{
+									"text": "A number looks wrong.",
+									"bold": true
+								},
+								{
+									"text": " Open the sensor and look at the chart. One odd reading among normal ones is usually noise; a step change that stays is usually real."
+								}
+							],
+							[
+								{
+									"text": "A card says “No data yet”.",
+									"bold": true
+								},
+								{
+									"text": " Nothing has ever arrived from it. New sensors show this until their first reading."
+								}
+							],
+							[
+								{
+									"text": "Everything went red at once.",
+									"bold": true
+								},
+								{
+									"text": " Look at the gateway rather than the sensors."
+								}
+							],
+							[
+								{
+									"text": "A sensor is missing entirely.",
+									"bold": true
+								},
+								{
+									"text": " It may be at a location you do not have access to. Ask whoever manages your account."
+								}
+							],
+							[
+								{
+									"text": "The page looks out of date.",
+									"bold": true
+								},
+								{
+									"text": " Refresh it. The dashboard shows what had arrived when you opened it."
+								}
+							]
 						]
 					}
 				]
@@ -74,6 +574,14 @@
 		{
 			"kind": "page",
 			"slug": "setting-up-alert-rules"
+		},
+		{
+			"kind": "page",
+			"slug": "creating-a-report"
+		},
+		{
+			"kind": "page",
+			"slug": "installing-a-gateway"
 		}
 	]
 }
