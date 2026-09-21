@@ -17,6 +17,7 @@
 			"description": "The CropWatch dashboard, alert rules and reports.",
 			"pages": [
 				"reading-the-dashboard",
+				"sensor-settings",
 				"setting-up-alert-rules",
 				"creating-a-report",
 				"reading-a-report"
@@ -229,6 +230,33 @@
 			"summary": "",
 			"image": null,
 			"hasVideo": false
+		},
+		"sensor-settings": {
+			"topic": "software",
+			"title": "Sensor settings",
+			"summary": "Renaming a sensor, grouping it, moving it between sites, its calibration certificates, and who is allowed to see it.",
+			"image": "images/sensor-settings/01-whole-page.svg",
+			"hasVideo": false,
+			"keywords": [
+				"settings",
+				"rename",
+				"device name",
+				"group",
+				"location",
+				"move",
+				"permission",
+				"permissions",
+				"access",
+				"admin",
+				"manager",
+				"viewer",
+				"disabled",
+				"certificate",
+				"calibration",
+				"iso17025",
+				"deveui",
+				"tti"
+			]
 		}
 	},
 	"featured": [

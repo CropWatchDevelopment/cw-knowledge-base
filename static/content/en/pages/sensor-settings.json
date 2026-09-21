@@ -1,0 +1,779 @@
+{
+	"slug": "sensor-settings",
+	"topic": "software",
+	"title": "Sensor settings",
+	"intro": "Every sensor has a settings page: its name, its group, the site it belongs to, its calibration certificates, and who is allowed to see it. This guide goes through it one box at a time, including the two that do more than they look like they do.",
+	"sections": [
+		{
+			"id": "what-it-is",
+			"heading": "What this page is for",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Every sensor has a settings page. It is where you change what CropWatch knows about a sensor, rather than anything the sensor itself measures: what it is called, which site it belongs to, and who is allowed to see it."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "There are up to three cards on it, and you can ignore any you do not need:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Device Settings",
+								"bold": true
+							},
+							{
+								"text": " — the name, the group, the TTI Device ID and the location."
+							}
+						],
+						[
+							{
+								"text": "Device Sensor Certificates",
+								"bold": true
+							},
+							{
+								"text": " — calibration paperwork to download. This card only appears on sensors CropWatch made."
+							}
+						],
+						[
+							{
+								"text": "Device Owner Permissions",
+								"bold": true
+							},
+							{
+								"text": " — what each person who has access to this sensor is allowed to do."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Nothing here changes how the sensor behaves. It will not report more often, measure anything different, or wake up sooner. How often a sensor reports comes from the model of sensor it is; no screen in CropWatch sets it, so if it needs changing, ask support."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-settings/01-whole-page.svg",
+				"alt": "The whole settings page: a Back To Device Detail button, then three cards — Device Settings, Device Sensor Certificates and Device Owner Permissions",
+				"caption": "The three cards. Click the picture to see it full size.",
+				"side": "right",
+				"width": 680,
+				"height": 900
+			}
+		},
+		{
+			"id": "getting-there",
+			"heading": "Opening the settings page",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "There are two ways in, and which you see depends on your access:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "From the sensor itself.",
+								"bold": true
+							},
+							{
+								"text": " Open the sensor, and look along the row of buttons at the top of its page for one marked “Settings”, next to Notes and Export CSV."
+							}
+						],
+						[
+							{
+								"text": "From the list of sensors at a location.",
+								"bold": true
+							},
+							{
+								"text": " Open the location, find the sensor's row, and press the small cog at the far right, under “Actions”. It has no words on it."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If you cannot see either of them, your account does not have the access needed to change this sensor. Ask whoever manages your CropWatch account."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Being able to open this page is not the same as being allowed to save. If you arrive here by a bookmark or a shared link without the right access, everything looks normal and fills in, but pressing Update Device answers with a red bar reading “You do not have permission to update this device”. Nothing is changed."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "the-four-fields",
+			"heading": "The four boxes",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The first card holds four boxes. Only the name has to be filled in; the rest can be left exactly as they are."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "The chips along the top",
+								"bold": true
+							},
+							{
+								"text": " cannot be edited. They show the sensor's DevEUI — its permanent serial number, useful when contacting support — and, if it has one, the group it is in. The group chip shows the saved value, so it does not change as you type."
+							}
+						],
+						[
+							{
+								"text": "Device Name",
+								"bold": true
+							},
+							{
+								"text": " — what the sensor is called everywhere in CropWatch."
+							}
+						],
+						[
+							{
+								"text": "Group",
+								"bold": true
+							},
+							{
+								"text": " — an optional label."
+							}
+						],
+						[
+							{
+								"text": "TTI Device ID",
+								"bold": true
+							},
+							{
+								"text": " — best left alone. See below."
+							}
+						],
+						[
+							{
+								"text": "Location",
+								"bold": true
+							},
+							{
+								"text": " — which site the sensor belongs to. Read the warning before changing it."
+							}
+						],
+						[
+							{
+								"text": "Update Device",
+								"bold": true
+							},
+							{
+								"text": " — saves the whole card at once."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-settings/02-device-card.svg",
+				"alt": "The Device Settings card: the DevEUI and group chips, then Device Name, Group, TTI Device ID and Location, with the Update Device button below",
+				"caption": "The numbers match the list beside it.",
+				"side": "left",
+				"width": 680,
+				"height": 500
+			}
+		},
+		{
+			"id": "device-name",
+			"heading": "Device Name",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This is the name you see on the dashboard, in the list of a location's sensors, in alert emails and on reports. Changing it here changes it everywhere at once."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Give it a name somebody else would recognise while standing in the field. “Greenhouse 1 — north end” beats “Sensor 4”."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "It cannot be left empty. Clear the box and “Device name is required.” appears under it, and the save button stops working until you type something. The limit is 120 characters, far longer than any sensible name. Spaces at the start and end are trimmed off when it saves."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Renaming a sensor does not affect the readings it has already sent. The history stays exactly as it is; only the label on it changes."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "group",
+			"heading": "Group",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Group is a free-text label you can type anything into — “Greenhouses”, “South block”, “Trial plots”. There is no list to pick from, and no spelling to get right, because nothing checks it."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Be aware of how little it does at the moment. The group appears as a column on the main dashboard when you use the table view on a computer; it is hidden on a phone, and that is the whole of it."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Groups do not affect alert rules, reports or who can see a sensor. If you are looking for a way to organise sensors that actually changes what people see, use locations instead."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "tti-device-id",
+			"heading": "TTI Device ID",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This one is not for everyday use. It holds the name the sensor goes by on the radio network that carries its readings, and CropWatch only needs it for sensors that can be switched on and off remotely."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Leave it alone. Typing in it will let you press Update Device, and CropWatch will answer “Device settings updated.” in green, but the value does not stick: reload the page and it is back as it was. Nothing was saved, despite the message."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If a sensor of yours needs this set — you will know, because a remote switch will not respond — contact support rather than typing it here."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "location",
+			"heading": "Location, and what moving a sensor really does",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The Location list holds every site you have access to. Changing it moves the sensor to that site: it leaves the old location's list of sensors and appears in the new one."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The readings are safe. A sensor's history belongs to the sensor, not to the site it sat at, so every reading it has ever sent moves with it and the charts look exactly the same afterwards. Nothing is left behind and nothing is lost."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "But moving a sensor rebuilds the list of who can see it, from scratch. Everyone who could see it at the old location loses access the moment you save. You become its Admin, and everybody at the new location starts as Disabled until somebody turns them back on one at a time, on this very page. If other people rely on this sensor, tell them before you move it."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Two smaller things to expect:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The list has an “Unassigned” option at the top, but saving with it chosen gives a red error. Every sensor has to belong to a location."
+							}
+						],
+						[
+							{
+								"text": "You need the right access at the destination too. Without it the save is refused with “You do not have permission to move this device to that location”."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "saving",
+			"heading": "Saving, and why the button is grey",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "One button saves the whole card. Until you change something it is greyed out and does nothing, which is deliberate rather than broken: there is nothing to save yet."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "As soon as you edit any of the boxes it turns dark and can be pressed. It goes grey again if you put the value back the way it was, and it stays grey while anything on the card is invalid."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When you press it, a coloured bar appears at the top of the card:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Green — “Device settings updated.”",
+								"bold": true
+							},
+							{
+								"text": " It saved."
+							}
+						],
+						[
+							{
+								"text": "Red",
+								"bold": true
+							},
+							{
+								"text": " — something stopped it, and the bar says what. “Please correct the highlighted fields.” means look for red text under one of the boxes."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If you leave the page without pressing Update Device, nothing is saved. There is no automatic save and no warning on the way out."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-settings/03-save-button.svg",
+				"alt": "The Update Device button greyed out when nothing has changed, and dark when it can be pressed",
+				"caption": "Grey means nothing has changed yet.",
+				"side": "right",
+				"width": 680,
+				"height": 240
+			}
+		},
+		{
+			"id": "certificates",
+			"heading": "Calibration certificates",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The second card holds calibration certificates: the paperwork showing that the temperature and humidity chip inside the sensor was checked against a known standard. If you are audited, or a buyer asks for proof, this is what they want."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "There are two, and they are not the same thing:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The one with a serial number",
+								"bold": true
+							},
+							{
+								"text": " — an ISO 17025 certificate for the exact chip in your sensor, fetched fresh when you press the button. The chips beside it show which chip it is, its serial number and the sensor model."
+							}
+						],
+						[
+							{
+								"text": "“SHT4x series certificate”",
+								"bold": true
+							},
+							{
+								"text": " — the general certificate for that family of chips. It says nothing about your particular sensor, and it is the same file for everybody."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each row has a small dark button on the right with a downward arrow and no words on it. Pressing it opens the PDF in a new tab. Ask for the one with the serial number if you are given the choice; it is the stronger document."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "This card only appears on sensors CropWatch manufactured. If it is missing entirely, your sensor came from another maker and its paperwork comes from them. On a CropWatch sensor with no chip serial recorded, you get the card with only the general certificate in it."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-settings/04-certificates.svg",
+				"alt": "The Device Sensor Certificates card: an SHT43 row with its serial number and a download button, and below it the SHT4x series certificate with its own download button",
+				"caption": "Two certificates: one for your chip, one for the family.",
+				"side": "left",
+				"width": 680,
+				"height": 330
+			}
+		},
+		{
+			"id": "who-can-see-it",
+			"heading": "Who can see this sensor",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The last card lists everyone with access to this sensor. Each row shows a person's name and email, a “Permission Level” box, and its own “Update Permission” button."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each row saves separately. Change one person's level, press the button on that row, and a bar appears under it confirming the change for that email address. Changing several people means pressing several buttons."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "There is no way to add or remove a person here, and the page does not explain why. People are added at the location, not at the sensor — see below."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-settings/05-permissions.svg",
+				"alt": "The Device Owner Permissions card: a person's name and email, a Permission Level dropdown reading Admin, and an Update Permission button",
+				"caption": "One row per person, each saved on its own.",
+				"side": "right",
+				"width": 680,
+				"height": 300
+			}
+		},
+		{
+			"id": "permission-levels",
+			"heading": "What the levels mean",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "There are five choices in the box, but only three of them behave differently."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Admin",
+								"bold": true
+							},
+							{
+								"text": " — everything a Manager can do, and can also change who else may see the sensor. Only an Admin can use this card."
+							}
+						],
+						[
+							{
+								"text": "Manager",
+								"bold": true
+							},
+							{
+								"text": " — can rename the sensor, group it, move it, switch a remote relay, and set up alert rules and reports on it. Cannot change anyone's access."
+							}
+						],
+						[
+							{
+								"text": "User",
+								"bold": true
+							},
+							{
+								"text": " and "
+							},
+							{
+								"text": "Viewer",
+								"bold": true
+							},
+							{
+								"text": " — can look at the sensor and its readings, and change nothing. In practice these two are identical; nothing in CropWatch treats them differently."
+							}
+						],
+						[
+							{
+								"text": "Disabled",
+								"bold": true
+							},
+							{
+								"text": " — cannot see the sensor at all. It disappears from their dashboard and their location's list."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Whoever owns the sensor outranks all of this and always has full control, whatever the list says."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-settings/06-permission-levels.svg",
+				"alt": "The five permission levels: Admin, Manager, User, Viewer and Disabled, with what each one is allowed to do",
+				"caption": "Five choices, three real levels of access.",
+				"side": "left",
+				"width": 680,
+				"height": 430
+			}
+		},
+		{
+			"id": "adding-people",
+			"heading": "Adding somebody new",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "People are given access to a whole location, not to one sensor at a time. To add somebody, go to the location rather than the sensor: open the location, press the cog at the top of its list of sensors, and find the card that offers to add a new user to that location with permissions."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Fill in their email, choose a permission level, and press Add Permission. There is a switch on that card worth understanding:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Apply to all devices in this location” turned on",
+								"bold": true
+							},
+							{
+								"text": " — they get the level you chose on every sensor there. This is almost always what you want."
+							}
+						],
+						[
+							{
+								"text": "Turned off",
+								"bold": true
+							},
+							{
+								"text": " — they are added to the location but set to Disabled on every sensor in it, so they see the site and none of its readings."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "That second case is what the Device Owner Permissions card is really for. If somebody says they can see a location but none of its sensors, this page is where you fix it, one sensor at a time."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "quick-answers",
+			"heading": "Quick answers",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "There is no Settings button on my sensor.",
+								"bold": true
+							},
+							{
+								"text": " Your account does not have the access for it. Ask whoever manages your CropWatch account."
+							}
+						],
+						[
+							{
+								"text": "The Update Device button is grey.",
+								"bold": true
+							},
+							{
+								"text": " Nothing has been changed yet. Edit one of the boxes and it wakes up."
+							}
+						],
+						[
+							{
+								"text": "It said it saved, but my change came back.",
+								"bold": true
+							},
+							{
+								"text": " If it was the TTI Device ID, that is expected; that box cannot be set here. Anything else, try again and read the coloured bar carefully."
+							}
+						],
+						[
+							{
+								"text": "Where do I add a new person?",
+								"bold": true
+							},
+							{
+								"text": " At the location, not here. See "
+							},
+							{
+								"text": "Adding somebody new",
+								"href": "page:sensor-settings#adding-people"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Somebody is listed as Disabled and I did not do that.",
+								"bold": true
+							},
+							{
+								"text": " They were added to the location without “Apply to all devices” switched on. Set their level here."
+							}
+						],
+						[
+							{
+								"text": "There is no Delete button.",
+								"bold": true
+							},
+							{
+								"text": " Sensors cannot be deleted from CropWatch. Contact support."
+							}
+						],
+						[
+							{
+								"text": "I moved a sensor and my colleagues lost it.",
+								"bold": true
+							},
+							{
+								"text": " That is what moving does. Put them back on this page, or ask an Admin to."
+							}
+						],
+						[
+							{
+								"text": "The certificates card is not there.",
+								"bold": true
+							},
+							{
+								"text": " The sensor was not made by CropWatch, so its paperwork comes from its maker."
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "reading-the-dashboard"
+		},
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		}
+	]
+}
