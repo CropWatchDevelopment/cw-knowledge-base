@@ -130,6 +130,35 @@
 				"width": 1536,
 				"height": 1024
 			}
+		},
+		{
+			"id": "what-does-an-optimal-mounting-location-look-like-for-long-range",
+			"heading": "What does an optimal mounting location look like for long range?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A perfect placement would be at the edge of a very tall location, no obstructions between the gateway and the transmitting devices."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Note how the gateway is at the corder of the building, preventing the building's walls from blocking it on both the left, and right side. Only the back of the building will have reduced signal coverage, but that is not the target location."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/what-is-lorawan/optimal-muasnadr.webp",
+				"alt": "Gateway on the very edge of a very tall building overlooking flat land.",
+				"side": "right",
+				"width": 1600,
+				"height": 721
+			}
 		}
 	],
 	"links": [
