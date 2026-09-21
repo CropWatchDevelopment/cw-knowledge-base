@@ -78,7 +78,7 @@
 			"topic": "concepts",
 			"title": "What is LoRaWAN?",
 			"summary": "The long-range, low-power radio network that carries your sensor readings.",
-			"image": null,
+			"image": "images/what-is-lorawan/lorawan-muasbneg.png",
 			"hasVideo": false,
 			"keywords": [
 				"lora",

@@ -40,7 +40,14 @@
 						]
 					]
 				}
-			]
+			],
+			"image": {
+				"src": "images/what-is-lorawan/lorawan-muasbneg.png",
+				"alt": "LoRaWAN sends longer distance than Cellular, WiFi, and Bluetooth, however it sends less data, and sends slower",
+				"side": "right",
+				"width": 665,
+				"height": 308
+			}
 		},
 		{
 			"id": "how-a-reading-reaches-you",
@@ -57,7 +64,15 @@
 						],
 						[
 							{
-								"text": "Any gateway in range receives it and forwards it over the internet."
+								"text": "Any gateway in range receives it and "
+							},
+							{
+								"text": "forwards",
+								"bold": true,
+								"italic": true
+							},
+							{
+								"text": " it over the internet."
 							}
 						],
 						[
@@ -76,7 +91,7 @@
 					"type": "note",
 					"content": [
 						{
-							"text": "Sensors do not connect to your Wi-Fi. They only talk to a LoRaWAN gateway."
+							"text": "Sensors do not connect to your Wi-Fi. They only talk through a LoRaWAN gateway."
 						}
 					]
 				}
@@ -107,7 +122,14 @@
 						}
 					]
 				}
-			]
+			],
+			"image": {
+				"src": "images/what-is-lorawan/gateway-placement-muas7b9r.png",
+				"alt": "How a gateway placed HIGH up, doesn't automatically meen good connection.",
+				"side": "right",
+				"width": 1536,
+				"height": 1024
+			}
 		}
 	],
 	"links": [
