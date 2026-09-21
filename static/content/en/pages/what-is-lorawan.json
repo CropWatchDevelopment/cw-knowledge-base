@@ -94,6 +94,44 @@
 							"text": "Sensors do not connect to your Wi-Fi. They only talk through a LoRaWAN gateway."
 						}
 					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "LoRaWAN (Class A) is a "
+							},
+							{
+								"text": "connectionless / no persistent",
+								"bold": true
+							},
+							{
+								"text": " gateway connection, this means it does not need to maintain a connection to the gateway to continue sending data."
+							}
+						],
+						[
+							{
+								"text": "WiFi on the other hand is a "
+							},
+							{
+								"text": "persistent access point association",
+								"bold": true
+							},
+							{
+								"text": " while connected, this means it needs to keep it's login, ip, connection intact while connected, lossing it's \"state\" would request in the need to re-connect using valuable power on time and power."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This allows LoRaWAN devices to wake quickly, send data, and sleep quickly. WiFi needs to wake, send a password, wait for a response, and get connection information. This eats device activity time, and that means device battery power."
+						}
+					]
 				}
 			],
 			"image": {
