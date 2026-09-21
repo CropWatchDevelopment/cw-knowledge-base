@@ -21,14 +21,23 @@
 	</div>
 
 	<main class="min-w-0 grow bg-surface px-4 pt-6 pb-16 sm:px-8 sm:pt-8">
-		<div class="mx-auto w-full max-w-[47.5rem]">
+		<!--
+			78rem matches the home page, and is exactly what a section needs once there is room for
+			it: a 34rem picture, a 2rem gap and a 42rem column of text. The frame only says how much
+			room there is; each page keeps its own text to a readable measure inside it.
+
+			It is a container, so what is inside can lay itself out by the room it actually has. The
+			side menus appear and disappear at their own widths, which leaves this column narrower at
+			1280px than it is at 820px, and anything measuring the window would get that wrong.
+		-->
+		<div class="@container mx-auto w-full max-w-[47.5rem] lg:max-w-[78rem]">
 			{@render children()}
 		</div>
 	</main>
 
 	{#if aside}
 		<aside
-			class="sticky top-header h-[calc(100dvh-var(--spacing-header))] w-70 shrink-0 overflow-y-auto border-l border-line-soft bg-surface px-6 py-8 max-xl:hidden"
+			class="sticky top-header h-[calc(100dvh-var(--spacing-header))] w-70 shrink-0 overflow-y-auto border-l border-line-soft bg-surface px-6 py-8 max-2xl:hidden"
 		>
 			{@render aside()}
 		</aside>

@@ -20,12 +20,20 @@
 	<!-- The picture comes first in the markup so it sits above the text on a phone. -->
 	<div
 		class={[
-			'flex flex-col gap-4 md:items-start md:gap-8',
-			section.image?.side === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'
+			'flex flex-col gap-4 @3xl:items-start @3xl:gap-8',
+			section.image?.side === 'right' ? '@3xl:flex-row-reverse' : '@3xl:flex-row'
 		]}
 	>
+		<!--
+			The text holds a readable measure and the picture takes whatever room is left over, so
+			a wide screen makes the illustration bigger rather than stretching the line length.
+			The pictures are drawn 680px wide, which is why neither width goes past 42.5rem.
+			Below 48rem of room the picture sits above the text instead of being squeezed beside it.
+		-->
 		{#if section.image}
-			<figure class="flex shrink-0 flex-col gap-2 md:w-[21.25rem]">
+			<figure
+				class="flex max-w-[42.5rem] flex-col gap-2 @3xl:max-w-[34rem] @3xl:shrink-0 @3xl:grow @3xl:basis-[36%]"
+			>
 				<ContentImage
 					src={section.image.src}
 					alt={section.image.alt}
@@ -43,7 +51,7 @@
 			</figure>
 		{/if}
 
-		<div class="min-w-0 grow">
+		<div class="min-w-0 @3xl:max-w-[42rem] @3xl:basis-[42rem]">
 			<RichText blocks={section.blocks} />
 		</div>
 	</div>

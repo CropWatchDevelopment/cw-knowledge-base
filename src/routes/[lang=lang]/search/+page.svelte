@@ -28,7 +28,7 @@
 </svelte:head>
 
 <DocsShell nav={data.nav}>
-	<div class="flex flex-col gap-6">
+	<div class="flex max-w-[52rem] flex-col gap-6">
 		<header class="flex flex-col gap-3">
 			<Breadcrumb current={locale.t.searchTitle} />
 			<h1 class="mt-1 text-3xl leading-tight font-bold tracking-tight sm:text-4xl">

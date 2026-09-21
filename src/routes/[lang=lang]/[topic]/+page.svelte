@@ -17,7 +17,7 @@
 
 <DocsShell nav={data.nav}>
 	<div class="flex flex-col gap-8">
-		<header class="flex flex-col gap-3">
+		<header class="flex max-w-[46rem] flex-col gap-3">
 			<Breadcrumb topic={data.topic} />
 			<div class="mt-1 flex items-center gap-3">
 				<div
@@ -33,7 +33,7 @@
 		</header>
 
 		{#if data.guides.length > 0}
-			<div class="grid gap-5 sm:grid-cols-2">
+			<div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
 				{#each data.guides as guide (guide.slug)}
 					<GuideCard {guide} showTopic={false} />
 				{/each}

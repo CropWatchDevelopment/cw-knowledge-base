@@ -34,7 +34,7 @@
 
 <DocsShell {nav}>
 	<article class="flex flex-col gap-10 sm:gap-12">
-		<header class="flex flex-col gap-3">
+		<header class="flex max-w-[46rem] flex-col gap-3">
 			<Breadcrumb topic={article.topic} current={article.title} />
 
 			<h1 class="mt-1 text-3xl leading-tight font-bold tracking-tight text-pretty sm:text-4xl">
@@ -44,7 +44,7 @@
 		</header>
 
 		{#if toc.length > 1}
-			<details bind:open={tocOpen} class="rounded-lg border border-line bg-raised xl:hidden">
+			<details bind:open={tocOpen} class="rounded-lg border border-line bg-raised 2xl:hidden">
 				<summary
 					class="flex min-h-13 cursor-pointer list-none items-center gap-2 px-4 text-[0.9375rem] font-semibold text-ink-2 [&::-webkit-details-marker]:hidden"
 				>
@@ -74,7 +74,9 @@
 		{#if article.video}
 			<section id={VIDEO_ID} {@attach spy.track} class="flex flex-col gap-4">
 				<SectionHeading id={VIDEO_ID} heading={locale.t.watchDemo} />
-				<VideoEmbed id={article.video.id} title={article.video.title} />
+				<div class="max-w-[56rem]">
+					<VideoEmbed id={article.video.id} title={article.video.title} />
+				</div>
 			</section>
 		{/if}
 	</article>
