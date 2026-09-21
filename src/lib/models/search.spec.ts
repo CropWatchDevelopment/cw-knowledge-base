@@ -7,30 +7,66 @@ const index: SiteIndex = {
 		{
 			id: 'gateways',
 			icon: 'gateway',
-			title: { en: 'Gateways', ja: 'ゲートウェイ' },
-			description: { en: '' },
+			title: 'Gateways',
+			description: '',
 			pages: ['installing-a-gateway', 'missing-from-pages']
 		},
 		{
 			id: 'concepts',
 			icon: 'concepts',
-			title: { en: 'Concepts' },
-			description: { en: '' },
+			title: 'Concepts',
+			description: '',
 			pages: ['vpd-explained']
 		}
 	],
 	pages: {
 		'installing-a-gateway': {
 			topic: 'gateways',
-			title: { en: 'Installing a gateway', ja: 'ゲートウェイの設置' },
-			summary: { en: 'Unbox, mount and connect.' },
+			title: 'Installing a gateway',
+			summary: 'Unbox, mount and connect.',
 			hasVideo: true,
-			keywords: { en: ['setup', 'antenna'] }
+			keywords: ['setup', 'antenna']
 		},
 		'vpd-explained': {
 			topic: 'concepts',
-			title: { en: 'VPD explained' },
-			summary: { en: 'Temperature and humidity in one number. Useful next to a gateway? No.' },
+			title: 'VPD explained',
+			summary: 'Temperature and humidity in one number. Useful next to a gateway? No.',
+			hasVideo: false
+		}
+	},
+	featured: [],
+	popular: []
+};
+
+const japanese: SiteIndex = {
+	topics: [
+		{
+			id: 'gateways',
+			icon: 'gateway',
+			title: 'ゲートウェイ',
+			description: '',
+			pages: ['installing-a-gateway']
+		},
+		{
+			id: 'concepts',
+			icon: 'concepts',
+			title: '基礎知識',
+			description: '',
+			pages: ['vpd-explained']
+		}
+	],
+	pages: {
+		'installing-a-gateway': {
+			topic: 'gateways',
+			title: 'ゲートウェイの設置',
+			summary: '開封して設置し、接続します。',
+			hasVideo: true,
+			keywords: ['アンテナ', 'antenna']
+		},
+		'vpd-explained': {
+			topic: 'concepts',
+			title: 'VPD（飽差）とは',
+			summary: '温度と湿度を1つの数値に。',
 			hasVideo: false
 		}
 	},
@@ -40,22 +76,15 @@ const index: SiteIndex = {
 
 describe('buildSearchEntries', () => {
 	it('lists pages in menu order and skips slugs with no page', () => {
-		expect(buildSearchEntries(index, 'en').map((entry) => entry.slug)).toEqual([
+		expect(buildSearchEntries(index).map((entry) => entry.slug)).toEqual([
 			'installing-a-gateway',
 			'vpd-explained'
 		]);
 	});
-
-	it('uses the requested language, falling back per field', () => {
-		const [gateway, vpd] = buildSearchEntries(index, 'ja');
-		expect(gateway.title).toBe('ゲートウェイの設置');
-		expect(gateway.summary).toBe('Unbox, mount and connect.');
-		expect(vpd.title).toBe('VPD explained');
-	});
 });
 
 describe('searchEntries', () => {
-	const en = buildSearchEntries(index, 'en');
+	const en = buildSearchEntries(index);
 
 	it('returns nothing for a blank query', () => {
 		expect(searchEntries(en, '   ')).toEqual([]);
@@ -80,17 +109,18 @@ describe('searchEntries', () => {
 		expect(searchEntries(en, 'gateway tractor')).toEqual([]);
 	});
 
-	it('finds a translated page by its English title or keywords', () => {
-		const ja = buildSearchEntries(index, 'ja');
-		expect(searchEntries(ja, 'installing').map((entry) => entry.slug)).toEqual([
-			'installing-a-gateway'
-		]);
-		expect(searchEntries(ja, 'antenna')).toHaveLength(1);
-	});
-
 	it('matches Japanese text and full-width characters', () => {
-		const ja = buildSearchEntries(index, 'ja');
+		const ja = buildSearchEntries(japanese);
 		expect(searchEntries(ja, '設置').map((entry) => entry.slug)).toEqual(['installing-a-gateway']);
 		expect(searchEntries(ja, 'ＶＰＤ').map((entry) => entry.slug)).toEqual(['vpd-explained']);
+	});
+
+	it('finds a Japanese page by an English keyword written into it', () => {
+		// Nothing falls back across languages any more, so product words that readers type in
+		// English have to be listed as keywords on the Japanese page itself.
+		const ja = buildSearchEntries(japanese);
+		expect(searchEntries(ja, 'antenna').map((entry) => entry.slug)).toEqual([
+			'installing-a-gateway'
+		]);
 	});
 });

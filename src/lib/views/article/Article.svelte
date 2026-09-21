@@ -37,27 +37,10 @@
 		<header class="flex flex-col gap-3">
 			<Breadcrumb topic={article.topic} current={article.title} />
 
-			{#if !article.translated}
-				<p
-					class="rounded-lg border border-warn-line bg-warn-soft px-4 py-3 text-[0.9375rem] leading-6 text-warn-ink"
-				>
-					{locale.t.notTranslated}
-				</p>
-			{/if}
-
-			<!-- `lang` on untranslated text lets screen readers pronounce it correctly. -->
-			<h1
-				lang={article.translated ? undefined : 'en'}
-				class="mt-1 text-3xl leading-tight font-bold tracking-tight text-pretty sm:text-4xl"
-			>
+			<h1 class="mt-1 text-3xl leading-tight font-bold tracking-tight text-pretty sm:text-4xl">
 				{article.title}
 			</h1>
-			<p
-				lang={article.translated ? undefined : 'en'}
-				class="text-lg leading-7 text-pretty text-ink-2"
-			>
-				{article.intro}
-			</p>
+			<p class="text-lg leading-7 text-pretty text-ink-2">{article.intro}</p>
 		</header>
 
 		{#if toc.length > 1}

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { setLocale } from '#lib/controllers/locale-context.ts';
-	import { DEFAULT_LOCALE, LOCALES } from '#lib/models/locale.ts';
+	import { DEFAULT_LOCALE, LOCALES, type Locale } from '#lib/models/locale.ts';
 	import { MESSAGES } from '#lib/models/messages.ts';
 	import SiteFooter from '#lib/views/layout/SiteFooter.svelte';
 	import SiteHeader from '#lib/views/layout/SiteHeader.svelte';
@@ -24,20 +24,37 @@
 		document.documentElement.lang = data.lang;
 	});
 
-	/** This page's address in another language, for search engines. */
-	const alternate = (lang: string) =>
-		page.url.origin + ['', lang, ...page.url.pathname.split('/').slice(2)].join('/');
+	/**
+	 * This page's address in another language, for search engines, or `null` when that language
+	 * does not have it. Pointing a crawler at a page that is not there is worse than saying nothing.
+	 */
+	function alternate(lang: Locale): string | null {
+		const [, , topic, slug] = page.url.pathname.split('/');
+		if (!topic) return `${page.url.origin}/${lang}`;
+		if (!slug) {
+			return data.available[lang].topics.includes(topic)
+				? `${page.url.origin}/${lang}/${topic}`
+				: null;
+		}
+		const targetTopic = data.available[lang].pages[slug];
+		return targetTopic ? `${page.url.origin}/${lang}/${targetTopic}/${slug}` : null;
+	}
 </script>
 
 <svelte:head>
 	{#each LOCALES as lang (lang)}
-		<link rel="alternate" hreflang={lang} href={alternate(lang)} />
+		{@const href = alternate(lang)}
+		{#if href}
+			<link rel="alternate" hreflang={lang} {href} />
+			{#if lang === DEFAULT_LOCALE}
+				<link rel="alternate" hreflang="x-default" {href} />
+			{/if}
+		{/if}
 	{/each}
-	<link rel="alternate" hreflang="x-default" href={alternate(DEFAULT_LOCALE)} />
 </svelte:head>
 
 <div class="flex min-h-dvh flex-col">
-	<SiteHeader nav={data.nav} searchEntries={data.searchEntries} />
+	<SiteHeader nav={data.nav} searchEntries={data.searchEntries} available={data.available} />
 	{@render children()}
 	<SiteFooter />
 </div>

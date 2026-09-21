@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 	import logo from '#lib/assets/cropwatch-knowledge-base.svg';
 	import { getLocale } from '#lib/controllers/locale-context.ts';
-	import type { NavTopic } from '#lib/controllers/shell.controller.ts';
+	import type { NavTopic, ShellData } from '#lib/controllers/shell.controller.ts';
 	import type { SearchEntry } from '#lib/models/search.ts';
 	import { SITE_LINKS } from '#lib/models/site.ts';
 	import Icon from '#lib/views/shared/Icon.svelte';
@@ -11,7 +11,12 @@
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	import SideNav from './SideNav.svelte';
 
-	let { nav, searchEntries }: { nav: NavTopic[]; searchEntries: SearchEntry[] } = $props();
+	let {
+		nav,
+		searchEntries,
+		available
+	}: { nav: NavTopic[]; searchEntries: SearchEntry[]; available: ShellData['available'] } =
+		$props();
 
 	const locale = getLocale();
 
@@ -72,7 +77,7 @@
 		<Icon name="external" class="size-4" />
 	</a>
 
-	<LanguageSwitcher />
+	<LanguageSwitcher {available} />
 </header>
 
 <!-- Phone and tablet menu. <dialog> traps focus and closes on Escape by itself. -->

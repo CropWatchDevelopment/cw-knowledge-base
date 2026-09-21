@@ -1,10 +1,13 @@
 /**
  * The shape of the JSON files in `static/content/`.
  *
- * `index.json` holds everything needed for navigation and search.
- * `pages/<slug>.json` holds one full page, in every language.
+ * Each language has a tree of its own: `<lang>/index.json` holds everything needed for
+ * navigation and search, and `<lang>/pages/<slug>.json` holds one full page. A page written in
+ * one language does not exist in the other until somebody writes it there, so nothing written
+ * for English can surface on the Japanese site or the other way round.
+ *
+ * Pictures are shared, at `images/<slug>/`, since a diagram rarely needs redrawing per language.
  */
-import type { Localized } from './locale.ts';
 
 export type TopicIcon = 'hardware' | 'software' | 'gateway' | 'concepts';
 
@@ -24,8 +27,8 @@ export type Block =
 export type SectionImage = {
 	/** Path relative to `static/content/`, or `null` while the picture is still to come. */
 	src: string | null;
-	alt: Localized<string>;
-	caption?: Localized<string>;
+	alt: string;
+	caption?: string;
 	side: 'left' | 'right';
 	width?: number;
 	height?: number;
@@ -34,25 +37,25 @@ export type SectionImage = {
 export type SectionRecord = {
 	/** The anchor in the URL (`#id`). Shared by every language so external links keep working. */
 	id: string;
-	heading: Localized<string>;
-	body: Localized<Block[]>;
+	heading: string;
+	body: Block[];
 	image?: SectionImage;
 };
 
 export type LinkRecord =
-	{ kind: 'page'; slug: string } | { kind: 'url'; href: string; label: Localized<string> };
+	{ kind: 'page'; slug: string } | { kind: 'url'; href: string; label: string };
 
 export type VideoRecord = {
 	/** Any YouTube link: watch, share, shorts or embed. */
 	url: string;
-	title?: Localized<string>;
+	title?: string;
 };
 
 export type PageDocument = {
 	slug: string;
 	topic: string;
-	title: Localized<string>;
-	intro: Localized<string>;
+	title: string;
+	intro: string;
 	sections: SectionRecord[];
 	links?: LinkRecord[];
 	video?: VideoRecord;
@@ -60,19 +63,19 @@ export type PageDocument = {
 
 export type PageSummary = {
 	topic: string;
-	title: Localized<string>;
-	summary: Localized<string>;
+	title: string;
+	summary: string;
 	/** Card picture, relative to `static/content/`. */
 	image?: string | null;
 	hasVideo: boolean;
-	keywords?: Localized<string[]>;
+	keywords?: string[];
 };
 
 export type TopicRecord = {
 	id: string;
 	icon: TopicIcon;
-	title: Localized<string>;
-	description: Localized<string>;
+	title: string;
+	description: string;
 	/** Page slugs, in menu order. */
 	pages: string[];
 };

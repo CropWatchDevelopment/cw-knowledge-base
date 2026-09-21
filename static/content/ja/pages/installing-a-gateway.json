@@ -1,0 +1,180 @@
+{
+	"slug": "installing-a-gateway",
+	"topic": "gateways",
+	"title": "ゲートウェイの設置",
+	"intro": "ゲートウェイは、CropWatchセンサーからの無線データを受信し、クラウドへ送ります。このガイドでは、箱の中身の確認から、設置場所、接続、オンライン確認までの手順を説明します。",
+	"sections": [
+		{
+			"id": "what-you-need",
+			"heading": "必要なもの",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "作業を始める前に、箱の中身を確認します。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "ゲートウェイ本体、アンテナ、電源アダプター"
+							}
+						],
+						[
+							{
+								"text": "ルーターまで届く長さのLANケーブル"
+							}
+						],
+						[
+							{
+								"text": "設置場所の近くの電源コンセント"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "最後にオンライン確認を行うため、CropWatchのアカウントも必要です。"
+						}
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "箱の横に並べたゲートウェイ本体、アンテナ、電源アダプター、LANケーブル",
+				"caption": "ゲートウェイの箱に入っているもの。",
+				"side": "right"
+			}
+		},
+		{
+			"id": "mounting-location",
+			"heading": "設置場所を選ぶ",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "電波の届く範囲は、高さと見通しで決まります。できるだけ高い位置で、金属の壁や大型機械から離れ、センサーを設置するエリアの中央に近い場所を選んでください。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "詳しくは："
+						},
+						{
+							"text": "設置場所の選び方",
+							"href": "page:choosing-a-mounting-location"
+						}
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "金属製の棚から離し、室内の壁の高い位置に取り付けたゲートウェイ",
+				"caption": "高いほど有利です。センサーとの間の障害物が少なくなります。",
+				"side": "left"
+			}
+		},
+		{
+			"id": "connect",
+			"heading": "電源とネットワークを接続する",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "次の順番で接続します。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "電源を入れる前に、アンテナを取り付けます。"
+							}
+						],
+						[
+							{
+								"text": "LANケーブルをゲートウェイとルーターに接続します。"
+							}
+						],
+						[
+							{
+								"text": "電源アダプターを接続し、起動するまで数分待ちます。"
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "ゲートウェイのアンテナ端子、LANポート、電源端子のアップ",
+				"caption": "アンテナ、ネットワーク、電源の順に接続します。",
+				"side": "right"
+			}
+		},
+		{
+			"id": "confirm-online",
+			"heading": "オンラインを確認する",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "CropWatchアプリを開き、ゲートウェイの状態が"
+						},
+						{
+							"text": "オンライン",
+							"bold": true
+						},
+						{
+							"text": "になっていることを確認します。「オフライン」のままの場合は、まずLANケーブルを確認してください。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "ゲートウェイの電源は常に入れたままにしてください。センサーは、通信範囲内のゲートウェイがオンラインのときだけデータを送信できます。"
+						}
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "ゲートウェイの状態が「オンライン」と表示されたCropWatchアプリの画面",
+				"caption": "CropWatchアプリに表示されるゲートウェイの状態。",
+				"side": "left"
+			}
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "choosing-a-mounting-location"
+		},
+		{
+			"kind": "page",
+			"slug": "what-is-lorawan"
+		},
+		{
+			"kind": "url",
+			"href": "https://www.cropwatch.io",
+			"label": "CropWatchアプリを開く"
+		}
+	]
+}

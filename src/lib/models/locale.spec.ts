@@ -1,25 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isTranslated, localeFromPath, localize, preferredLocale } from './locale.ts';
-
-describe('localize', () => {
-	it('returns the requested language when it is written', () => {
-		expect(localize({ en: 'Gateway', ja: 'ゲートウェイ' }, 'ja')).toBe('ゲートウェイ');
-	});
-
-	it('falls back to the default language when the translation is missing or blank', () => {
-		expect(localize({ en: 'Gateway' }, 'ja')).toBe('Gateway');
-		expect(localize({ en: 'Gateway', ja: '  ' }, 'ja')).toBe('Gateway');
-		expect(localize({ en: ['a'], ja: [] }, 'ja')).toEqual(['a']);
-	});
-});
-
-describe('isTranslated', () => {
-	it('treats blank strings and empty lists as untranslated', () => {
-		expect(isTranslated({ en: 'x', ja: 'y' }, 'ja')).toBe(true);
-		expect(isTranslated({ en: 'x', ja: '' }, 'ja')).toBe(false);
-		expect(isTranslated({ en: 'x' }, 'ja')).toBe(false);
-	});
-});
+import { localeFromPath, preferredLocale } from './locale.ts';
 
 describe('localeFromPath', () => {
 	it('reads the first segment and ignores anything that is not a language', () => {

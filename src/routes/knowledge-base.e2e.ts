@@ -34,10 +34,33 @@ test('switching language keeps the reader on the same section', async ({ page })
 	await expect(page.getByRole('heading', { level: 1 })).toHaveText('ゲートウェイの設置');
 });
 
-test('a guide with no Japanese yet is shown in English with a notice', async ({ page }) => {
-	await page.goto('/ja/concepts/dli-and-ppfd');
-	await expect(page.getByRole('heading', { level: 1 })).toHaveText('DLI and PPFD');
-	await expect(page.getByText('まだ日本語に翻訳されていない')).toBeVisible();
+test('a guide with no Japanese yet does not exist on the Japanese site', async ({ page }) => {
+	const response = await page.goto('/ja/concepts/dli-and-ppfd');
+	expect(response?.status()).toBe(404);
+	await expect(page.getByText('DLI')).toHaveCount(0);
+});
+
+test('a topic with nothing written in Japanese is absent from the Japanese site', async ({
+	page
+}) => {
+	const response = await page.goto('/ja/software');
+	expect(response?.status()).toBe(404);
+
+	await page.goto('/ja');
+	await expect(page.getByRole('link', { name: 'ソフトウェア' })).toHaveCount(0);
+});
+
+test('the language menu offers the home page when the guide is not written there', async ({
+	page
+}) => {
+	await page.goto('/en/software/reading-the-dashboard');
+
+	await page.getByLabel(/Change language/).click();
+	const japanese = page.getByRole('link', { name: /日本語/ });
+	await expect(japanese).toContainText('日本語版はまだない');
+	await japanese.click();
+
+	await expect(page).toHaveURL('/ja');
 });
 
 test('search finds a guide and opens it', async ({ page }) => {
@@ -48,7 +71,7 @@ test('search finds a guide and opens it', async ({ page }) => {
 
 	await expect(page).toHaveURL('/en/search?q=antenna');
 	await page
-		.getByRole('link', { name: /Installing a gateway/ })
+		.getByRole('link', { name: /Installing an indoor gateway/ })
 		.last()
 		.click();
 	await expect(page).toHaveURL(GUIDE);

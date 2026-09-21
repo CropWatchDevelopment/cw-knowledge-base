@@ -1,0 +1,64 @@
+{
+	"slug": "dli-and-ppfd",
+	"topic": "concepts",
+	"title": "DLI and PPFD",
+	"intro": "PPFD tells you how much usable light is reaching your plants right now. DLI adds that up over a whole day.",
+	"sections": [
+		{
+			"id": "ppfd",
+			"heading": "PPFD: light at this moment",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Photosynthetic photon flux density (PPFD) counts the photons of light that plants can use for photosynthesis (wavelengths of 400 to 700 nm) landing on one square metre each second. The unit is µmol/m²/s."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Full summer sun can reach around 2,000 µmol/m²/s. Under cloud, shade cloth or glass it is much lower."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "dli",
+			"heading": "DLI: light over the whole day",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The daily light integral (DLI) is the total PPFD received over 24 hours, in mol/m²/day. A bright hour and a cloudy hour both count: DLI tells you what the plant received in total."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "why-it-matters",
+			"heading": "Why it matters",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Growth follows total light more closely than peak light. Two days with the same midday PPFD can have very different DLI if one of them was cloudy all morning. Tracking DLI helps you decide when shading or supplemental lighting is worth it."
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "vpd-explained"
+		}
+	]
+}

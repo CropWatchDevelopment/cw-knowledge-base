@@ -7,10 +7,9 @@
 	import { PageEditor } from '#lib/controllers/page-editor.svelte.ts';
 	import type { PageDraft } from '#lib/models/page-draft.ts';
 	import { siteUrl } from '#lib/site-url.ts';
-	import { DEFAULT_LOCALE, LOCALE_INFO, youtubeId, type SiteIndex } from '#lib/site.ts';
+	import { LOCALE_INFO, youtubeId, type Locale, type SiteIndex } from '#lib/site.ts';
 	import Icon from './Icon.svelte';
 	import LinkPicker from './LinkPicker.svelte';
-	import LocaleTabs from './LocaleTabs.svelte';
 	import RelatedLinksField from './RelatedLinksField.svelte';
 	import SectionCard from './SectionCard.svelte';
 
@@ -24,13 +23,14 @@
 
 	let { draft: loaded, index, linkTargets, isNew }: Props = $props();
 
-	// One editor per page: the route keys on the address, so opening another page starts afresh.
-	const editor = untrack(() => new PageEditor(loaded, index, isNew));
+	const lang = $derived(page.params.lang as Locale);
+
+	// One editor per page: the route keys on the address and language, so opening another starts afresh.
+	const editor = untrack(() => new PageEditor(loaded, index, isNew, lang));
 
 	let picker = $state<LinkPicker>();
 	let justSaved = $state(false);
 
-	const lang = $derived(editor.lang);
 	const draft = $derived(editor.draft);
 	const videoId = $derived(draft.videoUrl.trim() === '' ? null : youtubeId(draft.videoUrl.trim()));
 	const pageUrl = $derived(siteUrl(page.url.hostname, `/${lang}/${draft.topic}/${editor.slug}`));
@@ -48,8 +48,13 @@
 		justSaved = true;
 		setTimeout(() => (justSaved = false), 2500);
 
-		if (wasNew) await goto(resolve('/pages/[slug]', { slug: draft.slug }), { invalidateAll: true });
-		else await invalidateAll();
+		if (wasNew) {
+			await goto(resolve('/[lang=lang]/pages/[slug]', { lang, slug: draft.slug }), {
+				invalidateAll: true
+			});
+		} else {
+			await invalidateAll();
+		}
 	}
 </script>
 
@@ -64,7 +69,7 @@
 		class="sticky top-0 z-10 flex flex-wrap items-center gap-3 border-b border-line bg-surface px-6 py-3"
 	>
 		<a
-			href={resolve('/')}
+			href={resolve('/[lang=lang]', { lang })}
 			class="flex items-center gap-1.5 text-[0.9375rem] font-medium text-ink-2 no-underline hover:underline"
 		>
 			<Icon name="back" class="size-[1.125rem]" />
@@ -74,7 +79,10 @@
 		<div class="h-7 w-px bg-line-soft"></div>
 
 		<span class="max-w-60 truncate text-lg font-semibold">
-			{draft.title[DEFAULT_LOCALE] || 'New page'}
+			{draft.title || (editor.isNew ? 'New page' : draft.slug)}
+		</span>
+		<span class="chip border-neutral-line bg-neutral-soft text-neutral-ink">
+			{LOCALE_INFO[lang].label}
 		</span>
 
 		{#if editor.dirty}
@@ -84,8 +92,6 @@
 		{/if}
 
 		<div class="grow"></div>
-
-		<LocaleTabs bind:lang={editor.lang} />
 
 		<a
 			href={editor.isNew ? undefined : pageUrl}
@@ -135,26 +141,14 @@
 				<h2 class="text-lg font-semibold">Title and introduction</h2>
 
 				<label class="flex flex-col gap-1.5">
-					<span class="text-sm font-semibold text-ink-2">
-						Page title
-						{#if lang !== DEFAULT_LOCALE}
-							<span class="font-normal text-ink-3">({LOCALE_INFO[lang].label})</span>
-						{/if}
-					</span>
-					<input
-						bind:value={draft.title[lang]}
-						placeholder={lang === DEFAULT_LOCALE ? '' : draft.title[DEFAULT_LOCALE]}
-						class="field text-base"
-					/>
+					<span class="text-sm font-semibold text-ink-2">Page title</span>
+					<input bind:value={draft.title} class="field text-base" />
 				</label>
 
 				<label class="flex flex-col gap-1.5">
 					<span class="text-sm font-semibold text-ink-2">Introduction</span>
-					<textarea
-						bind:value={draft.intro[lang]}
-						rows="3"
-						placeholder={lang === DEFAULT_LOCALE ? '' : draft.intro[DEFAULT_LOCALE]}
-						class="field h-auto py-2.5 leading-6"></textarea>
+					<textarea bind:value={draft.intro} rows="3" class="field h-auto py-2.5 leading-6"
+					></textarea>
 					<span class="text-[0.8125rem] text-ink-3">One or two sentences under the title.</span>
 				</label>
 			</section>
@@ -229,7 +223,7 @@
 					<span class="text-sm font-semibold text-ink-2">Topic</span>
 					<select bind:value={draft.topic} class="field">
 						{#each index.topics as topic (topic.id)}
-							<option value={topic.id}>{topic.title[DEFAULT_LOCALE]}</option>
+							<option value={topic.id}>{topic.title}</option>
 						{/each}
 					</select>
 				</label>
@@ -255,27 +249,15 @@
 				</label>
 
 				<label class="flex flex-col gap-1.5">
-					<span class="text-sm font-semibold text-ink-2">
-						One-line summary
-						{#if lang !== DEFAULT_LOCALE}
-							<span class="font-normal text-ink-3">({LOCALE_INFO[lang].label})</span>
-						{/if}
-					</span>
-					<textarea
-						bind:value={draft.summary[lang]}
-						rows="2"
-						placeholder={lang === DEFAULT_LOCALE ? '' : draft.summary[DEFAULT_LOCALE]}
-						class="field h-auto py-2.5 leading-6"></textarea>
+					<span class="text-sm font-semibold text-ink-2">One-line summary</span>
+					<textarea bind:value={draft.summary} rows="2" class="field h-auto py-2.5 leading-6"
+					></textarea>
 					<span class="text-[0.8125rem] text-ink-3">Shown on cards and in search results.</span>
 				</label>
 
 				<label class="flex flex-col gap-1.5">
 					<span class="text-sm font-semibold text-ink-2">Words people might search for</span>
-					<input
-						bind:value={draft.keywords[lang]}
-						placeholder="antenna, ethernet, setup"
-						class="field"
-					/>
+					<input bind:value={draft.keywords} placeholder="antenna, ethernet, setup" class="field" />
 					<span class="text-[0.8125rem] text-ink-3">Separated by commas. Never shown.</span>
 				</label>
 			</section>
@@ -311,12 +293,13 @@
 			<section class="card flex flex-col gap-2">
 				<h2 class="text-lg font-semibold">Where this is saved</h2>
 				<p class="text-[0.8125rem] leading-5 text-ink-3">
-					Save page writes this file on this computer. Publish to website sends it live.
+					Save page writes this file on this computer. Publish to website sends it live. The other
+					language has a file of its own, which this screen never touches.
 				</p>
 				<span
 					class="rounded-md border border-line-soft bg-muted px-2.5 py-2 font-mono text-xs break-all text-ink-2"
 				>
-					static/content/pages/{editor.slug || '…'}.json
+					static/content/{lang}/pages/{editor.slug || '…'}.json
 				</span>
 			</section>
 		</aside>

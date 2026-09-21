@@ -9,9 +9,6 @@ export const LOCALE_INFO: Record<Locale, { label: string; short: string }> = {
 	ja: { label: '日本語', short: 'JA' }
 };
 
-/** A value stored once per language. The default language is always present. */
-export type Localized<T> = Record<typeof DEFAULT_LOCALE, T> & Partial<Record<Locale, T>>;
-
 export function isLocale(value: string): value is Locale {
 	return (LOCALES as readonly string[]).includes(value);
 }
@@ -20,20 +17,6 @@ export function isLocale(value: string): value is Locale {
 export function localeFromPath(pathname: string): Locale {
 	const [, first = ''] = pathname.split('/');
 	return isLocale(first) ? first : DEFAULT_LOCALE;
-}
-
-/** True when the value has real content in `locale` (the editor saves untranslated fields as empty). */
-export function isTranslated<T>(value: Localized<T>, locale: Locale): boolean {
-	const candidate = value[locale];
-	if (candidate === undefined || candidate === null) return false;
-	if (typeof candidate === 'string') return candidate.trim() !== '';
-	if (Array.isArray(candidate)) return candidate.length > 0;
-	return true;
-}
-
-/** The value in `locale`, falling back to the default language when it is not translated yet. */
-export function localize<T>(value: Localized<T>, locale: Locale): T {
-	return isTranslated(value, locale) ? (value[locale] as T) : value[DEFAULT_LOCALE];
 }
 
 /** Picks the best supported language from an `Accept-Language` header. */

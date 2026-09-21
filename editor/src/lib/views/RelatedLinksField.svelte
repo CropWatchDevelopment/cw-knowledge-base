@@ -1,12 +1,10 @@
 <script lang="ts">
 	import type { LinkTarget } from '#lib/controllers/pages.controller.ts';
 	import type { PageEditor } from '#lib/controllers/page-editor.svelte.ts';
-	import { DEFAULT_LOCALE, LOCALE_INFO } from '#lib/site.ts';
 	import Icon from './Icon.svelte';
 
 	let { editor, targets }: { editor: PageEditor; targets: LinkTarget[] } = $props();
 
-	const lang = $derived(editor.lang);
 	/** A page cannot sensibly link to itself. */
 	const choices = $derived(targets.filter((target) => target.slug !== editor.draft.slug));
 </script>
@@ -33,14 +31,8 @@
 				</label>
 			{:else}
 				<label class="flex min-w-40 grow basis-60 items-center gap-2">
-					<span class="sr-only">
-						Link text {lang === DEFAULT_LOCALE ? '' : `(${LOCALE_INFO[lang].label})`}
-					</span>
-					<input
-						bind:value={link.label[lang]}
-						placeholder={lang === DEFAULT_LOCALE ? 'Link text' : link.label[DEFAULT_LOCALE]}
-						class="field"
-					/>
+					<span class="sr-only">Link text</span>
+					<input bind:value={link.label} placeholder="Link text" class="field" />
 				</label>
 				<label class="flex min-w-40 grow basis-60 items-center gap-2">
 					<span class="sr-only">Web address</span>

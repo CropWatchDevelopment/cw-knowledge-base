@@ -1,5 +1,4 @@
 import type { SiteIndex } from '#lib/models/content.ts';
-import { localize, type Locale } from '#lib/models/locale.ts';
 
 export type GuideCard = {
 	slug: string;
@@ -12,7 +11,7 @@ export type GuideCard = {
 };
 
 /** Cards for the given slugs, in order. Slugs missing from the index are skipped. */
-export function toGuideCards(index: SiteIndex, lang: Locale, slugs: string[]): GuideCard[] {
+export function toGuideCards(index: SiteIndex, slugs: string[]): GuideCard[] {
 	return slugs.flatMap((slug) => {
 		const page = index.pages[slug];
 		const topic = page && index.topics.find((candidate) => candidate.id === page.topic);
@@ -21,9 +20,9 @@ export function toGuideCards(index: SiteIndex, lang: Locale, slugs: string[]): G
 		return {
 			slug,
 			topic: topic.id,
-			topicTitle: localize(topic.title, lang),
-			title: localize(page.title, lang),
-			summary: localize(page.summary, lang),
+			topicTitle: topic.title,
+			title: page.title,
+			summary: page.summary,
 			image: page.image ?? null,
 			hasVideo: page.hasVideo
 		};

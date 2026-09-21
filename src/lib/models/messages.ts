@@ -47,7 +47,7 @@ const en = {
 	pictureComing: 'Picture coming soon',
 	expandPicture: 'Open this picture larger',
 	closePicture: 'Close the picture',
-	notTranslated: 'This page is not available in English yet.',
+	notInThisLanguage: 'Not in English yet, so this opens the home page',
 
 	notFoundTitle: 'Page not found',
 	notFoundBody: 'The page may have moved, or the link may be out of date.',
@@ -101,7 +101,7 @@ const ja: Messages = {
 	pictureComing: '画像準備中',
 	expandPicture: 'この画像を拡大する',
 	closePicture: '画像を閉じる',
-	notTranslated: 'このページはまだ日本語に翻訳されていないため、英語で表示しています。',
+	notInThisLanguage: '日本語版はまだないため、トップページを開きます',
 
 	notFoundTitle: 'ページが見つかりません',
 	notFoundBody: 'ページが移動したか、リンクが古い可能性があります。',

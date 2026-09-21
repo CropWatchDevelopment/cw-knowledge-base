@@ -8,27 +8,27 @@ const index: SiteIndex = {
 		{
 			id: 'gateways',
 			icon: 'gateway',
-			title: { en: 'Gateways' },
-			description: { en: '' },
+			title: 'Gateways',
+			description: '',
 			pages: ['installing-a-gateway', 'mounting']
 		},
 		{
 			id: 'concepts',
 			icon: 'concepts',
-			title: { en: 'Concepts' },
-			description: { en: '' },
+			title: 'Concepts',
+			description: '',
 			pages: []
 		}
 	],
 	pages: {
 		'installing-a-gateway': {
 			topic: 'gateways',
-			title: { en: 'Installing a gateway' },
-			summary: { en: 'Old summary' },
+			title: 'Installing a gateway',
+			summary: 'Old summary',
 			image: null,
 			hasVideo: false
 		},
-		mounting: { topic: 'gateways', title: { en: 'Mounting' }, summary: { en: '' }, hasVideo: false }
+		mounting: { topic: 'gateways', title: 'Mounting', summary: '', hasVideo: false }
 	},
 	featured: ['installing-a-gateway'],
 	popular: []
@@ -37,15 +37,15 @@ const index: SiteIndex = {
 const page: PageDocument = {
 	slug: 'installing-a-gateway',
 	topic: 'gateways',
-	title: { en: 'Installing a gateway' },
-	intro: { en: 'Intro' },
+	title: 'Installing a gateway',
+	intro: 'Intro',
 	sections: [
-		{ id: 'first', heading: { en: 'First' }, body: { en: [] } },
+		{ id: 'first', heading: 'First', body: [] },
 		{
 			id: 'second',
-			heading: { en: 'Second' },
-			body: { en: [] },
-			image: { src: 'images/installing-a-gateway/ports.webp', alt: { en: 'Ports' }, side: 'right' }
+			heading: 'Second',
+			body: [],
+			image: { src: 'images/installing-a-gateway/ports.webp', alt: 'Ports', side: 'right' }
 		}
 	],
 	video: { url: 'https://youtu.be/dQw4w9WgXcQ' }
@@ -54,8 +54,8 @@ const page: PageDocument = {
 const save: PageSave = {
 	page,
 	meta: {
-		summary: { en: 'New summary' },
-		keywords: { en: ['antenna'] },
+		summary: 'New summary',
+		keywords: ['antenna'],
 		featured: false,
 		popular: true
 	}
@@ -67,11 +67,11 @@ describe('applyPageToIndex', () => {
 
 		expect(next.pages['installing-a-gateway']).toEqual({
 			topic: 'gateways',
-			title: { en: 'Installing a gateway' },
-			summary: { en: 'New summary' },
+			title: 'Installing a gateway',
+			summary: 'New summary',
 			image: 'images/installing-a-gateway/ports.webp',
 			hasVideo: true,
-			keywords: { en: ['antenna'] }
+			keywords: ['antenna']
 		});
 		expect(next.featured).toEqual([]);
 		expect(next.popular).toEqual(['installing-a-gateway']);
@@ -102,7 +102,7 @@ describe('applyPageToIndex', () => {
 	});
 
 	it('leaves out keywords when none were given', () => {
-		const bare = applyPageToIndex(index, { ...save, meta: { ...save.meta, keywords: { en: [] } } });
+		const bare = applyPageToIndex(index, { ...save, meta: { ...save.meta, keywords: [] } });
 		expect(bare.pages['installing-a-gateway']).not.toHaveProperty('keywords');
 	});
 });

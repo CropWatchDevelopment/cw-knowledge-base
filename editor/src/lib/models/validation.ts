@@ -6,21 +6,14 @@
  * - `pageSaveSchema` makes sure whatever reaches the server has the exact shape of the content format.
  */
 import * as v from 'valibot';
-import {
-	DEFAULT_LOCALE,
-	LOCALES,
-	youtubeId,
-	type Localized,
-	type PageDocument,
-	type SiteIndex
-} from '#lib/site.ts';
+import { youtubeId, type PageDocument, type SiteIndex } from '#lib/site.ts';
 import type { PageSave } from './page-draft.ts';
 import { RESERVED_ANCHORS, SLUG_PATTERN } from './slug.ts';
 
 export function findProblems(page: PageDocument, index: SiteIndex, isNew: boolean): string[] {
 	const problems: string[] = [];
 
-	if (!page.title[DEFAULT_LOCALE]) problems.push('Give the page a title in English.');
+	if (!page.title) problems.push('Give the page a title.');
 
 	if (!SLUG_PATTERN.test(page.slug)) {
 		problems.push('The page address can only use lowercase letters, numbers and hyphens.');
@@ -34,7 +27,7 @@ export function findProblems(page: PageDocument, index: SiteIndex, isNew: boolea
 	page.sections.forEach((section, i) => {
 		const name = `Section ${i + 1}`;
 
-		if (!section.heading[DEFAULT_LOCALE]) problems.push(`${name} needs a heading in English.`);
+		if (!section.heading) problems.push(`${name} needs a heading.`);
 
 		if (!SLUG_PATTERN.test(section.id)) {
 			problems.push(`${name} needs a link name made of lowercase letters, numbers and hyphens.`);
@@ -47,8 +40,8 @@ export function findProblems(page: PageDocument, index: SiteIndex, isNew: boolea
 		}
 		seen.add(section.id);
 
-		if (section.image && !section.image.alt[DEFAULT_LOCALE]) {
-			problems.push(`${name}: describe the picture in English, for people who cannot see it.`);
+		if (section.image && !section.image.alt) {
+			problems.push(`${name}: describe the picture, for people who cannot see it.`);
 		}
 	});
 
@@ -57,14 +50,6 @@ export function findProblems(page: PageDocument, index: SiteIndex, isNew: boolea
 	}
 
 	return problems;
-}
-
-/** Text in every language, English required. */
-function localized<T extends v.GenericSchema>(item: T) {
-	return v.pipe(
-		v.record(v.picklist(LOCALES), item),
-		v.check((value) => DEFAULT_LOCALE in value, 'English text is required')
-	) as unknown as v.GenericSchema<Localized<v.InferOutput<T>>>;
 }
 
 const slug = v.pipe(v.string(), v.regex(SLUG_PATTERN));
@@ -90,18 +75,18 @@ export const pageSaveSchema = v.object({
 	page: v.object({
 		slug,
 		topic: slug,
-		title: localized(v.string()),
-		intro: localized(v.string()),
+		title: v.string(),
+		intro: v.string(),
 		sections: v.array(
 			v.object({
 				id: slug,
-				heading: localized(v.string()),
-				body: localized(v.array(block)),
+				heading: v.string(),
+				body: v.array(block),
 				image: v.optional(
 					v.object({
 						src: v.nullable(imagePath),
-						alt: localized(v.string()),
-						caption: v.optional(localized(v.string())),
+						alt: v.string(),
+						caption: v.optional(v.string()),
 						side: v.picklist(['left', 'right']),
 						width: v.optional(v.pipe(v.number(), v.integer(), v.minValue(1))),
 						height: v.optional(v.pipe(v.number(), v.integer(), v.minValue(1)))
@@ -116,16 +101,16 @@ export const pageSaveSchema = v.object({
 					v.object({
 						kind: v.literal('url'),
 						href: v.pipe(v.string(), v.url()),
-						label: localized(v.string())
+						label: v.string()
 					})
 				])
 			)
 		),
-		video: v.optional(v.object({ url: v.string(), title: v.optional(localized(v.string())) }))
+		video: v.optional(v.object({ url: v.string(), title: v.optional(v.string()) }))
 	}),
 	meta: v.object({
-		summary: localized(v.string()),
-		keywords: localized(v.array(v.string())),
+		summary: v.string(),
+		keywords: v.array(v.string()),
 		featured: v.boolean(),
 		popular: v.boolean()
 	})
@@ -137,8 +122,8 @@ export const topicsSchema = v.pipe(
 		v.object({
 			id: slug,
 			icon: v.picklist(['hardware', 'software', 'gateway', 'concepts']),
-			title: localized(v.pipe(v.string(), v.trim(), v.minLength(1))),
-			description: localized(v.string())
+			title: v.pipe(v.string(), v.trim(), v.minLength(1)),
+			description: v.string()
 		})
 	),
 	v.minLength(1),

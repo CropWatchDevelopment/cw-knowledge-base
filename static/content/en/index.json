@@ -1,0 +1,244 @@
+{
+	"topics": [
+		{
+			"id": "hardware",
+			"icon": "hardware",
+			"title": "Hardware",
+			"description": "The sensors and devices that measure your fields, greenhouses and facilities.",
+			"pages": [
+				"air-temperature-humidity-sensors",
+				"soil-moisture-sensors"
+			]
+		},
+		{
+			"id": "software",
+			"icon": "software",
+			"title": "Software",
+			"description": "The CropWatch dashboard, alert rules and reports.",
+			"pages": [
+				"reading-the-dashboard",
+				"setting-up-alert-rules",
+				"creating-a-report",
+				"reading-a-report"
+			]
+		},
+		{
+			"id": "gateways",
+			"icon": "gateway",
+			"title": "Gateways",
+			"description": "Connect your sensors to the internet over LoRaWAN, from unboxing to online.",
+			"pages": [
+				"installing-a-gateway",
+				"choosing-a-mounting-location",
+				"installing-an-outdoor-gateway"
+			]
+		},
+		{
+			"id": "concepts",
+			"icon": "concepts",
+			"title": "Concepts",
+			"description": "Plain-language explanations of the terms you see in CropWatch.",
+			"pages": [
+				"what-is-lorawan",
+				"vpd-explained",
+				"dli-and-ppfd"
+			]
+		}
+	],
+	"pages": {
+		"installing-a-gateway": {
+			"topic": "gateways",
+			"title": "Installing an indoor gateway",
+			"summary": "Unbox, mount and connect your gateway, then confirm it is online.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"install",
+				"setup",
+				"set up",
+				"antenna",
+				"ethernet"
+			]
+		},
+		"choosing-a-mounting-location": {
+			"topic": "gateways",
+			"title": "Choosing a mounting location",
+			"summary": "Where you put the gateway decides how far your sensors can reach it.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"range",
+				"signal",
+				"placement",
+				"height"
+			]
+		},
+		"what-is-lorawan": {
+			"topic": "concepts",
+			"title": "What is LoRaWAN?",
+			"summary": "The long-range, low-power radio network that carries your sensor readings.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"lora",
+				"radio",
+				"wireless",
+				"network",
+				"range"
+			]
+		},
+		"vpd-explained": {
+			"topic": "concepts",
+			"title": "VPD explained",
+			"summary": "How temperature and humidity combine into one number that tells you how hard the air pulls water from your plants.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"vapour pressure deficit",
+				"vapor pressure deficit",
+				"humidity",
+				"transpiration",
+				"kpa"
+			]
+		},
+		"dli-and-ppfd": {
+			"topic": "concepts",
+			"title": "DLI and PPFD",
+			"summary": "PPFD is the usable light reaching your plants right now. DLI adds it up over a whole day.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"light",
+				"daily light integral",
+				"photosynthesis",
+				"par"
+			]
+		},
+		"air-temperature-humidity-sensors": {
+			"topic": "hardware",
+			"title": "Air temperature and humidity sensors",
+			"summary": "What an air sensor measures, and where to place it for readings you can trust.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"air",
+				"temperature",
+				"humidity",
+				"placement",
+				"vpd"
+			]
+		},
+		"soil-moisture-sensors": {
+			"topic": "hardware",
+			"title": "Soil moisture sensors",
+			"summary": "See how much water is available around the roots, and water by need instead of by habit.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"soil",
+				"moisture",
+				"irrigation",
+				"watering",
+				"probe"
+			]
+		},
+		"reading-the-dashboard": {
+			"topic": "software",
+			"title": "Reading the dashboard",
+			"summary": "What every part of the dashboard means, and what to do when a sensor goes quiet.",
+			"image": "images/reading-the-dashboard/01-dashboard.svg",
+			"hasVideo": false,
+			"keywords": [
+				"dashboard",
+				"cards",
+				"table",
+				"status",
+				"online",
+				"offline",
+				"last seen",
+				"sensor error",
+				"no data",
+				"search",
+				"overview"
+			]
+		},
+		"setting-up-alert-rules": {
+			"topic": "software",
+			"title": "Creating an alert rule",
+			"summary": "Step by step, with pictures: watch a reading, set the limit, and choose who is told.",
+			"image": "images/setting-up-alert-rules/01-rules-page.svg",
+			"hasVideo": false,
+			"keywords": [
+				"alert",
+				"alarm",
+				"rule",
+				"notification",
+				"threshold",
+				"limit",
+				"trigger",
+				"reset",
+				"email",
+				"line",
+				"push",
+				"too cold",
+				"too hot"
+			]
+		},
+		"creating-a-report": {
+			"topic": "software",
+			"title": "Creating a report",
+			"summary": "Step by step, with pictures: choose the sensors, set the schedule, and say who receives it.",
+			"image": "images/creating-a-report/01-reports-page.svg",
+			"hasVideo": false,
+			"keywords": [
+				"report",
+				"reports",
+				"scheduled",
+				"weekly",
+				"monthly",
+				"daily",
+				"email",
+				"recipients",
+				"summary",
+				"export"
+			]
+		},
+		"reading-a-report": {
+			"topic": "software",
+			"title": "Reading a report",
+			"summary": "What is inside the PDF: the colours, the two panels, the chart, the readings and the notes.",
+			"image": "images/reading-a-report/01-whole-page.svg",
+			"hasVideo": false,
+			"keywords": [
+				"report",
+				"pdf",
+				"chart",
+				"average",
+				"std dev",
+				"standard deviation",
+				"notes",
+				"comments",
+				"download",
+				"samples",
+				"approved"
+			]
+		},
+		"installing-an-outdoor-gateway": {
+			"topic": "gateways",
+			"title": "Installing an Outdoor Gateway",
+			"summary": "",
+			"image": null,
+			"hasVideo": false
+		}
+	},
+	"featured": [
+		"installing-a-gateway",
+		"what-is-lorawan",
+		"vpd-explained"
+	],
+	"popular": [
+		"installing-a-gateway",
+		"setting-up-alert-rules",
+		"vpd-explained"
+	]
+}

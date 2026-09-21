@@ -1,0 +1,93 @@
+{
+	"slug": "choosing-a-mounting-location",
+	"topic": "gateways",
+	"title": "Choosing a mounting location",
+	"intro": "Where you put the gateway decides how far your sensors can reach it. A few minutes spent choosing the spot saves a lot of troubleshooting later.",
+	"sections": [
+		{
+			"id": "go-high",
+			"heading": "Go high",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Radio signals travel best in a straight line. Mount the gateway as high as you practically and safely can, so that fewer things stand between it and your sensors."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "Diagram comparing a low gateway blocked by equipment with a high gateway with clear line of sight",
+				"side": "right"
+			}
+		},
+		{
+			"id": "avoid-obstacles",
+			"heading": "Keep clear of obstacles",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Metal walls, roofs and machinery block and reflect radio signals."
+							}
+						],
+						[
+							{
+								"text": "Thick concrete walls weaken the signal."
+							}
+						],
+						[
+							{
+								"text": "Keep the antenna upright, with open space around it."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "stay-central",
+			"heading": "Stay central, near power and network",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Place the gateway near the middle of the area your sensors cover, within reach of a power outlet and your network."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Ready to install? See "
+						},
+						{
+							"text": "Installing a gateway",
+							"href": "page:installing-a-gateway#connect"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "installing-a-gateway"
+		},
+		{
+			"kind": "page",
+			"slug": "what-is-lorawan"
+		}
+	]
+}

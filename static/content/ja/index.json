@@ -1,0 +1,123 @@
+{
+	"topics": [
+		{
+			"id": "hardware",
+			"icon": "hardware",
+			"title": "ハードウェア",
+			"description": "圃場、ハウス、施設を計測するセンサーと機器。",
+			"pages": []
+		},
+		{
+			"id": "software",
+			"icon": "software",
+			"title": "ソフトウェア",
+			"description": "CropWatchのダッシュボード、アラートルール、レポート。",
+			"pages": []
+		},
+		{
+			"id": "gateways",
+			"icon": "gateway",
+			"title": "ゲートウェイ",
+			"description": "LoRaWANでセンサーをインターネットにつなぎます。開封からオンラインまで。",
+			"pages": [
+				"installing-a-gateway",
+				"choosing-a-mounting-location"
+			]
+		},
+		{
+			"id": "concepts",
+			"icon": "concepts",
+			"title": "基礎知識",
+			"description": "CropWatchに出てくる用語をわかりやすく解説します。",
+			"pages": [
+				"what-is-lorawan",
+				"vpd-explained"
+			]
+		}
+	],
+	"pages": {
+		"installing-a-gateway": {
+			"topic": "gateways",
+			"title": "ゲートウェイの設置",
+			"summary": "ゲートウェイを開封して設置・接続し、オンラインになったことを確認します。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"インストール",
+				"セットアップ",
+				"設定",
+				"アンテナ",
+				"Installing an indoor gateway",
+				"install",
+				"setup",
+				"set up",
+				"antenna",
+				"ethernet"
+			]
+		},
+		"choosing-a-mounting-location": {
+			"topic": "gateways",
+			"title": "設置場所の選び方",
+			"summary": "ゲートウェイの設置場所で、センサーの電波が届く距離が決まります。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"電波",
+				"通信距離",
+				"高さ",
+				"Choosing a mounting location",
+				"range",
+				"signal",
+				"placement",
+				"height"
+			]
+		},
+		"what-is-lorawan": {
+			"topic": "concepts",
+			"title": "LoRaWANとは？",
+			"summary": "センサーのデータを運ぶ、長距離・低消費電力の無線ネットワークです。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"LoRa",
+				"無線",
+				"ネットワーク",
+				"通信",
+				"What is LoRaWAN?",
+				"lora",
+				"radio",
+				"wireless",
+				"network",
+				"range"
+			]
+		},
+		"vpd-explained": {
+			"topic": "concepts",
+			"title": "VPD（飽差）とは",
+			"summary": "温度と湿度を1つの数値にまとめ、空気が植物から水分を奪う強さを表します。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"飽差",
+				"湿度",
+				"蒸散",
+				"kPa",
+				"VPD explained",
+				"vapour pressure deficit",
+				"vapor pressure deficit",
+				"humidity",
+				"transpiration",
+				"kpa"
+			]
+		}
+	},
+	"featured": [
+		"installing-a-gateway",
+		"what-is-lorawan",
+		"vpd-explained"
+	],
+	"popular": [
+		"installing-a-gateway",
+		"vpd-explained"
+	]
+}

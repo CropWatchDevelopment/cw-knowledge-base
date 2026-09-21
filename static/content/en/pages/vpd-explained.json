@@ -1,0 +1,92 @@
+{
+	"slug": "vpd-explained",
+	"topic": "concepts",
+	"title": "VPD explained",
+	"intro": "Vapour pressure deficit (VPD) describes how strongly the air pulls moisture out of a plant. It combines temperature and humidity into one number that is often more useful than either alone.",
+	"sections": [
+		{
+			"id": "what-vpd-measures",
+			"heading": "What VPD measures",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "VPD is the gap between how much water vapour the air could hold at its current temperature and how much it actually holds. It is measured in kilopascals (kPa)."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Low VPD: ",
+								"bold": true
+							},
+							{
+								"text": "the air is nearly saturated. Plants transpire slowly and leaves stay wet for longer, which favours disease."
+							}
+						],
+						[
+							{
+								"text": "High VPD: ",
+								"bold": true
+							},
+							{
+								"text": "the air is dry and pulls water out quickly. Plants may close their stomata to save water, which slows growth."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "why-not-humidity",
+			"heading": "Why not just use humidity?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Relative humidity depends on temperature: 70% humidity at 15 °C is a very different condition for a plant from 70% at 30 °C. VPD takes temperature into account, so a single target keeps its meaning throughout the day."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "using-vpd",
+			"heading": "Using VPD in CropWatch",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "CropWatch calculates VPD from the temperature and humidity readings of an air sensor."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Many greenhouse growers aim for roughly 0.8 to 1.2 kPa, but the right range depends on your crop and its growth stage. Follow the guidance for your own crop."
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "air-temperature-humidity-sensors"
+		},
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		}
+	]
+}

@@ -1,5 +1,4 @@
 import type { SiteIndex } from '#lib/models/content.ts';
-import type { Locale } from '#lib/models/locale.ts';
 import { toGuideCards, type GuideCard } from './guide-card.ts';
 
 export type HomeData = {
@@ -7,9 +6,9 @@ export type HomeData = {
 	popular: GuideCard[];
 };
 
-export function buildHome(index: SiteIndex, lang: Locale): HomeData {
+export function buildHome(index: SiteIndex): HomeData {
 	return {
-		featured: toGuideCards(index, lang, index.featured),
-		popular: toGuideCards(index, lang, index.popular)
+		featured: toGuideCards(index, index.featured),
+		popular: toGuideCards(index, index.popular)
 	};
 }

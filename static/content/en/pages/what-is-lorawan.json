@@ -1,0 +1,123 @@
+{
+	"slug": "what-is-lorawan",
+	"topic": "concepts",
+	"title": "What is LoRaWAN?",
+	"intro": "LoRaWAN is the long-range, low-power radio network that carries readings from your CropWatch sensors to a gateway, and from there to the cloud.",
+	"sections": [
+		{
+			"id": "long-range-low-power",
+			"heading": "Long range, low power",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "LoRa is a radio technique designed to send small amounts of data over long distances using very little energy. That is why a sensor can run on a battery for a long time and still reach a gateway on the far side of a farm."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Range: ",
+								"bold": true
+							},
+							{
+								"text": "from hundreds of metres to several kilometres, depending on terrain and obstacles"
+							}
+						],
+						[
+							{
+								"text": "Data: ",
+								"bold": true
+							},
+							{
+								"text": "small messages, such as one temperature reading, sent at intervals rather than continuously"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "how-a-reading-reaches-you",
+			"heading": "How a reading reaches you",
+			"body": [
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "The sensor takes a reading and sends it by radio."
+							}
+						],
+						[
+							{
+								"text": "Any gateway in range receives it and forwards it over the internet."
+							}
+						],
+						[
+							{
+								"text": "The network server checks the message and passes it to CropWatch."
+							}
+						],
+						[
+							{
+								"text": "CropWatch stores the reading and shows it on your dashboard."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Sensors do not connect to your Wi-Fi. They only talk to a LoRaWAN gateway."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "Diagram: sensor, radio link to gateway, internet, network server, CropWatch dashboard",
+				"caption": "The path of one reading, from the field to your screen.",
+				"side": "right"
+			}
+		},
+		{
+			"id": "what-affects-range",
+			"heading": "What affects range",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Height, obstacles and distance matter most. Buildings, metal structures, hills and dense vegetation all shorten the range. A well-placed gateway makes the biggest difference: see "
+						},
+						{
+							"text": "Choosing a mounting location",
+							"href": "page:choosing-a-mounting-location"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "installing-a-gateway"
+		},
+		{
+			"kind": "page",
+			"slug": "choosing-a-mounting-location"
+		}
+	]
+}

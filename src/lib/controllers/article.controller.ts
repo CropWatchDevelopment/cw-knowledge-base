@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { Block, InlineNode, SiteIndex } from '#lib/models/content.ts';
 import type { ContentRepository } from '#lib/models/content-repository.ts';
-import { isTranslated, localize, type Locale } from '#lib/models/locale.ts';
+import type { Locale } from '#lib/models/locale.ts';
 import { youtubeId } from '#lib/models/video.ts';
 
 export type InlineLink =
@@ -42,8 +42,6 @@ export type ArticleData = {
 	topic: { id: string; title: string };
 	title: string;
 	intro: string;
-	/** False when the page is shown in the default language because `lang` is not written yet. */
-	translated: boolean;
 	sections: SectionView[];
 	links: RelatedLinkView[];
 	video: { id: string; title: string } | null;
@@ -57,10 +55,10 @@ export async function loadArticle(
 	slug: string
 ): Promise<ArticleData> {
 	const topic = index.topics.find((candidate) => candidate.id === topicId);
-	const page = topic?.pages.includes(slug) ? await content.page(slug) : null;
+	const page = topic?.pages.includes(slug) ? await content.page(lang, slug) : null;
 	if (!topic || !page) error(404, 'Not found');
 
-	/** `page:<slug>#<id>` becomes a link to that page in the reader's language; unknown pages lose the link. */
+	/** `page:<slug>#<id>` becomes a link to that page; a page this language lacks loses the link. */
 	const toInline = (node: InlineNode): InlineView => {
 		let link: InlineLink | null = null;
 
@@ -80,24 +78,22 @@ export async function loadArticle(
 			? { ...block, items: block.items.map((item) => item.map(toInline)) }
 			: { ...block, content: block.content.map(toInline) };
 
-	const title = localize(page.title, lang);
 	const videoId = page.video ? youtubeId(page.video.url) : null;
 
 	return {
 		slug,
-		topic: { id: topic.id, title: localize(topic.title, lang) },
-		title,
-		intro: localize(page.intro, lang),
-		translated: isTranslated(page.title, lang),
+		topic: { id: topic.id, title: topic.title },
+		title: page.title,
+		intro: page.intro,
 		sections: page.sections.map((section) => ({
 			id: section.id,
-			heading: localize(section.heading, lang),
-			blocks: localize(section.body, lang).map(toBlock),
+			heading: section.heading,
+			blocks: section.body.map(toBlock),
 			image: section.image
 				? {
 						src: section.image.src,
-						alt: localize(section.image.alt, lang),
-						caption: section.image.caption ? localize(section.image.caption, lang) : null,
+						alt: section.image.alt,
+						caption: section.image.caption ?? null,
 						side: section.image.side,
 						width: section.image.width,
 						height: section.image.height
@@ -106,7 +102,7 @@ export async function loadArticle(
 		})),
 		links: (page.links ?? []).flatMap((link): RelatedLinkView[] => {
 			if (link.kind === 'url') {
-				return [{ kind: 'url', href: link.href, label: localize(link.label, lang) }];
+				return [{ kind: 'url', href: link.href, label: link.label }];
 			}
 			const target = index.pages[link.slug];
 			const targetTopic = target && index.topics.find((candidate) => candidate.id === target.topic);
@@ -116,13 +112,11 @@ export async function loadArticle(
 					kind: 'page',
 					topic: targetTopic.id,
 					slug: link.slug,
-					title: localize(target.title, lang),
-					topicTitle: localize(targetTopic.title, lang)
+					title: target.title,
+					topicTitle: targetTopic.title
 				}
 			];
 		}),
-		video: videoId
-			? { id: videoId, title: page.video?.title ? localize(page.video.title, lang) : title }
-			: null
+		video: videoId ? { id: videoId, title: page.video?.title || page.title } : null
 	};
 }

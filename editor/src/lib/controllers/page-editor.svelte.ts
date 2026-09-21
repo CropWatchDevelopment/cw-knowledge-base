@@ -10,14 +10,13 @@ import {
 } from '#lib/models/page-draft.ts';
 import { RESERVED_ANCHORS, slugify, uniqueSlug } from '#lib/models/slug.ts';
 import { findProblems } from '#lib/models/validation.ts';
-import { DEFAULT_LOCALE, type Locale, type SiteIndex } from '#lib/site.ts';
+import type { Locale, SiteIndex } from '#lib/site.ts';
 import { savePage } from './content.remote.ts';
 import { uploadImage } from './image-upload.ts';
 
-/** The state behind the page editing screen: the draft, the language being written, and saving. */
+/** The state behind the page editing screen: the draft, and saving it to this language's tree. */
 export class PageEditor {
 	draft: PageDraft;
-	lang = $state<Locale>(DEFAULT_LOCALE);
 	saving = $state(false);
 	/** What stopped the last save, in words for the writer. */
 	problems = $state<string[]>([]);
@@ -25,26 +24,26 @@ export class PageEditor {
 	isNew: boolean;
 
 	#index: SiteIndex;
+	#lang: Locale;
 	#saved = $state('');
 	#addressTyped = $state(false);
 
 	dirty: boolean;
-	/** A new page takes its address from the English title until someone types one. */
+	/** A new page takes its address from the title until someone types one. */
 	slug: string;
 	/** The address is part of each picture's path, so it is fixed once a picture has been added. */
 	slugLocked: boolean;
 
-	constructor(draft: PageDraft, index: SiteIndex, isNew: boolean) {
+	constructor(draft: PageDraft, index: SiteIndex, isNew: boolean, lang: Locale) {
 		this.draft = $state(draft);
 		this.isNew = $state(isNew);
 		this.#index = index;
+		this.#lang = lang;
 		this.#saved = JSON.stringify(draft);
 
 		this.dirty = $derived(JSON.stringify(this.draft) !== this.#saved);
 		this.slug = $derived(
-			!this.isNew || this.#addressTyped
-				? this.draft.slug
-				: slugify(this.draft.title[DEFAULT_LOCALE])
+			!this.isNew || this.#addressTyped ? this.draft.slug : slugify(this.draft.title)
 		);
 		this.slugLocked = $derived(
 			!this.isNew || this.draft.sections.some((section) => section.image?.src)
@@ -56,7 +55,7 @@ export class PageEditor {
 		this.draft.slug = slugify(typed);
 	};
 
-	/** New sections are named after their English heading; published ones keep the anchor they have. */
+	/** New sections are named after their heading; published ones keep the anchor they have. */
 	anchorOf(section: DraftSection): string {
 		if (section.anchorLocked) return section.id;
 
@@ -64,7 +63,7 @@ export class PageEditor {
 			.filter((other) => other !== section && other.anchorLocked)
 			.map((other) => other.id);
 		const index = this.draft.sections.indexOf(section);
-		const wanted = slugify(section.heading[DEFAULT_LOCALE]) || `section-${index + 1}`;
+		const wanted = slugify(section.heading) || `section-${index + 1}`;
 
 		return uniqueSlug(wanted, [...taken, ...RESERVED_ANCHORS]);
 	}
@@ -118,7 +117,7 @@ export class PageEditor {
 
 		this.saving = true;
 		try {
-			await savePage({ ...save, isNew: this.isNew });
+			await savePage({ ...save, isNew: this.isNew, lang: this.#lang });
 		} catch (cause) {
 			this.problems = isHttpError(cause)
 				? cause.body.message.split('\n')

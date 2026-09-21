@@ -1,5 +1,4 @@
 import type { SiteIndex } from './content.ts';
-import { DEFAULT_LOCALE, localize, type Locale } from './locale.ts';
 
 export type SearchEntry = {
 	slug: string;
@@ -17,35 +16,25 @@ function normalize(text: string): string {
 	return text.normalize('NFKC').toLowerCase().trim();
 }
 
-/** One entry per page listed in a topic, in menu order, with text in `locale`. */
-export function buildSearchEntries(index: SiteIndex, locale: Locale): SearchEntry[] {
+/** One entry per page listed in a topic, in menu order. */
+export function buildSearchEntries(index: SiteIndex): SearchEntry[] {
 	return index.topics.flatMap((topic) =>
 		topic.pages.flatMap((slug) => {
 			const page = index.pages[slug];
 			if (!page) return [];
 
-			const title = localize(page.title, locale);
-			const summary = localize(page.summary, locale);
-			const topicTitle = localize(topic.title, locale);
-			const keywords = page.keywords ? localize(page.keywords, locale) : [];
-
-			// Product words are often typed in English whatever the reader's language,
-			// so the default-language title and keywords are searchable everywhere.
-			const fallbackTitle = page.title[DEFAULT_LOCALE];
-			const fallbackKeywords = page.keywords?.[DEFAULT_LOCALE] ?? [];
+			const { title, summary } = page;
 
 			return {
 				slug,
 				topic: topic.id,
-				topicTitle,
+				topicTitle: topic.title,
 				title,
 				summary,
 				hasVideo: page.hasVideo,
 				haystack: {
 					title: normalize(title),
-					keywords: normalize(
-						[...keywords, topicTitle, fallbackTitle, ...fallbackKeywords].join(' ')
-					),
+					keywords: normalize([...(page.keywords ?? []), topic.title].join(' ')),
 					summary: normalize(summary)
 				}
 			};

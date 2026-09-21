@@ -1,4 +1,4 @@
-/** Keeps `index.json` in step with the page files. Every function returns a new index. */
+/** Keeps one language's `index.json` in step with its page files. Every function returns a new index. */
 import type { SiteIndex } from '#lib/site.ts';
 import type { PageSave } from './page-draft.ts';
 
@@ -22,9 +22,7 @@ export function applyPageToIndex(index: SiteIndex, { page, meta }: PageSave): Si
 				// The card on the home page shows the first picture in the guide.
 				image: page.sections.find((section) => section.image?.src)?.image?.src ?? null,
 				hasVideo: Boolean(page.video),
-				...(Object.values(meta.keywords).some((words) => words.length > 0) && {
-					keywords: meta.keywords
-				})
+				...(meta.keywords.length > 0 && { keywords: meta.keywords })
 			}
 		},
 		featured: toggle(index.featured, page.slug, meta.featured),

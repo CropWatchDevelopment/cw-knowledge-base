@@ -1,0 +1,93 @@
+{
+	"slug": "choosing-a-mounting-location",
+	"topic": "gateways",
+	"title": "設置場所の選び方",
+	"intro": "ゲートウェイの設置場所で、センサーの電波が届く距離が決まります。最初に場所をしっかり選んでおくと、あとのトラブルを大きく減らせます。",
+	"sections": [
+		{
+			"id": "go-high",
+			"heading": "高い位置に設置する",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "電波はまっすぐ進むときに最もよく届きます。安全に作業できる範囲でできるだけ高い位置に設置し、センサーとの間にある障害物を減らします。"
+						}
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "低い位置で機器に遮られるゲートウェイと、高い位置で見通しのよいゲートウェイを比べた図",
+				"side": "right"
+			}
+		},
+		{
+			"id": "avoid-obstacles",
+			"heading": "障害物を避ける",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "金属の壁や屋根、機械は電波を遮ったり反射したりします。"
+							}
+						],
+						[
+							{
+								"text": "厚いコンクリートの壁は電波を弱めます。"
+							}
+						],
+						[
+							{
+								"text": "アンテナは垂直に立て、周囲に空間を確保します。"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "stay-central",
+			"heading": "中央に、電源とネットワークの近くに",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "ゲートウェイは、センサーを設置するエリアの中央付近で、電源コンセントとネットワークに接続できる場所に設置します。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "設置の手順は"
+						},
+						{
+							"text": "ゲートウェイの設置",
+							"href": "page:installing-a-gateway#connect"
+						},
+						{
+							"text": "をご覧ください。"
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "installing-a-gateway"
+		},
+		{
+			"kind": "page",
+			"slug": "what-is-lorawan"
+		}
+	]
+}

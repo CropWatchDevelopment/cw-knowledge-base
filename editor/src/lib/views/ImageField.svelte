@@ -1,17 +1,15 @@
 <script lang="ts">
 	import type { DraftImage } from '#lib/models/page-draft.ts';
-	import { DEFAULT_LOCALE, LOCALE_INFO, type Locale } from '#lib/site.ts';
 	import Icon from './Icon.svelte';
 
 	type Props = {
 		image: DraftImage | null;
-		lang: Locale;
 		/** Stores the file and fills in `src`, width and height on the section. */
 		upload: (file: File) => Promise<void>;
 		onremove: () => void;
 	};
 
-	let { image, lang, upload, onremove }: Props = $props();
+	let { image, upload, onremove }: Props = $props();
 
 	let input = $state<HTMLInputElement>();
 	let busy = $state(false);
@@ -92,13 +90,8 @@
 
 	{#if image}
 		<label class="flex flex-col gap-1.5">
-			<span class="text-sm font-semibold text-ink-2">
-				What the picture shows
-				{#if lang !== DEFAULT_LOCALE}<span class="font-normal text-ink-3">
-						({LOCALE_INFO[lang].label})</span
-					>{/if}
-			</span>
-			<input bind:value={image.alt[lang]} class="field" />
+			<span class="text-sm font-semibold text-ink-2">What the picture shows</span>
+			<input bind:value={image.alt} class="field" />
 			<span class="text-[0.8125rem] text-ink-3">
 				Read aloud to people who cannot see the picture. Not shown on the page.
 			</span>
@@ -106,7 +99,7 @@
 
 		<label class="flex flex-col gap-1.5">
 			<span class="text-sm font-semibold text-ink-2">Caption under the picture (optional)</span>
-			<input bind:value={image.caption[lang]} class="field" />
+			<input bind:value={image.caption} class="field" />
 		</label>
 
 		<div class="flex items-center gap-3">

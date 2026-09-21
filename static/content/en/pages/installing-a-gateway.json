@@ -1,0 +1,180 @@
+{
+	"slug": "installing-a-gateway",
+	"topic": "gateways",
+	"title": "Installing an indoor gateway",
+	"intro": "A gateway receives the radio messages from your CropWatch sensors and passes them on to the cloud. This guide covers what is in the box, where to mount it, how to connect it, and how to confirm it is online.",
+	"sections": [
+		{
+			"id": "what-you-need",
+			"heading": "What you need",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Check the box before you start. You should have:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The gateway, its antenna and the power adapter"
+							}
+						],
+						[
+							{
+								"text": "An Ethernet cable long enough to reach your router"
+							}
+						],
+						[
+							{
+								"text": "A power outlet close to the mounting spot"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "You will also need your CropWatch account to confirm the gateway is online at the end."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "The gateway, antenna, power adapter and Ethernet cable laid out next to the box",
+				"caption": "Everything that ships in the gateway box.",
+				"side": "right"
+			}
+		},
+		{
+			"id": "mounting-location",
+			"heading": "Choose a mounting location",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Radio range depends on height and line of sight. Mount the gateway as high as you practically can, away from metal walls and large machinery, and near the middle of the area your sensors cover."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "More detail: "
+						},
+						{
+							"text": "Choosing a mounting location",
+							"href": "page:choosing-a-mounting-location"
+						}
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "A gateway mounted high on an interior wall, clear of metal shelving",
+				"caption": "Higher is better: fewer obstacles between sensors and gateway.",
+				"side": "left"
+			}
+		},
+		{
+			"id": "connect",
+			"heading": "Connect power and network",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Connect things in this order:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Screw on the antenna before applying power."
+							}
+						],
+						[
+							{
+								"text": "Plug the Ethernet cable into the gateway and your router."
+							}
+						],
+						[
+							{
+								"text": "Connect the power adapter and give the gateway a few minutes to start."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "Close-up of the gateway's antenna connector, Ethernet port and power socket",
+				"caption": "Antenna first, then network, then power.",
+				"side": "right"
+			}
+		},
+		{
+			"id": "confirm-online",
+			"heading": "Confirm the gateway is online",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Open the CropWatch app and find your gateway. Its status should read "
+						},
+						{
+							"text": "Online",
+							"bold": true
+						},
+						{
+							"text": ". If it still shows Offline, check the network cable first."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Keep the gateway powered at all times. Sensors can only report while a gateway is in range and online."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "Screenshot of the CropWatch app showing a gateway with the status Online",
+				"caption": "The gateway status shown in the CropWatch app.",
+				"side": "left"
+			}
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "choosing-a-mounting-location"
+		},
+		{
+			"kind": "page",
+			"slug": "what-is-lorawan"
+		},
+		{
+			"kind": "url",
+			"href": "https://www.cropwatch.io",
+			"label": "Open the CropWatch app"
+		}
+	]
+}

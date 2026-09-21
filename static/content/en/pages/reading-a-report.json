@@ -1,0 +1,580 @@
+{
+	"slug": "reading-a-report",
+	"topic": "software",
+	"title": "Reading a report",
+	"intro": "What is inside a CropWatch report, part by part, and how to get the sense of one in about a minute.",
+	"sections": [
+		{
+			"id": "what-arrives",
+			"heading": "What arrives",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A report is a PDF, emailed to everyone on its recipient list. One sensor, one report: a template covering four sensors sends four PDFs."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Every page carries the same dark blue bar across the top with the report's name, the period it covers, the sensor and its location, so a printed page is never orphaned. Along the bottom, the same three details and the page number."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The first page is the summary. The pages after it are the readings, and the last page holds any notes."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/reading-a-report/01-whole-page.svg",
+				"alt": "A whole page of a report: the title bar, the device details, the sign-off box, the alert summary, the temperature and humidity panels, the chart and the start of the table",
+				"caption": "The first page. Click it to see it full size.",
+				"side": "right",
+				"width": 680,
+				"height": 960
+			}
+		},
+		{
+			"id": "the-top-of-the-page",
+			"heading": "The top of the page",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Under the title bar are the details of what you are looking at:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Location",
+								"bold": true
+							},
+							{
+								"text": " and "
+							},
+							{
+								"text": "Device Name",
+								"bold": true
+							},
+							{
+								"text": " — where the sensor is and what it is called in CropWatch."
+							}
+						],
+						[
+							{
+								"text": "Device Type",
+								"bold": true
+							},
+							{
+								"text": " — Air Sensor, and so on."
+							}
+						],
+						[
+							{
+								"text": "Dev EUI",
+								"bold": true
+							},
+							{
+								"text": " — the sensor's serial number. Quote this if you ever ask us about a reading."
+							}
+						],
+						[
+							{
+								"text": "Period",
+								"bold": true
+							},
+							{
+								"text": " — the days the report covers."
+							}
+						],
+						[
+							{
+								"text": "Samples",
+								"bold": true
+							},
+							{
+								"text": " — how many readings went into it. A week of readings every 15 minutes is about 672."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On the right are three empty boxes: “Approved”, “Reviewed” and “Prepared”. They are for signatures. If your paperwork needs someone to sign off the week, print the report and sign there."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/reading-a-report/02-top-of-the-page.svg",
+				"alt": "The top of a report page: the title bar, the device details and the empty Approved, Reviewed and Prepared boxes",
+				"caption": "The details, and the three boxes for signing off.",
+				"side": "left",
+				"width": 680,
+				"height": 330
+			}
+		},
+		{
+			"id": "the-colours",
+			"heading": "The coloured squares",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Under the details is a short list of coloured squares. These come from the alerts set on the report, and they are the fastest thing on the page to read."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each line says the same three things:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "What it is watching for, and at what number."
+							}
+						],
+						[
+							{
+								"text": "How many readings crossed it."
+							}
+						],
+						[
+							{
+								"text": "What share of the whole period that was."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“High Temp (≥ 25°C): 82 (27%)” means 82 readings were at or above 25 °C, which was 27% of the week. Not a disaster, but not nothing either."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The same colours are used further down, on the readings themselves. That is how you find which hours they were."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/reading-a-report/03-alert-summary.svg",
+				"alt": "The alert summary: a red square reading High Temp 82 readings or 27 per cent, and an amber square reading Low Humidity 51 readings or 17 per cent",
+				"caption": "Each line: the limit, how many crossed it, and what share of the period.",
+				"side": "right",
+				"width": 680,
+				"height": 230
+			}
+		},
+		{
+			"id": "the-two-panels",
+			"heading": "The temperature and humidity panels",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Two boxes give the period in four numbers each."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Max",
+								"bold": true
+							},
+							{
+								"text": " — the highest reading."
+							}
+						],
+						[
+							{
+								"text": "Min",
+								"bold": true
+							},
+							{
+								"text": " — the lowest."
+							}
+						],
+						[
+							{
+								"text": "Avg",
+								"bold": true
+							},
+							{
+								"text": " — the average across every reading."
+							}
+						],
+						[
+							{
+								"text": "Std Dev",
+								"bold": true
+							},
+							{
+								"text": " — how much the readings moved about. Small means steady; large means it swung. Two weeks can share an average and be nothing alike, and this is the number that tells them apart."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A greenhouse averaging 21 °C with a standard deviation of 1 °C held steady. The same average with 6 °C was on a rollercoaster."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/reading-a-report/04-summary-panels.svg",
+				"alt": "The Temperature and Humidity panels, each listing Max, Min, Avg and Std Dev for the period",
+				"caption": "Four numbers each: highest, lowest, average, and how much it moved.",
+				"side": "left",
+				"width": 680,
+				"height": 260
+			}
+		},
+		{
+			"id": "the-chart",
+			"heading": "The chart",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The chart is the shape of the period. Two lines are drawn on it, and they use different scales:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The red line is temperature",
+								"bold": true
+							},
+							{
+								"text": ", read against the numbers on the "
+							},
+							{
+								"text": "left",
+								"bold": true
+							},
+							{
+								"text": " edge, in degrees."
+							}
+						],
+						[
+							{
+								"text": "The blue line is humidity",
+								"bold": true
+							},
+							{
+								"text": ", read against the numbers on the "
+							},
+							{
+								"text": "right",
+								"bold": true
+							},
+							{
+								"text": " edge, as a percentage."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The regular rise and fall is day and night. What to look for is anything that breaks the pattern: a night that did not cool, a spike in the middle of the afternoon, a flat line where the sensor stopped reporting."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Because the two lines use different scales, they cross each other often. That means nothing in itself."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/reading-a-report/05-chart.svg",
+				"alt": "The chart: a red temperature line read against the left scale in degrees, and a blue humidity line read against the right scale in per cent",
+				"caption": "Red is temperature on the left scale; blue is humidity on the right.",
+				"side": "right",
+				"width": 680,
+				"height": 340
+			}
+		},
+		{
+			"id": "the-readings",
+			"heading": "The table of readings",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The rest of the report is the readings themselves, two columns to a page to save paper: a time, the temperature, the humidity, and a Comments column."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The rows are spaced by the report's “Data pull interval” — every 30 minutes unless it was changed."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Two things stand out in this table:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Coloured readings",
+								"bold": true
+							},
+							{
+								"text": " — a value shaded red or amber crossed one of the limits at the top of the report. The colour tells you which one."
+							}
+						],
+						[
+							{
+								"text": "A small number in Comments",
+								"bold": true
+							},
+							{
+								"text": " — somebody wrote a note about that reading. The note itself is on the last page."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "A reading that set off an alert is always listed, even when the spacing would otherwise have skipped past it. Nothing that crossed a limit is hidden."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/reading-a-report/06-table.svg",
+				"alt": "The data table: a row every fifteen minutes, with three temperature readings shaded amber and red, and a small 1 in the Comments column",
+				"caption": "Shaded values crossed a limit. The 1 points at a note.",
+				"side": "left",
+				"width": 680,
+				"height": 330
+			}
+		},
+		{
+			"id": "the-notes",
+			"heading": "The last page: notes",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If anybody added notes, the final page is headed “Report Notes” and lists them in order, each with its time and who wrote it."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This is where the report explains itself. A spike at two in the afternoon looks alarming on its own; “sensor briefly in direct sun” turns it into nothing. Without the note, somebody re-investigates the same spike next month."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The numbers in the Comments column match the numbers here. If there are no notes, the page is not printed at all."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Notes are added afterwards, from the Reports page, and the report is rebuilt with them. It is not emailed round again — the copy with notes sits beside the original, ready to download."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/reading-a-report/07-notes-page.svg",
+				"alt": "The last page of the report, headed Report Notes, listing two numbered notes with their time and who wrote them",
+				"caption": "Each note carries its time and its author.",
+				"side": "right",
+				"width": 680,
+				"height": 300
+			}
+		},
+		{
+			"id": "reading-it-quickly",
+			"heading": "Reading one in a minute",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If a report lands in your inbox and you have a minute, do this:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Check the period and the sensor name in the title bar — the right report about the right thing."
+							}
+						],
+						[
+							{
+								"text": "Read the coloured lines. No lines at all means nothing crossed a limit."
+							}
+						],
+						[
+							{
+								"text": "Look at the two panels. Are Max and Min where you expect?"
+							}
+						],
+						[
+							{
+								"text": "Glance at the chart for anything that breaks the daily rhythm."
+							}
+						],
+						[
+							{
+								"text": "Only then go to the table, and only for the hours you care about."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The table is there for proof and for the record. The first page is the one that tells you whether to worry."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "keeping-them",
+			"heading": "Keeping and finding old reports",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Every report is kept. On the Reports page, the clock button on a row lists everything that template has produced, newest first, with a “Download” button on each."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "That is the place to go for last quarter's paperwork, or when somebody deleted the email."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Readings are kept for 24 months, and notes can be added to a report for up to 23 months after its period ends. Older reports can still be downloaded; they simply cannot be annotated."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "language",
+			"heading": "Japanese and English",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The report is produced with Japanese labels — 温度 for temperature, 湿度 for humidity, 備考 for comments. The layout, the numbers and the colours are the same either way; only the words change."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If your reports should be in English instead, ask support to switch them. It is not something you can change yourself on the Reports page."
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "creating-a-report"
+		},
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		}
+	]
+}

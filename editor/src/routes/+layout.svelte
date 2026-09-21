@@ -3,25 +3,45 @@
 	import { page } from '$app/state';
 	import logo from '../../../src/lib/assets/cropwatch-knowledge-base.svg';
 	import { siteUrl } from '#lib/site-url.ts';
+	import { DEFAULT_LOCALE, LOCALES, LOCALE_INFO, type Locale } from '#lib/site.ts';
 	import Icon from '#lib/views/Icon.svelte';
 	import PublishButton from '#lib/views/PublishButton.svelte';
 	import '../app.css';
 
 	let { data, children } = $props();
 
-	const website = $derived(siteUrl(page.url.hostname));
+	/** Every screen below lives under a language, so the whole editor follows this one choice. */
+	const lang = $derived((page.params.lang ?? DEFAULT_LOCALE) as Locale);
+	const website = $derived(siteUrl(page.url.hostname, `/${lang}`));
 
-	const NAV = [
-		{ href: resolve('/'), label: 'Pages', icon: 'pages' },
-		{ href: resolve('/topics'), label: 'Topics and menu order', icon: 'topics' }
-	] as const;
+	/**
+	 * The same screen in another language. A guide that has not been written in that language
+	 * has nothing to open, so those land on its list of pages instead of a missing file.
+	 */
+	function inLanguage(locale: Locale): string {
+		const open = data.openPageLanguages;
+		if (open && !open.includes(locale)) return resolve('/[lang=lang]', { lang: locale });
+		return page.url.pathname.replace(/^\/[^/]*/, `/${locale}`);
+	}
+
+	const NAV = $derived([
+		{ href: resolve('/[lang=lang]', { lang }), label: 'Pages', icon: 'pages' },
+		{
+			href: resolve('/[lang=lang]/topics', { lang }),
+			label: 'Topics and menu order',
+			icon: 'topics'
+		}
+	] as const);
 </script>
 
 <div class="flex min-h-dvh flex-col">
 	<header
 		class="flex h-20 shrink-0 items-center gap-4 border-b-2 border-line-soft bg-brand px-4 sm:px-6"
 	>
-		<a href={resolve('/')} class="flex items-center gap-3 text-white no-underline">
+		<a
+			href={resolve('/[lang=lang]', { lang })}
+			class="flex items-center gap-3 text-white no-underline"
+		>
 			<img src={logo} alt="" width="48" height="48" class="size-12" />
 			<span class="flex flex-col">
 				<span class="text-base leading-5 font-bold">Knowledge Base Editor</span>
@@ -30,6 +50,27 @@
 		</a>
 
 		<div class="grow"></div>
+
+		<div
+			role="group"
+			aria-label="Language you are editing"
+			class="flex h-11 items-center gap-1 rounded-xl border border-white/25 bg-white/10 p-1"
+		>
+			{#each LOCALES as locale (locale)}
+				<a
+					href={inLanguage(locale)}
+					aria-current={lang === locale ? 'true' : undefined}
+					class={[
+						'flex h-full items-center rounded-lg px-4 text-sm no-underline',
+						lang === locale
+							? 'bg-white font-semibold text-brand'
+							: 'font-medium text-white hover:bg-white/15'
+					]}
+				>
+					{LOCALE_INFO[locale].label}
+				</a>
+			{/each}
+		</div>
 
 		<a
 			href={website}
@@ -51,7 +92,7 @@
 			<div
 				class="px-2 pt-2 pb-1 text-[0.625rem] font-bold tracking-[0.075em] text-nav-group uppercase"
 			>
-				Content
+				{LOCALE_INFO[lang].label} content
 			</div>
 			{#each NAV as item (item.href)}
 				{@const current = page.url.pathname === item.href}
