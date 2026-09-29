@@ -1,0 +1,64 @@
+{
+	"slug": "dli-and-ppfd",
+	"topic": "concepts",
+	"title": "DLIとPPFD",
+	"intro": "PPFDは、いま植物に届いている、光合成に使える光の量を表します。DLIは、それを1日分合計したものです。",
+	"sections": [
+		{
+			"id": "ppfd",
+			"heading": "PPFD：いまこの瞬間の光",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "光合成光量子束密度（PPFD）は、植物が光合成に使える光（波長400〜700 nm）の光子が、1平方メートルに1秒間あたりいくつ届くかを表します。単位はµmol/m²/sです。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "夏の晴天時には約2,000 µmol/m²/sに達することがあります。曇りの日や遮光ネット、ガラスの下では、これよりずっと低くなります。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "dli",
+			"heading": "DLI：1日を通した光",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "積算光量（DLI）は、24時間に受けたPPFDの合計で、単位はmol/m²/dayです。明るい時間も曇った時間もすべて足し合わせるため、植物が受け取った光の総量がわかります。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "why-it-matters",
+			"heading": "なぜ重要なのか",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "生育は、ピーク時の光よりも光の総量との関係が強い傾向があります。正午のPPFDが同じ2日間でも、片方が午前中ずっと曇っていれば、DLIは大きく異なります。DLIを記録しておくと、遮光や補光が必要かどうかを判断しやすくなります。"
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "vpd-explained"
+		}
+	]
+}

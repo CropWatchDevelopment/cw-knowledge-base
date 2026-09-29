@@ -6,6 +6,7 @@
 			"title": "Hardware",
 			"description": "The sensors and devices that measure your fields, greenhouses and facilities.",
 			"pages": [
+				"sensor-installation-and-maintenance",
 				"air-temperature-humidity-sensors",
 				"soil-moisture-sensors"
 			]
@@ -16,6 +17,7 @@
 			"title": "Software",
 			"description": "The CropWatch dashboard, alert rules and reports.",
 			"pages": [
+				"resetting-your-password",
 				"reading-the-dashboard",
 				"sensor-settings",
 				"setting-up-alert-rules",
@@ -256,6 +258,53 @@
 				"iso17025",
 				"deveui",
 				"tti"
+			]
+		},
+		"resetting-your-password": {
+			"topic": "software",
+			"title": "Resetting your password",
+			"summary": "Forgot your password? Ask for a reset link from the sign-in page and choose a new one in a few minutes.",
+			"image": "images/resetting-your-password/en-01-sign-in.webp",
+			"hasVideo": false,
+			"keywords": [
+				"password",
+				"forgot password",
+				"reset",
+				"reset link",
+				"sign in",
+				"login",
+				"locked out",
+				"change password"
+			]
+		},
+		"sensor-installation-and-maintenance": {
+			"topic": "hardware",
+			"title": "Sensor installation and maintenance",
+			"summary": "Mount the sensor, choose where it goes, get it online, and replace the battery, sensor module, magnets and mesh filter yourself.",
+			"image": "images/sensor-installation-and-maintenance/01-unit.webp",
+			"hasVideo": false,
+			"keywords": [
+				"install",
+				"mount",
+				"mounting",
+				"magnet",
+				"bracket",
+				"strap",
+				"placement",
+				"battery",
+				"replace battery",
+				"sensor module",
+				"mesh filter",
+				"filter",
+				"screws",
+				"devEUI",
+				"not connecting",
+				"safety",
+				"CW-AIR-T",
+				"CW-AIR-TH",
+				"CW-AIR-THC",
+				"CW-SS-THCP",
+				"user guide"
 			]
 		}
 	},

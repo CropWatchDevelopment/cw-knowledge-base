@@ -78,5 +78,15 @@
 				}
 			]
 		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "air-temperature-humidity-sensors"
+		},
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		}
 	]
 }

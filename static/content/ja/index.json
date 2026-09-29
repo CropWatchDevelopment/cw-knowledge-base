@@ -5,14 +5,25 @@
 			"icon": "hardware",
 			"title": "ハードウェア",
 			"description": "圃場、ハウス、施設を計測するセンサーと機器。",
-			"pages": []
+			"pages": [
+				"sensor-installation-and-maintenance",
+				"air-temperature-humidity-sensors",
+				"soil-moisture-sensors"
+			]
 		},
 		{
 			"id": "software",
 			"icon": "software",
 			"title": "ソフトウェア",
 			"description": "CropWatchのダッシュボード、アラートルール、レポート。",
-			"pages": []
+			"pages": [
+				"resetting-your-password",
+				"reading-the-dashboard",
+				"sensor-settings",
+				"setting-up-alert-rules",
+				"creating-a-report",
+				"reading-a-report"
+			]
 		},
 		{
 			"id": "gateways",
@@ -21,7 +32,8 @@
 			"description": "LoRaWANでセンサーをインターネットにつなぎます。開封からオンラインまで。",
 			"pages": [
 				"installing-a-gateway",
-				"choosing-a-mounting-location"
+				"choosing-a-mounting-location",
+				"installing-an-outdoor-gateway"
 			]
 		},
 		{
@@ -31,14 +43,15 @@
 			"description": "CropWatchに出てくる用語をわかりやすく解説します。",
 			"pages": [
 				"what-is-lorawan",
-				"vpd-explained"
+				"vpd-explained",
+				"dli-and-ppfd"
 			]
 		}
 	],
 	"pages": {
 		"installing-a-gateway": {
 			"topic": "gateways",
-			"title": "ゲートウェイの設置",
+			"title": "屋内ゲートウェイの設置",
 			"summary": "ゲートウェイを開封して設置・接続し、オンラインになったことを確認します。",
 			"image": null,
 			"hasVideo": false,
@@ -76,7 +89,7 @@
 			"topic": "concepts",
 			"title": "LoRaWANとは？",
 			"summary": "センサーのデータを運ぶ、長距離・低消費電力の無線ネットワークです。",
-			"image": null,
+			"image": "images/what-is-lorawan/lorawan-muasbneg.png",
 			"hasVideo": false,
 			"keywords": [
 				"LoRa",
@@ -109,6 +122,324 @@
 				"transpiration",
 				"kpa"
 			]
+		},
+		"resetting-your-password": {
+			"topic": "software",
+			"title": "パスワードの再設定",
+			"summary": "パスワードを忘れた場合は、サインイン画面から再設定リンクを申請し、数分で新しいパスワードを設定できます。",
+			"image": "images/resetting-your-password/ja-01-sign-in.webp",
+			"hasVideo": false,
+			"keywords": [
+				"パスワード",
+				"パスワードを忘れた",
+				"再設定",
+				"リセット",
+				"サインイン",
+				"ログイン",
+				"ログインできない",
+				"パスワード変更",
+				"password"
+			]
+		},
+		"sensor-installation-and-maintenance": {
+			"topic": "hardware",
+			"title": "センサーの設置とメンテナンス",
+			"summary": "センサーの取り付けと設置場所の選び方、ネットワークへの接続、電池・センサーモジュール・マグネット・メッシュフィルターの交換方法を説明します。",
+			"image": "images/sensor-installation-and-maintenance/01-unit.webp",
+			"hasVideo": false,
+			"keywords": [
+				"設置",
+				"取り付け",
+				"マグネット",
+				"ブラケット",
+				"ストラップ",
+				"設置場所",
+				"電池交換",
+				"電池",
+				"センサーモジュール",
+				"メッシュフィルター",
+				"フィルター",
+				"ネジ",
+				"接続できない",
+				"安全上の注意",
+				"ユーザーガイド",
+				"Sensor installation and maintenance",
+				"install",
+				"mount",
+				"mounting",
+				"magnet",
+				"bracket",
+				"strap",
+				"placement",
+				"battery",
+				"replace battery",
+				"sensor module",
+				"mesh filter",
+				"filter",
+				"screws",
+				"devEUI",
+				"not connecting",
+				"safety",
+				"CW-AIR-T",
+				"CW-AIR-TH",
+				"CW-AIR-THC",
+				"CW-SS-THCP",
+				"user guide"
+			]
+		},
+		"air-temperature-humidity-sensors": {
+			"topic": "hardware",
+			"title": "気温・湿度センサー",
+			"summary": "空気センサーが計測するものと、信頼できる計測値を得るための設置場所を説明します。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"気温",
+				"温度",
+				"湿度",
+				"相対湿度",
+				"設置場所",
+				"飽差",
+				"Air temperature and humidity sensors",
+				"air",
+				"temperature",
+				"humidity",
+				"placement",
+				"vpd"
+			]
+		},
+		"soil-moisture-sensors": {
+			"topic": "hardware",
+			"title": "土壌水分センサー",
+			"summary": "根の周りにどれだけ水があるかを確認し、習慣ではなく必要に応じて水やりができます。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"土壌",
+				"水分",
+				"土壌水分",
+				"灌水",
+				"水やり",
+				"プローブ",
+				"地温",
+				"EC",
+				"Soil moisture sensors",
+				"soil",
+				"moisture",
+				"irrigation",
+				"watering",
+				"probe"
+			]
+		},
+		"dli-and-ppfd": {
+			"topic": "concepts",
+			"title": "DLIとPPFD",
+			"summary": "PPFDはいま植物に届いている光合成に使える光の量、DLIはそれを1日分合計したものです。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"光",
+				"日射",
+				"積算光量",
+				"光合成",
+				"光合成光量子束密度",
+				"遮光",
+				"補光",
+				"DLI and PPFD",
+				"light",
+				"daily light integral",
+				"photosynthesis",
+				"par"
+			]
+		},
+		"installing-an-outdoor-gateway": {
+			"topic": "gateways",
+			"title": "屋外ゲートウェイの設置",
+			"summary": "",
+			"image": null,
+			"hasVideo": false
+		},
+		"setting-up-alert-rules": {
+			"topic": "software",
+			"title": "アラートルールの作成",
+			"summary": "計測値を見守り、限度を決め、通知先を選ぶまでを、図を使って順番に説明します。",
+			"image": "images/setting-up-alert-rules/ja-01-rules-page.svg",
+			"hasVideo": false,
+			"keywords": [
+				"アラート",
+				"警報",
+				"ルール",
+				"アラートルール",
+				"通知",
+				"しきい値",
+				"限度",
+				"リセット値",
+				"メール",
+				"LINE",
+				"プッシュ通知",
+				"低温",
+				"高温",
+				"Creating an alert rule",
+				"alert",
+				"alarm",
+				"rule",
+				"notification",
+				"threshold",
+				"limit",
+				"trigger",
+				"reset",
+				"email",
+				"line",
+				"push",
+				"too cold",
+				"too hot"
+			]
+		},
+		"reading-a-report": {
+			"topic": "software",
+			"title": "レポートの読み方",
+			"summary": "PDFレポートの中身を説明します：色付きの四角、2つのパネル、グラフ、計測データの表、備考。",
+			"image": "images/reading-a-report/ja-01-whole-page.svg",
+			"hasVideo": false,
+			"keywords": [
+				"レポート",
+				"PDF",
+				"グラフ",
+				"平均",
+				"標準偏差",
+				"備考",
+				"備考一覧",
+				"ダウンロード",
+				"サンプル数",
+				"承認",
+				"最大",
+				"最小",
+				"アラート",
+				"Reading a report",
+				"report",
+				"pdf",
+				"chart",
+				"average",
+				"std dev",
+				"standard deviation",
+				"notes",
+				"comments",
+				"download",
+				"samples",
+				"approved"
+			]
+		},
+		"creating-a-report": {
+			"topic": "software",
+			"title": "レポートの作成",
+			"summary": "センサーの選択、スケジュールの設定、受け取る人の指定までを、図を使って順に説明します。",
+			"image": "images/creating-a-report/ja-01-reports-page.svg",
+			"hasVideo": false,
+			"keywords": [
+				"レポート",
+				"レポートテンプレート",
+				"定期",
+				"毎日",
+				"毎週",
+				"月末",
+				"毎月",
+				"メール",
+				"宛先",
+				"受信者",
+				"ハイライト設定",
+				"まとめ",
+				"エクスポート",
+				"Creating a report",
+				"report",
+				"reports",
+				"scheduled",
+				"weekly",
+				"monthly",
+				"daily",
+				"email",
+				"recipients",
+				"summary",
+				"export"
+			]
+		},
+		"reading-the-dashboard": {
+			"topic": "software",
+			"title": "ダッシュボードの見方",
+			"summary": "ダッシュボードの各部分の意味と、センサーからの受信が止まったときの対処を説明します。",
+			"image": "images/reading-the-dashboard/ja-01-dashboard.svg",
+			"hasVideo": false,
+			"keywords": [
+				"ダッシュボード",
+				"カード",
+				"センサーカード",
+				"テーブル",
+				"状態",
+				"オンライン",
+				"オフライン",
+				"警告",
+				"最終受信",
+				"センサーエラー",
+				"データなし",
+				"検索",
+				"概要",
+				"Reading the dashboard",
+				"dashboard",
+				"cards",
+				"table",
+				"status",
+				"online",
+				"offline",
+				"last seen",
+				"sensor error",
+				"no data",
+				"search",
+				"overview"
+			]
+		},
+		"sensor-settings": {
+			"topic": "software",
+			"title": "センサーの設定",
+			"summary": "センサーの名前変更、グループ設定、現場間の移動、校正証明書、閲覧できる人の管理について説明します。",
+			"image": "images/sensor-settings/ja-01-whole-page.svg",
+			"hasVideo": false,
+			"keywords": [
+				"設定",
+				"名前変更",
+				"デバイス名",
+				"グループ",
+				"ロケーション",
+				"移動",
+				"権限",
+				"アクセス権",
+				"管理者",
+				"マネージャー",
+				"閲覧のみ",
+				"無効",
+				"証明書",
+				"校正",
+				"校正証明書",
+				"DevEUI",
+				"TTI",
+				"Sensor settings",
+				"settings",
+				"rename",
+				"device name",
+				"group",
+				"location",
+				"move",
+				"permission",
+				"permissions",
+				"access",
+				"admin",
+				"manager",
+				"viewer",
+				"disabled",
+				"certificate",
+				"calibration",
+				"iso17025",
+				"deveui",
+				"tti"
+			]
 		}
 	},
 	"featured": [
@@ -118,6 +449,7 @@
 	],
 	"popular": [
 		"installing-a-gateway",
+		"setting-up-alert-rules",
 		"vpd-explained"
 	]
 }

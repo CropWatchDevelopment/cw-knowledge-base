@@ -1,0 +1,60 @@
+{
+	"slug": "soil-moisture-sensors",
+	"topic": "hardware",
+	"title": "土壌水分センサー",
+	"intro": "土壌センサーは、根の周りにどれだけ水があるかを示します。習慣ではなく、必要に応じて水やりができるようになります。",
+	"sections": [
+		{
+			"id": "what-it-measures",
+			"heading": "計測できるもの",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "プローブを挿した深さの土壌水分です。機種によっては、地温と電気伝導度（EC）も計測できます。"
+						}
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "植物の横の地面に挿した土壌水分プローブ",
+				"side": "right"
+			}
+		},
+		{
+			"id": "installing-the-probe",
+			"heading": "プローブの設置",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "そのエリアを代表する株を選び、その根域にプローブを設置します。"
+							}
+						],
+						[
+							{
+								"text": "プローブの周りの土をしっかり押し固めます。すき間に空気が残ると、実際より低い値になります。"
+							}
+						],
+						[
+							{
+								"text": "点滴チューブの吐出口から離して設置します。給水そのものではなく、土壌の状態を計測するためです。"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		}
+	]
+}

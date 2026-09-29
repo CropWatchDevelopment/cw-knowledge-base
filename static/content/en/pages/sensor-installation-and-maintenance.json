@@ -1,0 +1,1082 @@
+{
+	"slug": "sensor-installation-and-maintenance",
+	"topic": "hardware",
+	"title": "Sensor installation and maintenance",
+	"intro": "How to mount a CropWatch Sensor Series unit, choose where it goes, get it online, and replace the battery, sensor module, magnets and mesh filter yourself. This covers the CW-AIR-T, CW-AIR-TH, CW-AIR-THC and CW-SS-THCP.",
+	"sections": [
+		{
+			"id": "before-you-start",
+			"heading": "Before you start",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Read this guide before you install or use the unit. It is based on the CropWatch Sensor Series User Guide (CW-UG-001, Rev A)."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "You can carry out the maintenance described here yourself: replacing the battery, the sensor module, the base magnets and the sensor mesh filter. For any other repair, disassembly or part replacement, contact CropWatch."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "For warranty terms, see the "
+						},
+						{
+							"text": "CropWatch Hardware Limited Warranty (CW-WT-001)",
+							"bold": true
+						},
+						{
+							"text": ". Changes to this guide do not change the warranty terms of products you have already bought."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-installation-and-maintenance/01-unit.webp",
+				"alt": "A CropWatch Sensor Series unit with the D-cell battery cover fitted. The vent slots are on the lower part of one side.",
+				"caption": "Enclosure shape and appearance may change without notice.",
+				"side": "right",
+				"width": 972,
+				"height": 723
+			}
+		},
+		{
+			"id": "unit-overview",
+			"heading": "What is inside the unit",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Every model in the Sensor Series uses the same enclosure."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Base:",
+								"bold": true
+							},
+							{
+								"text": " holds the battery holder and the main board."
+							}
+						],
+						[
+							{
+								"text": "Sensor chamber:",
+								"bold": true
+							},
+							{
+								"text": " the sensor module sits in its own chamber at the vent end, behind the vent slots."
+							}
+						],
+						[
+							{
+								"text": "Top cover:",
+								"bold": true
+							},
+							{
+								"text": " held on by eight screws. The radio antenna is inside it."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-installation-and-maintenance/03-inside.webp",
+				"alt": "The enclosure with the cover removed: battery holder on the left, main board in the middle, sensor chamber and vent slots on the right.",
+				"caption": "Cover removed: battery holder, main board, and the sensor chamber at the vent end.",
+				"side": "right",
+				"width": 853,
+				"height": 715
+			}
+		},
+		{
+			"id": "rules-for-every-installation",
+			"heading": "Rules for every installation",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "You can mount the unit with its magnets, with a bracket, or stand it on a table. Whichever you choose, these rules apply:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Keep plenty of clear space around the top cover.",
+								"bold": true
+							},
+							{
+								"text": " The antenna is inside it. Metal, concrete and anything holding a lot of water block or absorb radio waves and shorten the range."
+							}
+						],
+						[
+							{
+								"text": "On a wall or pole, point the sensor vent down.",
+								"bold": true
+							},
+							{
+								"text": " Dust and water droplets then cannot collect in it."
+							}
+						],
+						[
+							{
+								"text": "Keep it away from vibration and knocks.",
+								"bold": true
+							},
+							{
+								"text": " Not on machinery or near fans that shake continuously, not above doors, and not where people or objects can bump into it."
+							}
+						],
+						[
+							{
+								"text": "On a wall or pole, keep the unit upright,",
+								"bold": true
+							},
+							{
+								"text": " at a height that represents the space you are monitoring."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-installation-and-maintenance/en-04-orientation.webp",
+				"alt": "Correct: the unit upright on a flat surface, top cover facing into the room, vent facing down. Wrong: vent facing up, the top cover blocked by an obstruction, and mounted where it is exposed to vibration.",
+				"caption": "Correct and wrong orientation on a wall.",
+				"side": "right",
+				"width": 1560,
+				"height": 630
+			}
+		},
+		{
+			"id": "magnet-mounting",
+			"heading": "Magnet mounting (recommended)",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The four magnets on the base hold the unit to any magnetic surface: racks, machine frames, steel columns, cold-room panels, door frames."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Choose a flat, clean surface that does not vibrate."
+							}
+						],
+						[
+							{
+								"text": "Wipe off dust, rust, water or ice."
+							}
+						],
+						[
+							{
+								"text": "Put the unit in place and check it does not wobble."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Magnets hold less firmly on painted, uneven or curved surfaces. If the unit wobbles or does not hold firmly, move it somewhere else."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-installation-and-maintenance/06-magnet-mounting.webp",
+				"alt": "The unit held by its magnets to a vertical metal panel.",
+				"side": "right",
+				"width": 742,
+				"height": 873
+			}
+		},
+		{
+			"id": "bracket-mounting",
+			"heading": "Bracket mounting",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Where magnets cannot be used, use a bracket or strap. Afterwards, check that the unit is held securely and cannot slip or fall."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Do not mount it where it cannot be held firmly, such as on slippery or wet surfaces or on tapered poles. A loose strap or a slippery pole lets the unit slide out of place or fall."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-installation-and-maintenance/en-07-strap-mounting.webp",
+				"alt": "Correct: the strap tightened firmly so the unit does not slip. Wrong: a loose strap on a pole lets the unit slide down from its original position.",
+				"caption": "Strap mounting on a pole.",
+				"side": "right",
+				"width": 1500,
+				"height": 630
+			}
+		},
+		{
+			"id": "tabletop-placement",
+			"heading": "Tabletop placement",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a desk, shelf or other flat surface, make sure that:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "No water or condensation collects on the surface.",
+								"bold": true
+							},
+							{
+								"text": " Avoid spots where condensation drips, where water splashes during cleaning, and cold-room floors."
+							}
+						],
+						[
+							{
+								"text": "Nothing is placed on top of the unit.",
+								"bold": true
+							},
+							{
+								"text": " It would block the antenna or the vent slots and affect both the radio and the readings."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a table the vent faces sideways. Keep the vent end well away from walls and objects so air reaches the sensor freely."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-installation-and-maintenance/08-tabletop.webp",
+				"alt": "The unit standing on a flat wooden surface.",
+				"side": "right",
+				"width": 1557,
+				"height": 770
+			}
+		},
+		{
+			"id": "placement-and-readings",
+			"heading": "Where you place it changes what it reads",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Readings can differ with position and height, even in the same room. The unit measures the air right around it, so choose a spot that represents what you are monitoring."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Air stratifies: temperature and humidity can differ with height."
+							}
+						],
+						[
+							{
+								"text": "CO₂ depends on ventilation, sources, airflow and the shape of the room. Mount the unit at the height that matters, such as where people or animals breathe."
+							}
+						],
+						[
+							{
+								"text": "Avoid spots dominated by local airflow: doors, vents and air inlets."
+							}
+						],
+						[
+							{
+								"text": "For temperature and humidity, mount it at the position and height of what you care about: the crop, the product or the stored goods."
+							}
+						],
+						[
+							{
+								"text": "Keep it out of direct sunlight and away from heater and cooler outlets, fans, misters and cleaning water."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If you move the unit, do not compare readings from before and after the move",
+							"bold": true
+						},
+						{
+							"text": " as if they were taken under the same conditions."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-installation-and-maintenance/en-09-height-and-airflow.webp",
+				"alt": "A room from floor to ceiling: warm air rises to the upper zone around 2.5 m, the middle zone around 1.2 m is the monitoring height, and the lower zone around 0.3 m is influenced by the floor and cold air.",
+				"caption": "Indoors, temperature, humidity and CO₂ vary with height and airflow. Mount at the height of the people, animals, crops or products you monitor.",
+				"side": "right",
+				"width": 1600,
+				"height": 831
+			}
+		},
+		{
+			"id": "connecting-to-the-network",
+			"heading": "Connecting to the network",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "After you install the unit, replace the battery or replace the sensor module, it connects to the CropWatch network by itself and starts sending readings. Depending on the site, readings can take from a few minutes to a few hours to settle."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "After a move, the radio settings may take a few transmissions to adjust automatically."
+							}
+						],
+						[
+							{
+								"text": "In a new place, readings may drift until the sensor and enclosure match the surrounding temperature and humidity."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If no connection is confirmed within 5 hours of installation,",
+							"bold": true
+						},
+						{
+							"text": " contact CropWatch Support. Have the DevEUI from the unit's label and the installation location ready."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "before-contacting-support",
+			"heading": "Quick checks before contacting support",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Battery:",
+								"bold": true
+							},
+							{
+								"text": " open the main cover and check the battery sits correctly in the holder, with + at the fixed contact and − at the spring. See "
+							},
+							{
+								"text": "Replacing the battery",
+								"href": "page:sensor-installation-and-maintenance#replacing-the-battery"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Sensor module:",
+								"bold": true
+							},
+							{
+								"text": " check the sensor cable connector is pushed fully in, the right way round, and that the module is seated in its holder. See "
+							},
+							{
+								"text": "Replacing the sensor module",
+								"href": "page:sensor-installation-and-maintenance#replacing-the-sensor-module"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Obstructions:",
+								"bold": true
+							},
+							{
+								"text": " check nothing that blocks radio is on top of or close to the unit. If it is, move the unit somewhere with clear space around it. See "
+							},
+							{
+								"text": "Rules for every installation",
+								"href": "page:sensor-installation-and-maintenance#rules-for-every-installation"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Distance to the gateway:",
+								"bold": true
+							},
+							{
+								"text": " move the unit near the gateway for a while. If it connects there, the original spot needs to change or you need another gateway."
+							}
+						],
+						[
+							{
+								"text": "Gateway:",
+								"bold": true
+							},
+							{
+								"text": " check the gateway is powered on and shows as online on the dashboard."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "tools-and-parts",
+			"heading": "Tools and parts for replacements",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "A No. 2 Phillips screwdriver"
+							}
+						],
+						[
+							{
+								"text": "Tweezers"
+							}
+						],
+						[
+							{
+								"text": "The replacement battery, sensor module or filter"
+							}
+						],
+						[
+							{
+								"text": "A clean, dry work surface"
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Do not open the cover right after bringing the unit in from the cold.",
+							"bold": true
+						},
+						{
+							"text": " Let it reach room temperature and check its surface is free of condensation and frost first, so moisture does not condense inside."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-installation-and-maintenance/en-10-tools.webp",
+				"alt": "A No. 2 Phillips screwdriver, tweezers, a replacement battery, sensor module or filter, and a clean, dry work surface.",
+				"side": "right",
+				"width": 1470,
+				"height": 192
+			}
+		},
+		{
+			"id": "replacing-the-battery",
+			"heading": "Replacing the battery",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Have the new battery ready before you open the unit. Use the type, voltage and size given on the product label or datasheet. The pictures show a D-size 3.6 V lithium battery."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Remove the eight screws on the top cover and lift it off. You do not need to remove the magnets."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Remove the old battery:",
+								"bold": true
+							},
+							{
+								"text": " push its "
+							},
+							{
+								"text": "+ end",
+								"bold": true
+							},
+							{
+								"text": " toward the − end of the holder until the spring is fully compressed."
+							}
+						],
+						[
+							{
+								"text": "Keeping the spring compressed, lift the "
+							},
+							{
+								"text": "+ end",
+								"bold": true
+							},
+							{
+								"text": " up. Once it clears the fixed contact, take the battery out."
+							}
+						],
+						[
+							{
+								"text": "Fit the new battery:",
+								"bold": true
+							},
+							{
+								"text": " hold it with "
+							},
+							{
+								"text": "− toward the spring",
+								"bold": true
+							},
+							{
+								"text": " and "
+							},
+							{
+								"text": "+ toward the fixed contact",
+								"bold": true
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Press the "
+							},
+							{
+								"text": "− end against the spring",
+								"bold": true
+							},
+							{
+								"text": " to compress it, then lower the + end and seat it under the fixed contact."
+							}
+						],
+						[
+							{
+								"text": "Check the battery lies flat in the holder, + at the fixed contact and − at the spring, and that the spring is not bent sideways. A battery fitted backwards will not start the unit."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Before closing:",
+							"bold": true
+						},
+						{
+							"text": " check the gasket is in its groove and not twisted, shifted, damaged or dirty. Put the cover back, check no wires are pinched, and tighten the eight screws evenly: firmly, but not too hard."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The unit restarts by itself and rejoins the network. The first reading can take from a few minutes to several tens of minutes to appear on the dashboard. Dispose of the used lithium battery according to local rules."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-installation-and-maintenance/11-battery-steps.webp",
+				"alt": "Four drawings: pushing the battery toward the spring, lifting its + end out, holding a new battery over the holder, and pressing it against the spring.",
+				"caption": "Steps 1 to 4.",
+				"side": "right",
+				"width": 1552,
+				"height": 1040
+			}
+		},
+		{
+			"id": "replacing-the-sensor-module",
+			"heading": "Replacing the sensor module",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The sensor module is a small board that plugs into the holder at the vent end and connects to the main board with a 4-wire cable. Hold it by the edges of the board; do not touch the components or contacts."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Remove the three screws of the sensor cover and lift it off. You do not need to remove the main board cover or the magnets."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Find the sensor module in the sensor chamber, and the cable running to the main board."
+							}
+						],
+						[
+							{
+								"text": "Pull the module straight up out of the holder. Do not twist it or pry against the board."
+							}
+						],
+						[
+							{
+								"text": "Pull the wire connector straight out of the socket on the old sensor."
+							}
+						],
+						[
+							{
+								"text": "Take the new sensor. The connector fits only one way: keep its "
+							},
+							{
+								"text": "flat face up",
+								"bold": true
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Wrong way round:",
+								"bold": true
+							},
+							{
+								"text": " the keyed face with the contact windows must not be on top. If the connector is hard to push in, do not force it; turn it over."
+							}
+						],
+						[
+							{
+								"text": "Push the connector fully into the new module, push the module all the way into the holder, and check it is seated. Route the cable so the cover will not pinch it."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Before closing:",
+							"bold": true
+						},
+						{
+							"text": " put the sensor cover back, check no wires are pinched, and tighten the three screws evenly: firmly, but not too hard."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The new module starts reporting within 10 minutes. A CO₂ sensor can take longer before its readings settle; see "
+						},
+						{
+							"text": "Connecting to the network",
+							"href": "page:sensor-installation-and-maintenance#connecting-to-the-network"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-installation-and-maintenance/12-sensor-steps.webp",
+				"alt": "Six drawings: the sensor module in its chamber, pulling it up, unplugging the cable, the connector flat face up, the connector upside down crossed out, and pushing the module back into its holder.",
+				"caption": "Steps 1 to 6. Step 5 shows the wrong way round.",
+				"side": "right",
+				"width": 1552,
+				"height": 1568
+			}
+		},
+		{
+			"id": "replacing-the-magnets",
+			"heading": "Replacing the magnets",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The four mounting magnets are countersunk ring magnets, each held in a recess on the base by one screw. Replace a magnet if it is cracked or chipped, or no longer holds firmly. You do not need to remove either cover."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Keep removed magnets well apart. If they snap together, they can chip or crack."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Turn the unit over. Remove the center screw of each magnet you are replacing and lift the magnet out of its recess."
+							}
+						],
+						[
+							{
+								"text": "Fit the new magnet with its recessed, countersunk side facing "
+							},
+							{
+								"text": "out",
+								"bold": true
+							},
+							{
+								"text": " from the enclosure."
+							}
+						],
+						[
+							{
+								"text": "Put the screw in from the countersunk side and check that the screw head sits in the countersink."
+							}
+						],
+						[
+							{
+								"text": "Line the magnet up with its recess and screw it in, checking it sits flat. Tighten until the magnet no longer moves, and no further: the screw goes straight into the enclosure, so overtightening can damage it."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-installation-and-maintenance/13-magnet-steps.webp",
+				"alt": "Three drawings: the base of the unit with a magnet and screw lifted out, a screw above a countersunk ring magnet, and the screw head sitting in the countersink.",
+				"caption": "Steps 1 to 3.",
+				"side": "right",
+				"width": 1552,
+				"height": 1040
+			}
+		},
+		{
+			"id": "replacing-the-mesh-filter",
+			"heading": "Replacing the mesh filter",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The mesh filter sits inside the vent slots, in front of the sensor, and keeps dust, insects and debris out of the sensor chamber. Replace it if it is clogged, torn, heavily soiled or wet."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The unit uses a "
+						},
+						{
+							"text": "stainless steel 120-mesh",
+							"bold": true
+						},
+						{
+							"text": " filter. Use the material, mesh count and number of layers CropWatch specifies. A different filter changes the airflow and how quickly the sensor responds."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Remove the three screws of the sensor cover and lift it off. You do not need to remove the main board cover or the magnets."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Pull out the used filter, with tweezers if needed."
+							}
+						],
+						[
+							{
+								"text": "Check the sensor chamber and vent slots for dust or debris, and remove any with a soft, dry brush."
+							}
+						],
+						[
+							{
+								"text": "If needed, cut the new filter to size and insert it where the old one was. It must cover the whole vent slot and lie flat, with no wrinkles or gaps."
+							}
+						],
+						[
+							{
+								"text": "Refit the sensor cover, check no wires or mesh are pinched, and tighten the three screws evenly until the cover is secure. Do not overtighten."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "usage-precautions",
+			"heading": "Usage precautions",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "To use the unit safely and keep its readings accurate:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Use it within the conditions and ratings given in the product datasheet and this guide."
+							}
+						],
+						[
+							{
+								"text": "Do not block the vent slots with walls, floors or objects."
+							}
+						],
+						[
+							{
+								"text": "Do not mount it unsteadily, such as hanging it by a cable or holding it with tape alone."
+							}
+						],
+						[
+							{
+								"text": "Avoid direct sunlight, heating or cooling outlets, fans and doorways."
+							}
+						],
+						[
+							{
+								"text": "Avoid heavy vibration or knocks, and places where cargo, animals or workers could hit it or knock it down."
+							}
+						],
+						[
+							{
+								"text": "Open the cover only as described in this guide, somewhere clean and dry. Never outdoors in the rain, in high humidity, where condensation may form, or with wet hands or tools."
+							}
+						],
+						[
+							{
+								"text": "Apart from the replacements in this guide, do not disassemble, modify or repair the board, antenna or other internal parts, and do not modify the firmware."
+							}
+						],
+						[
+							{
+								"text": "Use only batteries of the type and specification CropWatch gives. No rechargeable batteries, other battery types or other power sources."
+							}
+						],
+						[
+							{
+								"text": "Do not submerge it or let water in. No direct water spray or pressure washing."
+							}
+						],
+						[
+							{
+								"text": "Do not use solvents, strong cleaners or corrosive substances on it, and avoid heavy dust or contaminants."
+							}
+						],
+						[
+							{
+								"text": "Clean the outside with a soft cloth, lightly dampened if needed."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Warranty:",
+							"bold": true
+						},
+						{
+							"text": " failures, damage or loss of performance caused by use outside the conditions in this guide, the product datasheet, or given by CropWatch may not be covered. See the CropWatch Hardware Limited Warranty (CW-WT-001) for the terms and exclusions."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "safety-precautions",
+			"heading": "Safety precautions",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The battery is a primary (non-rechargeable) lithium battery.",
+								"bold": true
+							},
+							{
+								"text": " Do not short-circuit, charge, heat, disassemble or puncture it, or put it in a fire. Do not use a battery that is leaking, deformed or damaged. Dispose of used batteries according to local rules."
+							}
+						],
+						[
+							{
+								"text": "Neodymium magnets are very strong.",
+								"bold": true
+							},
+							{
+								"text": " Snapping together, they can pinch fingers and chip or crack. Keep them away from pacemakers and other medical devices, magnetic cards, and small children."
+							}
+						],
+						[
+							{
+								"text": "The unit is not explosion-proof.",
+								"bold": true
+							},
+							{
+								"text": " Do not use it where flammable gases, vapors or dust could form an explosive atmosphere."
+							}
+						],
+						[
+							{
+								"text": "A unit in a cold environment can be very cold to touch.",
+								"bold": true
+							},
+							{
+								"text": " Wear gloves if needed and do not hold it with bare hands for long."
+							}
+						],
+						[
+							{
+								"text": "The unit helps you monitor conditions; it is not a safety system.",
+								"bold": true
+							},
+							{
+								"text": " Do not rely on it alone for the safety of people, animals, products or stored goods."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "spare-parts-and-support",
+			"heading": "Spare parts and support",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "To order replacement sensor modules, magnets, mesh filters, batteries and other parts, contact us through the "
+						},
+						{
+							"text": "CropWatch website",
+							"href": "https://www.cropwatch.co.jp"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "General-purpose parts such as batteries and mesh filters may also be bought elsewhere, as long as they match the type and specification in this guide or the product datasheet."
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "air-temperature-humidity-sensors"
+		},
+		{
+			"kind": "page",
+			"slug": "choosing-a-mounting-location"
+		},
+		{
+			"kind": "page",
+			"slug": "reading-the-dashboard"
+		}
+	]
+}

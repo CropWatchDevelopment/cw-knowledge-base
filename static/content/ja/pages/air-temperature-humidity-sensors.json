@@ -1,0 +1,79 @@
+{
+	"slug": "air-temperature-humidity-sensors",
+	"topic": "hardware",
+	"title": "気温・湿度センサー",
+	"intro": "空気センサーは、作物の周りの気温と相対湿度を計測します。CropWatchは、現在の計測値とその推移を表示し、それらをもとに飽差（VPD）を計算します。",
+	"sections": [
+		{
+			"id": "what-it-measures",
+			"heading": "計測できるもの",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "気温"
+							}
+						],
+						[
+							{
+								"text": "相対湿度"
+							}
+						],
+						[
+							{
+								"text": "飽差（VPD）：気温と湿度から計算します。詳しくは"
+							},
+							{
+								"text": "VPD（飽差）とは",
+								"href": "page:vpd-explained"
+							},
+							{
+								"text": "をご覧ください。"
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": null,
+				"alt": "ハウス内で作物の高さに吊り下げた気温・湿度センサー",
+				"side": "right"
+			}
+		},
+		{
+			"id": "where-to-place-it",
+			"heading": "設置する場所",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "センサーは作物と同じ高さに設置し、直射日光や暖房機、換気口、出入口を避けます。こうすることで、植物が実際に感じている空気を計測できます。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "直射日光が当たるセンサーは、周囲の気温より高い値を示します。"
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "vpd-explained"
+		},
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		}
+	]
+}

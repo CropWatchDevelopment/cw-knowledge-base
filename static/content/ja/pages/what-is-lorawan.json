@@ -40,7 +40,14 @@
 						]
 					]
 				}
-			]
+			],
+			"image": {
+				"src": "images/what-is-lorawan/lorawan-muasbneg.png",
+				"alt": "LoRaWANはセルラー（4G/5G）、Wi-Fi、Bluetoothより遠くまで届く一方、送れるデータ量は少なく、通信速度も遅いことを示す図",
+				"side": "right",
+				"width": 665,
+				"height": 308
+			}
 		},
 		{
 			"id": "how-a-reading-reaches-you",
@@ -57,7 +64,15 @@
 						],
 						[
 							{
-								"text": "通信範囲内のゲートウェイが受信し、インターネット経由で転送します。"
+								"text": "通信範囲内のゲートウェイが受信し、インターネット経由で"
+							},
+							{
+								"text": "転送",
+								"bold": true,
+								"italic": true
+							},
+							{
+								"text": "します。"
 							}
 						],
 						[
@@ -77,6 +92,44 @@
 					"content": [
 						{
 							"text": "センサーはWi-Fiには接続しません。通信する相手はLoRaWANゲートウェイだけです。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "LoRaWAN（クラスA）は、ゲートウェイとの"
+							},
+							{
+								"text": "接続を維持しない（コネクションレス）",
+								"bold": true
+							},
+							{
+								"text": "方式です。データを送り続けるために、ゲートウェイとの接続を保ち続ける必要がありません。"
+							}
+						],
+						[
+							{
+								"text": "一方、Wi-Fiは接続中、アクセスポイントとの"
+							},
+							{
+								"text": "関連付けを常に維持する",
+								"bold": true
+							},
+							{
+								"text": "方式です。ログイン情報、IPアドレス、接続を保ち続ける必要があり、この「状態」が失われると再接続が必要になり、時間と電力を消費します。"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "そのため、LoRaWANデバイスはすばやく起動してデータを送り、すぐにスリープに戻れます。Wi-Fiでは、起動してパスワードを送り、応答を待ち、接続情報を受け取る必要があります。その分だけデバイスの動作時間が延び、電池を消耗します。"
 						}
 					]
 				}
@@ -107,7 +160,43 @@
 						}
 					]
 				}
-			]
+			],
+			"image": {
+				"src": "images/what-is-lorawan/gateway-placement-muas7b9r.png",
+				"alt": "高い場所に設置したゲートウェイでも、必ずしも通信が良好になるわけではないことを示す図",
+				"side": "right",
+				"width": 1536,
+				"height": 1024
+			}
+		},
+		{
+			"id": "what-does-an-optimal-mounting-location-look-like-for-long-range",
+			"heading": "長距離通信に最適な設置場所とは？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "理想的なのは、非常に高い場所の端に設置し、ゲートウェイとデータを送信するデバイスとの間に障害物がない状態です。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "ゲートウェイが建物の角に設置されている点に注目してください。こうすることで、左右どちらの方向も建物の壁にさえぎられません。電波が弱くなるのは建物の裏側だけですが、そちらは通信したい方向ではありません。"
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/what-is-lorawan/optimal-muasnadr.webp",
+				"alt": "平地を見下ろす非常に高い建物の端に設置されたゲートウェイ",
+				"side": "right",
+				"width": 1600,
+				"height": 721
+			}
 		}
 	],
 	"links": [
