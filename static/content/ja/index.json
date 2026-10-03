@@ -233,8 +233,8 @@
 		},
 		"dli-and-ppfd": {
 			"topic": "concepts",
-			"title": "DLIとPPFD",
-			"summary": "PPFDはいま植物に届いている光合成に使える光の量、DLIはそれを1日分合計したものです。",
+			"title": "農業における光の測り方：PPFD・DLI・W/m²・J/m²の違い",
+			"summary": "PPFDはいま植物が受けている光、DLIは1日の光の合計です。W/m²とJ/m²は光のエネルギーを表します。",
 			"image": null,
 			"hasVideo": false,
 			"keywords": [
@@ -249,7 +249,15 @@
 				"light",
 				"daily light integral",
 				"photosynthesis",
-				"par"
+				"par",
+				"日積算光量",
+				"光合成有効放射",
+				"量子センサー",
+				"W/m²",
+				"J/m²",
+				"ワット",
+				"ジュール",
+				"日射量"
 			]
 		},
 		"installing-an-outdoor-gateway": {

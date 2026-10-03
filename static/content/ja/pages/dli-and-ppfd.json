@@ -1,18 +1,267 @@
 {
 	"slug": "dli-and-ppfd",
 	"topic": "concepts",
-	"title": "DLIとPPFD",
-	"intro": "PPFDは、いま植物に届いている、光合成に使える光の量を表します。DLIは、それを1日分合計したものです。",
+	"title": "農業における光の測り方：PPFD・DLI・W/m²・J/m²の違い",
+	"intro": "植物の生育にとって、光は非常に重要な要素のひとつです。しかし、光を測定するセンサーにはさまざまな種類があり、表示される単位も異なります。",
 	"sections": [
 		{
-			"id": "ppfd",
-			"heading": "PPFD：いまこの瞬間の光",
+			"id": "four-measurements",
+			"heading": "光を表す4つの指標",
 			"body": [
 				{
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "光合成光量子束密度（PPFD）は、植物が光合成に使える光（波長400〜700 nm）の光子が、1平方メートルに1秒間あたりいくつ届くかを表します。単位はµmol/m²/sです。"
+							"text": "よく使われるものとして、次のような指標があります。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "DLI",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "W/m²・mW/m²",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "J/m²",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "どれも「光」に関する測定値ですが、"
+						},
+						{
+							"text": "それぞれ意味しているものは異なります。",
+							"bold": true
+						},
+						{
+							"text": "まずは、次のように考えるとわかりやすくなります。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD：今、植物がどれくらい光を受けているか",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "DLI：1日を通して、植物が合計でどれくらい光を受けたか",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "W/m²：今、どれくらいの光エネルギーが届いているか",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "J/m²：一定時間に、合計でどれくらいの光エネルギーを受けたか",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "作物の生育を目的として光を測定する場合は、一般的に "
+						},
+						{
+							"text": "PPFDとDLIが特にわかりやすく、実用的な指標",
+							"bold": true
+						},
+						{
+							"text": "です。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "comparison",
+			"heading": "まずは簡単に比較",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD",
+								"bold": true
+							},
+							{
+								"text": "：今、植物が受けている光の量。簡単に言うと、現在の「植物にとっての明るさ」です。"
+							}
+						],
+						[
+							{
+								"text": "DLI",
+								"bold": true
+							},
+							{
+								"text": "：1日で植物が受けた光の合計。簡単に言うと、今日1日の「光の総量」です。"
+							}
+						],
+						[
+							{
+								"text": "W/m²",
+								"bold": true
+							},
+							{
+								"text": "：今、届いている光エネルギー。簡単に言うと、現在の日射エネルギーです。"
+							}
+						],
+						[
+							{
+								"text": "mW/m²",
+								"bold": true
+							},
+							{
+								"text": "：W/m²と同じ種類の測定値。より小さい単位で表した光エネルギーです。"
+							}
+						],
+						[
+							{
+								"text": "J/m²",
+								"bold": true
+							},
+							{
+								"text": "：一定時間に受けたエネルギーの合計。簡単に言うと、積み重なった光エネルギーです。"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "大きく分けると、「現在の状態」と「積み重ねた量」の2組として考えることができます。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD",
+								"bold": true
+							},
+							{
+								"text": "（現在の状態）と "
+							},
+							{
+								"text": "DLI",
+								"bold": true
+							},
+							{
+								"text": "（積み重ねた量）"
+							}
+						],
+						[
+							{
+								"text": "W/m²",
+								"bold": true
+							},
+							{
+								"text": "（現在の状態）と "
+							},
+							{
+								"text": "J/m²",
+								"bold": true
+							},
+							{
+								"text": "（積み重ねた量）"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "PPFDとDLIは、特に"
+						},
+						{
+							"text": "植物の光合成や生育を考えるときに使いやすい指標",
+							"bold": true
+						},
+						{
+							"text": "です。一方、W/m²やJ/m²は、植物に限らず「光が持っているエネルギー」を測るための指標です。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "ppfd",
+			"heading": "PPFDとは？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "PPFD",
+							"bold": true
+						},
+						{
+							"text": "は、"
+						},
+						{
+							"text": "Photosynthetic Photon Flux Density",
+							"bold": true
+						},
+						{
+							"text": " の略で、日本語では一般的に"
+						},
+						{
+							"text": "光合成光量子束密度",
+							"bold": true
+						},
+						{
+							"text": "と呼ばれます。名前だけを見ると非常に難しそうですが、考え方はそれほど複雑ではありません。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "PPFDは、植物が光合成に利用できる光が、今どれくらい届いているかを表す値です。",
+							"bold": true
 						}
 					]
 				},
@@ -20,7 +269,166 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "夏の晴天時には約2,000 µmol/m²/sに達することがあります。曇りの日や遮光ネット、ガラスの下では、これよりずっと低くなります。"
+							"text": "一般的には、"
+						},
+						{
+							"text": "µmol/m²/s",
+							"bold": true
+						},
+						{
+							"text": " という単位で表示されます。この単位の詳しい仕組みを覚える必要はありません。農業で利用する場合は、次のように考えれば十分です。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "PPFDの値が大きいほど、その瞬間に植物へ届いている光合成に利用できる光が多い",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "車のスピードメーターで考える。",
+							"bold": true
+						},
+						{
+							"text": "PPFDは、車の"
+						},
+						{
+							"text": "スピードメーター",
+							"bold": true
+						},
+						{
+							"text": "に似ています。スピードメーターを見れば、「今、時速何kmで走っているか」がわかります。同じようにPPFDを見ることで、「今、植物にどれくらいの光が届いているか」を確認できます。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "PPFDは1日の中でも大きく変化する。",
+							"bold": true
+						},
+						{
+							"text": "例えば、ハウス内でPPFDを測定すると、次のように変化します。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "7:00",
+								"bold": true
+							},
+							{
+								"text": "：100 µmol/m²/s"
+							}
+						],
+						[
+							{
+								"text": "9:00",
+								"bold": true
+							},
+							{
+								"text": "：450 µmol/m²/s"
+							}
+						],
+						[
+							{
+								"text": "12:00",
+								"bold": true
+							},
+							{
+								"text": "：1,100 µmol/m²/s"
+							}
+						],
+						[
+							{
+								"text": "15:00",
+								"bold": true
+							},
+							{
+								"text": "：700 µmol/m²/s"
+							}
+						],
+						[
+							{
+								"text": "18:00",
+								"bold": true
+							},
+							{
+								"text": "：80 µmol/m²/s"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "朝は低く、太陽が高くなるにつれて上昇し、夕方になると再び低下します。雲が通過した場合にもPPFDは大きく変化します。そのためPPFDは、例えば次のような確認に向いています。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "今、作物にどれくらい光が届いているか"
+							}
+						],
+						[
+							{
+								"text": "ハウス内で光の当たり方に違いがあるか"
+							}
+						],
+						[
+							{
+								"text": "建物や設備による影が発生していないか"
+							}
+						],
+						[
+							{
+								"text": "遮光カーテンによって光がどれくらい減っているか"
+							}
+						],
+						[
+							{
+								"text": "植物育成用LEDからどれくらい光が届いているか"
+							}
+						],
+						[
+							{
+								"text": "葉の上部と下部で光量にどれくらい差があるか"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "つまりPPFDは、次のような指標と考えるとわかりやすいでしょう。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "「今の光環境」を確認するための指標",
+							"bold": true
 						}
 					]
 				}
@@ -28,27 +436,1315 @@
 		},
 		{
 			"id": "dli",
-			"heading": "DLI：1日を通した光",
+			"heading": "DLIとは？",
 			"body": [
 				{
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "積算光量（DLI）は、24時間に受けたPPFDの合計で、単位はmol/m²/dayです。明るい時間も曇った時間もすべて足し合わせるため、植物が受け取った光の総量がわかります。"
+							"text": "DLI",
+							"bold": true
+						},
+						{
+							"text": "は、"
+						},
+						{
+							"text": "Daily Light Integral",
+							"bold": true
+						},
+						{
+							"text": " の略で、日本語では"
+						},
+						{
+							"text": "日積算光量",
+							"bold": true
+						},
+						{
+							"text": "などと呼ばれます。DLIが教えてくれるのは、次の情報です。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "植物が1日を通して、合計でどれくらい光を受けたか",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "一般的には、"
+						},
+						{
+							"text": "mol/m²/day",
+							"bold": true
+						},
+						{
+							"text": " という単位で表示されます。難しく考える必要はなく、次のように考えるとわかりやすくなります。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "「今日、植物が受けた光の合計」",
+							"bold": true
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "why-it-matters",
-			"heading": "なぜ重要なのか",
+			"id": "ppfd-vs-dli",
+			"heading": "PPFDとDLIの違い",
 			"body": [
 				{
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "生育は、ピーク時の光よりも光の総量との関係が強い傾向があります。正午のPPFDが同じ2日間でも、片方が午前中ずっと曇っていれば、DLIは大きく異なります。DLIを記録しておくと、遮光や補光が必要かどうかを判断しやすくなります。"
+							"text": "PPFDとDLIは、どちらか一方を選ぶものではありません。それぞれ違うことを教えてくれます。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD",
+								"bold": true
+							},
+							{
+								"text": "：今、どれくらい光が届いているか"
+							}
+						],
+						[
+							{
+								"text": "DLI",
+								"bold": true
+							},
+							{
+								"text": "：今日1日で、合計どれくらい光が届いたか"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "例えば、車で考えてみましょう。PPFDが"
+						},
+						{
+							"text": "スピードメーター",
+							"bold": true
+						},
+						{
+							"text": "だとすると、DLIは"
+						},
+						{
+							"text": "今日走った距離",
+							"bold": true
+						},
+						{
+							"text": "のようなものです。車の速度は走っている間ずっと変化します。しかし、1日の最後には「今日は合計100km走った」という結果が残ります。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "植物の光も同じです。PPFDは常に変化しますが、それを1日分積み重ねたものがDLIです。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "why-dli-matters",
+			"heading": "なぜDLIが農業で重要なのか",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "例えば、次の2日間を考えてみましょう。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "1日目",
+								"bold": true
+							},
+							{
+								"text": "：午前中は非常によく晴れていました。しかし午後から曇りになりました。"
+							}
+						],
+						[
+							{
+								"text": "2日目",
+								"bold": true
+							},
+							{
+								"text": "：1日目ほど強い日差しではありませんでしたが、朝から夕方まで晴れが続きました。"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "一番明るかった瞬間だけを比較すると、1日目のほうが良い条件に見えるかもしれません。しかし実際には、2日目のほうが植物が受けた"
+						},
+						{
+							"text": "1日の総光量が多い",
+							"bold": true
+						},
+						{
+							"text": "ことがあります。例えば、次のような場合です。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "月曜日",
+								"bold": true
+							},
+							{
+								"text": "：最大PPFD 1,400 µmol/m²/s、DLI 15 mol/m²/day"
+							}
+						],
+						[
+							{
+								"text": "火曜日",
+								"bold": true
+							},
+							{
+								"text": "：最大PPFD 1,050 µmol/m²/s、DLI 21 mol/m²/day"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "月曜日は、瞬間的には非常に強い光がありました。しかし1日を通して見ると、火曜日のほうが植物は多くの光を受けています。この違いを簡単に確認できるのがDLIです。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "peak-is-not-enough",
+			"heading": "なぜ「一番明るかった値」だけでは不十分なのか",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "作物にとって重要なのは、「今日の最大PPFDはいくつだったか」だけではありません。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "例えば正午に非常に強い光があっても、その前後がずっと曇っていれば、1日全体の光量はそれほど多くない場合があります。反対に、強烈な日差しがなくても、適度な明るさが長時間続けば、十分な光量になる場合があります。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "そのため作物管理では、"
+						},
+						{
+							"text": "瞬間的な光量を見るPPFD",
+							"bold": true
+						},
+						{
+							"text": "と、"
+						},
+						{
+							"text": "1日全体を見るDLI",
+							"bold": true
+						},
+						{
+							"text": "を組み合わせることで、光環境をより理解しやすくなります。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "watts",
+			"heading": "W/m²とは？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "光を測る方法として、"
+						},
+						{
+							"text": "W/m²（ワット毎平方メートル）",
+							"bold": true
+						},
+						{
+							"text": "という単位もよく使われます。これは、次のことを表しています。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "1平方メートルあたりに、今どれくらいの光エネルギーが届いているか",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "例えば、地表に届く強い太陽光は、条件によっては"
+						},
+						{
+							"text": "約1,000 W/m²",
+							"bold": true
+						},
+						{
+							"text": "程度になることがあります。W/m²は、気象観測や太陽光発電などでもよく使われる単位です。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "milliwatts",
+			"heading": "mW/m²とは？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "mW/m²",
+							"bold": true
+						},
+						{
+							"text": "も基本的にはW/m²と同じ種類の測定値です。mWの「m」は"
+						},
+						{
+							"text": "ミリ",
+							"bold": true
+						},
+						{
+							"text": "を意味します。"
+						},
+						{
+							"text": "1 W = 1,000 mW",
+							"bold": true
+						},
+						{
+							"text": " です。つまり、"
+						},
+						{
+							"text": "1 W/m² = 1,000 mW/m²",
+							"bold": true
+						},
+						{
+							"text": " となります。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "測定対象の光が弱い場合などに、mW/m²が使われることがあります。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "watts-and-plants",
+			"heading": "なぜ植物ではW/m²だけでは十分ではないのか",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "ここが重要なポイントです。W/m²は、"
+						},
+						{
+							"text": "光が持っているエネルギー",
+							"bold": true
+						},
+						{
+							"text": "を測っています。しかし植物を育てる場合、知りたいのは必ずしもエネルギーそのものではありません。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "植物は光合成を行うために、光の中にある"
+						},
+						{
+							"text": "光子（フォトン）",
+							"bold": true
+						},
+						{
+							"text": "と呼ばれるものを利用します。簡単に言えば、"
+						},
+						{
+							"text": "植物に届いている「光の粒」の数",
+							"bold": true
+						},
+						{
+							"text": "を考えるイメージです。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "同じ500 W/m²でも同じとは限らない。",
+							"bold": true
+						},
+						{
+							"text": "例えば、2種類の照明があり、どちらも"
+						},
+						{
+							"text": "500 W/m²",
+							"bold": true
+						},
+						{
+							"text": "だったとします。エネルギーだけを見ると同じです。しかし、その光に含まれている色や波長が違えば、"
+						},
+						{
+							"text": "植物が利用できる光の量は同じとは限りません。",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "そのため、「500 W/m²だから、植物にとっても同じ明るさ」とは必ずしも言えません。これが、植物の生育を測るときにW/m²ではなくPPFDがよく使われる理由です。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "joules",
+			"heading": "J/m²とは？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "J（ジュール）",
+							"bold": true
+						},
+						{
+							"text": "は、エネルギーの量を表す単位です。例えば、"
+						},
+						{
+							"text": "J/m²",
+							"bold": true
+						},
+						{
+							"text": " であれば、次のことを表します。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "1平方メートルあたりに、合計でどれくらいのエネルギーが届いたか",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "W/m²が「今の状態」なのに対して、J/m²は「一定時間の積み重ね」と考えるとわかりやすくなります。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "W/m²",
+								"bold": true
+							},
+							{
+								"text": "：今、どれくらいのエネルギーが届いているか"
+							}
+						],
+						[
+							{
+								"text": "J/m²",
+								"bold": true
+							},
+							{
+								"text": "：一定時間に、合計でどれくらいのエネルギーが届いたか"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "light-like-water",
+			"heading": "水道の水で考えてみる",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "光の測定を理解する簡単な方法として、水道のホースを想像してみましょう。ホースから水が出ています。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "「今、どれくらいの勢いで水が出ているか」",
+								"bold": true
+							},
+							{
+								"text": "：これは、PPFDやW/m²に似ています。"
+							}
+						],
+						[
+							{
+								"text": "「朝から夕方までに、バケツにどれくらい水がたまったか」",
+								"bold": true
+							},
+							{
+								"text": "：これは、DLIやJ/m²に似ています。"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "つまり、次のような関係です。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD",
+								"bold": true
+							},
+							{
+								"text": "：今、植物が受けている光の量"
+							}
+						],
+						[
+							{
+								"text": "DLI",
+								"bold": true
+							},
+							{
+								"text": "：今日1日で植物が受けた光の合計"
+							}
+						],
+						[
+							{
+								"text": "W/m²",
+								"bold": true
+							},
+							{
+								"text": "：今、届いている光エネルギー"
+							}
+						],
+						[
+							{
+								"text": "J/m²",
+								"bold": true
+							},
+							{
+								"text": "：一定時間に届いた光エネルギーの合計"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "photons-not-watts",
+			"heading": "PPFDとW/m²は何が違う？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "一番大きな違いは、"
+						},
+						{
+							"text": "何を数えているか",
+							"bold": true
+						},
+						{
+							"text": "です。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD",
+								"bold": true
+							},
+							{
+								"text": "：植物の光合成に関係する"
+							},
+							{
+								"text": "光子の量",
+								"bold": true
+							},
+							{
+								"text": "を測ります。"
+							}
+						],
+						[
+							{
+								"text": "W/m²",
+								"bold": true
+							},
+							{
+								"text": "：光が持っている"
+							},
+							{
+								"text": "エネルギー",
+								"bold": true
+							},
+							{
+								"text": "を測ります。"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "植物の生育を考える場合には、エネルギーそのものよりも、"
+						},
+						{
+							"text": "光合成に利用できる光がどれくらい届いているか",
+							"bold": true
+						},
+						{
+							"text": "を知りたいことが多いため、PPFDがよく利用されます。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "par",
+			"heading": "PARとは？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "PPFDについて調べると、"
+						},
+						{
+							"text": "PAR",
+							"bold": true
+						},
+						{
+							"text": "という言葉もよく出てきます。PARは、"
+						},
+						{
+							"text": "Photosynthetically Active Radiation",
+							"bold": true
+						},
+						{
+							"text": " の略で、日本語では一般的に"
+						},
+						{
+							"text": "光合成有効放射",
+							"bold": true
+						},
+						{
+							"text": "と呼ばれます。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "一般的には、"
+						},
+						{
+							"text": "約400～700 nm",
+							"bold": true
+						},
+						{
+							"text": " の波長の光を指します。これは、人間の目で見える可視光の大部分にあたります。植物は、この範囲の光を主に光合成に利用します。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "そのためPPFDを測定するセンサーは、次のように呼ばれることがあります。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PARセンサー",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "量子センサー",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "PPFDセンサー",
+								"bold": true
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "converting-watts-to-ppfd",
+			"heading": "W/m²からPPFDへ変換できる？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "条件によっては、おおよその換算を行うことはできます。ただし、正確な変換には注意が必要です。その理由は、"
+						},
+						{
+							"text": "光の色によって、光が持っているエネルギーが違うため",
+							"bold": true
+						},
+						{
+							"text": "です。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "例えば、赤色の光と青色の光では、1つの光子が持っているエネルギーが異なります。そのため、W/m²だけでは、"
+						},
+						{
+							"text": "何個の光子が植物に届いているか",
+							"bold": true
+						},
+						{
+							"text": "を正確に判断することができません。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "太陽光の場合。",
+							"bold": true
+						},
+						{
+							"text": "自然の太陽光は、光の色の構成がある程度予測できるため、W/m²からPPFDを"
+						},
+						{
+							"text": "おおよそ推定する",
+							"bold": true
+						},
+						{
+							"text": "ことは可能です。しかし、あくまで推定値です。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "LED照明の場合。",
+							"bold": true
+						},
+						{
+							"text": "植物工場やハウスでは、人工照明が使われることがあります。例えば、次のようなものです。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "白色LED"
+							}
+						],
+						[
+							{
+								"text": "赤色・青色LED"
+							}
+						],
+						[
+							{
+								"text": "植物育成用LED"
+							}
+						],
+						[
+							{
+								"text": "高圧ナトリウムランプ"
+							}
+						],
+						[
+							{
+								"text": "蛍光灯"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "これらは、それぞれ光に含まれる色の割合が違います。そのため、"
+						},
+						{
+							"text": "同じW/m²でもPPFDが違う",
+							"bold": true
+						},
+						{
+							"text": "ということがあります。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "特に人工照明を正確に測定したい場合は、"
+						},
+						{
+							"text": "PPFDを直接測定できるセンサーを使用する",
+							"bold": true
+						},
+						{
+							"text": "ほうが適しています。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "best-for-agriculture",
+			"heading": "農業ではどれを使えばいい？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "目的が"
+						},
+						{
+							"text": "作物の生育や光合成に必要な光を測定すること",
+							"bold": true
+						},
+						{
+							"text": "であれば、"
+						},
+						{
+							"text": "PPFDとDLI",
+							"bold": true
+						},
+						{
+							"text": "が特に使いやすい指標です。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "PPFDが向いている用途。",
+							"bold": true
+						},
+						{
+							"text": "PPFDは、次のようなことを確認するときに便利です。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "現在の光量"
+							}
+						],
+						[
+							{
+								"text": "ハウス内の場所による光量の違い"
+							}
+						],
+						[
+							{
+								"text": "建物や設備による影"
+							}
+						],
+						[
+							{
+								"text": "遮光カーテンの効果"
+							}
+						],
+						[
+							{
+								"text": "被覆材による光量の変化"
+							}
+						],
+						[
+							{
+								"text": "植物育成用LEDの光量"
+							}
+						],
+						[
+							{
+								"text": "作物の高さによる光量の違い"
+							}
+						],
+						[
+							{
+								"text": "葉の上部と下部の光環境"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "つまり、"
+						},
+						{
+							"text": "今の光環境を詳しく見る",
+							"bold": true
+						},
+						{
+							"text": "ための指標です。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "DLIが向いている用途。",
+							"bold": true
+						},
+						{
+							"text": "DLIは、次のような確認に便利です。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "今日、作物がどれくらい光を受けたか"
+							}
+						],
+						[
+							{
+								"text": "晴天日と曇天日の違い"
+							}
+						],
+						[
+							{
+								"text": "季節による光量の変化"
+							}
+						],
+						[
+							{
+								"text": "ハウスごとの光環境の比較"
+							}
+						],
+						[
+							{
+								"text": "ハウス内の場所ごとの比較"
+							}
+						],
+						[
+							{
+								"text": "補光が必要かどうかの判断"
+							}
+						],
+						[
+							{
+								"text": "LED補光によって1日の光量がどれだけ増えたか"
+							}
+						],
+						[
+							{
+								"text": "作物ごとの目標光量との比較"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "DLIを見ることで、次のような非常にわかりやすい形で、1日の光環境を見ることができます。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "「今日は作物に十分な光が届いたのか？」",
+							"bold": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "when-watts-are-useful",
+			"heading": "W/m²やJ/m²は必要ない？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "W/m²やJ/m²が不要ということではありません。目的によっては、こちらのほうが適しています。例えば、次のような用途では、W/m²やJ/m²が重要になります。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "日射量の測定"
+							}
+						],
+						[
+							{
+								"text": "気象観測"
+							}
+						],
+						[
+							{
+								"text": "太陽光発電"
+							}
+						],
+						[
+							{
+								"text": "ハウス内の熱負荷の確認"
+							}
+						],
+						[
+							{
+								"text": "太陽光による温度上昇の評価"
+							}
+						],
+						[
+							{
+								"text": "建物のエネルギー管理"
+							}
+						],
+						[
+							{
+								"text": "紫外線の測定"
+							}
+						],
+						[
+							{
+								"text": "材料の耐候性評価"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "つまり、何を知りたいかによって適した測定方法が変わります。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "choosing-a-measurement",
+			"heading": "何を測りたいかで選ぶ",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "迷った場合は、次のように考えるとわかりやすくなります。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "今、植物がどれくらい光を受けている？ → "
+							},
+							{
+								"text": "PPFD",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "今日1日で植物がどれくらい光を受けた？ → "
+							},
+							{
+								"text": "DLI",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "今、どれくらいの日射エネルギーがある？ → "
+							},
+							{
+								"text": "W/m²",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "一定時間にどれくらいの日射エネルギーを受けた？ → "
+							},
+							{
+								"text": "J/m²",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "作物の光環境を管理する場合は、"
+						},
+						{
+							"text": "PPFDを定期的に測定し、そのデータからDLIを計算する",
+							"bold": true
+						},
+						{
+							"text": "という方法が非常にわかりやすくなります。例えば、画面上では次のように表示できます。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "現在の光量（PPFD）",
+								"bold": true
+							},
+							{
+								"text": "：724 µmol/m²/s"
+							}
+						],
+						[
+							{
+								"text": "本日の積算光量（DLI）",
+								"bold": true
+							},
+							{
+								"text": "：16.8 mol/m²/day"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "これによって、"
+						},
+						{
+							"text": "現在の光環境",
+							"bold": true
+						},
+						{
+							"text": "と"
+						},
+						{
+							"text": "今日1日の光環境",
+							"bold": true
+						},
+						{
+							"text": "の両方を確認できます。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "short-version",
+			"heading": "まとめ",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "すべての仕組みを覚える必要はありません。まずは、次の4つを覚えておけば十分です。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD = 今、植物が受けている光",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "DLI = 今日1日で植物が受けた光の合計",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "W/m² = 今、届いている光エネルギー",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "J/m² = 一定時間に届いた光エネルギーの合計",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "作物の生育を目的として光を管理する場合は、特に"
+						},
+						{
+							"text": "PPFDとDLI",
+							"bold": true
+						},
+						{
+							"text": "がわかりやすく、実用的です。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "PPFDを見ることで、"
+						},
+						{
+							"text": "「今、どれくらい光が届いているか」",
+							"bold": true
+						},
+						{
+							"text": "がわかります。DLIを見ることで、"
+						},
+						{
+							"text": "「今日1日で、作物はどれくらい光を受けたか」",
+							"bold": true
+						},
+						{
+							"text": "がわかります。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "この2つを組み合わせることで、ハウスや圃場の光環境をよりわかりやすく把握できるようになります。"
 						}
 					]
 				}

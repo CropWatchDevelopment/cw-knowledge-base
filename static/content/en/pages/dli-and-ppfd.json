@@ -1,18 +1,253 @@
 {
 	"slug": "dli-and-ppfd",
 	"topic": "concepts",
-	"title": "DLI and PPFD",
-	"intro": "PPFD tells you how much usable light is reaching your plants right now. DLI adds that up over a whole day.",
+	"title": "PPFD, DLI, Watts and Joules: Understanding Light Measurements in Agriculture",
+	"intro": "Light is one of the most important factors affecting plant growth, but light sensors can report their measurements in several different ways.",
 	"sections": [
 		{
-			"id": "ppfd",
-			"heading": "PPFD: light at this moment",
+			"id": "four-measurements",
+			"heading": "Four ways to measure light",
 			"body": [
 				{
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Photosynthetic photon flux density (PPFD) counts the photons of light that plants can use for photosynthesis (wavelengths of 400 to 700 nm) landing on one square metre each second. The unit is µmol/m²/s."
+							"text": "You may see terms such as:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "DLI",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "W/m² or mW/m²",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "J/m²",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "They all measure light in some way, but they do "
+						},
+						{
+							"text": "not",
+							"bold": true
+						},
+						{
+							"text": " tell you the same thing. The easiest way to understand the difference is:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD tells you how much useful plant light is available right now.",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "DLI tells you how much useful plant light the crop received throughout the day.",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "W/m² tells you how much light energy is arriving right now.",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "J/m² tells you how much light energy accumulated over a period of time.",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "For most crop-growing applications, "
+						},
+						{
+							"text": "PPFD and DLI are usually the most useful measurements",
+							"bold": true
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "comparison",
+			"heading": "A simple comparison",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD",
+								"bold": true
+							},
+							{
+								"text": ": plant-usable light available right now. Think of it as how bright the growing light is right now."
+							}
+						],
+						[
+							{
+								"text": "DLI",
+								"bold": true
+							},
+							{
+								"text": ": total plant-usable light received during the day. Think of it as how much growing light the plant received today."
+							}
+						],
+						[
+							{
+								"text": "W/m²",
+								"bold": true
+							},
+							{
+								"text": ": light energy arriving right now. Think of it as how powerful the sunlight is right now."
+							}
+						],
+						[
+							{
+								"text": "mW/m²",
+								"bold": true
+							},
+							{
+								"text": ": the same type of measurement as W/m², but using a smaller unit. Light power."
+							}
+						],
+						[
+							{
+								"text": "J/m²",
+								"bold": true
+							},
+							{
+								"text": ": total light energy received over time. Think of it as how much light energy accumulated."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "There are essentially two pairs, each made of a current measurement and an accumulated one:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD",
+								"bold": true
+							},
+							{
+								"text": " (current) and "
+							},
+							{
+								"text": "DLI",
+								"bold": true
+							},
+							{
+								"text": " (accumulated)"
+							}
+						],
+						[
+							{
+								"text": "W/m²",
+								"bold": true
+							},
+							{
+								"text": " (current) and "
+							},
+							{
+								"text": "J/m²",
+								"bold": true
+							},
+							{
+								"text": " (accumulated)"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "PPFD and DLI are particularly useful for plants. Watts and joules are measurements of physical energy."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "ppfd",
+			"heading": "What is PPFD?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "PPFD",
+							"bold": true
+						},
+						{
+							"text": " stands for "
+						},
+						{
+							"text": "Photosynthetic Photon Flux Density",
+							"bold": true
+						},
+						{
+							"text": ". The name sounds complicated, but the idea is simple:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "PPFD tells us how much light that plants can use for photosynthesis is reaching them right now.",
+							"bold": true
 						}
 					]
 				},
@@ -20,35 +255,1272 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Full summer sun can reach around 2,000 µmol/m²/s. Under cloud, shade cloth or glass it is much lower."
+							"text": "PPFD is normally displayed as "
+						},
+						{
+							"text": "µmol/m²/s",
+							"bold": true
+						},
+						{
+							"text": ". For most growers, understanding the exact scientific meaning of this unit is not particularly important. The important part is:"
 						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "A higher PPFD means more photosynthesis-capable light is reaching the plant at that moment.",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Think of PPFD as being similar to a "
+						},
+						{
+							"text": "speedometer",
+							"bold": true
+						},
+						{
+							"text": ". A speedometer tells you how fast your car is travelling "
+						},
+						{
+							"text": "right now",
+							"bold": true
+						},
+						{
+							"text": ". PPFD tells you how much useful growing light is reaching the crop "
+						},
+						{
+							"text": "right now",
+							"bold": true
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "An example.",
+							"bold": true
+						},
+						{
+							"text": " Imagine checking a greenhouse throughout the day. You might see:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "7:00 AM",
+								"bold": true
+							},
+							{
+								"text": ": 100 µmol/m²/s"
+							}
+						],
+						[
+							{
+								"text": "9:00 AM",
+								"bold": true
+							},
+							{
+								"text": ": 450 µmol/m²/s"
+							}
+						],
+						[
+							{
+								"text": "12:00 PM",
+								"bold": true
+							},
+							{
+								"text": ": 1,100 µmol/m²/s"
+							}
+						],
+						[
+							{
+								"text": "3:00 PM",
+								"bold": true
+							},
+							{
+								"text": ": 700 µmol/m²/s"
+							}
+						],
+						[
+							{
+								"text": "6:00 PM",
+								"bold": true
+							},
+							{
+								"text": ": 80 µmol/m²/s"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The sunlight changes throughout the day, so PPFD changes with it. PPFD is therefore very useful when you want to know things such as:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "How much light is reaching the crop right now?"
+							}
+						],
+						[
+							{
+								"text": "Is part of the greenhouse being shaded?"
+							}
+						],
+						[
+							{
+								"text": "How much light is reaching plants underneath a shade curtain?"
+							}
+						],
+						[
+							{
+								"text": "How much additional light are grow lights providing?"
+							}
+						],
+						[
+							{
+								"text": "How does light differ between different areas of a greenhouse?"
+							}
+						]
 					]
 				}
 			]
 		},
 		{
 			"id": "dli",
-			"heading": "DLI: light over the whole day",
+			"heading": "What is DLI?",
 			"body": [
 				{
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The daily light integral (DLI) is the total PPFD received over 24 hours, in mol/m²/day. A bright hour and a cloudy hour both count: DLI tells you what the plant received in total."
+							"text": "DLI",
+							"bold": true
+						},
+						{
+							"text": " stands for "
+						},
+						{
+							"text": "Daily Light Integral",
+							"bold": true
+						},
+						{
+							"text": ". DLI answers a slightly different and often more useful question:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "How much usable light did the plant receive during the entire day?",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "DLI is normally displayed as "
+						},
+						{
+							"text": "mol/m²/day",
+							"bold": true
+						},
+						{
+							"text": ". You can simply think of this as:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The total amount of growing light received today.",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If PPFD is like your car's "
+						},
+						{
+							"text": "speedometer",
+							"bold": true
+						},
+						{
+							"text": ", DLI is similar to the "
+						},
+						{
+							"text": "distance travelled during the day",
+							"bold": true
+						},
+						{
+							"text": ". PPFD might constantly change, but DLI keeps adding the light together as the day progresses."
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "why-it-matters",
-			"heading": "Why it matters",
+			"id": "why-dli-matters",
+			"heading": "Why is DLI important?",
 			"body": [
 				{
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Growth follows total light more closely than peak light. Two days with the same midday PPFD can have very different DLI if one of them was cloudy all morning. Tracking DLI helps you decide when shading or supplemental lighting is worth it."
+							"text": "Consider two different days."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Day 1:",
+								"bold": true
+							},
+							{
+								"text": " the morning is extremely sunny, but heavy clouds arrive during the afternoon."
+							}
+						],
+						[
+							{
+								"text": "Day 2:",
+								"bold": true
+							},
+							{
+								"text": " the sunlight is not quite as strong, but the sky remains clear throughout the entire day."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Looking at only the highest PPFD measurement could make Day 1 appear better. But the plants might actually receive "
+						},
+						{
+							"text": "more total light on Day 2",
+							"bold": true
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "DLI makes this easy to see because it adds together the usable light received throughout the whole day. For example:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Monday",
+								"bold": true
+							},
+							{
+								"text": ": maximum PPFD 1,400 µmol/m²/s, DLI 15 mol/m²/day"
+							}
+						],
+						[
+							{
+								"text": "Tuesday",
+								"bold": true
+							},
+							{
+								"text": ": maximum PPFD 1,050 µmol/m²/s, DLI 21 mol/m²/day"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Monday reached a much higher light level. But Tuesday provided considerably more usable light over the entire day. For crop production, that can be much more meaningful."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "ppfd-vs-dli",
+			"heading": "PPFD vs DLI",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "PPFD and DLI should not really be thought of as competing measurements. They answer two different questions."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD:",
+								"bold": true
+							},
+							{
+								"text": " what are the light conditions right now?"
+							}
+						],
+						[
+							{
+								"text": "DLI:",
+								"bold": true
+							},
+							{
+								"text": " how much useful light has the crop received today?"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A good agricultural monitoring system can use both. For example:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Current PPFD:",
+								"bold": true
+							},
+							{
+								"text": " 724 µmol/m²/s"
+							}
+						],
+						[
+							{
+								"text": "Today's DLI:",
+								"bold": true
+							},
+							{
+								"text": " 16.8 mol/m²/day"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This allows a grower to see both the current conditions and the overall daily light exposure."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "watts",
+			"heading": "What are W/m² and mW/m²?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Another common way of measuring light is "
+						},
+						{
+							"text": "watts per square meter",
+							"bold": true
+						},
+						{
+							"text": ", written as "
+						},
+						{
+							"text": "W/m²",
+							"bold": true
+						},
+						{
+							"text": ". You may also encounter "
+						},
+						{
+							"text": "mW/m²",
+							"bold": true
+						},
+						{
+							"text": ". A milliwatt is simply one-thousandth of a watt."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "These measurements tell us:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "How much light energy is reaching an area right now.",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This is useful in many applications. For example, solar radiation sensors frequently measure sunlight in W/m². Strong sunlight reaching the Earth's surface may be around "
+						},
+						{
+							"text": "1,000 W/m²",
+							"bold": true
+						},
+						{
+							"text": ", depending on the weather, location, time of year and other conditions."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "watts-and-plants",
+			"heading": "Why aren't watts always ideal for plants?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Plants do not respond to every type of light in exactly the same way. A measurement in watts tells us "
+						},
+						{
+							"text": "how much energy is present",
+							"bold": true
+						},
+						{
+							"text": ", but it does not necessarily tell us "
+						},
+						{
+							"text": "how many useful photons are available for photosynthesis",
+							"bold": true
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Imagine two different lights that both produce "
+						},
+						{
+							"text": "500 W/m²",
+							"bold": true
+						},
+						{
+							"text": ". One could produce light that is very useful for photosynthesis, while another could contain considerably more energy outside the wavelengths we are interested in for plant growth. The energy measurement may be the same, while their usefulness to a plant may be different."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "That is why agricultural lighting commonly uses "
+						},
+						{
+							"text": "PPFD instead of simply measuring watts",
+							"bold": true
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "joules",
+			"heading": "What are joules?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A "
+						},
+						{
+							"text": "joule",
+							"bold": true
+						},
+						{
+							"text": " is a measurement of energy. When light energy is added together over time, it can be expressed using joules. For example, "
+						},
+						{
+							"text": "J/m²",
+							"bold": true
+						},
+						{
+							"text": " means the amount of energy that has reached one square meter."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The relationship between watts and joules is similar to the relationship between PPFD and DLI."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "W/m²",
+								"bold": true
+							},
+							{
+								"text": " tells us how much energy is arriving "
+							},
+							{
+								"text": "right now",
+								"bold": true
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "J/m²",
+								"bold": true
+							},
+							{
+								"text": " tells us how much energy has "
+							},
+							{
+								"text": "accumulated over time",
+								"bold": true
+							},
+							{
+								"text": "."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "light-like-water",
+			"heading": "Think about light like water",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "One of the easiest ways to understand these measurements is to imagine filling a bucket with water. The amount of water coming from the hose "
+						},
+						{
+							"text": "right now",
+							"bold": true
+						},
+						{
+							"text": " is similar to PPFD or W/m². The amount of water collected in the bucket "
+						},
+						{
+							"text": "after several hours",
+							"bold": true
+						},
+						{
+							"text": " is similar to DLI or J/m². So:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD",
+								"bold": true
+							},
+							{
+								"text": ": how fast useful plant light is arriving"
+							}
+						],
+						[
+							{
+								"text": "DLI",
+								"bold": true
+							},
+							{
+								"text": ": how much useful plant light accumulated during the day"
+							}
+						],
+						[
+							{
+								"text": "W/m²",
+								"bold": true
+							},
+							{
+								"text": ": how fast light energy is arriving"
+							}
+						],
+						[
+							{
+								"text": "J/m²",
+								"bold": true
+							},
+							{
+								"text": ": how much light energy accumulated"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The major difference is "
+						},
+						{
+							"text": "what is being counted",
+							"bold": true
+						},
+						{
+							"text": ". PPFD and DLI are concerned with the photons used for photosynthesis. Watts and joules are concerned with energy."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "photons-not-watts",
+			"heading": "Why do plants use PPFD instead of watts?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Plants perform photosynthesis using individual packets of light called "
+						},
+						{
+							"text": "photons",
+							"bold": true
+						},
+						{
+							"text": ". PPFD essentially counts the amount of photosynthetically useful light reaching the plant."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This is important because different colors of light contain different amounts of energy. For example, a blue photon contains a different amount of energy from a red photon. A measurement based purely on watts measures that energy difference. For photosynthesis, however, we are often more interested in "
+						},
+						{
+							"text": "how many usable photons are reaching the plant",
+							"bold": true
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This is why PPFD has become such an important measurement in horticulture and controlled-environment agriculture."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "par",
+			"heading": "What is PAR?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When discussing PPFD, you will often encounter another term: "
+						},
+						{
+							"text": "PAR (Photosynthetically Active Radiation)",
+							"bold": true
+						},
+						{
+							"text": ". PAR generally refers to light between approximately "
+						},
+						{
+							"text": "400–700 nm",
+							"bold": true
+						},
+						{
+							"text": ". This covers most of the visible light spectrum used by plants for photosynthesis."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A proper PPFD sensor is therefore often called a:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PAR sensor"
+							}
+						],
+						[
+							{
+								"text": "Quantum sensor"
+							}
+						],
+						[
+							{
+								"text": "PPFD sensor"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "These sensors are designed specifically for measuring photosynthetically useful light."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "converting-watts-to-ppfd",
+			"heading": "Can W/m² be converted to PPFD?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Sometimes, but there is an important limitation. To accurately convert light energy into PPFD, you need to know something about the "
+						},
+						{
+							"text": "colors or wavelengths contained in the light",
+							"bold": true
+						},
+						{
+							"text": ". This is because different wavelengths contain different amounts of energy."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "With natural sunlight, approximate conversions can sometimes be made because the spectrum of sunlight is reasonably predictable. With artificial lighting, the situation can be very different. For example, these can all have different light spectra:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "White LED grow lights"
+							}
+						],
+						[
+							{
+								"text": "Red and blue grow lights"
+							}
+						],
+						[
+							{
+								"text": "High-pressure sodium lamps"
+							}
+						],
+						[
+							{
+								"text": "Fluorescent lights"
+							}
+						],
+						[
+							{
+								"text": "Specialized horticultural LEDs"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Two lights could therefore produce the same W/m² measurement while producing different PPFD measurements. For accurate agricultural measurements, it is generally better to "
+						},
+						{
+							"text": "measure PPFD directly with an appropriate sensor",
+							"bold": true
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "best-for-agriculture",
+			"heading": "Which measurement is best for agriculture?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If the purpose is understanding the light available for "
+						},
+						{
+							"text": "crop growth and photosynthesis",
+							"bold": true
+						},
+						{
+							"text": ", PPFD and DLI are generally the most useful measurements."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Use PPFD when you want to know:",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Current light conditions"
+							}
+						],
+						[
+							{
+								"text": "Light differences throughout a greenhouse"
+							}
+						],
+						[
+							{
+								"text": "Whether plants are being shaded"
+							}
+						],
+						[
+							{
+								"text": "Grow-light intensity"
+							}
+						],
+						[
+							{
+								"text": "Light levels at different canopy heights"
+							}
+						],
+						[
+							{
+								"text": "Changes caused by curtains, films or greenhouse coverings"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Use DLI when you want to know:",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "How much light the crop received today"
+							}
+						],
+						[
+							{
+								"text": "Whether crops are receiving enough light over time"
+							}
+						],
+						[
+							{
+								"text": "Differences between sunny and cloudy days"
+							}
+						],
+						[
+							{
+								"text": "Seasonal changes"
+							}
+						],
+						[
+							{
+								"text": "Differences between greenhouses"
+							}
+						],
+						[
+							{
+								"text": "Whether supplemental lighting may be required"
+							}
+						],
+						[
+							{
+								"text": "How effectively supplemental lighting is increasing daily light exposure"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "For most growers, "
+						},
+						{
+							"text": "DLI can be one of the easiest measurements to use when looking at overall crop-light conditions",
+							"bold": true
+						},
+						{
+							"text": ". Instead of asking \"How bright did it get at noon?\", DLI lets us ask:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "\"Did the crop receive enough light today?\"",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "That is often the more useful agricultural question."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "when-watts-are-useful",
+			"heading": "When are W/m² and joules useful?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "PPFD and DLI are not always the correct measurement. W/m² and J/m² are useful when the goal is measuring "
+						},
+						{
+							"text": "energy rather than photosynthesis",
+							"bold": true
+						},
+						{
+							"text": ". Examples include:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Solar radiation monitoring"
+							}
+						],
+						[
+							{
+								"text": "Solar panel performance"
+							}
+						],
+						[
+							{
+								"text": "Heating caused by sunlight"
+							}
+						],
+						[
+							{
+								"text": "Building energy studies"
+							}
+						],
+						[
+							{
+								"text": "Greenhouse heat-load calculations"
+							}
+						],
+						[
+							{
+								"text": "UV exposure"
+							}
+						],
+						[
+							{
+								"text": "Radiation measurements"
+							}
+						],
+						[
+							{
+								"text": "Material exposure testing"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If the question is "
+						},
+						{
+							"text": "\"How much solar energy is arriving?\"",
+							"bold": true
+						},
+						{
+							"text": ", W/m² may be appropriate. If the question is "
+						},
+						{
+							"text": "\"How much useful growing light is reaching my crop?\"",
+							"bold": true
+						},
+						{
+							"text": ", PPFD is normally more useful."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "choosing-a-measurement",
+			"heading": "Which measurement should a grower look at?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A simple way to choose is:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "How much useful plant light is available right now? "
+							},
+							{
+								"text": "PPFD",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "How much useful plant light did the crop receive today? "
+							},
+							{
+								"text": "DLI",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "How much solar energy is arriving right now? "
+							},
+							{
+								"text": "W/m²",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "How much solar energy accumulated over time? "
+							},
+							{
+								"text": "J/m²",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "For agricultural crop monitoring, a useful system will often "
+						},
+						{
+							"text": "measure PPFD throughout the day and automatically calculate DLI",
+							"bold": true
+						},
+						{
+							"text": ". The grower can then see:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Current light (PPFD):",
+								"bold": true
+							},
+							{
+								"text": " 724 µmol/m²/s"
+							}
+						],
+						[
+							{
+								"text": "Daily light (DLI):",
+								"bold": true
+							},
+							{
+								"text": " 16.8 mol/m²/day"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This provides both a real-time view and a simple daily measurement."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "short-version",
+			"heading": "The short version",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If you remember only four things, remember these:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "PPFD = useful plant light right now",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "DLI = total useful plant light today",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "W/m² = light energy right now",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "J/m² = accumulated light energy",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "For most agricultural applications concerned with plant growth, "
+						},
+						{
+							"text": "PPFD and DLI provide the most directly useful information",
+							"bold": true
+						},
+						{
+							"text": ". PPFD shows what is happening now. DLI shows the bigger picture. Together, they make it much easier to understand how much light a crop is actually receiving."
 						}
 					]
 				}

@@ -106,15 +106,21 @@
 		},
 		"dli-and-ppfd": {
 			"topic": "concepts",
-			"title": "DLI and PPFD",
-			"summary": "PPFD is the usable light reaching your plants right now. DLI adds it up over a whole day.",
+			"title": "PPFD, DLI, Watts and Joules: Understanding Light Measurements in Agriculture",
+			"summary": "PPFD is the usable plant light right now and DLI is the total for the day. Watts and joules measure light energy instead.",
 			"image": null,
 			"hasVideo": false,
 			"keywords": [
 				"light",
 				"daily light integral",
 				"photosynthesis",
-				"par"
+				"par",
+				"ppfd",
+				"watts",
+				"joules",
+				"w/m²",
+				"solar radiation",
+				"quantum sensor"
 			]
 		},
 		"air-temperature-humidity-sensors": {
