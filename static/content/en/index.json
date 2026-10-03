@@ -44,7 +44,8 @@
 			"pages": [
 				"what-is-lorawan",
 				"vpd-explained",
-				"dli-and-ppfd"
+				"dli-and-ppfd",
+				"vwc-and-saturation"
 			]
 		}
 	],
@@ -311,6 +312,23 @@
 				"CW-AIR-THC",
 				"CW-SS-THCP",
 				"user guide"
+			]
+		},
+		"vwc-and-saturation": {
+			"topic": "concepts",
+			"title": "Soil Moisture: Understanding VWC vs. Degree of Saturation",
+			"summary": "VWC is how much of the soil's volume is water. Degree of saturation is how full the spaces in the soil are.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"soil moisture",
+				"vwc",
+				"volumetric water content",
+				"saturation",
+				"pore space",
+				"waterlogged",
+				"drainage",
+				"irrigation"
 			]
 		}
 	},

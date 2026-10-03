@@ -44,7 +44,8 @@
 			"pages": [
 				"what-is-lorawan",
 				"vpd-explained",
-				"dli-and-ppfd"
+				"dli-and-ppfd",
+				"vwc-and-saturation"
 			]
 		}
 	],
@@ -447,6 +448,27 @@
 				"iso17025",
 				"deveui",
 				"tti"
+			]
+		},
+		"vwc-and-saturation": {
+			"topic": "concepts",
+			"title": "土壌水分の見方：VWCと飽和度の違い",
+			"summary": "VWCは土全体のうち水が占める割合、飽和度は土のすき間が水で満たされている割合です。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"土壌水分",
+				"体積含水率",
+				"飽和度",
+				"含水率",
+				"すき間",
+				"灌水",
+				"過湿",
+				"排水",
+				"VWC",
+				"volumetric water content",
+				"saturation",
+				"soil moisture"
 			]
 		}
 	},

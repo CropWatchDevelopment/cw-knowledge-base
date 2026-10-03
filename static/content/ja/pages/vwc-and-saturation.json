@@ -1,0 +1,807 @@
+{
+	"slug": "vwc-and-saturation",
+	"topic": "concepts",
+	"title": "土壌水分の見方：VWCと飽和度の違い",
+	"intro": "土の中にどれくらい水があるかを表す方法には、いくつか種類があります。",
+	"sections": [
+		{
+			"id": "two-measurements",
+			"heading": "VWCと飽和度",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "農業でよく使われるものに、次の2つがあります。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "VWC",
+								"bold": true
+							},
+							{
+								"text": "（体積含水率）"
+							}
+						],
+						[
+							{
+								"text": "土壌の飽和度",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "どちらも土の水分を表す数字ですが、見ているものは少し違います。まずは、次のように考えるとわかりやすくなります。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "VWC：土全体の中に、どれくらい水が入っているか",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "飽和度：土のすき間が、どれくらい水で満たされているか",
+								"bold": true
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "pores",
+			"heading": "土の中には「すき間」がある",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "土は、砂や粘土などの粒がぎっしり詰まっているように見えます。しかし実際には、土の粒と粒の間にはたくさんの小さなすき間があります。そのすき間には、次のものが入っています。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "水"
+							}
+						],
+						[
+							{
+								"text": "空気"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "植物の根は、この土の中にある水を吸収して育ちます。VWCと飽和度は、どちらもこの水分を表しますが、"
+						},
+						{
+							"text": "どこを基準にするか",
+							"bold": true
+						},
+						{
+							"text": "が違います。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "vwc",
+			"heading": "VWCとは？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "VWCは、"
+						},
+						{
+							"text": "Volumetric Water Content",
+							"bold": true
+						},
+						{
+							"text": " の略で、日本語では"
+						},
+						{
+							"text": "体積含水率",
+							"bold": true
+						},
+						{
+							"text": "と呼ばれます。簡単に言うと、次のことを表した数字です。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "土全体の体積のうち、何％が水なのか",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "例えば、1リットル分の土の中に200mLの水が含まれていたとします。この場合、"
+						},
+						{
+							"text": "VWCは20％",
+							"bold": true
+						},
+						{
+							"text": "です。つまり、次のような意味になります。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "VWC 20％ = 土全体の体積の20％が水",
+							"bold": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "saturation",
+			"heading": "飽和度とは？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "飽和度は、次のことを表します。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "土の中にある「すき間」のうち、どれくらいが水で満たされているか",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "土の粒そのものは数えず、水や空気が入ることのできるすき間だけを見ます。例えば、1リットルの土の中に、次のものがあるとします。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "土の粒",
+								"bold": true
+							},
+							{
+								"text": "：600mL"
+							}
+						],
+						[
+							{
+								"text": "すき間",
+								"bold": true
+							},
+							{
+								"text": "：400mL"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "その400mLのすき間のうち、200mLに水が入っている場合、"
+						},
+						{
+							"text": "飽和度は50％",
+							"bold": true
+						},
+						{
+							"text": "です。同じ土のVWCは20％ですが、飽和度は50％になります。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "same-soil-different-numbers",
+			"heading": "同じ土でも、VWCと飽和度は違う",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "先ほどの例をまとめると、土全体の1,000mLの内訳は次のとおりです。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "土の粒",
+								"bold": true
+							},
+							{
+								"text": "：600mL"
+							}
+						],
+						[
+							{
+								"text": "水",
+								"bold": true
+							},
+							{
+								"text": "：200mL"
+							}
+						],
+						[
+							{
+								"text": "空気",
+								"bold": true
+							},
+							{
+								"text": "：200mL"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "この場合、次のようになります。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "VWC",
+								"bold": true
+							},
+							{
+								"text": "：20％"
+							}
+						],
+						[
+							{
+								"text": "飽和度",
+								"bold": true
+							},
+							{
+								"text": "：50％"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "理由は簡単です。VWCは"
+						},
+						{
+							"text": "土全体",
+							"bold": true
+						},
+						{
+							"text": "を基準にしています。飽和度は"
+						},
+						{
+							"text": "土のすき間だけ",
+							"bold": true
+						},
+						{
+							"text": "を基準にしています。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "sponge",
+			"heading": "スポンジで考えるとわかりやすい",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "土をスポンジに置き換えて考えてみましょう。スポンジには、たくさんの穴があります。その穴には水をためることができます。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "VWC",
+								"bold": true
+							},
+							{
+								"text": "：スポンジ全体のうち、どれくらいが水なのか？"
+							}
+						],
+						[
+							{
+								"text": "飽和度",
+								"bold": true
+							},
+							{
+								"text": "：スポンジの穴が、どれくらい水で満たされているのか？"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "という違いです。スポンジの穴がすべて水で満たされていれば、"
+						},
+						{
+							"text": "飽和度は100％",
+							"bold": true
+						},
+						{
+							"text": "です。しかし、スポンジそのものが水になったわけではありません。そのため、次のようにはなりません。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "飽和度100％ = VWC 100％ ではありません。",
+							"bold": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "fully-saturated",
+			"heading": "「飽和度100％」とは？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "飽和度100％とは、次のような状態です。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "土のすき間がすべて水で満たされ、空気がほとんど残っていない状態",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "雨が大量に降った直後や、水はけの悪い場所などで起こることがあります。この状態では、土の中にある空気が少なくなるため、作物によっては根が酸素不足になることがあります。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "つまり、飽和度は、"
+						},
+						{
+							"text": "土がどれくらい水でいっぱいになっているか",
+							"bold": true
+						},
+						{
+							"text": "を見るのに便利な数字です。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "soil-type-matters",
+			"heading": "同じVWCでも、土によって状態が違う",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "土の種類によって、土の中にあるすき間の量は違います。例えば、次のような土では、水の入り方や保持のされ方が違います。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "砂の多い土"
+							}
+						],
+						[
+							{
+								"text": "粘土の多い土"
+							}
+						],
+						[
+							{
+								"text": "有機物の多い土"
+							}
+						],
+						[
+							{
+								"text": "畑の土"
+							}
+						],
+						[
+							{
+								"text": "培土"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "そのため、同じVWCが30％だったとしても、土によって「かなり湿っている」場合もあれば、「まだ水を保持できる」場合もあります。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "数字を見るときは、"
+						},
+						{
+							"text": "土の種類と合わせて考える",
+							"bold": true
+						},
+						{
+							"text": "ことが大切です。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "which-to-use",
+			"heading": "農業ではどちらが便利？",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "どちらが優れているというより、知りたいことによって使い分けます。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "土の中にどれくらい水がある？ → "
+							},
+							{
+								"text": "VWC",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "土のすき間がどれくらい水で満たされている？ → "
+							},
+							{
+								"text": "飽和度",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "灌水後に土の水分がどれくらい増えた？ → "
+							},
+							{
+								"text": "VWC",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "土が水でいっぱいになりすぎていない？ → "
+							},
+							{
+								"text": "飽和度",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "日ごとの土壌水分の変化を見たい → "
+							},
+							{
+								"text": "VWC",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "排水不良や過湿状態を確認したい → "
+							},
+							{
+								"text": "飽和度",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "普段の栽培管理では、VWCのほうが「土の中にどれくらい水があるか」を直接確認しやすいため、"
+						},
+						{
+							"text": "灌水管理に使いやすい指標",
+							"bold": true
+						},
+						{
+							"text": "です。一方、飽和度は、"
+						},
+						{
+							"text": "土が水で満たされすぎていないか",
+							"bold": true
+						},
+						{
+							"text": "を見るときに役立ちます。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "example",
+			"heading": "具体的なイメージ",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "例えば、VWCを継続して測定すると、次のように変化していきます。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "朝",
+								"bold": true
+							},
+							{
+								"text": "：VWC 28％"
+							}
+						],
+						[
+							{
+								"text": "昼",
+								"bold": true
+							},
+							{
+								"text": "：VWC 25％"
+							}
+						],
+						[
+							{
+								"text": "夕方",
+								"bold": true
+							},
+							{
+								"text": "：VWC 22％"
+							}
+						],
+						[
+							{
+								"text": "灌水後",
+								"bold": true
+							},
+							{
+								"text": "：VWC 31％"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "これを見ることで、「植物が水を使って土が乾いてきた」ことや、「灌水によって土の水分が増えた」ことがわかります。このような変化を見るには、VWCがとても便利です。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "一方、雨が続いたときなどに飽和度が非常に高い状態が続いていれば、「土の中のすき間が水で埋まり、空気が少なくなっている可能性がある」と考えることができます。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "not-plant-available-water",
+			"heading": "どちらも「植物が使える水」を直接表しているわけではない",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "ここも大切なポイントです。VWCが高ければ、必ず植物にとって良いというわけではありません。土の種類によっては、水がたくさんあっても植物が吸収しにくいことがあります。反対に、VWCが比較的低くても、植物が十分に水を利用できることもあります。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "そのため、VWCや飽和度は、"
+						},
+						{
+							"text": "土の水分状態を知るための目安",
+							"bold": true
+						},
+						{
+							"text": "として使います。"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "植物の状態、土の種類、天候、灌水量などと合わせて見ることで、より適切な判断ができます。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "summary",
+			"heading": "まとめ",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "VWCと飽和度の違いは、難しく考える必要はありません。まずは次の2つを覚えておけば十分です。"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "VWC = 土全体の中に、どれくらい水が入っているか",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "飽和度 = 土のすき間が、どれくらい水で満たされているか",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "例えば、"
+						},
+						{
+							"text": "VWC 20％",
+							"bold": true
+						},
+						{
+							"text": "でも、"
+						},
+						{
+							"text": "飽和度 50％",
+							"bold": true
+						},
+						{
+							"text": "ということは普通にあります。また、"
+						},
+						{
+							"text": "飽和度100％でも、VWCが100％になるわけではありません。",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "農業で日々の土壌水分や灌水の変化を見る場合は、VWCが特にわかりやすい指標です。飽和度は、土が水で満たされすぎていないか、排水がうまくできているかを見るときに役立ちます。"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "2つの意味を正しく理解することで、土の中で水がどのような状態になっているのかを、よりわかりやすく把握できるようになります。"
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "soil-moisture-sensors"
+		}
+	]
+}

@@ -1,0 +1,992 @@
+{
+	"slug": "vwc-and-saturation",
+	"topic": "concepts",
+	"title": "Soil Moisture: Understanding VWC vs. Degree of Saturation",
+	"intro": "There are several ways to describe how much water is in the soil.",
+	"sections": [
+		{
+			"id": "two-measurements",
+			"heading": "VWC and degree of saturation",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Two common terms are:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "VWC",
+								"bold": true
+							},
+							{
+								"text": " (Volumetric Water Content)"
+							}
+						],
+						[
+							{
+								"text": "Degree of Saturation",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Both describe soil moisture, but they do not mean the same thing. The easiest way to think about the difference is:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "VWC tells you how much of the total soil volume is water.",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "Degree of saturation tells you how full the empty spaces in the soil are with water.",
+								"bold": true
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "pores",
+			"heading": "Soil is not completely solid",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Soil may look solid, but it is actually made up of many small particles with spaces between them. Those spaces can hold:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Water"
+							}
+						],
+						[
+							{
+								"text": "Air"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Plant roots grow through these spaces and take up water from the soil. VWC and degree of saturation both describe soil water, but they use a "
+						},
+						{
+							"text": "different reference point",
+							"bold": true
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "vwc",
+			"heading": "What is VWC?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "VWC stands for "
+						},
+						{
+							"text": "Volumetric Water Content",
+							"bold": true
+						},
+						{
+							"text": ". In simple terms:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "VWC tells you what percentage of the total soil volume is water.",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Imagine you have exactly 1 liter of soil. If that soil contains 200 milliliters of water, then "
+						},
+						{
+							"text": "VWC = 20%",
+							"bold": true
+						},
+						{
+							"text": ". That means:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "20% of the total volume of the soil is water.",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This makes VWC a useful way to track how much water is actually stored in the soil."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "saturation",
+			"heading": "What is degree of saturation?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Degree of saturation looks at the empty spaces between soil particles. It tells you:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "What percentage of the soil's pore space is filled with water.",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Imagine 1 liter of soil contains:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Solid soil particles",
+								"bold": true
+							},
+							{
+								"text": ": 600 mL"
+							}
+						],
+						[
+							{
+								"text": "Pore space",
+								"bold": true
+							},
+							{
+								"text": ": 400 mL"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Now imagine that 200 mL of that pore space is filled with water. The soil would have "
+						},
+						{
+							"text": "VWC = 20%",
+							"bold": true
+						},
+						{
+							"text": ", because 200 mL of the full 1,000 mL is water. But the degree of saturation would be "
+						},
+						{
+							"text": "50%",
+							"bold": true
+						},
+						{
+							"text": ", because 200 mL of the 400 mL of pore space is filled with water."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "same-soil-different-numbers",
+			"heading": "The same soil can have different VWC and saturation values",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Using the example above, the total soil volume of 1,000 mL is made up of:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Soil particles",
+								"bold": true
+							},
+							{
+								"text": ": 600 mL"
+							}
+						],
+						[
+							{
+								"text": "Water",
+								"bold": true
+							},
+							{
+								"text": ": 200 mL"
+							}
+						],
+						[
+							{
+								"text": "Air",
+								"bold": true
+							},
+							{
+								"text": ": 200 mL"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The result is:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "VWC",
+								"bold": true
+							},
+							{
+								"text": ": 20%"
+							}
+						],
+						[
+							{
+								"text": "Degree of saturation",
+								"bold": true
+							},
+							{
+								"text": ": 50%"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Why? Because VWC looks at the "
+						},
+						{
+							"text": "entire soil volume",
+							"bold": true
+						},
+						{
+							"text": ". Degree of saturation looks "
+						},
+						{
+							"text": "only at the spaces between the soil particles",
+							"bold": true
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "sponge",
+			"heading": "Think of soil like a sponge",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A sponge is an easy way to picture the difference. A sponge has solid material and lots of small holes that can hold water."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "VWC",
+								"bold": true
+							},
+							{
+								"text": ": how much of the entire sponge's volume is water?"
+							}
+						],
+						[
+							{
+								"text": "Degree of saturation",
+								"bold": true
+							},
+							{
+								"text": ": how full are the sponge's holes with water?"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If every hole in the sponge is filled with water, the sponge is "
+						},
+						{
+							"text": "100% saturated",
+							"bold": true
+						},
+						{
+							"text": ". But the sponge itself has not become 100% water. So:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "100% saturation does not mean 100% VWC.",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The same idea applies to soil."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "fully-saturated",
+			"heading": "What does 100% saturation mean?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If soil is 100% saturated, it means:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Nearly all of the pore spaces between the soil particles are filled with water, leaving very little room for air.",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This can happen after heavy rain, over-irrigation, flooding, or in areas with poor drainage. When soil stays highly saturated for too long, plant roots may have trouble getting enough oxygen."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "So degree of saturation can be useful for identifying:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Waterlogged soil"
+							}
+						],
+						[
+							{
+								"text": "Poor drainage"
+							}
+						],
+						[
+							{
+								"text": "Over-irrigation"
+							}
+						],
+						[
+							{
+								"text": "Areas that stay too wet for too long"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "soil-type-matters",
+			"heading": "The same VWC can mean different things in different soils",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Different soils have different amounts of pore space. For example, these all hold water differently:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Sandy soil"
+							}
+						],
+						[
+							{
+								"text": "Clay soil"
+							}
+						],
+						[
+							{
+								"text": "Loam"
+							}
+						],
+						[
+							{
+								"text": "Organic-rich soil"
+							}
+						],
+						[
+							{
+								"text": "Potting mix"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Two soils may both show "
+						},
+						{
+							"text": "VWC = 30%",
+							"bold": true
+						},
+						{
+							"text": ", but they may not be in the same moisture condition. One soil may be relatively wet, while another may still have a lot of room to hold more water."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "That is why VWC should always be considered "
+						},
+						{
+							"text": "together with the type of soil being measured",
+							"bold": true
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "which-to-use",
+			"heading": "Which measurement is more useful in farming?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Neither measurement is always better. They answer different questions."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "How much water is in the soil? → "
+							},
+							{
+								"text": "VWC",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "How full are the soil's pore spaces? → "
+							},
+							{
+								"text": "Degree of saturation",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "How much did soil moisture increase after irrigation? → "
+							},
+							{
+								"text": "VWC",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "Is the soil becoming waterlogged? → "
+							},
+							{
+								"text": "Degree of saturation",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "How is soil moisture changing throughout the day? → "
+							},
+							{
+								"text": "VWC",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "Is drainage poor or is the soil staying overly wet? → "
+							},
+							{
+								"text": "Degree of saturation",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "For everyday irrigation management, "
+						},
+						{
+							"text": "VWC is usually the easier and more useful measurement",
+							"bold": true
+						},
+						{
+							"text": ". It gives a direct way to track how much water is being stored in the soil over time."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Degree of saturation is especially useful when you want to understand "
+						},
+						{
+							"text": "how close the soil is to being completely filled with water",
+							"bold": true
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "example",
+			"heading": "A simple farming example",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Imagine a soil moisture sensor shows the following values through the day:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Morning",
+								"bold": true
+							},
+							{
+								"text": ": VWC 28%"
+							}
+						],
+						[
+							{
+								"text": "Midday",
+								"bold": true
+							},
+							{
+								"text": ": VWC 25%"
+							}
+						],
+						[
+							{
+								"text": "Late afternoon",
+								"bold": true
+							},
+							{
+								"text": ": VWC 22%"
+							}
+						],
+						[
+							{
+								"text": "After irrigation",
+								"bold": true
+							},
+							{
+								"text": ": VWC 31%"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This makes it easy to see what is happening. The soil is gradually drying as plants use water and moisture is lost. After irrigation, the VWC rises again."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This makes VWC very useful for seeing:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "When the soil is drying"
+							}
+						],
+						[
+							{
+								"text": "How much irrigation increased soil moisture"
+							}
+						],
+						[
+							{
+								"text": "How quickly the soil dries afterward"
+							}
+						],
+						[
+							{
+								"text": "Differences between parts of a field or greenhouse"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "what-saturation-tells-you",
+			"heading": "What can saturation tell you?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Now imagine you have had several days of heavy rain. If the soil stays close to full saturation for a long period, that can indicate:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The spaces in the soil are staying filled with water and there may not be enough air around the roots.",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This can be useful when looking for:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Poor drainage"
+							}
+						],
+						[
+							{
+								"text": "Standing water"
+							}
+						],
+						[
+							{
+								"text": "Root-zone oxygen problems"
+							}
+						],
+						[
+							{
+								"text": "Over-irrigation"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "So while VWC tells you how much water is in the soil, saturation helps describe how full the soil's available space has become."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "not-plant-available-water",
+			"heading": "More water does not always mean better conditions",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "One important thing to remember is that "
+						},
+						{
+							"text": "neither VWC nor degree of saturation tells you everything about plant water availability",
+							"bold": true
+						},
+						{
+							"text": ". A high VWC does not automatically mean the plant has ideal growing conditions."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Different soils hold onto water differently. For example, a clay soil can hold a large amount of water very tightly, while sandy soil drains much more quickly. That means the same VWC value can have a different meaning depending on the soil."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "It is best to use soil moisture measurements together with:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Soil type"
+							}
+						],
+						[
+							{
+								"text": "Crop type"
+							}
+						],
+						[
+							{
+								"text": "Weather"
+							}
+						],
+						[
+							{
+								"text": "Irrigation amount"
+							}
+						],
+						[
+							{
+								"text": "Plant condition"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "summary",
+			"heading": "The short version",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If you remember only two things, remember these:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "VWC = How much of the total soil volume is water",
+								"bold": true
+							}
+						],
+						[
+							{
+								"text": "Degree of saturation = How full the soil's pore spaces are with water",
+								"bold": true
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "For example, soil can have "
+						},
+						{
+							"text": "VWC = 20%",
+							"bold": true
+						},
+						{
+							"text": " while at the same time having "
+						},
+						{
+							"text": "degree of saturation = 50%",
+							"bold": true
+						},
+						{
+							"text": ". And:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "100% saturation does not mean 100% VWC.",
+							"bold": true
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "For most day-to-day irrigation monitoring, VWC is the easier measurement to use because it shows how much water is stored in the soil and how that amount changes over time."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Degree of saturation is especially useful for understanding when soil is becoming excessively wet, poorly drained, or waterlogged."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Together, the two measurements give a clearer picture of what is happening below the surface."
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "soil-moisture-sensors"
+		}
+	]
+}
