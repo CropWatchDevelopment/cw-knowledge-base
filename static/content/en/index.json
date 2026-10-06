@@ -45,7 +45,8 @@
 				"what-is-lorawan",
 				"vpd-explained",
 				"dli-and-ppfd",
-				"vwc-and-saturation"
+				"vwc-and-saturation",
+				"rssi-and-snr"
 			]
 		}
 	],
@@ -329,6 +330,26 @@
 				"waterlogged",
 				"drainage",
 				"irrigation"
+			]
+		},
+		"rssi-and-snr": {
+			"topic": "concepts",
+			"title": "RSSI and SNR: How Strong Is the Signal?",
+			"summary": "RSSI is how loud a sensor's radio signal is when it reaches the gateway. SNR is how loud it is compared with the background noise.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"rssi",
+				"snr",
+				"signal strength",
+				"signal to noise",
+				"noise",
+				"dbm",
+				"range",
+				"lora",
+				"lorawan",
+				"weak signal",
+				"missing readings"
 			]
 		}
 	},

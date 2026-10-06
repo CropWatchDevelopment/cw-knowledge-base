@@ -1,0 +1,474 @@
+{
+	"slug": "rssi-and-snr",
+	"topic": "concepts",
+	"title": "RSSI and SNR: How Strong Is the Signal?",
+	"intro": "RSSI and SNR are two numbers that tell you how well a sensor's radio message reached the gateway. RSSI is how loud the message was. SNR is how loud it was compared with the background noise.",
+	"sections": [
+		{
+			"id": "dinner-party",
+			"heading": "Think of a dinner party",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Imagine a friend calling your name from across a crowded room."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "How well you hear them depends on two things. The first is how loud their voice is by the time it reaches you. A friend at the next table sounds loud; a friend at the far end of the room sounds quiet. The second is how noisy the room is. A quiet voice is easy to pick out in a silent library, and a loud voice can get lost next to a band."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A CropWatch sensor and its gateway have the same two problems. The sensor is your friend, the gateway is you, and the radio waves are the voice:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "RSSI",
+								"bold": true
+							},
+							{
+								"text": " is how loud the voice is when it arrives."
+							}
+						],
+						[
+							{
+								"text": "SNR",
+								"bold": true
+							},
+							{
+								"text": " is how much louder the voice is than the chatter around it."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "rssi",
+			"heading": "RSSI: how loud the signal is",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "RSSI stands for "
+						},
+						{
+							"text": "Received Signal Strength Indicator",
+							"bold": true
+						},
+						{
+							"text": ". It is measured in a unit called dBm, and for LoRaWAN it is almost always a negative number, such as -75 or -112."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The closer RSSI is to zero, the stronger the signal.",
+							"bold": true
+						},
+						{
+							"text": " -70 is stronger than -100, the same way -5 °C is warmer than -20 °C."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The scale is not linear. Every 10 points down means the signal is 10 times weaker, so a reading of -100 is 1,000 times weaker than a reading of -70. That sounds dramatic, but LoRa radios are built to hear very faint signals, and the gateway can still understand a message at around -130."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "As a rough guide for LoRaWAN:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "-30 to -90",
+								"bold": true
+							},
+							{
+								"text": ": strong. The sensor is close or has a clear path to the gateway."
+							}
+						],
+						[
+							{
+								"text": "-90 to -110",
+								"bold": true
+							},
+							{
+								"text": ": good. Normal for a sensor some distance away."
+							}
+						],
+						[
+							{
+								"text": "-110 to -120",
+								"bold": true
+							},
+							{
+								"text": ": weak, but readings usually still arrive."
+							}
+						],
+						[
+							{
+								"text": "Below -120",
+								"bold": true
+							},
+							{
+								"text": ": close to the limit. Some readings may go missing."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "snr",
+			"heading": "SNR: how clear the signal is",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "SNR stands for "
+						},
+						{
+							"text": "Signal-to-Noise Ratio",
+							"bold": true
+						},
+						{
+							"text": ". It compares the sensor's signal with the background radio noise at the gateway: static from motors, power lines, inverters, other electronics, and the faint hiss that is always present. It is measured in dB."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "A positive SNR",
+								"bold": true
+							},
+							{
+								"text": " (for example +8) means the signal is louder than the noise."
+							}
+						],
+						[
+							{
+								"text": "An SNR of 0",
+								"bold": true
+							},
+							{
+								"text": " means the signal and the noise are equally loud."
+							}
+						],
+						[
+							{
+								"text": "A negative SNR",
+								"bold": true
+							},
+							{
+								"text": " (for example -12) means the signal is quieter than the noise."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "LoRa can pick a message out of noise that is a little louder than the message itself, a bit like recognising a friend's voice through the chatter because you know how it sounds. Depending on how slowly the sensor transmits, a gateway can sometimes decode a message at -7.5 dB, or even -20 dB."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Sometimes is not good enough for a sensor you rely on. At those levels there is no margin left: a pump switching on or a wet morning adds a little more noise, and readings start to go missing. CropWatch therefore uses a stricter rule:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Above 0",
+								"bold": true
+							},
+							{
+								"text": ": good. The signal stands out from the noise."
+							}
+						],
+						[
+							{
+								"text": "0 to -4",
+								"bold": true
+							},
+							{
+								"text": ": acceptable. The signal is a little quieter than the noise, and readings still arrive reliably."
+							}
+						],
+						[
+							{
+								"text": "Below -4",
+								"bold": true
+							},
+							{
+								"text": ": bad. Readings may still arrive for now, but the link is unreliable and needs attention."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "In CropWatch, any SNR below -4 is considered bad.",
+							"bold": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "why-both",
+			"heading": "Why you need both numbers",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each number tells only half of the story. Two examples:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Loud but noisy.",
+								"bold": true
+							},
+							{
+								"text": " A sensor 20 metres from the gateway shows an RSSI of -65, which is strong. But the gateway sits beside a large pump motor, and the SNR is -9. The friend is shouting, but there is a band playing."
+							}
+						],
+						[
+							{
+								"text": "Quiet but clear.",
+								"bold": true
+							},
+							{
+								"text": " A sensor 3 km away in open fields shows an RSSI of -118, which is weak. The countryside has little electrical noise, so the SNR is +2. The friend is whispering, but the room is silent."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The second sensor has the better connection of the two, even though its signal is far weaker. The first one's SNR of -9 is well below CropWatch's limit of -4. When readings go missing, look at both numbers before deciding what to change."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "in-cropwatch",
+			"heading": "Where to find RSSI and SNR in CropWatch",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "CropWatch shows both numbers in two places."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a gateway's page.",
+							"bold": true
+						},
+						{
+							"text": " Open "
+						},
+						{
+							"text": "Gateways",
+							"bold": true
+						},
+						{
+							"text": " and choose a gateway. The table lists every device that gateway hears, with its "
+						},
+						{
+							"text": "RSSI",
+							"bold": true
+						},
+						{
+							"text": " in dBm, its "
+						},
+						{
+							"text": "SNR",
+							"bold": true
+						},
+						{
+							"text": " in dB, a set of "
+						},
+						{
+							"text": "Signal",
+							"bold": true
+						},
+						{
+							"text": " bars, and when the gateway last heard it. This is the view to use when you want to see how one gateway is doing with all of its sensors."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a device's page.",
+							"bold": true
+						},
+						{
+							"text": " Open the device and press the "
+						},
+						{
+							"text": "Signal",
+							"bold": true
+						},
+						{
+							"text": " button. The button itself shows signal bars for the device's best gateway. Pressing it opens "
+						},
+						{
+							"text": "Connected gateways",
+							"bold": true
+						},
+						{
+							"text": ", which lists every gateway that heard the device, with the RSSI, SNR and signal bars for each one. A device often reaches more than one gateway. Gateways you don't have access to appear as \"Other gateway\"."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The signal bars look at both numbers and show the worse of the two, so a strong RSSI cannot hide a poor SNR."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "improving",
+			"heading": "How to improve a weak signal",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If RSSI is low, the signal is too faint by the time it arrives. Help it travel:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Mount the gateway or its antenna higher, ideally above roofs and trees."
+							}
+						],
+						[
+							{
+								"text": "Clear the path between sensor and gateway. Walls, metal sheds, hills and wet foliage all absorb radio signals."
+							}
+						],
+						[
+							{
+								"text": "Move the sensor or gateway closer together, or add a second gateway."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If SNR is low but RSSI is fine, the problem is noise near the gateway. Move the gateway or its antenna away from motors, pumps, inverters, LED drivers and power cables."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "For more on placement, see "
+						},
+						{
+							"text": "what affects range",
+							"href": "page:what-is-lorawan#what-affects-range"
+						},
+						{
+							"text": " and "
+						},
+						{
+							"text": "choosing a mounting location",
+							"href": "page:choosing-a-mounting-location"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "what-is-lorawan"
+		},
+		{
+			"kind": "page",
+			"slug": "choosing-a-mounting-location"
+		}
+	]
+}

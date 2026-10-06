@@ -45,7 +45,8 @@
 				"what-is-lorawan",
 				"vpd-explained",
 				"dli-and-ppfd",
-				"vwc-and-saturation"
+				"vwc-and-saturation",
+				"rssi-and-snr"
 			]
 		}
 	],
@@ -469,6 +470,30 @@
 				"volumetric water content",
 				"saturation",
 				"soil moisture"
+			]
+		},
+		"rssi-and-snr": {
+			"topic": "concepts",
+			"title": "RSSIとSNR：電波の強さと聞き取りやすさ",
+			"summary": "RSSIはゲートウェイに届いた電波の強さ、SNRは周りの雑音と比べた電波の聞き取りやすさです。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"電波",
+				"電波強度",
+				"受信強度",
+				"雑音",
+				"ノイズ",
+				"通信距離",
+				"電波が弱い",
+				"データが届かない",
+				"RSSI",
+				"SNR",
+				"dBm",
+				"signal strength",
+				"noise",
+				"LoRa",
+				"LoRaWAN"
 			]
 		}
 	},
