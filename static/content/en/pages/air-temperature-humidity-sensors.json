@@ -2,7 +2,7 @@
 	"slug": "air-temperature-humidity-sensors",
 	"topic": "hardware",
 	"title": "Air temperature and humidity sensors",
-	"intro": "Air sensors measure the temperature and relative humidity around your crop. CropWatch shows those readings now and over time, and uses them to calculate VPD.",
+	"intro": "Air sensors measure the temperature and relative humidity around your crop. CropWatch shows those readings now and over time, works out the dew point from them, marks the readings taken while an alert rule was set off, and lets your team add a note to any reading.",
 	"sections": [
 		{
 			"id": "what-it-measures",
@@ -24,16 +24,29 @@
 						],
 						[
 							{
-								"text": "VPD, calculated from the two. See "
-							},
+								"text": "CO₂, on models that carry a CO₂ sensor"
+							}
+						],
+						[
 							{
-								"text": "VPD explained",
-								"href": "page:vpd-explained"
-							},
-							{
-								"text": "."
+								"text": "Dew point, which CropWatch works out from the temperature and humidity"
 							}
 						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "VPD can be worked out from the same two readings. See "
+						},
+						{
+							"text": "VPD explained",
+							"href": "page:vpd-explained"
+						},
+						{
+							"text": "."
+						}
 					]
 				}
 			],
@@ -64,6 +77,228 @@
 					]
 				}
 			]
+		},
+		{
+			"id": "the-sensor-page",
+			"heading": "What the sensor's page shows",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Open the sensor from the dashboard or from its location to reach its page. The buttons at the top choose how far back to look, from “Today Only” to “Last 72 Hours”, and everything below them follows that choice."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The chart at the top",
+								"bold": true
+							},
+							{
+								"text": ", under “Time series”: temperature and humidity over the time you picked. The chips under it show each line's latest value with its lowest, average and highest; press a chip to show or hide its line. Dew point is there too, hidden until you turn it on."
+							}
+						],
+						[
+							{
+								"text": "Cards under the chart",
+								"bold": true
+							},
+							{
+								"text": ": “Current Temperature”, “Current Humidity” and “Dew Point”, plus “CO₂” on a sensor that measures it. Each shows the latest reading, with the lowest, highest and average for the time you picked."
+							}
+						],
+						[
+							{
+								"text": "The heatmap",
+								"bold": true
+							},
+							{
+								"text": ": one card that shades every reading by its value, so warm afternoons and damp nights stand out. Buttons on it switch between “Temperature (°C)”, “Humidity (%)” and, where it is measured, “CO₂ (ppm)”. A sensor that also measures wind shows a compass beside it."
+							}
+						],
+						[
+							{
+								"text": "“Telemetry Table”",
+								"bold": true
+							},
+							{
+								"text": ": every reading, newest first, with a search box. Its columns are “Timestamp”, “Temperature (°C)”, “Humidity (%)”, “CO₂ (ppm)” where measured, and “Alerts”, with the note buttons at the end of each row under “Actions”."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If nothing arrived in the time you picked, a card reads “No air quality data available for the selected range.” instead."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/air-temperature-humidity-sensors/sensor-page.webp",
+				"alt": "The top of Cold Room 1's page: the time range buttons from Today Only to Last 72 Hours, the Time series chart of temperature and humidity, and the Current Temperature, Current Humidity and Dew Point cards with their minimum, average and maximum",
+				"caption": "The range buttons, the readings chart and the three cards at the top of an air sensor's page.",
+				"side": "left",
+				"width": 1600,
+				"height": 1499
+			}
+		},
+		{
+			"id": "alerts-on-readings",
+			"heading": "The Alerts column",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The “Alerts” column in the Telemetry Table shows which readings were taken while one of your alert rules was set off. A red circle with an exclamation mark sits on every reading from the one that set the rule off up to and including the one that cleared it. A green tick in a circle means no rule was set off at that reading."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a computer, point at a red icon to see which rule it was. Several rules set off at the same time are listed together, and a rule that has since been deleted reads “Deleted rule”."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "A reading can carry the red icon without looking extreme on its own. Once a rule is set off it stays on until its reset condition is met, and every reading in between is marked. "
+						},
+						{
+							"text": "Creating an alert rule",
+							"href": "page:setting-up-alert-rules#trigger-and-reset"
+						},
+						{
+							"text": " explains how a rule sets off and resets."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/air-temperature-humidity-sensors/alerts-column.webp",
+				"alt": "The Telemetry Table, newest first: the four newest readings, from 5.7 to 6.4 °C, have a red alert icon and the older ones a green tick; one of the red ones also has an eye button for its notes under Actions",
+				"caption": "Readings taken while the alarm was on carry the red icon.",
+				"side": "right",
+				"width": 1600,
+				"height": 854
+			}
+		},
+		{
+			"id": "notes-on-readings",
+			"heading": "Notes on readings",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A note pins an explanation to one reading: the door was propped open, the heater was being serviced. Each note has an “Include in report” switch, on unless you turn it off, which decides whether it goes into reports."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "To add a note on the sensor's page:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Find the reading in the Telemetry Table and press the add-note button at the end of its row, under “Actions”. Its icon is a sheet of paper with a plus sign."
+							}
+						],
+						[
+							{
+								"text": "A box headed “Add Note for” and the reading's time opens. “Note title” is optional. “Note details” is required and takes up to 500 characters."
+							}
+						],
+						[
+							{
+								"text": "Leave “Include in report” on if the note should appear in reports, and press “Save Note”."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Note saved successfully.” confirms it, and an eye button appears on that row. Press it to read every note on that reading, each with the reading's time, who wrote it (their email address, or “CropWatch support”), and “Included in report” or “Excluded from report”."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On the dashboard, an open air sensor card has the same add-note button beside “Details”. It opens “Add Note for Today's Reading”, where you pick one of today's readings under “Select a reading from today” before writing the note."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Anyone whose level on the sensor is User or above can add notes, and so can the sensor's owner. A Viewer can read notes but gets no add-note button. See "
+						},
+						{
+							"text": "The six levels",
+							"href": "page:sharing-access#the-six-levels"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Admins and Managers of the location also see a “View Notes” button at the top of the page. It lists a month of notes day by day, with a search box and a month picker. The “Delete” buttons in it are greyed out and do nothing."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "A saved note cannot be changed or removed from the sensor's page. That is done from a report: on the Reports page, open the history of a report covering that day and press “Edit”, which needs Manager or above on the sensor. See "
+						},
+						{
+							"text": "Adding notes to a report that has already been sent",
+							"href": "page:creating-a-report#notes-on-a-report"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/air-temperature-humidity-sensors/add-note.webp",
+				"alt": "The Add Note for box for the newest reading, with a note title and note details filled in, a character count out of 500, Include in report switched on, and the Cancel and Save Note buttons",
+				"caption": "Note details are required; the title is optional.",
+				"side": "left",
+				"width": 1280,
+				"height": 1076
+			}
 		}
 	],
 	"links": [
@@ -74,6 +309,18 @@
 		{
 			"kind": "page",
 			"slug": "setting-up-alert-rules"
+		},
+		{
+			"kind": "page",
+			"slug": "sharing-access"
+		},
+		{
+			"kind": "page",
+			"slug": "creating-a-report"
+		},
+		{
+			"kind": "page",
+			"slug": "reading-the-dashboard"
 		}
 	]
 }

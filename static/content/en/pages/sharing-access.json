@@ -111,7 +111,7 @@
 								"bold": true
 							},
 							{
-								"text": ": everything a Manager can do, plus changing a person's level on a single sensor with the Device Owner Permissions card on the sensor's settings page. Admins can make other people Admins."
+								"text": ": everything a Manager can do, plus opening the location's settings to rename it, set its map position and add, change or remove people, and changing a person's level on a single sensor with the Device Owner Permissions card on the sensor's settings page. Admins can make other people Admins."
 							}
 						],
 						[
@@ -120,7 +120,7 @@
 								"bold": true
 							},
 							{
-								"text": ": can change the settings of the location and its sensors (names, groups, map position, moving a sensor), switch relays, create, edit and delete alert rules and reports, add new sensors to the location, and add or remove people at the location. Managers cannot make anyone an Admin and cannot use the Device Owner Permissions card."
+								"text": ": can change a sensor's settings (name, group, moving it), switch relays, create, edit and delete alert rules and reports, and add new sensors to the location. Managers cannot open the location's own settings, so they cannot rename the location, change its map position, or add and remove people. They also cannot use the Device Owner Permissions card."
 							}
 						],
 						[
@@ -129,7 +129,7 @@
 								"bold": true
 							},
 							{
-								"text": ": sees everything a Viewer sees, and can add, edit and delete notes on air temperature and humidity sensors. Cannot change any settings."
+								"text": ": sees everything a Viewer sees, and can add notes to the readings of air temperature and humidity sensors. Cannot change any settings. Changing or removing a note is done in a report's notes, which needs Manager."
 							}
 						],
 						[
@@ -212,7 +212,7 @@
 					{
 						"label": [
 							{
-								"text": "Add, edit and delete notes on air temperature and humidity sensors"
+								"text": "Add notes to air temperature and humidity readings"
 							}
 						],
 						"cells": [
@@ -227,13 +227,28 @@
 					{
 						"label": [
 							{
-								"text": "Change location and sensor settings, and move sensors"
+								"text": "Change sensor settings, and move sensors"
 							}
 						],
 						"cells": [
 							true,
 							true,
 							true,
+							false,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Change the location's name, group and map position"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							false,
 							false,
 							false,
 							false
@@ -293,7 +308,7 @@
 						"cells": [
 							true,
 							true,
-							true,
+							false,
 							false,
 							false,
 							false
@@ -355,7 +370,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "You need to be the location's owner, an Admin or a Manager. The other person needs a CropWatch account already, because they are found by the email address they signed up with."
+							"text": "You need to be the location's owner or an Admin. The other person needs a CropWatch account already, because they are found by the email address they signed up with."
 						}
 					]
 				},
@@ -370,7 +385,7 @@
 						],
 						[
 							{
-								"text": "Press the cog at the top of its list of sensors. If there is no cog, your level on this location is not high enough."
+								"text": "Press Location settings at the top of the location's page. If the button is missing, your level on this location is User or Viewer."
 							}
 						],
 						[
@@ -421,7 +436,7 @@
 					"type": "note",
 					"content": [
 						{
-							"text": "You can only give a level equal to or below your own, so a Manager can add Managers, Users and Viewers but not Admins. Nobody can change their own level, and nobody can change the owner's."
+							"text": "Managers see the Location settings button too, but pressing it shows “You do not have permission to access this location settings page.” Only the owner and Admins can open a location's settings. Nobody can change their own level, and nobody can change the owner's."
 						}
 					]
 				}
@@ -589,11 +604,20 @@
 						],
 						[
 							{
-								"text": "There is no cog on the location.",
+								"text": "There is no Location settings button.",
 								"bold": true
 							},
 							{
 								"text": " Your level on that location is User or Viewer. Ask the location's owner or an Admin."
+							}
+						],
+						[
+							{
+								"text": "“You do not have permission to access this location settings page.”",
+								"bold": true
+							},
+							{
+								"text": " Only the owner and Admins can open a location's settings, and this is what a Manager sees. Ask the owner or an Admin to add the person, or to make you an Admin."
 							}
 						]
 					]

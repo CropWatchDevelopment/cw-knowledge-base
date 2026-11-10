@@ -2,7 +2,7 @@
 	"slug": "sensor-settings",
 	"topic": "software",
 	"title": "Sensor settings",
-	"intro": "Every sensor has a settings page: its name, its group, the site it belongs to, its calibration certificates, and who is allowed to see it. This guide goes through it one box at a time, including the two that do more than they look like they do.",
+	"intro": "Every sensor has a settings page: its name, its group, the location it belongs to, the crop on a soil sensor, its licence, its calibration certificates and who is allowed to see it. The sensor's owner can also delete it from there. This guide goes through the page one card at a time, including the two boxes that do more than they look like they do.",
 	"sections": [
 		{
 			"id": "what-it-is",
@@ -12,7 +12,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Every sensor has a settings page. It is where you change what CropWatch knows about a sensor, rather than anything the sensor itself measures: what it is called, which site it belongs to, and who is allowed to see it."
+							"text": "Every sensor has a settings page. It is where you change what CropWatch knows about a sensor, rather than anything the sensor itself measures: what it is called, which location it belongs to, and who is allowed to see it."
 						}
 					]
 				},
@@ -20,7 +20,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "There are up to three cards on it, and you can ignore any you do not need:"
+							"text": "The cards on it, from top to bottom. You only see the ones that apply to this sensor and to you:"
 						}
 					]
 				},
@@ -34,7 +34,16 @@
 								"bold": true
 							},
 							{
-								"text": " — the name, the group, the TTI Device ID and the location."
+								"text": ": the name, the group, the TTI Device ID, the location and, on a soil sensor, the crop."
+							}
+						],
+						[
+							{
+								"text": "Device license",
+								"bold": true
+							},
+							{
+								"text": ": whether one of your licences is assigned to this sensor."
 							}
 						],
 						[
@@ -43,7 +52,7 @@
 								"bold": true
 							},
 							{
-								"text": " — calibration paperwork to download. This card only appears on sensors CropWatch made."
+								"text": ": calibration paperwork to download. Only on sensors CropWatch made."
 							}
 						],
 						[
@@ -52,7 +61,16 @@
 								"bold": true
 							},
 							{
-								"text": " — what each person who has access to this sensor is allowed to do."
+								"text": ": each person's level on this sensor."
+							}
+						],
+						[
+							{
+								"text": "Danger zone",
+								"bold": true
+							},
+							{
+								"text": ": deleting the sensor. Only the sensor's owner sees this card."
 							}
 						]
 					]
@@ -68,8 +86,8 @@
 			],
 			"image": {
 				"src": "images/sensor-settings/01-whole-page.svg",
-				"alt": "The whole settings page: a Back To Device Detail button, then three cards — Device Settings, Device Sensor Certificates and Device Owner Permissions",
-				"caption": "The three cards. Click the picture to see it full size.",
+				"alt": "The settings page: a Back To Device Detail button, then the Device Settings, Device Sensor Certificates and Device Owner Permissions cards",
+				"caption": "Three of the five cards; Device license and Danger zone are not drawn. Click the picture to see it full size.",
 				"side": "right",
 				"width": 680,
 				"height": 900
@@ -83,7 +101,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "There are two ways in, and which you see depends on your access:"
+							"text": "There are two ways in. Which one you see depends on your level at the sensor's location:"
 						}
 					]
 				},
@@ -97,7 +115,7 @@
 								"bold": true
 							},
 							{
-								"text": " Open the sensor, and look along the row of buttons at the top of its page for one marked “Settings”, next to Notes and Export CSV."
+								"text": " Open the sensor and look along the row of buttons at the top of its page for “Settings”. It is the last one, after “Signal”. The location's owner and its Admins see it."
 							}
 						],
 						[
@@ -106,7 +124,7 @@
 								"bold": true
 							},
 							{
-								"text": " Open the location, find the sensor's row, and press the small cog at the far right, under “Actions”. It has no words on it."
+								"text": " Open the location, find the sensor's row, and press the cog at the far right, under “Actions”, beside the eye button. It has no words on it. Admins and Managers of the location see it."
 							}
 						]
 					]
@@ -115,7 +133,14 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "If you cannot see either of them, your account does not have the access needed to change this sensor. Ask whoever manages your CropWatch account."
+							"text": "If you see neither, your level at this location is User or Viewer. Ask the location's owner or an Admin. "
+						},
+						{
+							"text": "Sharing access",
+							"href": "page:sharing-access#two-kinds-of-level"
+						},
+						{
+							"text": " explains why a person has one level for the location and another for each sensor."
 						}
 					]
 				},
@@ -123,7 +148,7 @@
 					"type": "note",
 					"content": [
 						{
-							"text": "Being able to open this page is not the same as being allowed to save. If you arrive here by a bookmark or a shared link without the right access, everything looks normal and fills in, but pressing Update Device answers with a red bar reading “You do not have permission to update this device”. Nothing is changed."
+							"text": "Opening the page is not the same as being allowed to save. Saving the first card needs Manager or above on this sensor itself. Without it, everything fills in normally, but pressing Update Device shows a red bar reading “You do not have permission to perform this action on this device”, and nothing is changed."
 						}
 					]
 				}
@@ -131,13 +156,13 @@
 		},
 		{
 			"id": "the-four-fields",
-			"heading": "The four boxes",
+			"heading": "The boxes on the first card",
 			"body": [
 				{
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The first card holds four boxes. Only the name has to be filled in; the rest can be left exactly as they are."
+							"text": "The first card, “Device Settings”, holds four boxes, and a fifth on soil sensors. Only the name has to be filled in; the rest can stay as they are."
 						}
 					]
 				},
@@ -151,7 +176,7 @@
 								"bold": true
 							},
 							{
-								"text": " cannot be edited. They show the sensor's DevEUI — its permanent serial number, useful when contacting support — and, if it has one, the group it is in. The group chip shows the saved value, so it does not change as you type."
+								"text": " cannot be edited. They show the sensor's DevEUI (its permanent serial number, useful when contacting support) and, if it has one, “Current group:” followed by its group. The group chip shows the saved value, so it does not change as you type."
 							}
 						],
 						[
@@ -160,7 +185,7 @@
 								"bold": true
 							},
 							{
-								"text": " — what the sensor is called everywhere in CropWatch."
+								"text": ": what the sensor is called everywhere in CropWatch."
 							}
 						],
 						[
@@ -169,7 +194,7 @@
 								"bold": true
 							},
 							{
-								"text": " — an optional label."
+								"text": ": an optional label."
 							}
 						],
 						[
@@ -178,7 +203,7 @@
 								"bold": true
 							},
 							{
-								"text": " — best left alone. See below."
+								"text": ": best left alone. See below."
 							}
 						],
 						[
@@ -187,7 +212,7 @@
 								"bold": true
 							},
 							{
-								"text": " — which site the sensor belongs to. Read the warning before changing it."
+								"text": ": which location the sensor belongs to. Read the warning before changing it."
 							}
 						],
 						[
@@ -196,9 +221,24 @@
 								"bold": true
 							},
 							{
-								"text": " — saves the whole card at once."
+								"text": ": saves the whole card at once."
 							}
 						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a soil sensor a fifth box, “Crop”, sits after Location. See "
+						},
+						{
+							"text": "Crop",
+							"href": "page:sensor-settings#crop"
+						},
+						{
+							"text": "."
+						}
 					]
 				}
 			],
@@ -287,7 +327,14 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "This one is not for everyday use. It holds the name the sensor goes by on the radio network that carries its readings, and CropWatch only needs it for sensors that can be switched on and off remotely."
+							"text": "This one is not for everyday use. It holds the name the sensor goes by on the radio network that carries its readings, and CropWatch only needs it for sensors that can be switched on and off remotely. A sensor added with the guided "
+						},
+						{
+							"text": "add-a-sensor steps",
+							"href": "page:adding-a-sensor"
+						},
+						{
+							"text": " has it filled in for you."
 						}
 					]
 				},
@@ -295,7 +342,15 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Leave it alone. Typing in it will let you press Update Device, and CropWatch will answer “Device settings updated.” in green, but the value does not stick: reload the page and it is back as it was. Nothing was saved, despite the message."
+							"text": "Leave it alone. You can type in it, and pressing Update Device answers “Device settings updated.” in green, but the value does not stick: reload the page and the old value is back. Nothing was saved, despite the message."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The box also checks what you type when you press the button. Capital letters are turned into small ones, and anything other than letters, numbers and hyphens brings up “TTI device IDs must use lowercase letters, numbers, and hyphens only.” under the box. If that happens, reload the page before you change anything else: the Update Device button stays grey until you do."
 						}
 					]
 				},
@@ -303,7 +358,7 @@
 					"type": "note",
 					"content": [
 						{
-							"text": "If a sensor of yours needs this set — you will know, because a remote switch will not respond — contact support rather than typing it here."
+							"text": "If a sensor of yours needs this set (you will know, because a remote switch does not respond), contact support rather than typing it here."
 						}
 					]
 				}
@@ -317,7 +372,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The Location list holds every site you have access to. Changing it moves the sensor to that site: it leaves the old location's list of sensors and appears in the new one."
+							"text": "The Location list holds every location you have access to. Changing it moves the sensor there: it leaves the old location's list of sensors and appears in the new one."
 						}
 					]
 				},
@@ -333,7 +388,15 @@
 					"type": "note",
 					"content": [
 						{
-							"text": "But moving a sensor rebuilds the list of who can see it, from scratch. Everyone who could see it at the old location loses access the moment you save. You become its Admin, and everybody at the new location starts as Disabled until somebody turns them back on one at a time, on this very page. If other people rely on this sensor, tell them before you move it."
+							"text": "Moving a sensor also rebuilds the list of who can see it, from scratch. Everyone who had a level on it at the old location loses access the moment you save. You become its Admin, and everybody at the new location starts as Disabled on it until an Admin turns them back on, one at a time, on this page. If other people rely on this sensor, tell them before you move it."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Ownership moves too. The owner of the new location becomes the sensor's owner. Move a sensor you own into somebody else's location and they own it from then on, which also means only they can delete it."
 						}
 					]
 				},
@@ -351,17 +414,62 @@
 					"items": [
 						[
 							{
-								"text": "The list has an “Unassigned” option at the top, but saving with it chosen gives a red error. Every sensor has to belong to a location."
+								"text": "The list has an “Unassigned” option at the top, but saving with it chosen stops with “Location is required.” under the box. Every sensor has to belong to a location. Reload the page afterwards, because the Update Device button stays grey until you do."
 							}
 						],
 						[
 							{
-								"text": "You need the right access at the destination too. Without it the save is refused with “You do not have permission to move this device to that location”."
+								"text": "You need Manager or above at the destination location too. Without it the save is refused with “You do not have permission to move this device to that location”."
 							}
 						]
 					]
 				}
 			]
+		},
+		{
+			"id": "crop",
+			"heading": "Crop (soil sensors only)",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Soil sensors have a fifth box, “Crop”. Under it is the line “Sets the growing targets this soil sensor's readings are judged against.”"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Open the list and pick what is growing around the probe, or “No crop” to clear it, then press Update Device. The crop decides which targets the sensor's readings are compared with on its own page. "
+						},
+						{
+							"text": "Crop targets and growing advice",
+							"href": "page:crop-targets-and-growing-advice"
+						},
+						{
+							"text": " explains what those targets show."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The box appears only on soil sensors. If the list of crops cannot be loaded, the box is left off the card altogether; reload the page a little later."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-settings/crop-box.webp",
+				"alt": "The lower half of the Device Settings card: TTI Device ID and Location, the Crop box set to Tomato with the line “Sets the growing targets this soil sensor's readings are judged against.” under it, and the grey Update Device button",
+				"caption": "The Crop box sits under Location, on soil sensors only.",
+				"side": "right",
+				"width": 1600,
+				"height": 450
+			}
 		},
 		{
 			"id": "saving",
@@ -379,7 +487,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "As soon as you edit any of the boxes it turns dark and can be pressed. It goes grey again if you put the value back the way it was, and it stays grey while anything on the card is invalid."
+							"text": "As soon as you edit a box it turns dark and can be pressed. It goes grey again if you put the value back the way it was, and while the name box is empty."
 						}
 					]
 				},
@@ -387,7 +495,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "When you press it, a coloured bar appears at the top of the card:"
+							"text": "When you press it, a coloured bar appears under the chips:"
 						}
 					]
 				},
@@ -397,7 +505,7 @@
 					"items": [
 						[
 							{
-								"text": "Green — “Device settings updated.”",
+								"text": "Green, “Device settings updated.”",
 								"bold": true
 							},
 							{
@@ -410,13 +518,21 @@
 								"bold": true
 							},
 							{
-								"text": " — something stopped it, and the bar says what. “Please correct the highlighted fields.” means look for red text under one of the boxes."
+								"text": ": something stopped it, and the bar says what. “Please correct the highlighted fields.” means look for red text under one of the boxes. A bar starting “You do not have permission” means your level on this sensor, or at the location you picked, is too low."
 							}
 						]
 					]
 				},
 				{
 					"type": "note",
+					"content": [
+						{
+							"text": "If red text appears under the TTI Device ID, Location or Crop box after you press the button, the button stays grey even once you have corrected the box. Reload the page and make the change again."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
 					"content": [
 						{
 							"text": "If you leave the page without pressing Update Device, nothing is saved. There is no automatic save and no warning on the way out."
@@ -428,9 +544,71 @@
 				"src": "images/sensor-settings/03-save-button.svg",
 				"alt": "The Update Device button greyed out when nothing has changed, and dark when it can be pressed",
 				"caption": "Grey means nothing has changed yet.",
-				"side": "right",
+				"side": "left",
 				"width": 680,
 				"height": 240
+			}
+		},
+		{
+			"id": "device-license",
+			"heading": "The licence card",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The second card, “Device license”, shows whether one of your licences is assigned to this sensor. It reads one of two ways:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "One of your licences is on it.",
+								"bold": true
+							},
+							{
+								"text": " A green chip at the top right names it, such as “License 2”, or reads “Included”. The card says “This device holds one of your licenses. Unassigning frees the license so it can be used by another device.”"
+							}
+						],
+						[
+							{
+								"text": "None of your licences is on it.",
+								"bold": true
+							},
+							{
+								"text": " The card says “This device has no license assigned. Assign one from the billing page.”, and the “Billing” button beside it takes you there."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Unassign license” takes the licence off this sensor so you can give it to another one. A box asks “Unassign the license from this device? The device keeps its data, but it will need a license again before it can be re-registered.” Press “Unassign license” in the box to confirm, and “License unassigned.” appears on the card."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The card only knows about licences on your own account. If somebody else added the sensor and it uses one of their licences, the card says it has none. Nothing is wrong with the sensor: the licence holder sees the licence on this card when they open the page."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-settings/license-card.webp",
+				"alt": "The Device license card with a green License 4 chip, the line “This device holds one of your licenses. Unassigning frees the license so it can be used by another device.” and the Unassign license button",
+				"caption": "A sensor that holds one of your licences.",
+				"side": "right",
+				"width": 1600,
+				"height": 305
 			}
 		},
 		{
@@ -441,7 +619,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The second card holds calibration certificates: the paperwork showing that the temperature and humidity chip inside the sensor was checked against a known standard. If you are audited, or a buyer asks for proof, this is what they want."
+							"text": "The “Device Sensor Certificates” card holds calibration certificates: the paperwork showing that the temperature and humidity chip inside the sensor was checked against a known standard. If you are audited, or a buyer asks for proof, this is what they want."
 						}
 					]
 				},
@@ -463,7 +641,7 @@
 								"bold": true
 							},
 							{
-								"text": " — an ISO 17025 certificate for the exact chip in your sensor, fetched fresh when you press the button. The chips beside it show which chip it is, its serial number and the sensor model."
+								"text": ": an ISO 17025 certificate for the exact chip in your sensor, fetched fresh when you press the button. The chips beside it show which chip it is, its serial number and the sensor model."
 							}
 						],
 						[
@@ -472,7 +650,7 @@
 								"bold": true
 							},
 							{
-								"text": " — the general certificate for that family of chips. It says nothing about your particular sensor, and it is the same file for everybody."
+								"text": ": the general certificate for that family of chips. It says nothing about your particular sensor, and it is the same file for everybody."
 							}
 						]
 					]
@@ -481,7 +659,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Each row has a small dark button on the right with a downward arrow and no words on it. Pressing it opens the PDF in a new tab. Ask for the one with the serial number if you are given the choice; it is the stronger document."
+							"text": "Each row has a small button on the right with a downward arrow and no words on it. Pressing it opens the PDF in a new tab. Ask for the one with the serial number if you are given the choice; it is the stronger document."
 						}
 					]
 				},
@@ -511,7 +689,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The last card lists everyone with access to this sensor. Each row shows a person's name and email, a “Permission Level” box, and its own “Update Permission” button."
+							"text": "The “Device Owner Permissions” card lists the people who have a level of their own on this sensor. Each row shows a person's name and email, a “Permission Level” box, and its own “Update Permission” button."
 						}
 					]
 				},
@@ -519,15 +697,46 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Each row saves separately. Change one person's level, press the button on that row, and a bar appears under it confirming the change for that email address. Changing several people means pressing several buttons."
+							"text": "Each row saves separately. Change one person's level, press the button on that row, and “Permission updated for” followed by their email appears under it. Changing several people means pressing several buttons."
 						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Only the sensor's owner and its Admins can save here. Anyone else who presses the button gets “You do not have permission to perform this action on this device”. Two more refusals you may meet:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“You cannot change your own access level”: nobody can change their own row."
+							}
+						],
+						[
+							{
+								"text": "“The resource owner's access cannot be changed”: the owner always keeps full control."
+							}
+						]
 					]
 				},
 				{
 					"type": "note",
 					"content": [
 						{
-							"text": "There is no way to add or remove a person here, and the page does not explain why. People are added at the location, not at the sensor — see below."
+							"text": "There is no way to add or remove a person here. People are added at the location, not at the sensor; see "
+						},
+						{
+							"text": "Giving someone access",
+							"href": "page:sharing-access#adding-someone"
+						},
+						{
+							"text": ". If the card reads “No device owners were returned for this device.”, nobody has a level of their own on this sensor yet."
 						}
 					]
 				}
@@ -549,7 +758,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "There are five choices in the box, but only three of them behave differently."
+							"text": "The Permission Level box offers five levels. Each one sets what a person can do with this one sensor:"
 						}
 					]
 				},
@@ -563,7 +772,7 @@
 								"bold": true
 							},
 							{
-								"text": " — everything a Manager can do, and can also change who else may see the sensor. Only an Admin can use this card."
+								"text": ": everything a Manager can do, and can save the Device Owner Permissions card, so can change other people's levels on this sensor, up to Admin."
 							}
 						],
 						[
@@ -572,7 +781,7 @@
 								"bold": true
 							},
 							{
-								"text": " — can rename the sensor, group it, move it, switch a remote relay, and set up alert rules and reports on it. Cannot change anyone's access."
+								"text": ": can rename the sensor, group it, move it, choose its crop, switch a relay, and set up alert rules and reports on it. Cannot use the Device Owner Permissions card."
 							}
 						],
 						[
@@ -581,14 +790,16 @@
 								"bold": true
 							},
 							{
-								"text": " and "
-							},
+								"text": ": everything a Viewer can do, plus adding notes to the readings of an air temperature and humidity sensor. Changes no settings."
+							}
+						],
+						[
 							{
 								"text": "Viewer",
 								"bold": true
 							},
 							{
-								"text": " — can look at the sensor and its readings, and change nothing. In practice these two are identical; nothing in CropWatch treats them differently."
+								"text": ": can look at the sensor and its readings, and change nothing."
 							}
 						],
 						[
@@ -597,7 +808,7 @@
 								"bold": true
 							},
 							{
-								"text": " — cannot see the sensor at all. It disappears from their dashboard and their location's list."
+								"text": ": cannot see the sensor at all. It disappears from their dashboard and their location's list."
 							}
 						]
 					]
@@ -606,7 +817,21 @@
 					"type": "note",
 					"content": [
 						{
-							"text": "Whoever owns the sensor outranks all of this and always has full control, whatever the list says."
+							"text": "Whoever owns the sensor outranks all of this: they always have full control, whatever the list says, and they are the only one who can delete it. Every level is described in "
+						},
+						{
+							"text": "The six levels",
+							"href": "page:sharing-access#the-six-levels"
+						},
+						{
+							"text": ", and "
+						},
+						{
+							"text": "Who can do what, at a glance",
+							"href": "page:sharing-access#at-a-glance"
+						},
+						{
+							"text": " puts them side by side."
 						}
 					]
 				}
@@ -614,7 +839,7 @@
 			"image": {
 				"src": "images/sensor-settings/06-permission-levels.svg",
 				"alt": "The five permission levels: Admin, Manager, User, Viewer and Disabled, with what each one is allowed to do",
-				"caption": "Five choices, three real levels of access.",
+				"caption": "Five choices, each allowing less than the one above.",
 				"side": "left",
 				"width": 680,
 				"height": 430
@@ -628,7 +853,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "People are given access to a whole location, not to one sensor at a time. To add somebody, go to the location rather than the sensor: open the location, press the cog at the top of its list of sensors, and find the card that offers to add a new user to that location with permissions."
+							"text": "People are given access to a whole location, not to one sensor at a time. To add somebody, go to the location: open it, press “Location settings” at the top of its page, and use the card titled “Add new user to (location name) with permissions”. Only the location's owner and its Admins can open that page."
 						}
 					]
 				},
@@ -636,7 +861,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Fill in their email, choose a permission level, and press Add Permission. There is a switch on that card worth understanding:"
+							"text": "Type their email, choose a Permission Level, and press Add Permission. The switch on that card decides what they get on the sensors already in the location:"
 						}
 					]
 				},
@@ -646,20 +871,20 @@
 					"items": [
 						[
 							{
-								"text": "“Apply to all devices in this location” turned on",
+								"text": "“Apply to all devices in this location” on",
 								"bold": true
 							},
 							{
-								"text": " — they get the level you chose on every sensor there. This is almost always what you want."
+								"text": ": they get the level you chose on every one of those sensors."
 							}
 						],
 						[
 							{
-								"text": "Turned off",
+								"text": "Off",
 								"bold": true
 							},
 							{
-								"text": " — they are added to the location but set to Disabled on every sensor in it, so they see the site and none of its readings."
+								"text": ": they join the location but are Disabled on every sensor in it, so they see the location and none of its readings."
 							}
 						]
 					]
@@ -668,11 +893,124 @@
 					"type": "note",
 					"content": [
 						{
-							"text": "That second case is what the Device Owner Permissions card is really for. If somebody says they can see a location but none of its sensors, this page is where you fix it, one sensor at a time."
+							"text": "That second case is what the Device Owner Permissions card is for: turning sensors on, one at a time, for somebody who joined with the switch off. "
+						},
+						{
+							"text": "Giving someone access",
+							"href": "page:sharing-access#adding-someone"
+						},
+						{
+							"text": " goes through the whole process, including changing and removing people."
 						}
 					]
 				}
 			]
+		},
+		{
+			"id": "deleting-a-sensor",
+			"heading": "Deleting a sensor",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Deleting removes a sensor from CropWatch for good, together with everything it has ever sent. Only the sensor's owner can do it. For the owner, a red “Danger zone” card sits at the bottom of the page, with “Delete this device”, the line “Permanently deletes this device and all of its data. This cannot be undone.”, and a “Delete device” button. Nobody else sees this card."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Pressing “Delete device” opens a confirmation box. Its heading names the sensor, as in Delete “Greenhouse 1”? Under the red “This cannot be undone.” it lists what is removed:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“All of its sensor readings and history”"
+							}
+						],
+						[
+							{
+								"text": "“Its notes and alerts”"
+							}
+						],
+						[
+							{
+								"text": "“Its rule and report assignments, including its alert history”"
+							}
+						],
+						[
+							{
+								"text": "“Access to its past reports in CropWatch”"
+							}
+						],
+						[
+							{
+								"text": "“Everyone's access to this device”"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Below the list it says “Its license is released, so you can assign it to another device.”, and shows the sensor's name and DevEUI so you can check you have the right one. Then:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Type the DevEUI into the box whose label reads “To confirm, type the DevEUI” and then the DevEUI itself. Capitals and small letters both work. If what you type does not match, “The DevEUI you typed does not match this device.” appears."
+							}
+						],
+						[
+							{
+								"text": "Tick “I understand that this device and all of its data will be permanently deleted.”"
+							}
+						],
+						[
+							{
+								"text": "Press “Delete this device permanently”. It stays grey until both steps above are done."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "While it works, the box cannot be closed. A sensor with a long history takes a while, and the box counts as it goes, for example “Deleting… 120,000 data rows removed so far.” When it finishes you land on the location's page, and the sensor is no longer in its list."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If it stops partway, the card says “Part of this device's data was deleted, but the device still exists. Press Delete device again to continue.” Press it again and go through the box once more; it carries on from where it stopped. If you only want a sensor out of sight, move it to another location or set people to Disabled on it instead. Both of those can be undone; deleting cannot."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/sensor-settings/delete-dialog.webp",
+				"alt": "The Delete “GH1 Soil”? box: the list of what is removed, the note that the licence is released, the sensor's name and DevEUI, the DevEUI typed into the confirmation box, the tick box checked, and the red Delete this device permanently button",
+				"caption": "Type the DevEUI and tick the box before the last button can be pressed.",
+				"side": "right",
+				"width": 1280,
+				"height": 1252
+			}
 		},
 		{
 			"id": "quick-answers",
@@ -688,7 +1026,7 @@
 								"bold": true
 							},
 							{
-								"text": " Your account does not have the access for it. Ask whoever manages your CropWatch account."
+								"text": " It is shown to the location's owner and Admins. A Manager can use the cog in the location's list of sensors instead. Anyone else, ask whoever manages your CropWatch account."
 							}
 						],
 						[
@@ -697,7 +1035,7 @@
 								"bold": true
 							},
 							{
-								"text": " Nothing has been changed yet. Edit one of the boxes and it wakes up."
+								"text": " Nothing has been changed yet, or a box needs fixing. If red text appeared under a box after you pressed the button, reload the page."
 							}
 						],
 						[
@@ -706,7 +1044,7 @@
 								"bold": true
 							},
 							{
-								"text": " If it was the TTI Device ID, that is expected; that box cannot be set here. Anything else, try again and read the coloured bar carefully."
+								"text": " If it was the TTI Device ID, that box cannot be saved from this page. Anything else, try again and read the coloured bar carefully."
 							}
 						],
 						[
@@ -731,16 +1069,23 @@
 								"bold": true
 							},
 							{
-								"text": " They were added to the location without “Apply to all devices” switched on. Set their level here."
+								"text": " They were added to the location with “Apply to all devices in this location” switched off, or the sensor was moved here from another location. Set their level here."
 							}
 						],
 						[
 							{
-								"text": "There is no Delete button.",
+								"text": "How do I delete a sensor?",
 								"bold": true
 							},
 							{
-								"text": " Sensors cannot be deleted from CropWatch. Contact support."
+								"text": " Only its owner can, from the Danger zone card at the bottom of this page. See "
+							},
+							{
+								"text": "Deleting a sensor",
+								"href": "page:sensor-settings#deleting-a-sensor"
+							},
+							{
+								"text": "."
 							}
 						],
 						[
@@ -750,6 +1095,15 @@
 							},
 							{
 								"text": " That is what moving does. Put them back on this page, or ask an Admin to."
+							}
+						],
+						[
+							{
+								"text": "The licence card says there is no licence, but the sensor works.",
+								"bold": true
+							},
+							{
+								"text": " The card only shows licences on your own account. The sensor is most likely using a licence on the account of whoever added it."
 							}
 						],
 						[
@@ -769,11 +1123,19 @@
 	"links": [
 		{
 			"kind": "page",
+			"slug": "sharing-access"
+		},
+		{
+			"kind": "page",
 			"slug": "reading-the-dashboard"
 		},
 		{
 			"kind": "page",
 			"slug": "setting-up-alert-rules"
+		},
+		{
+			"kind": "page",
+			"slug": "crop-targets-and-growing-advice"
 		}
 	]
 }

@@ -57,12 +57,44 @@
 						],
 						[
 							{
-								"text": "How often you want it: daily, weekly, or at the end of each month."
+								"text": "How often you want it: every week, at the end of each month, or both."
 							}
 						],
 						[
 							{
 								"text": "The email address of everybody who should receive it."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Saving a report also needs two things from your account:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Manager or above on every sensor in the report",
+								"bold": true
+							},
+							{
+								"text": ", or being its owner. The sensor list offers every sensor you can see, but saving with one you cannot manage is refused with “You do not have permission to manage one or more selected devices”."
+							}
+						],
+						[
+							{
+								"text": "The reporting add-on.",
+								"bold": true
+							},
+							{
+								"text": " Without it, the Reports page shows a yellow panel headed “Reporting subscription required”, and the button that saves a report stays grey. “Subscribe to reporting” in that panel starts the subscription. Accounts billed by invoice have no button there; ask CropWatch to switch reporting on."
 							}
 						]
 					]
@@ -238,7 +270,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The “Delivery schedule” card decides when a report is produced. There are three switches and a box:"
+							"text": "The “Delivery schedule” card decides when a report is produced. It has two switches and a box:"
 						}
 					]
 				},
@@ -248,20 +280,11 @@
 					"items": [
 						[
 							{
-								"text": "Daily",
-								"bold": true
-							},
-							{
-								"text": " — one report each day."
-							}
-						],
-						[
-							{
 								"text": "Weekly",
 								"bold": true
 							},
 							{
-								"text": " — one report each week."
+								"text": ": one report each week. A new report starts with this one switched on."
 							}
 						],
 						[
@@ -270,7 +293,7 @@
 								"bold": true
 							},
 							{
-								"text": " — one report at the end of each month."
+								"text": ": one report at the end of each month."
 							}
 						],
 						[
@@ -279,7 +302,7 @@
 								"bold": true
 							},
 							{
-								"text": " — your time zone, as a number of hours. Japan is 9. Without it, the report is cut off at the wrong time of day and a “daily” report covers the wrong day."
+								"text": ": your time zone, as a number of hours. Japan is 9. It starts at 0, and with the wrong number the report's days begin and end at the wrong hour."
 							}
 						]
 					]
@@ -288,7 +311,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "These are switches, not a choice of one. Turning on both Daily and End of month gives you a report every day and another at the end of the month."
+							"text": "These are switches, not a choice of one. Turning on both gives you a report every week and another at the end of the month. There is no daily report to choose."
 						}
 					]
 				},
@@ -296,18 +319,18 @@
 					"type": "note",
 					"content": [
 						{
-							"text": "At least one of the three must be switched on. If none is, saving stops and says “Choose at least one cadence (daily, weekly, or monthly) for the active schedule.”"
+							"text": "At least one of the two must be switched on. If neither is, saving stops and says “Choose at least one cadence (daily, weekly, or monthly) for the active schedule.” The message mentions daily, but only Weekly and End of month can be switched on."
 						}
 					]
 				}
 			],
 			"image": {
 				"src": "images/creating-a-report/04-delivery-schedule.svg",
-				"alt": "The Delivery schedule card with Daily, Weekly and End of month switches, Weekly switched on, and a UTC offset box",
+				"alt": "The Delivery schedule card with Weekly and End of month switches, Weekly switched on, and a UTC offset box",
 				"caption": "Weekly, with the UTC offset set to 9 for Japan.",
 				"side": "left",
 				"width": 680,
-				"height": 400
+				"height": 342
 			}
 		},
 		{
@@ -326,7 +349,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Press “Add recipient” for each further person, and fill in three things:"
+							"text": "Press the + button at the top right of the card for each further person. Each gets a numbered block, “Recipient 2” and so on, with three boxes:"
 						}
 					]
 				},
@@ -340,7 +363,7 @@
 								"bold": true
 							},
 							{
-								"text": " — Email."
+								"text": ": Email."
 							}
 						],
 						[
@@ -349,7 +372,7 @@
 								"bold": true
 							},
 							{
-								"text": " — where it goes."
+								"text": ": where it goes."
 							}
 						],
 						[
@@ -358,7 +381,7 @@
 								"bold": true
 							},
 							{
-								"text": " — who it is, so the list makes sense later."
+								"text": ": who it is, so the list makes sense later."
 							}
 						]
 					]
@@ -374,7 +397,7 @@
 			],
 			"image": {
 				"src": "images/creating-a-report/05-recipients.svg",
-				"alt": "The Recipients card with one recipient: Send by Email, an email address and a name, and an Add recipient button",
+				"alt": "The Recipients card with one recipient: Send by Email, an email address and a name, and a + button for adding another",
 				"caption": "Each recipient needs an address and a name.",
 				"side": "right",
 				"width": 680,
@@ -498,7 +521,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Below the recipients is a folded-up panel headed “(ADVANCED) Data Processing Schedules”. It throws away readings outside the hours you name — counting only working hours, say."
+							"text": "Between the Delivery schedule and the Alerts card is a folded-up panel headed “(ADVANCED) Data Processing Schedules”. It throws away readings outside the hours you name, for example counting only working hours."
 						}
 					]
 				},
@@ -552,7 +575,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "If that button is grey and will not press, something is still missing. It stays grey until everything needed is filled in, and a yellow panel headed “Please check these fields” lists what. The usual ones are:"
+							"text": "If that button is grey and will not press, something is still missing. Once you start filling in the form, a yellow panel headed “Please check these fields” appears at the top and lists what. The usual ones are:"
 						}
 					]
 				},
@@ -580,6 +603,14 @@
 								"text": "A recipient with a missing or misspelled email address."
 							}
 						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If the button stays grey and the panel lists nothing, look for the “Reporting subscription required” panel at the top of the page. Without the reporting add-on, no report can be saved."
+						}
 					]
 				}
 			],
@@ -623,7 +654,7 @@
 								"bold": true
 							},
 							{
-								"text": " lists the reports this template has already produced, grouped by sensor, each with a “Download” button. If it says “No reports have been generated yet.”, the first one is still to come."
+								"text": " opens “View History”: the reports this template has already produced, grouped by sensor, each with a “Download” button. If it says “No reports have been generated yet.”, the first one is still to come."
 							}
 						],
 						[
@@ -632,9 +663,17 @@
 								"bold": true
 							},
 							{
-								"text": " deletes the template. It asks first: “Are you sure you want to delete the report template …? This cannot be undone.”"
+								"text": " deletes the template. It asks first, naming the report: “Are you sure you want to delete the report template \"Weekly operations summary\"? This cannot be undone.”"
 							}
 						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Saving changes and deleting both need Manager or above on every sensor in the report; anyone else gets “You do not have permission to manage one or more selected devices”. Downloading a report only needs access to the sensor."
+						}
 					]
 				},
 				{
@@ -663,7 +702,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Sometimes a reading needs an explanation: the door was open, the heater was being serviced. You can write that onto a report that has already been produced."
+							"text": "Sometimes a reading needs an explanation: the door was open, the heater was being serviced. On air temperature and humidity sensors you can write that onto a report that has already been produced."
 						}
 					]
 				},
@@ -678,26 +717,41 @@
 						],
 						[
 							{
-								"text": "Find the report and press “Edit”."
+								"text": "Find the report and press “Edit” beside it. The button is there only for sensors where you are Manager or above, or the owner, and it is greyed out once the report's period ended more than 23 months ago."
 							}
 						],
 						[
 							{
-								"text": "You get the readings for that period. Use the note button on a row to add, change or remove a note, then press “Apply”."
+								"text": "The “Edit report notes” page lists that period's readings, with a “Notes” column. Press the note button on a row to see its notes, then use “Add note”, “Edit” or “Remove”, and press “Apply”. Each change is marked “unsaved”, and “Restore” brings back a note you removed by mistake."
 							}
 						],
 						[
 							{
-								"text": "Press “Save Changes” when you have finished."
+								"text": "Press “Save Changes”. “Notes saved. The report will be regenerated on the next scheduled run.” confirms it."
 							}
 						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Back in View History, that report carries a “Regeneration queued · 1 edit(s)” badge until the next run. Leaving the notes page before saving asks “You have unsaved note changes. Leave without saving them?” first."
+						}
 					]
 				},
 				{
 					"type": "note",
 					"content": [
 						{
-							"text": "The report is rebuilt with your notes on the next scheduled run and kept beside the original. It is not emailed to the recipients again. Notes can be added for up to 23 months after the period ends, and only on air sensors."
+							"text": "The report is rebuilt with your notes on the next scheduled run and kept beside the original. It is not emailed to the recipients again, so download it from View History when you need it. Notes added on the sensor's own page appear here too; see "
+						},
+						{
+							"text": "Notes on readings",
+							"href": "page:air-temperature-humidity-sensors#notes-on-readings"
+						},
+						{
+							"text": "."
 						}
 					]
 				}
@@ -770,6 +824,22 @@
 							},
 							{
 								"text": " The report still arrives; that sensor is simply missing from it."
+							}
+						],
+						[
+							{
+								"text": "A grey save button with nothing listed.",
+								"bold": true
+							},
+							{
+								"text": " The account has no reporting add-on yet. See "
+							},
+							{
+								"text": "Before you start",
+								"href": "page:creating-a-report#before-you-start"
+							},
+							{
+								"text": "."
 							}
 						]
 					]

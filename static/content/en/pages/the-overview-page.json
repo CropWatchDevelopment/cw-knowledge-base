@@ -1,0 +1,1375 @@
+{
+	"slug": "the-overview-page",
+	"topic": "software",
+	"title": "The Overview page",
+	"intro": "The Overview page puts every sensor and gateway you can see on one screen: how many are working, what needs a look, and what has happened lately. This guide goes through each card, explains how every number is worked out, and says where each link takes you.",
+	"sections": [
+		{
+			"id": "what-it-is",
+			"heading": "What the Overview page is for",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The Overview answers one question for all your sites at once: how is everything doing? It shows no readings. Instead it counts: sensors online and offline, alerts, gateways, reports, and how much data has come in."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "From top to bottom it holds a status card, a row of six key numbers, and then seven cards. On a computer the cards sit in two columns. The left column holds “Needs attention”, “Recent activity” and the “Devices reporting, last 24 h” chart; the right column holds “Breakdown”, “Locations”, “Latest notes” and “Recent reports”."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "To check an actual temperature or moisture level, use the dashboard or open the sensor. A section near the end of this guide "
+						},
+						{
+							"text": "compares the two pages",
+							"href": "page:the-overview-page#overview-or-dashboard"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "opening-it",
+			"heading": "Opening the Overview",
+			"body": [
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Sign in to CropWatch."
+							}
+						],
+						[
+							{
+								"text": "In the menu on the left, press “Overview”. It is the first item, above “Dashboard”."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a phone the menu is folded away. Tap the button with three lines at the top left to open it, then tap “Overview”."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "To get back to your sensors, press “Open Dashboard” at the top right. On a phone the same button also sits at the very bottom of the page."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The page always opens on the last 24 hours, whichever period you looked at last time."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If the page cannot load, a red panel says “Couldn't load the overview.” with a “Try again” button under it. Press it. If it keeps failing, reload the page."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "whose-sensors",
+			"heading": "Whose sensors and gateways are counted",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Every sensor figure on the page is worked out from the sensors you have access to: each sensor where your level is Viewer or higher. A sensor where you are set to Disabled is left out of every count, and so is any sensor you have no access to at all. The "
+						},
+						{
+							"text": "six levels",
+							"href": "page:sharing-access#the-six-levels"
+						},
+						{
+							"text": " are explained in the sharing guide."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Two people in the same company can therefore see different numbers. A colleague with access to one more greenhouse than you counts its sensors too."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Gateways are the ones the "
+						},
+						{
+							"text": "Gateways page",
+							"href": "page:gateways-in-the-app"
+						},
+						{
+							"text": " lists for you: the gateways linked to your account, plus the public gateways that page shows with a tick under “Public”. A public gateway counts towards the gateway figures even though it is not yours."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "To see a colleague's sensors here, they have to be shared with you. "
+						},
+						{
+							"text": "Adding someone",
+							"href": "page:sharing-access#adding-someone"
+						},
+						{
+							"text": " shows how."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "online-and-offline",
+			"heading": "How online and offline are decided",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Every sensor sends readings on a schedule, its reporting interval: every 10 minutes, every 30 minutes, depending on the model. The Overview calls a sensor offline once more time than that interval has passed since its last reading. A sensor that reports every 10 minutes counts as offline after 10 minutes without a reading."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A sensor that has never sent a reading also counts as offline."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This one rule feeds every online and offline figure on the page: the status card, the “Online / Offline” card, the Offline line in Needs attention, the Devices view of Breakdown, and the Locations card."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The “Device went offline” entries in Recent activity use a gentler rule. They appear only after twice the reporting interval without a reading, so a single late reading does not log a went-offline and back-online pair. CropWatch checks for them every 10 minutes. A sensor can therefore count as offline in the numbers a while before its entry appears in the activity."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "the-status-card",
+			"heading": "The status card at the top",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The wide card at the top sums the page up. Its coloured tag shows one of three states:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“All good” (green)",
+								"bold": true
+							},
+							{
+								"text": ": nothing needs attention. No sensors are offline, no alerts are still triggered and no gateways are offline."
+							}
+						],
+						[
+							{
+								"text": "“Needs attention” (amber)",
+								"bold": true
+							},
+							{
+								"text": ": at least one of those three is not true."
+							}
+						],
+						[
+							{
+								"text": "“No devices” (grey)",
+								"bold": true
+							},
+							{
+								"text": ": you cannot see any sensors yet. The card reads “No devices yet” and “Devices you add, or that are shared with you, appear here.”"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Beside the tag is a headline. With All good it reads “Everything is running”. With something to look at, it counts the items, as in “2 items need a look”. When 90% or more of your sensors are online, it starts with “Mostly healthy:”, as in “Mostly healthy: 1 item needs a look”. There is one item each for offline sensors, triggered alerts and offline gateways, so the count never goes above 3."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Under the headline is a summary line, for example “2 devices offline · no active alerts · every gateway online · last data received 3 min ago”. The gateway part is left out when you have no gateways. “last data received” is the newest reading from any of your sensors."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When the tag says Needs attention, the card also carries a “See what needs attention” link, which jumps down to the Needs attention card."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/the-overview-page/status-card.webp",
+				"alt": "The top of the Overview page: the title with the “Live” line under it, the 24 h, 7 days and 30 days buttons and Open Dashboard on the right, and below them the status card with an amber “Needs attention” tag, the headline “Mostly healthy: 2 items need a look” and the summary line.",
+				"caption": "The status card when one sensor is offline and one alert is still active.",
+				"side": "right",
+				"width": 1600,
+				"height": 214
+			}
+		},
+		{
+			"id": "live-and-updates",
+			"heading": "“Live”, and when the numbers update",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Under the page title a small line says how old the numbers are, such as “Live · updated 2m 10s ago”, with a green dot. Once the numbers are 15 minutes old, the dot turns grey and the line changes to “Updated 18m 40s ago”, still counting up."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Hold the mouse over the line, or move to it with the Tab key, to see when the next update is due: “Next update in 7m 50s”, or “Updating…” while one is running."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The page fetches new numbers by itself:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "While it is open and on screen",
+								"bold": true
+							},
+							{
+								"text": ": every 10 minutes."
+							}
+						],
+						[
+							{
+								"text": "When you come back to it",
+								"bold": true
+							},
+							{
+								"text": " from another tab or app: it checks again straight away if what is on screen is more than a minute old."
+							}
+						],
+						[
+							{
+								"text": "While it is hidden behind another tab or app",
+								"bold": true
+							},
+							{
+								"text": ": never. Nothing updates until you come back."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Not everything is counted at the same moment. Online and offline, alerts, reports and notes are worked out when the page fetches its numbers. “Data received”, the Devices reporting chart, the Data entries in Recent activity, and the went-offline and back-online entries come from a count CropWatch redoes every 10 minutes, so they can trail by up to 10 minutes."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If an update fails in the background, no message appears. The old numbers stay on screen and the age in the line keeps growing. Reloading the page always fetches a fresh copy."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "time-range",
+			"heading": "Choosing a time range",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The three buttons at the top right, “24 h”, “7 days” and “30 days”, set the period for the parts of the page that count things over time. On a phone they run across the page under the status card."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "While a new period loads, the cards fade slightly and keep showing the old period until the new numbers arrive. Going back to a period you loaded in the last 10 minutes is instant. If loading fails, a red message says “Couldn't load the overview.” and the buttons go back to the period you were on."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The table shows which parts follow the buttons. The rest always describe right now, or the latest few items."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "What the time range changes",
+				"columns": [
+					"Part of the page",
+					"Follows the time range"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "“Alerts triggered”, and its comparison"
+							}
+						],
+						"cells": [
+							true
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“Reports sent” (the count)"
+							}
+						],
+						"cells": [
+							true
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“Data received” and “of expected”"
+							}
+						],
+						"cells": [
+							true
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Recent activity"
+							}
+						],
+						"cells": [
+							true
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Breakdown, Alerts view"
+							}
+						],
+						"cells": [
+							true
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“Devices”, “Online / Offline”, “Gateways”"
+							}
+						],
+						"cells": [
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Status card and Needs attention"
+							}
+						],
+						"cells": [
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Devices reporting chart"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Always the last 24 hours"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Locations, Latest notes, Recent reports"
+							}
+						],
+						"cells": [
+							false
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "the-key-numbers",
+			"heading": "The six key numbers",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Six cards run across the page under the status card. Only the Gateways card can be pressed; it opens the Gateways page."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Devices”",
+								"bold": true
+							},
+							{
+								"text": ": how many sensors you can see, with “across 3 locations” (or “at 1 location”) under it. Sensors with no location are counted, but not as a location."
+							}
+						],
+						[
+							{
+								"text": "“Online / Offline”",
+								"bold": true
+							},
+							{
+								"text": ": the two counts side by side, green then red, with a bar showing the split."
+							}
+						],
+						[
+							{
+								"text": "“Alerts triggered”",
+								"bold": true
+							},
+							{
+								"text": ": how many times an alert started in the period. Each rule counts once per sensor, so a rule that goes off on three sensors adds 3. Under it, “2 active” appears when alerts are still triggered right now, whenever they started. Then comes the change on the previous period of the same length, as in “+4 vs yesterday”: “vs yesterday” compares with the 24 hours before the current 24, and “vs last week” and “vs last month” do the same for 7 and 30 days."
+							}
+						],
+						[
+							{
+								"text": "“Gateways”",
+								"bold": true
+							},
+							{
+								"text": ": online gateways out of the total, as in “3 of 4 online”. Under it: “All connected” in green, “1 offline” in red, or “No gateways”."
+							}
+						],
+						[
+							{
+								"text": "“Reports sent”",
+								"bold": true
+							},
+							{
+								"text": ": how many report PDFs were made for your sensors in the period. A report covering four sensors makes four PDFs, so it adds 4. Under it, “last: 2 days ago” gives the newest report of all, whatever the period, or “none yet”."
+							}
+						],
+						[
+							{
+								"text": "“Data received”",
+								"bold": true
+							},
+							{
+								"text": ": how many readings arrived from your sensors in the period. The app calls each one an uplink, and shortens large numbers, as in “13.8K”. Next to “uplinks”, a figure such as “98.5% of expected” compares what arrived with what the sensors' reporting intervals promise."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "How “of expected” is worked out:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Each sensor's expected count starts from the hour of its first reading in the period, so a sensor installed halfway through is not marked short."
+							}
+						],
+						[
+							{
+								"text": "A sensor that sends more than expected counts as 100%, so one busy sensor cannot hide a quiet one."
+							}
+						],
+						[
+							{
+								"text": "A sensor that sent nothing at all in the period is left out of this figure. It shows up in the offline count instead."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/the-overview-page/key-numbers.webp",
+				"alt": "Six cards in a row: Devices 10 across 4 locations; Online / Offline 9 / 1 with a green and red bar; Alerts triggered 2, 1 active, −2 vs yesterday; Gateways 3 of 3 online, All connected; Reports sent 1, last: 5 hr ago; Data received 647 uplinks, 97.7% of expected.",
+				"caption": "The six key numbers with the 24 h range chosen.",
+				"side": "left",
+				"width": 1600,
+				"height": 174
+			}
+		},
+		{
+			"id": "needs-attention",
+			"heading": "The Needs attention card",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Needs attention” lists the problems across your sites, grouped by kind rather than one line per sensor. When there are none it says “Nothing needs attention right now”."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "It has up to three lines, always in the order below. Each shows a coloured tag, a sentence with the count, the locations involved, and a “View” link."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "After each sentence come the locations, the ones with the most problems first, such as “North Field · Greenhouse 2 · Cold Room 1 · +2 more”. Sensors with no location appear as “No location”. The gateway line says “Check the gateways page” instead, because gateways are not tied to a location."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The alert line counts each sensor separately. One rule triggered on three sensors reads “3 alert rules are still triggered”, even though it is one rule. The Rules page shows which rules and sensors they are."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "The three lines and where “View” goes",
+				"columns": [
+					"Line",
+					"What it counts",
+					"“View” opens"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "“Offline” (red)"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Sensors offline right now: “3 devices are not reporting”"
+								}
+							],
+							[
+								{
+									"text": "That location's page when they are all at one location; the dashboard when they are spread over several, or have no location"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“Active alert” (amber)"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Alerts still triggered right now, one per rule per sensor: “2 alert rules are still triggered”"
+								}
+							],
+							[
+								{
+									"text": "The Rules page"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“Gateway” (red)"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Gateways offline right now: “1 gateway is offline”"
+								}
+							],
+							[
+								{
+									"text": "The Gateways page"
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/the-overview-page/needs-attention.webp",
+				"alt": "The Needs attention card with two lines: a red Offline tag, “1 device is not reporting”, North Field and a View button; and an amber Active alert tag, “1 alert rule is still triggered”, Cold Storage and a View button.",
+				"caption": "One line per kind of problem, each with its locations and a View link.",
+				"side": "right",
+				"width": 1600,
+				"height": 389
+			}
+		},
+		{
+			"id": "recent-activity",
+			"heading": "The Recent activity timeline",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Recent activity” lists what happened in the period, newest first. It shows the 8 newest entries, or 6 on a phone, and has no button for more. To look further back, use the filters, or the Rules and Reports pages."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The buttons along its top filter it: “All”, “Alerts”, “Reports”, “Data” and “Devices”. The number on each is how many entries of that kind the whole period holds, which can be more than the list shows. Alerts counts a start and a clear as two entries."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "What each kind of entry says, and what pressing it does:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Alerts",
+								"bold": true
+							},
+							{
+								"text": ": “Alert triggered: Greenhouse 1 north” when a rule went off, with the rule's name and the location under it, and “Alert resolved: Greenhouse 1 north” when it cleared, with how long it lasted, as in “active for 1h 12m”. Press either to open that sensor's page."
+							}
+						],
+						[
+							{
+								"text": "Devices",
+								"bold": true
+							},
+							{
+								"text": ": “Device went offline: …” with when the sensor was last seen, and “Device back online: …” with how long it was silent, as in “Offline for 45m”. Press either to open the sensor's page."
+							}
+						],
+						[
+							{
+								"text": "Reports",
+								"bold": true
+							},
+							{
+								"text": ": “Report sent: …” with “PDF” and the dates the report covers. Press it to open the PDF in a new browser tab."
+							}
+						],
+						[
+							{
+								"text": "Data",
+								"bold": true
+							},
+							{
+								"text": ": “12 of 14 devices reported in the last hour” for the last complete hour, with “All locations” under it, and one entry per day such as “13 of 14 devices sent 1.9K uplinks”, with “24 hours to” and the date and time that day ends. These entries do not open anything."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Times read as a clock time for today, “Yesterday” for yesterday, and a date such as “Oct 13” before that."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "An entry for a sensor with no location cannot be opened, because a sensor's page belongs to its location."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/the-overview-page/recent-activity.webp",
+				"alt": "The Recent activity card with the filter buttons All 9, Alerts 3, Reports 1, Data 2 and Devices 3, above eight entries: devices reported in the last hour, uplinks sent in 24 hours, an alert triggered on Cold Room 1, North Soil B going offline, an alert resolved on GH1 CO2, a report sent for GH1 Climate, an alert triggered on GH1 CO2, and GH2 Climate back online.",
+				"caption": "The eight newest entries; the numbers on the buttons count the whole period.",
+				"side": "left",
+				"width": 1600,
+				"height": 1016
+			}
+		},
+		{
+			"id": "devices-reporting",
+			"heading": "The Devices reporting chart",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Devices reporting, last 24 h” has one bar for each of the last 24 complete hours, oldest on the left, with “24 h ago”, “12 h ago” and “now” along the bottom. The hour in progress is not drawn yet. This chart always covers 24 hours, whichever time range is chosen."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each bar's height is the share of your sensors that sent at least one reading in that hour. A bar at 90% or more is blue; below 90% it turns amber. Hold the mouse over a bar to see its numbers, as in “14:00: 13 of 14 devices (93%)”."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When several sensors stop at the same moment, every bar from that hour on drops together. That pattern usually points to a gateway or its internet connection rather than the sensors, as "
+						},
+						{
+							"text": "When a sensor stops",
+							"href": "page:reading-the-dashboard#not-reporting"
+						},
+						{
+							"text": " explains."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Bars can sit below 100% when nothing is wrong. The share is taken against all the sensors you have now, so a sensor that is already offline, or one added today, lowers every bar. A sensor that reports less often than once an hour cannot appear in every bar."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/the-overview-page/devices-reporting.webp",
+				"alt": "The Devices reporting, last 24 h chart: 24 bars, almost all blue and full height, one shorter amber bar 15 hours ago, and the last few bars slightly lower, with “24 h ago”, “12 h ago” and “now” along the bottom.",
+				"caption": "The amber bar is an hour when fewer than 90% of the sensors reported.",
+				"side": "right",
+				"width": 1600,
+				"height": 410
+			}
+		},
+		{
+			"id": "breakdown",
+			"heading": "The Breakdown card",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Breakdown” is a ring chart with three views, chosen with the buttons at its top right: “Devices”, “Alerts” and “Types”."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Devices”",
+								"bold": true
+							},
+							{
+								"text": ": online in green and offline in red, with the share online in the middle."
+							}
+						],
+						[
+							{
+								"text": "“Alerts”",
+								"bold": true
+							},
+							{
+								"text": ": the sensors with the most alerts in the period. The middle shows the total, as in “12” over “alerts in 7 days”. The list names up to three sensors (four, when exactly four sensors had alerts) and puts the rest together under “Other”. Press a sensor's name to open its page. With no alerts, it says “No alerts in this period”."
+							}
+						],
+						[
+							{
+								"text": "“Types”",
+								"bold": true
+							},
+							{
+								"text": ": your sensors by kind: “Air”, “Soil”, “Water”, “Traffic”, “Relay”, and “Other” for anything else, with the total in the middle. Kinds you have none of are not listed."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "In the Alerts and Types views the colours only tell the slices apart. They do not mean good or bad."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "locations-card",
+			"heading": "The Locations card",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Locations” shows “Devices online per location”. Each line has a dot, the location's name, a count such as “5 / 6” (online out of total) and a bar."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Every sensor online",
+								"bold": true
+							},
+							{
+								"text": ": green dot, and a green bar filled to the end."
+							}
+						],
+						[
+							{
+								"text": "Any sensor offline",
+								"bold": true
+							},
+							{
+								"text": ": red dot, the count in red, and an amber bar filled as far as the share that is online."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Locations are sorted by how many sensors are offline, most first; locations with the same number are in alphabetical order. Press a name to open that location. Sensors without a location are gathered under “No location”, which cannot be opened."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The card shows up to 8 locations. When you have more, “View all locations” at the bottom opens the Locations page."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/the-overview-page/locations.webp",
+				"alt": "The Locations card: North Field with a red dot, 2 / 3 in red and an amber bar two thirds full, then Cold Storage 2 / 2, Greenhouse 1 3 / 3 and Greenhouse 2 2 / 2, each with a green dot and a full green bar.",
+				"caption": "The location with an offline sensor comes first.",
+				"side": "left",
+				"width": 720,
+				"height": 570
+			}
+		},
+		{
+			"id": "latest-notes",
+			"heading": "The Latest notes card",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Latest notes” shows the three newest notes on any of your sensors, whatever time range is chosen. Notes are written on readings from air temperature and humidity sensors, on the sensor's page or "
+						},
+						{
+							"text": "while adding notes to a report",
+							"href": "page:creating-a-report#notes-on-a-report"
+						},
+						{
+							"text": ", so that is where they come from."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each note shows its title in bold and its text, then a tag with the location (or the sensor's name, if it has no location), then who wrote it and how long ago."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Who wrote it",
+								"bold": true
+							},
+							{
+								"text": ": the email address the writer signs in to CropWatch with."
+							}
+						],
+						[
+							{
+								"text": "“CropWatch support”",
+								"bold": true
+							},
+							{
+								"text": ": shown in place of a name when a member of CropWatch staff wrote the note. Staff email addresses are not shown."
+							}
+						],
+						[
+							{
+								"text": "How long ago",
+								"bold": true
+							},
+							{
+								"text": ": measured from the reading the note is attached to, not from when it was written. A note added today about a reading from six days ago reads “6 days ago”, and can sit below newer notes or drop off the card."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Notes cannot be opened from here. With no notes, the card says “No notes yet”."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "recent-reports",
+			"heading": "The Recent reports card",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Recent reports” lists the four newest report PDFs made for your sensors, whatever time range is chosen. Each row shows the sensor's name, the dates the report covers and when it was made."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Press a row to open that PDF in a new browser tab. If it cannot be opened, a red message says “Unable to download this report.” or “Download link is unavailable.”. Wait a moment and press the row again."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“All reports” at the top right of the card opens the Reports page. With no reports yet, the card says “No reports yet”. Setting reports up is covered in "
+						},
+						{
+							"text": "Creating a report",
+							"href": "page:creating-a-report"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "on-a-phone",
+			"heading": "The Overview on a phone",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a phone, or in any narrow window, the same information is arranged in one column:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The status card becomes a ring showing the share of sensors online, with three tiles under it: “online”, “offline” and “active alerts”. The “Live” line moves inside this card."
+							}
+						],
+						[
+							{
+								"text": "The time range buttons run across the page under it."
+							}
+						],
+						[
+							{
+								"text": "Four key numbers sit two by two: Alerts triggered, Gateways, Reports sent and Data received. Devices and Online / Offline are left out, because the ring and tiles already show them. The Gateways card reads “3 / 4” instead of “3 of 4 online”."
+							}
+						],
+						[
+							{
+								"text": "Each Needs attention line becomes one row you can tap, such as “2 devices offline”. It goes where “View” would."
+							}
+						],
+						[
+							{
+								"text": "The cards follow in this order: Needs attention, Recent activity, Breakdown, Devices reporting, Locations, Latest notes, Recent reports."
+							}
+						],
+						[
+							{
+								"text": "“Open Dashboard” sits at the top right and again at the bottom."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/the-overview-page/phone.webp",
+				"alt": "The Overview on a phone: the title and Open Dashboard at the top, the status card as a 90% online ring with tiles for 9 online, 1 offline and 1 active alerts, the time range buttons across the page, four key numbers two by two, and the start of Needs attention.",
+				"caption": "On a phone the page becomes one column.",
+				"side": "right",
+				"width": 1170,
+				"height": 2532
+			}
+		},
+		{
+			"id": "overview-or-dashboard",
+			"heading": "Overview or dashboard?",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The two pages answer different questions."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The dashboard",
+								"bold": true
+							},
+							{
+								"text": ": every sensor with its latest readings, grouped by location. Go there to check a temperature or find one sensor. "
+							},
+							{
+								"text": "Reading the dashboard",
+								"href": "page:reading-the-dashboard"
+							},
+							{
+								"text": " covers it."
+							}
+						],
+						[
+							{
+								"text": "The Overview",
+								"bold": true
+							},
+							{
+								"text": ": no readings at all. It counts, and it looks back: alerts, reports and data over 24 hours, 7 days or 30 days, and a timeline of what happened."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Differences worth knowing:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The Overview's numbers are a snapshot, fetched again about every 10 minutes. The “Live” line under the title says how old it is."
+							}
+						],
+						[
+							{
+								"text": "Both judge a sensor offline by its reporting interval, as described in "
+							},
+							{
+								"text": "“Last Seen”, and when to worry",
+								"href": "page:reading-the-dashboard#last-seen"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "A new sensor that has never sent a reading is blue (Loading) on the dashboard, but counts as offline on the Overview. The dashboard's colours are in "
+							},
+							{
+								"text": "The colours, and what they mean",
+								"href": "page:reading-the-dashboard#the-dot"
+							},
+							{
+								"text": "."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "quick-answers",
+			"heading": "Quick answers",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "My colleague sees different numbers.",
+								"bold": true
+							},
+							{
+								"text": " You each see only the sensors you have access to. See "
+							},
+							{
+								"text": "Whose sensors and gateways are counted",
+								"href": "page:the-overview-page#whose-sensors"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "The Gateways card counts a gateway that is not mine.",
+								"bold": true
+							},
+							{
+								"text": " Public gateways are counted along with your own, the same ones the Gateways page lists. An offline public gateway also shows in Needs attention."
+							}
+						],
+						[
+							{
+								"text": "Some entries will not open.",
+								"bold": true
+							},
+							{
+								"text": " A sensor with no location has no page to open, so it is plain text in Recent activity, Breakdown and Locations. Give it a location in its "
+							},
+							{
+								"text": "settings",
+								"href": "page:sensor-settings#location"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "A brand-new sensor counts as offline.",
+								"bold": true
+							},
+							{
+								"text": " It has not sent its first reading yet. It moves to online at the first update after that reading arrives."
+							}
+						],
+						[
+							{
+								"text": "Needs attention says 3 alert rules, but I have one rule.",
+								"bold": true
+							},
+							{
+								"text": " Each sensor the rule is triggered on counts once. The Rules page shows them."
+							}
+						],
+						[
+							{
+								"text": "The numbers look stale.",
+								"bold": true
+							},
+							{
+								"text": " Read the line under the title. “Updated” with a grey dot, rather than “Live”, means the numbers on screen are 15 minutes old or more; reload the page. Data received and the Devices reporting chart are recounted only every 10 minutes in any case."
+							}
+						],
+						[
+							{
+								"text": "A sensor stopped, but Recent activity has no “Device went offline” entry.",
+								"bold": true
+							},
+							{
+								"text": " That entry waits for twice the reporting interval and is checked every 10 minutes. The offline count reacts sooner."
+							}
+						],
+						[
+							{
+								"text": "The Devices reporting chart never reaches 100%.",
+								"bold": true
+							},
+							{
+								"text": " See the note under "
+							},
+							{
+								"text": "The Devices reporting chart",
+								"href": "page:the-overview-page#devices-reporting"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "My new note is not in Latest notes.",
+								"bold": true
+							},
+							{
+								"text": " The card shows three notes, ordered by the time of the reading each is attached to. A new note about an old reading sits further down."
+							}
+						],
+						[
+							{
+								"text": "The page says “No devices yet”.",
+								"bold": true
+							},
+							{
+								"text": " No sensors are shared with you, or you are set to Disabled on all of them. Ask whoever manages your CropWatch account."
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "reading-the-dashboard"
+		},
+		{
+			"kind": "page",
+			"slug": "sharing-access"
+		},
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		},
+		{
+			"kind": "page",
+			"slug": "creating-a-report"
+		},
+		{
+			"kind": "page",
+			"slug": "gateways-in-the-app"
+		}
+	]
+}

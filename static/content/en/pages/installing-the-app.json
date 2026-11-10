@@ -1,0 +1,652 @@
+{
+	"slug": "installing-the-app",
+	"topic": "software",
+	"title": "Installing CropWatch as an app",
+	"intro": "CropWatch works in any web browser, and it can also be installed so it opens from its own icon, in its own window, without the browser's address bar. It installs straight from the CropWatch website in your browser. This guide covers Android, iPhone, iPad and computers, what the installed app does differently, and how long you stay signed in.",
+	"sections": [
+		{
+			"id": "what-changes",
+			"heading": "What installing changes",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The installed app is the same CropWatch: the same account, the same sensors, the same screens. What changes is how it opens, plus a few extras:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Its own icon and window",
+								"bold": true
+							},
+							{
+								"text": ": CropWatch opens from your home screen, Start menu or dock, in a window with no browser bars."
+							}
+						],
+						[
+							{
+								"text": "Push on iPhone and iPad",
+								"bold": true
+							},
+							{
+								"text": ": push notifications only reach the Home Screen app there. See "
+							},
+							{
+								"text": "Push notifications on phones and computers",
+								"href": "page:push-notifications"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "A count on the icon",
+								"bold": true
+							},
+							{
+								"text": ": the icon shows how many of your rules are in alert right now. Computers using Chrome or Edge show it, and so do iPhone and iPad Home Screen apps with notifications allowed. The number disappears when no rule is in alert."
+							}
+						],
+						[
+							{
+								"text": "Shortcuts",
+								"bold": true
+							},
+							{
+								"text": ": on Android and on computers, pressing and holding the icon, or right-clicking it, offers Dashboard, Locations, Rules and Reports."
+							}
+						],
+						[
+							{
+								"text": "Your language",
+								"bold": true
+							},
+							{
+								"text": ": the app's name and its shortcuts follow the language you use CropWatch in."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The app still needs an internet connection. Readings, reports and settings load from CropWatch every time; the only thing kept on the phone or computer is a page that tells you that you are offline."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "install-card",
+			"heading": "The install card",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When your browser allows CropWatch to be installed, a card appears at the bottom right of the screen. Its small heading reads “Install app”, followed by “Use CropWatch like an app.” and two buttons:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Install",
+								"bold": true
+							},
+							{
+								"text": ": opens the browser's own install window. Confirm the install there."
+							}
+						],
+						[
+							{
+								"text": "Not now",
+								"bold": true
+							},
+							{
+								"text": ": hides the card on this browser for 14 days. Turning down the browser's install window does the same."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Chrome, Edge and other browsers built on Chrome offer this on Android phones, tablets and computers. Browsers that do not let a website offer installation never show the card. It also stays hidden on the sign-in pages, and inside the installed app."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/installing-the-app/install-card.webp",
+				"alt": "The CropWatch dashboard on a computer with the install card at the bottom right: “Install app”, “Use CropWatch like an app.”, “Open it from your home screen or desktop in its own window, without the browser bars.”, and the buttons Not now and Install.",
+				"caption": "The install card appears at the bottom right of the window.",
+				"side": "right",
+				"width": 1600,
+				"height": 1075
+			}
+		},
+		{
+			"id": "android",
+			"heading": "Installing on an Android phone or tablet",
+			"body": [
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Open CropWatch in Chrome and sign in."
+							}
+						],
+						[
+							{
+								"text": "When the “Install app” card appears, press "
+							},
+							{
+								"text": "Install",
+								"bold": true
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Chrome shows its install window, sometimes with example pictures of CropWatch. Those pictures come from a made-up demo farm, not from your account. Confirm the install."
+							}
+						],
+						[
+							{
+								"text": "Open CropWatch from its new icon on your home screen."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "While the app starts, Android shows the CropWatch icon on a dark navy background, then your dashboard or whichever page you open."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Pressed “Not now” by mistake? The card comes back after 14 days. Until then, Chrome's own menu can install CropWatch too."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/installing-the-app/android.webp",
+				"alt": "The CropWatch dashboard on an Android phone, with the Install app card across the bottom of the screen and its Not now and Install buttons.",
+				"caption": "On a phone the card sits at the bottom of the screen.",
+				"side": "left",
+				"width": 1170,
+				"height": 2532
+			}
+		},
+		{
+			"id": "iphone-and-ipad",
+			"heading": "Installing on iPhone or iPad",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Apple does not let websites show an install button, so on an iPhone or iPad CropWatch shows a card with instructions instead. It reads “Add to Home Screen”, then “Get CropWatch alerts on this device.” and “Tap the Share button, then Add to Home Screen. Push alerts on iPhone and iPad only reach CropWatch opened from its Home Screen icon.” Its only button, "
+						},
+						{
+							"text": "Dismiss",
+							"bold": true
+						},
+						{
+							"text": ", hides it for 14 days."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Open CropWatch in Safari and sign in."
+							}
+						],
+						[
+							{
+								"text": "Tap the Share button, then "
+							},
+							{
+								"text": "Add to Home Screen",
+								"bold": true
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Keep the name CropWatch and tap "
+							},
+							{
+								"text": "Add",
+								"bold": true
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Open CropWatch from its new Home Screen icon. If it shows the sign-in page, sign in."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "While the app opens, the iPhone or iPad shows a CropWatch launch screen made for its screen size, instead of a blank white page. iPads have one for upright and one for sideways."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "To get alerts on it, turn push on next, as described in "
+						},
+						{
+							"text": "Push notifications on phones and computers",
+							"href": "page:push-notifications"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/installing-the-app/iphone.webp",
+				"alt": "The CropWatch dashboard on an iPhone with the Add to Home Screen card at the bottom: “Get CropWatch alerts on this device.”, the Share button instructions, and a Dismiss button.",
+				"caption": "On iPhone and iPad the card explains Add to Home Screen instead of offering an Install button.",
+				"side": "right",
+				"width": 1170,
+				"height": 2532
+			}
+		},
+		{
+			"id": "computers",
+			"heading": "Installing on a computer",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On Windows, Mac, Linux or a Chromebook, open CropWatch in Chrome or Edge and press "
+						},
+						{
+							"text": "Install",
+							"bold": true
+						},
+						{
+							"text": " on the card. CropWatch opens in its own window and gets an icon among your computer's apps, with the count of rules in alert on it."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Installing from Chrome and from Edge on the same computer gives two separate apps, each with its own sign-in and its own push setting."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "offline-and-updates",
+			"heading": "Offline page and new versions",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If you open CropWatch, or move to another page, with no connection, you get a CropWatch page instead of the browser's error. It is headed “CropWatch needs a connection for live data.” and has a "
+						},
+						{
+							"text": "Try again",
+							"bold": true
+						},
+						{
+							"text": " button that loads the page again once you are back online. This also works in a browser tab, on any browser where CropWatch has been opened before."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If the connection drops while a page is already open, a “You're Offline” panel covers it, with a "
+						},
+						{
+							"text": "Try Again",
+							"bold": true
+						},
+						{
+							"text": " button and tips such as checking your WiFi. It closes by itself and shows “You're back online!” when the connection returns."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When a new version of CropWatch is released, a card says “Update available” and “A new version of CropWatch is available.” Press "
+						},
+						{
+							"text": "Update now",
+							"bold": true
+						},
+						{
+							"text": " to reload into it, or "
+						},
+						{
+							"text": "Later",
+							"bold": true
+						},
+						{
+							"text": " to hide the card and keep working; the next time you open CropWatch you get the new version anyway. Save what you are typing before you press Update now, because, as the card warns, “Anything you have not saved on this page will be lost.” CropWatch checks for a new version each time you come back to it."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/installing-the-app/update.webp",
+				"alt": "The Update available card: “A new version of CropWatch is available.”, “Reload to switch to it. Anything you have not saved on this page will be lost.”, and the buttons Later and Update now.",
+				"caption": "Save what you are typing before you press Update now.",
+				"side": "left",
+				"width": 848,
+				"height": 444
+			}
+		},
+		{
+			"id": "staying-signed-in",
+			"heading": "How long you stay signed in",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "You sign in once on each browser and in each installed app. While you use CropWatch, it renews your sign-in in the background a few minutes before it would run out, so leaving CropWatch open all day does not end on the sign-in page."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each renewal keeps you signed in for another 30 days. CropWatch renews whenever you use it and the current sign-in is close to running out, so opening CropWatch at least once every 30 days keeps you signed in. Leave a browser or app unopened for longer than that and it asks you to sign in again."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Phones, computers and browsers are signed in separately. Signing in on your phone does not sign in your computer, and logging out on one leaves the others signed in."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "signing-in-again",
+			"heading": "When CropWatch asks you to sign in again",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The sign-in page tells you why it appeared. After you sign in, CropWatch takes you back to the page you were trying to open."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Forgotten your password? Follow "
+						},
+						{
+							"text": "Resetting your password",
+							"href": "page:resetting-your-password"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Logging out does not stop push notifications on that phone or computer. Alerts keep arriving there until you press “Disable on this device” on your Profile page; see "
+						},
+						{
+							"text": "Push notifications on phones and computers",
+							"href": "page:push-notifications"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			],
+			"table": {
+				"columns": [
+					"What happened",
+					"What the sign-in page says"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "CropWatch was not opened on this browser or app for more than 30 days."
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Nothing extra: the usual sign-in page."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "You pressed "
+							},
+							{
+								"text": "Logout",
+								"bold": true
+							},
+							{
+								"text": " in the menu under your name."
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "“You signed out successfully.”"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "CropWatch was open but could not renew your sign-in in time, for example because there was no connection at that moment."
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "“Your session expired. Sign in again to continue.”"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "You set a new password from a reset link."
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "“Use your updated password to sign in again.”"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "CropWatch hit an unexpected error in your browser, or you pressed the button on an error page that resets the app. It clears what it had saved in the browser first."
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "“An error occurred. Your saved data has been cleared. Please sign in again.”"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "The browser's cookies or site data were cleared, or a private window was closed."
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Nothing extra: the usual sign-in page."
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/installing-the-app/signed-out-reason.webp",
+				"alt": "The CropWatch sign-in page with an amber message above the email box: “Your session expired. Sign in again to continue.”",
+				"caption": "The sign-in page says why you were asked to sign in.",
+				"side": "right",
+				"width": 1056,
+				"height": 1434
+			}
+		},
+		{
+			"id": "common-questions",
+			"heading": "Common questions",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The install card never appears.",
+								"bold": true
+							},
+							{
+								"text": " Your browser does not offer installation, CropWatch is already installed, you pressed “Not now” within the last 14 days, or you are on the sign-in page."
+							}
+						],
+						[
+							{
+								"text": "Push works on my Android phone but not on my iPhone.",
+								"bold": true
+							},
+							{
+								"text": " On iPhone and iPad, push needs the Home Screen app. Open CropWatch from its icon, not from Safari, and turn push on there."
+							}
+						],
+						[
+							{
+								"text": "I see the offline page, but my connection is fine.",
+								"bold": true
+							},
+							{
+								"text": " Press “Try again”. The page appears whenever a page fails to load, which includes a short drop in signal."
+							}
+						],
+						[
+							{
+								"text": "I am asked to sign in every time.",
+								"bold": true
+							},
+							{
+								"text": " The browser is deleting its cookies when it closes, or you are using a private window. Change that setting for CropWatch, or use a normal window."
+							}
+						],
+						[
+							{
+								"text": "Removing the app.",
+								"bold": true
+							},
+							{
+								"text": " Remove the icon the way you remove any app. Your account, sensors, rules and reports stay as they are, because CropWatch keeps them, not the phone."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/installing-the-app/offline.webp",
+				"alt": "The CropWatch offline page: a small green “Offline” heading, “CropWatch needs a connection for live data.”, a sentence saying dashboards, reports and settings need the network, and a green Try again button.",
+				"caption": "The offline page appears when a page cannot load; Try again loads it once more.",
+				"side": "left",
+				"width": 1504,
+				"height": 1052
+			}
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "push-notifications"
+		},
+		{
+			"kind": "page",
+			"slug": "resetting-your-password"
+		},
+		{
+			"kind": "page",
+			"slug": "reading-the-dashboard"
+		}
+	]
+}

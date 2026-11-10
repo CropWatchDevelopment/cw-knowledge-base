@@ -1,0 +1,1311 @@
+{
+	"slug": "the-location-page",
+	"topic": "software",
+	"title": "The location page",
+	"intro": "Every location in CropWatch has a page of its own: how its sensors are doing, where it is on a map, and a list of every sensor there with its latest readings and gateway signal. This guide walks down the page from top to bottom, explains how CropWatch decides that a sensor is Online, and shows what your permission level changes.",
+	"sections": [
+		{
+			"id": "getting-there",
+			"heading": "Opening a location",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "There are three ways in:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "From the dashboard",
+								"bold": true
+							},
+							{
+								"text": ": every location card has a small arrow in its top bar, beside the location's name. Press it."
+							}
+						],
+						[
+							{
+								"text": "From Locations in the side menu",
+								"bold": true
+							},
+							{
+								"text": ": this opens All Locations, a list of every location you can see, arranged under their groups. Press the eye button at the end of a row."
+							}
+						],
+						[
+							{
+								"text": "From the Overview page",
+								"bold": true
+							},
+							{
+								"text": ": press a location's name in its list of locations. See "
+							},
+							{
+								"text": "The Overview page",
+								"href": "page:the-overview-page"
+							},
+							{
+								"text": "."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The “Back to Dashboard” button at the top of the page takes you to the dashboard. If you arrived from a dashboard filtered to one location group, that filter is still on when you get back."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "the-header",
+			"heading": "The name, the chips and the buttons",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The top of the page says which location you are on. A small line above the name reads “Locations”, followed by the location's group when it has one: “Locations / Greenhouses”. Under the name are up to three chips:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“3 of 4 reporting”",
+								"bold": true
+							},
+							{
+								"text": ": how many of your sensors here are Online. The dot is green when all of them are, and yellow when any one is not. The chip is missing when the location has no sensors you can see."
+							}
+						],
+						[
+							{
+								"text": "The coordinates",
+								"bold": true
+							},
+							{
+								"text": ": the location's position, such as “31.9147, 131.4232”, rounded to four decimal places. A yellow “No coordinates” chip takes their place when the location has no map position."
+							}
+						],
+						[
+							{
+								"text": "“ID 12”",
+								"bold": true
+							},
+							{
+								"text": ": the location's number. Quote it when you contact support."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Up to three buttons sit to the right of the name, or under it on a phone:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Refresh",
+								"bold": true
+							},
+							{
+								"text": ": fetches the latest reading of every sensor now. It spins while it works, and is greyed out at a location with no sensors."
+							}
+						],
+						[
+							{
+								"text": "Location settings",
+								"bold": true
+							},
+							{
+								"text": ": opens the location's settings, covered in "
+							},
+							{
+								"text": "Location settings",
+								"href": "page:location-settings"
+							},
+							{
+								"text": ". Only the location's owner, Admins and Managers see this button."
+							}
+						],
+						[
+							{
+								"text": "Add Device",
+								"bold": true
+							},
+							{
+								"text": ": starts the guided setup for a new sensor at this location. Everyone sees it, but only the owner, Admins and Managers can finish adding a sensor. See "
+							},
+							{
+								"text": "Adding a sensor",
+								"href": "page:adding-a-sensor"
+							},
+							{
+								"text": "."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/the-location-page/header-and-cards.webp",
+				"alt": "Top of the North Field page: the line Locations / Fields, the name, chips reading 2 of 3 reporting with a yellow dot, 36.5431, -119.8519 and ID 102, the Refresh, Location settings and Add Device buttons, and four cards: Devices 3, Online 2 (67% reporting on schedule), Needs attention 1 (1 offline · 0 never reported) and Last uplink 12 min ago from North Soil A",
+				"caption": "One of the three sensors is offline, so the dot is yellow and Needs attention shows 1.",
+				"side": "right",
+				"width": 1600,
+				"height": 437
+			}
+		},
+		{
+			"id": "the-summary-cards",
+			"heading": "The four summary cards",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Four cards under the header sum the location up. Like the rest of the page, they count only the sensors you have access to: a sensor that is Disabled for you is not listed or counted anywhere here."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Devices",
+								"bold": true
+							},
+							{
+								"text": ": how many sensors there are, with “Total in this location” underneath."
+							}
+						],
+						[
+							{
+								"text": "Online",
+								"bold": true
+							},
+							{
+								"text": ": how many are reporting on time, and the same as a share, such as “75% reporting on schedule”."
+							}
+						],
+						[
+							{
+								"text": "Needs attention",
+								"bold": true
+							},
+							{
+								"text": ": sensors that are Offline or have never reported, split underneath as “1 offline · 0 never reported”. The number turns red when it is above zero. When nothing needs looking at, the card says “All devices healthy”."
+							}
+						],
+						[
+							{
+								"text": "Last uplink",
+								"bold": true
+							},
+							{
+								"text": ": how long ago the newest reading from any sensor here arrived, such as “3 min ago”, with that sensor's name underneath. “No data yet” means no sensor here has sent anything."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "online-and-offline",
+			"heading": "How CropWatch decides Online, Offline and Never reported",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Every sensor sends readings on a fixed schedule, its reporting interval: every 10 minutes, for example. CropWatch compares the time of each sensor's newest reading with that interval and gives the sensor one of three statuses. The table shows them, in the colours used all over the page."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If CropWatch does not know a sensor's interval, it uses 10 minutes."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The page keeps itself up to date while it is open. When a sensor is due to report, CropWatch looks for its new reading and updates its row, and times such as “3 min ago” move on by themselves. This pauses while the browser tab is in the background and picks up again when you return to it."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Refresh updates readings and statuses only. A sensor that was added to this location, or moved here, while the page was open appears once you reload the page in your browser."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "The three statuses",
+				"columns": [
+					"Status",
+					"Colour",
+					"What it means"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "Online"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Green"
+								}
+							],
+							[
+								{
+									"text": "The newest reading arrived within the sensor's reporting interval, plus one minute."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Offline"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Red"
+								}
+							],
+							[
+								{
+									"text": "The sensor has missed a report: its newest reading is older than its interval plus one minute."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Never reported"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Purple"
+								}
+							],
+							[
+								{
+									"text": "CropWatch has no reading from this sensor at all. A sensor that has just been added stays here until its first reading arrives."
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "the-map",
+			"heading": "The map",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When the location has a map position, the Map card shows it on a map from OpenStreetMap. The large pin is the location itself. Sensors that were given their own position when they were added show as small round dots in their status colour: green, red or purple. Point at a dot with the mouse to see which sensor it is."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Moving the map",
+								"bold": true
+							},
+							{
+								"text": ": drag it."
+							}
+						],
+						[
+							{
+								"text": "Zooming",
+								"bold": true
+							},
+							{
+								"text": ": use the plus and minus buttons in the top left corner, or pinch on a phone or tablet."
+							}
+						],
+						[
+							{
+								"text": "The mouse wheel",
+								"bold": true
+							},
+							{
+								"text": ": scrolls the page, not the map, so the map does not trap you while you scroll past it."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Below the map are the exact Latitude and Longitude, and a copy button that puts both on the clipboard as one line, ready to paste into a message. “Open in Google Maps”, at the top of the card, opens the same spot in Google Maps in a new tab, which gives you directions to the site. The map opens at the zoom that was saved with the position."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "A location with no map position shows “This location has no coordinates yet” in place of the map, with “Once a latitude and longitude are set, the location appears here on a map.” The owner or an Admin can set the position in the location's settings; see "
+						},
+						{
+							"text": "Location settings",
+							"href": "page:location-settings"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/the-location-page/map.webp",
+				"alt": "The Map card for North Field: an OpenStreetMap map of farmland with the location's large pin in the middle, two green dots and one red dot for its sensors, plus and minus buttons in the top left corner, Open in Google Maps at the top, and Latitude 36.5431, Longitude -119.8519 and a copy button underneath",
+				"caption": "Sensors with their own position are dots in their status colour; the red one is offline.",
+				"side": "left",
+				"width": 1196,
+				"height": 928
+			}
+		},
+		{
+			"id": "device-health",
+			"heading": "The Device health card",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Beside the map, or across the page when there is no map, is Device health, “Based on each device's upload interval”. The ring shows the share of sensors that are Online, with the percentage in the middle. Its green, red and purple parts match the three counts listed next to it: Online, Offline and Never reported."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Under “Needs attention” is every sensor that is not Online, each with a line saying why:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Offline · last seen 2 hr ago” for a sensor that has stopped reporting, with how long it has been quiet."
+							}
+						],
+						[
+							{
+								"text": "“No data received yet” for a sensor that has never reported."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“View” at the end of the line opens that sensor's page. When every sensor is Online, the list is replaced by “All devices are reporting on schedule.” A location with no sensors you can see shows “No devices in this location yet.” in place of the ring."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/the-location-page/device-health.webp",
+				"alt": "The Device health card: a ring reading 67% online in green and red, the counts Online 2, Offline 1 and Never reported 0, and under Needs attention the line North Soil B, Offline · last seen 3 hr ago, with View at the end",
+				"caption": "Each sensor that is not Online is listed with the reason and a View link.",
+				"side": "right",
+				"width": 726,
+				"height": 928
+			}
+		},
+		{
+			"id": "the-sensor-list",
+			"heading": "The list of sensors",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The Devices card lists every sensor at the location that you can see, under a line such as “4 devices in this location”. It shows ten at a time, with page controls at the bottom."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "To find a sensor:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Status chips",
+								"bold": true
+							},
+							{
+								"text": ": “All 4”, “Online 3”, “Offline 1” and “Never reported 0” show only the sensors with that status. The numbers follow the statuses as they change. Press the All chip to see every sensor again."
+							}
+						],
+						[
+							{
+								"text": "Search...",
+								"bold": true
+							},
+							{
+								"text": ": type part of a sensor's name or of its Device EUI. The list narrows as you type."
+							}
+						],
+						[
+							{
+								"text": "Column headings",
+								"bold": true
+							},
+							{
+								"text": ": press one to sort by it, press it again to reverse the order, and a third time to return to the original order. On a phone, a sort list above the table does the same job."
+							}
+						],
+						[
+							{
+								"text": "“10 rows”",
+								"bold": true
+							},
+							{
+								"text": ": shows 20, 50 or 100 sensors per page instead."
+							}
+						],
+						[
+							{
+								"text": "The ⋮ button",
+								"bold": true
+							},
+							{
+								"text": ": “Columns Settings” chooses which columns are shown, and “Refresh” redraws the list. It does not fetch new readings; the Refresh button at the top of the page does that."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/the-location-page/sensor-list.webp",
+				"alt": "The Devices card for North Field: 3 devices in this location, the chips All 3, Online 2, Offline 1 and Never reported 0, the Search box, the 10 rows list and the ⋮ button, then three soil sensors with their status, temperature, a dash under Humidity, Last seen, signal bars, and the eye and cog buttons; North Soil B is Offline and its signal is empty bars with a red circle",
+				"caption": "The status chips, search and page size sit above the table.",
+				"side": "left",
+				"width": 1600,
+				"height": 744
+			}
+		},
+		{
+			"id": "the-columns",
+			"heading": "What each column shows",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Columns that do not fit are hidden on narrower screens, so a phone shows only Status, Device Name and the buttons. The last column of the table says where each one appears."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A dash in a reading column means the sensor's latest reading has no value for it. A soil sensor, for example, always shows a dash under Humidity."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "The columns of the Devices list",
+				"columns": [
+					"Column",
+					"What it shows",
+					"Where it appears"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "Status"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "“Online”, “Offline” or “Never reported”, in a coloured label"
+								}
+							],
+							[
+								{
+									"text": "Every screen"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Device Name"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The sensor's name, as set in its settings"
+								}
+							],
+							[
+								{
+									"text": "Every screen"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Temp"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The latest temperature in °C, to one decimal place. On a soil sensor this is the soil temperature."
+								}
+							],
+							[
+								{
+									"text": "Tablets and computers"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Humidity"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The latest air humidity, in whole percent"
+								}
+							],
+							[
+								{
+									"text": "Tablets and computers"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "CO₂"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The latest carbon dioxide level, in ppm"
+								}
+							],
+							[
+								{
+									"text": "Wide computer screens"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Last seen"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "How long ago the newest reading arrived, such as “3 min ago”, or “Never”"
+								}
+							],
+							[
+								{
+									"text": "All but phones"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Signal"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "How well the gateways hear the sensor, as bars. See the next section."
+								}
+							],
+							[
+								{
+									"text": "All but phones"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Device EUI"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The sensor's permanent serial number, with a copy button"
+								}
+							],
+							[
+								{
+									"text": "Wide computer screens"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Actions"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The View and settings buttons"
+								}
+							],
+							[
+								{
+									"text": "Every screen"
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/the-location-page/all-columns.webp",
+				"alt": "The Greenhouse 1 table on a wide computer screen with every column: Status, Device Name, Temp, Humidity, CO₂, Last seen, Signal, Device EUI with copy buttons, and Actions; the soil sensor has a dash under Humidity and the irrigation relay has a dash in every reading column",
+				"caption": "A wide screen shows every column; a dash means the reading has no value for it.",
+				"side": "right",
+				"width": 1600,
+				"height": 421
+			}
+		},
+		{
+			"id": "the-signal-column",
+			"heading": "The Signal column",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Signal shows how well your gateways hear each sensor, as up to four bars. Two radio measurements sit behind the bars: RSSI, how strong the signal is when it arrives, and SNR, how far it stands out above background noise. Each is graded on its own and the bars show the worse grade, so a strong signal in an electrically noisy spot still shows as weak. "
+						},
+						{
+							"text": "RSSI and SNR",
+							"href": "page:rssi-and-snr"
+						},
+						{
+							"text": " explains both numbers."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Three or four green bars",
+								"bold": true
+							},
+							{
+								"text": ": Strong."
+							}
+						],
+						[
+							{
+								"text": "Two yellow bars",
+								"bold": true
+							},
+							{
+								"text": ": Okay."
+							}
+						],
+						[
+							{
+								"text": "One red bar",
+								"bold": true
+							},
+							{
+								"text": ": Weak. Readings still arrive, but the sensor is close to the edge of range, where readings start to go missing."
+							}
+						],
+						[
+							{
+								"text": "Empty bars with a red crossed-out circle",
+								"bold": true
+							},
+							{
+								"text": ": no gateway has heard this sensor."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Point at the bars to see the numbers behind them, for example “Signal strength: Strong · RSSI -95 dBm · SNR 7.5 dB”."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Many sensors are heard by more than one gateway. The column shows the best of them, counting only gateways that heard the sensor within 24 hours of its newest reading. A gateway that picked the sensor up once, weeks ago, cannot make it look better than it is, and a sensor that has gone quiet keeps the signal of its last readings. Gateways you do not have access to count as well. Sorting by Signal puts sensors with no signal first, then runs from fewest bars to most."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The table shows where the grades change: a reading gets the number of bars that both of its numbers reach. To see each gateway separately, open the sensor and press its Signal button. "
+						},
+						{
+							"text": "Gateways in the app",
+							"href": "page:gateways-in-the-app"
+						},
+						{
+							"text": " covers the gateways themselves."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "How many bars a reading gets",
+				"columns": [
+					"Bars",
+					"RSSI at least",
+					"SNR at least"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "4"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "-100 dBm"
+								}
+							],
+							[
+								{
+									"text": "0 dB"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "3"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "-110 dBm"
+								}
+							],
+							[
+								{
+									"text": "-5 dB"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "2"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "-118 dBm"
+								}
+							],
+							[
+								{
+									"text": "-10 dB"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "1"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Weaker, but the reading arrived"
+								}
+							],
+							[
+								{
+									"text": "Weaker, but the reading arrived"
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/the-location-page/signal-column.webp",
+				"alt": "Close-up of the Device Name, Last seen and Signal columns sorted by Signal: GH1 Irrigation Relay with one red bar, GH1 Soil with two yellow bars, GH1 CO2 with three green bars and GH1 Climate with four green bars",
+				"caption": "Sorted by Signal, from fewest bars to most.",
+				"side": "left",
+				"width": 1248,
+				"height": 912
+			}
+		},
+		{
+			"id": "opening-a-sensor",
+			"heading": "Opening a sensor and its settings",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each row ends with its buttons, under “Actions”:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The eye button",
+								"bold": true
+							},
+							{
+								"text": ": opens the sensor's own page, with its readings and charts. Everyone with access to the sensor sees it."
+							}
+						],
+						[
+							{
+								"text": "The cog",
+								"bold": true
+							},
+							{
+								"text": ": opens the sensor's settings page, where it can be renamed, grouped or moved to another location. Only the location's owner, Admins and Managers see it. See "
+							},
+							{
+								"text": "Sensor settings",
+								"href": "page:sensor-settings"
+							},
+							{
+								"text": "."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“View” in the Needs attention list opens the same sensor page as the eye button. Pressing a row itself does nothing; use the buttons."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "location-details",
+			"heading": "The Location details card",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The last card on the page, Location details, lists the location's basic facts in two columns: Name, Group and Description, then Created (the date the location was made), Coordinates and Location ID. A dash means the item has not been set."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The description is written when a location is created and cannot be changed afterwards: the location's settings have no box for it. The name, group and coordinates are changed in "
+						},
+						{
+							"text": "Location settings",
+							"href": "page:location-settings"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "who-sees-what",
+			"heading": "What each permission level sees",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The buttons go by your level on the location. Which sensors are listed goes by your level on each sensor. User and Viewer see exactly the same page. "
+						},
+						{
+							"text": "Sharing access and permission levels",
+							"href": "page:sharing-access#the-six-levels"
+						},
+						{
+							"text": " explains the levels."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "A Manager sees the Location settings button, but at the moment the settings page itself opens only for the owner and Admins. A Manager who presses it gets a page headed “Forbidden” that says “You do not have permission to access this location settings page.” Ask the owner or an Admin to make the change."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "What each location level gets on this page",
+				"columns": [
+					"On this page",
+					"Owner",
+					"Admin",
+					"Manager",
+					"User",
+					"Viewer"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "See the summary cards, map, Device health and list of sensors"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							true,
+							true
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Use Refresh, the filters, search, copy buttons and Open in Google Maps"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							true,
+							true
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Open a sensor's page"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							true,
+							true
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "See the Location settings button"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Open the location's settings page"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							false,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "See the cog that opens a sensor's settings"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Finish adding a sensor with Add Device"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							false,
+							false
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "quick-answers",
+			"heading": "Quick answers",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The map says “This location has no coordinates yet”.",
+								"bold": true
+							},
+							{
+								"text": " No map position has been saved. The owner or an Admin can set one; see "
+							},
+							{
+								"text": "Location settings",
+								"href": "page:location-settings"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "A sensor I expected is not in the list.",
+								"bold": true
+							},
+							{
+								"text": " It is Disabled for you, or it belongs to another location. See "
+							},
+							{
+								"text": "When someone cannot see something",
+								"href": "page:sharing-access#troubleshooting"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "I added a sensor and it is not in the list.",
+								"bold": true
+							},
+							{
+								"text": " Reload the page in your browser; Refresh only updates readings. Until its first reading arrives, a new sensor shows as Never reported."
+							}
+						],
+						[
+							{
+								"text": "A sensor says Offline but I think it is working.",
+								"bold": true
+							},
+							{
+								"text": " Press Refresh. If a new reading has arrived, it turns green. If it stays red, check its Signal column; a weak signal is a common reason for missed readings, and "
+							},
+							{
+								"text": "How to improve a weak signal",
+								"href": "page:rssi-and-snr#improving"
+							},
+							{
+								"text": " lists what to try."
+							}
+						],
+						[
+							{
+								"text": "The Signal column shows empty bars with a red circle.",
+								"bold": true
+							},
+							{
+								"text": " No gateway has heard the sensor. Check that your gateway is powered and connected, and that the sensor is within its range."
+							}
+						],
+						[
+							{
+								"text": "There is no Location settings button.",
+								"bold": true
+							},
+							{
+								"text": " Your level on this location is User or Viewer. Ask the owner or an Admin."
+							}
+						],
+						[
+							{
+								"text": "I pressed Location settings and got “Forbidden”.",
+								"bold": true
+							},
+							{
+								"text": " You are a Manager of this location. The settings page currently opens only for the owner and Admins."
+							}
+						],
+						[
+							{
+								"text": "Some columns are missing on my phone.",
+								"bold": true
+							},
+							{
+								"text": " Narrow screens hide them. The wider the screen, the more you get: Last seen and Signal come back first, then Temp and Humidity, and CO₂ and Device EUI need a wide computer screen."
+							}
+						],
+						[
+							{
+								"text": "The page shows no sensors, no map and no Location details card.",
+								"bold": true
+							},
+							{
+								"text": " You do not have access to this location, or it has been deleted. Ask the location's owner."
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "location-settings"
+		},
+		{
+			"kind": "page",
+			"slug": "sharing-access"
+		},
+		{
+			"kind": "page",
+			"slug": "sensor-settings"
+		},
+		{
+			"kind": "page",
+			"slug": "rssi-and-snr"
+		},
+		{
+			"kind": "page",
+			"slug": "reading-the-dashboard"
+		}
+	]
+}

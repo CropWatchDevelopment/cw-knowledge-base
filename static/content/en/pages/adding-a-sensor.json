@@ -1,0 +1,1756 @@
+{
+	"slug": "adding-a-sensor",
+	"topic": "software",
+	"title": "Adding a sensor",
+	"intro": "New sensors are added from the location they belong to. A guided screen in three steps reads the sensor's QR code or DevEUI, checks it, registers it on the LoRaWAN network and assigns one licence. This guide covers every step and every message on the way, and what to do when a new sensor does not connect.",
+	"sections": [
+		{
+			"id": "before-you-start",
+			"heading": "Before you start",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Have these to hand before you begin. Nothing is saved until you press Register device on the last step, so you can stop at any point and start again later."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The sensor and its label:",
+								"bold": true
+							},
+							{
+								"text": " the label on the sensor or on its box carries the DevEUI, a 16-character code that identifies the sensor, and usually a QR code that contains it."
+							}
+						],
+						[
+							{
+								"text": "Its join keys, for some sensors:",
+								"bold": true
+							},
+							{
+								"text": " a sensor that CropWatch has not prepared for your account also needs a JoinEUI (16 characters) and an AppKey (32 characters). They are on the label or on an info card in the box. The screen tells you whether they are needed."
+							}
+						],
+						[
+							{
+								"text": "A free licence:",
+								"bold": true
+							},
+							{
+								"text": " every sensor uses one licence from your own account. The top of the screen shows “Licenses available” with the number you have free."
+							}
+						],
+						[
+							{
+								"text": "Manager access or higher on the location:",
+								"bold": true
+							},
+							{
+								"text": " see "
+							},
+							{
+								"text": "Who can add sensors",
+								"href": "page:adding-a-sensor#who-can-add-sensors"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "A gateway in range:",
+								"bold": true
+							},
+							{
+								"text": " readings travel from the sensor to CropWatch through a gateway. Check that one is powered on and online, close enough to where the sensor will go. Setting one up is covered in "
+							},
+							{
+								"text": "Installing an indoor gateway",
+								"href": "page:installing-a-gateway"
+							},
+							{
+								"text": "."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The sensor is registered in the location's network region, shown under the page title, for example “Network region Asia-Pacific (AS923)”. The region cannot be changed in the app. If it does not match the country your location is in, contact support before you add sensors there."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "who-can-add-sensors",
+			"heading": "Who can add sensors",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Adding a sensor goes by your level on the location. The location's owner, Admins and Managers can add sensors; Users and Viewers cannot. What each level allows is set out in "
+						},
+						{
+							"text": "The six levels",
+							"href": "page:sharing-access#the-six-levels"
+						},
+						{
+							"text": ", and raising someone's level in "
+						},
+						{
+							"text": "Changing someone's level",
+							"href": "page:sharing-access#changing-a-level"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The Add Device button appears for everyone who can open the location, whatever their level. Someone below Manager can open the screen, but as soon as they enter a DevEUI a red box says “You can't add devices to this location” and “Adding devices needs Manager access or higher. Ask the location owner to change your access.” Continue stays grey."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Two things follow from who adds the sensor:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "You become its owner:",
+								"bold": true
+							},
+							{
+								"text": " the person who adds a sensor owns it."
+							}
+						],
+						[
+							{
+								"text": "The licence is yours:",
+								"bold": true
+							},
+							{
+								"text": " it comes from the account of the person adding the sensor, not from the location's owner. A Manager adding sensors to someone else's location needs free licences of their own."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "opening-the-screen",
+			"heading": "Opening Add a device",
+			"body": [
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Open Locations in the menu and choose the location the sensor will belong to."
+							}
+						],
+						[
+							{
+								"text": "Press Add Device in the row of buttons at the top of the location page, after Refresh."
+							}
+						],
+						[
+							{
+								"text": "The Add a device screen opens. Under its title you see the location's name and network region, and beside it a count such as “Licenses available: 3”."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Below that, a bar shows the three steps: Identify device, Name and place, and Review and register. Each step's number turns into a tick once it is done. Two panels beside the form (below it on a phone) explain “What happens when you register” and “Where to find the DevEUI”."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Back at the top of the screen, or Cancel on the first step, takes you back to the location without saving anything. The location page itself is described in "
+						},
+						{
+							"text": "The location page",
+							"href": "page:the-location-page"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/adding-a-sensor/add-a-device-screen.webp",
+				"alt": "The Add a device screen for Greenhouse 1: the title with the network region Asia-Pacific (AS923), “Licenses available: 3” at the top right, the bar with the three steps, the Identify your device form, and the two side panels.",
+				"caption": "The Add a device screen, opened from Greenhouse 1.",
+				"side": "right",
+				"width": 1600,
+				"height": 1205
+			}
+		},
+		{
+			"id": "step-1-identify",
+			"heading": "Step 1: identifying the sensor",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The first step, headed “Identify your device”, needs the sensor's DevEUI. There are two ways to give it:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Scan QR code:",
+								"bold": true
+							},
+							{
+								"text": " the large button on the left opens your camera and reads the code on the sensor or its box. On a phone this is the quickest way, and it also fills in the join keys when the code carries them."
+							}
+						],
+						[
+							{
+								"text": "The DevEUI box:",
+								"bold": true
+							},
+							{
+								"text": " type or paste the code printed on the label."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Either way, the moment the box holds 16 valid characters, CropWatch checks the sensor by itself; there is no button to press. The Device model box, and the key boxes if they are needed, appear only after that check."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/adding-a-sensor/step-1-ready.webp",
+				"alt": "Step 1 after the check: the DevEUI DE5A00000000A001 is entered, the Device model box shows the CropWatch air temperature and humidity sensor with “Recognized from the DevEUI”, and a green tick says the network keys are on file.",
+				"caption": "Once the DevEUI is complete, the check runs and the model and keys appear.",
+				"side": "left",
+				"width": 1392,
+				"height": 1096
+			}
+		},
+		{
+			"id": "scanning-the-qr-code",
+			"heading": "Scanning the QR code",
+			"body": [
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Press Scan QR code. A window titled “Scan the device QR code” opens. The first time, your browser asks whether CropWatch may use the camera: allow it."
+							}
+						],
+						[
+							{
+								"text": "Hold the phone so the QR code sits inside the square on the screen. On a phone the back camera is used. The line under the picture reads “Point the camera at the QR code on the device or its box.”"
+							}
+						],
+						[
+							{
+								"text": "When the code is read, the window closes by itself and the DevEUI box is filled in. The check starts straight away."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The scanner reads CropWatch labels and the QR codes most LoRaWAN sensor makers print. It takes the DevEUI from the code, and also the JoinEUI and AppKey when the code contains them. A CropWatch label names the sensor's model as well, and the scanner chooses that model for you."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Some makers' codes hold more than one 16-character number. After scanning, compare the DevEUI box with the DevEUI printed on the label. If they differ, correct the box by hand."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Two more buttons sit at the bottom of the window:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Use a photo:",
+								"bold": true
+							},
+							{
+								"text": " reads one still picture instead of the live view. On a phone it opens the camera; on a computer it lets you choose a picture file. A still photo is sharper, so try it when the live view will not pick up a small or worn code."
+							}
+						],
+						[
+							{
+								"text": "Type the DevEUI instead:",
+								"bold": true
+							},
+							{
+								"text": " closes the window so you can type the code."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "camera-problems",
+			"heading": "When the camera will not scan",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When something goes wrong, the window says what, in place of the picture or under it:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Camera access was blocked. Allow camera access in your browser settings, or type the DevEUI instead.”:",
+								"bold": true
+							},
+							{
+								"text": " the camera has been refused for CropWatch. Open your browser's settings for the CropWatch site, allow the camera, then close the window and press Scan QR code again. Each time the window opens, it tries the camera afresh."
+							}
+						],
+						[
+							{
+								"text": "“No camera is available here. Type the DevEUI instead.”:",
+								"bold": true
+							},
+							{
+								"text": " the browser found no camera it could use. This also happens when another app is using the camera. Close that app and try again, use a photo, or type the DevEUI."
+							}
+						],
+						[
+							{
+								"text": "“No QR code found in that photo. Take it closer, with the code sharp and filling most of the picture.”:",
+								"bold": true
+							},
+							{
+								"text": " the photo was read but held no code. Take another one, closer, in focus and in good light."
+							}
+						],
+						[
+							{
+								"text": "“That QR code doesn't contain a DevEUI. It reads: …”:",
+								"bold": true
+							},
+							{
+								"text": " a code was read, but it is not the sensor's code. It is often a link to the maker's website or a product number, and the window shows what it says. Look for a second code on the sensor, the box or the info card, or type the DevEUI."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "When the live view is blocked, Use a photo is the quickest way round it: it asks your phone's camera for a single picture instead of showing the camera inside the page."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/adding-a-sensor/scanner-no-camera.webp",
+				"alt": "The Scan the device QR code window with the message “No camera is available here. Type the DevEUI instead.” and the buttons Use a photo and Type the DevEUI instead.",
+				"caption": "When no camera can be used, the window says so and offers the other two ways.",
+				"side": "right",
+				"width": 1280,
+				"height": 564
+			}
+		},
+		{
+			"id": "typing-the-deveui",
+			"heading": "Typing the DevEUI",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A DevEUI is 16 characters long and uses only the numbers 0 to 9 and the letters A to F. On most labels it sits next to “DevEUI”, “EUI” or “Device EUI”."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Spacing does not matter:",
+								"bold": true
+							},
+							{
+								"text": " spaces, colons and dashes are ignored, so 00 13 7A 10 00 04 41 DF, 00:13:7A:10:00:04:41:DF and 00137A10000441DF are the same sensor."
+							}
+						],
+						[
+							{
+								"text": "Capitals do not matter:",
+								"bold": true
+							},
+							{
+								"text": " small letters are read as capitals."
+							}
+						],
+						[
+							{
+								"text": "Pasting works:",
+								"bold": true
+							},
+							{
+								"text": " copy the code from an email or a spreadsheet and paste it into the box."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The box tells you what is wrong as you type:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "A character is not accepted:",
+								"bold": true
+							},
+							{
+								"text": " the box names it, for example “\"O\" isn't valid”. The usual cause is the letter O typed for the number 0, or the letter I or l for the number 1."
+							}
+						],
+						[
+							{
+								"text": "“17 of 16 characters. Check the label again.”:",
+								"bold": true
+							},
+							{
+								"text": " there are too many characters. This shows as soon as you type the extra one."
+							}
+						],
+						[
+							{
+								"text": "Too few characters:",
+								"bold": true
+							},
+							{
+								"text": " nothing is shown and no check runs; the box is waiting for the 16th character. A DevEUI is eight pairs, so count the pairs against the label."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "the-check",
+			"heading": "What the check tells you",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "While CropWatch checks the sensor, “Checking this device…” shows with a spinner. Then one of these appears:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "A Device model box:",
+								"bold": true
+							},
+							{
+								"text": " the sensor can be added. Confirm the model, enter the keys if asked, and press Continue."
+							}
+						],
+						[
+							{
+								"text": "“You've already added this device”:",
+								"bold": true
+							},
+							{
+								"text": " a sensor with this DevEUI is already in CropWatch and you can see it. The message gives its name and location. Press Open followed by its name to go to it, and change its name or location in its settings instead of adding it again. A sensor someone else added and shared with you shows this message too."
+							}
+						],
+						[
+							{
+								"text": "“This device is registered to another account”:",
+								"bold": true
+							},
+							{
+								"text": " another CropWatch account has this DevEUI, or CropWatch supplied the sensor to a different customer. Check the DevEUI first. If it is right, ask the previous owner to remove the sensor from their account, or press Contact support and give your order number."
+							}
+						],
+						[
+							{
+								"text": "“You can't add devices to this location”:",
+								"bold": true
+							},
+							{
+								"text": " your level on this location is below Manager. Ask the location's owner or an Admin to raise it."
+							}
+						],
+						[
+							{
+								"text": "“We couldn't check this DevEUI. Check your connection and try again.”:",
+								"bold": true
+							},
+							{
+								"text": " the check did not reach CropWatch. Check your phone's signal or Wi-Fi and press Try again."
+							}
+						],
+						[
+							{
+								"text": "“We couldn't check this DevEUI because of a problem on our side. …”:",
+								"bold": true
+							},
+							{
+								"text": " the fault is at CropWatch. Wait a moment and press Try again, or contact support with the reference number shown."
+							}
+						],
+						[
+							{
+								"text": "“Too many attempts in a short time. Wait a while, then try again.”:",
+								"bold": true
+							},
+							{
+								"text": " your account has reached its hourly limit of checks. Wait up to an hour."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Every Contact support button opens a new email to CropWatch support with “Device setup”, any reference number and the DevEUI already in the subject line."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/adding-a-sensor/check-other-account.webp",
+				"alt": "Step 1 with a DevEUI typed in small letters with spaces, and a red box: “This device is registered to another account”, with a Contact support button. Continue is grey.",
+				"caption": "A DevEUI held by another account stops the setup at step 1.",
+				"side": "left",
+				"width": 1392,
+				"height": 1042
+			}
+		},
+		{
+			"id": "device-model",
+			"heading": "Choosing the device model",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Once the check passes, a “Device model” box appears. The model decides how CropWatch registers the sensor on the network and how it reads the sensor's data, so it must match the sensor in your hand."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The app often picks the model for you. The line under the box says where the choice came from:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Read from the CropWatch label.”:",
+								"bold": true
+							},
+							{
+								"text": " the QR code on a CropWatch label named the model."
+							}
+						],
+						[
+							{
+								"text": "“Recognized from the DevEUI. Change it if this isn't your model.”:",
+								"bold": true
+							},
+							{
+								"text": " if CropWatch supplied the sensor, this is the model on record. Otherwise it is a guess based on other sensors whose DevEUI starts the same way, so check it."
+							}
+						],
+						[
+							{
+								"text": "“The label says device type …, which this app doesn't know yet. Choose the model.”:",
+								"bold": true
+							},
+							{
+								"text": " the CropWatch label names a model code the app does not recognise yet. Choose the model yourself."
+							}
+						],
+						[
+							{
+								"text": "No line:",
+								"bold": true
+							},
+							{
+								"text": " choose the model yourself."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Models that suit this sensor are listed first. Models that cannot be registered in this location's network region are greyed out and cannot be chosen. Two messages can appear under the box:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Choose the device model.”:",
+								"bold": true
+							},
+							{
+								"text": " you pressed Continue without choosing one."
+							}
+						],
+						[
+							{
+								"text": "“This model can't be set up in this location's network region yet. Contact support to have it added.”:",
+								"bold": true
+							},
+							{
+								"text": " the model has no network settings for this region yet, so it cannot be registered here until support adds them."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Choose carefully. A sensor's settings page has no model box, so a wrong model can only be corrected by support. If you are not sure which model you have, ask support before you register."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "network-keys",
+			"heading": "Network keys",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Under the model, the screen tells you whether the sensor's join keys are needed. These are the codes the sensor uses to join the network."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Network keys are on file.”:",
+								"bold": true
+							},
+							{
+								"text": " followed by “CropWatch provisioned this device, so you don't need to enter any keys.” There is nothing to type."
+							}
+						],
+						[
+							{
+								"text": "Two boxes, “JoinEUI (AppEUI)” and “AppKey”:",
+								"bold": true
+							},
+							{
+								"text": " CropWatch does not hold this sensor's keys. Copy them from the label or from the info card in the box. The JoinEUI is 16 characters and the AppKey 32; spaces, colons and dashes are ignored, as in the DevEUI box. Scanning a QR code that carries the keys fills both boxes. As the line under the AppKey says, it is “Sent securely to the network server and never shown again.”"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Watch for this warning:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“The label doesn't show the AppKey.”:",
+								"bold": true
+							},
+							{
+								"text": " some CropWatch labels print the AppKey as a row of X's to keep it private, and CropWatch does not have the key on record for this sensor yet. Without the real AppKey the sensor cannot join the network. Type the AppKey from the info card in the box, or press Contact support and CropWatch will add the key for you."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If the network will not accept the keys after you press Register device, the screen brings you back to this step with the key boxes open and a red message:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“That AppKey doesn't match this device's network registration. …”:",
+								"bold": true
+							},
+							{
+								"text": " the sensor is already registered on the network with a different AppKey. Check every character; the AppKey is the longest code on the label."
+							}
+						],
+						[
+							{
+								"text": "“This device is already registered on the network. Enter its JoinEUI and AppKey to confirm it's yours.”:",
+								"bold": true
+							},
+							{
+								"text": " type both keys. Once the AppKey matches, CropWatch takes over the existing registration."
+							}
+						],
+						[
+							{
+								"text": "“Check the JoinEUI and AppKey and try again.”:",
+								"bold": true
+							},
+							{
+								"text": " the keys were missing or not in the right form."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Correct the keys, press Continue through the next two steps (your name, position and licence are still filled in), and press Register device again."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/adding-a-sensor/network-keys-needed.webp",
+				"alt": "Step 1 for a sensor whose keys CropWatch does not hold: the model was recognised from the DevEUI, and empty JoinEUI (AppEUI) and AppKey boxes ask for the join keys.",
+				"caption": "When CropWatch does not hold the keys, two boxes ask for them.",
+				"side": "right",
+				"width": 1392,
+				"height": 1328
+			}
+		},
+		{
+			"id": "step-2-name-and-place",
+			"heading": "Step 2: name and place",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The second step, headed “Name and place it”, sets what the sensor is called and where it sits. Only the name is required."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Device name:",
+								"bold": true
+							},
+							{
+								"text": " what your team sees on the dashboard and in alerts. Pick something you would recognise standing in the field, such as “Greenhouse 2, north end”. Up to 120 characters. Pressing Continue with the box empty shows “Give the device a name.” You can rename the sensor later; see "
+							},
+							{
+								"text": "Device Name",
+								"href": "page:sensor-settings#device-name"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Group (optional):",
+								"bold": true
+							},
+							{
+								"text": " a free label. Groups already used at this location appear under the box as buttons, up to eight of them; press one to use it, so the spelling matches the other sensors. What groups do is explained in "
+							},
+							{
+								"text": "Group",
+								"href": "page:sensor-settings#group"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Installed on (optional):",
+								"bold": true
+							},
+							{
+								"text": " the day the sensor went in. Days after today cannot be chosen. The date appears on the review step; the app does not display it anywhere after setup."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Below these, a panel shows where the sensor will appear on the map:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Position: same as location”:",
+								"bold": true
+							},
+							{
+								"text": " followed by the location's coordinates. The sensor gets no position of its own. Leave it like this if the sensor is at the location."
+							}
+						],
+						[
+							{
+								"text": "“This location has no coordinates yet. You can set the device's own position.”:",
+								"bold": true
+							},
+							{
+								"text": " the location itself has no map position yet."
+							}
+						],
+						[
+							{
+								"text": "Set precise position:",
+								"bold": true
+							},
+							{
+								"text": " opens Latitude and Longitude boxes, filled with the location's coordinates to start with. Type the sensor's own position in decimal degrees, such as 35.6812 and 139.7671; a comma works as the decimal mark too. A sensor with its own position gets its own pin on the location's map, which is shown only when the location itself has a position."
+							}
+						],
+						[
+							{
+								"text": "Use the location's position:",
+								"bold": true
+							},
+							{
+								"text": " closes the boxes and goes back to the location's position."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Enter a latitude between -90 and 90, for example 35.6812.”, or the same message for longitude, means the number is out of range or not a plain decimal. Degrees, minutes and seconds (35°40′52″) are not accepted; convert them to decimal first. Back at the bottom returns to step 1 with everything you typed kept."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/adding-a-sensor/step-2-name-and-place.webp",
+				"alt": "Step 2, Name and place it: the device name “GH1 Climate, east end”, the group Climate picked from the suggestions Climate, Irrigation and Soil, today's date as Installed on, the position panel with the location's coordinates, and “Uses 1 of your 3 available licenses.” with Change.",
+				"caption": "Step 2 with a name, a suggested group and today's install date.",
+				"side": "left",
+				"width": 1392,
+				"height": 1206
+			}
+		},
+		{
+			"id": "the-licence",
+			"heading": "Choosing the licence",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The bottom of step 2 shows the licence the sensor will use:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Uses 1 of your 3 available licenses.”:",
+								"bold": true
+							},
+							{
+								"text": " CropWatch has picked your first free licence. There is nothing to do."
+							}
+						],
+						[
+							{
+								"text": "Change:",
+								"bold": true
+							},
+							{
+								"text": " appears when you have more than one free licence. It opens a “License” list of your free licences by number, such as “License #4”. Which one you pick makes no difference to the sensor; use it if you keep track of licences by number."
+							}
+						],
+						[
+							{
+								"text": "“All your licenses are in use”:",
+								"bold": true
+							},
+							{
+								"text": " with “Each device needs one license. Add licenses in Billing, then come back to finish.” Continue stays grey. Press Add licenses to open the Billing & Subscriptions page. If your account is invoiced directly by CropWatch, that page says so; ask CropWatch to add licences."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Pressing Add licenses leaves the setup screen, and what you typed is not kept. Buying licences first and adding the sensor afterwards saves typing everything twice."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "step-3-review",
+			"heading": "Step 3: review and register",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The last step, “Review and register”, lists what will be saved: Device, Model, DevEUI, Network keys, Location (followed by the group and any precise position), Installed on if you set a date, and License."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Network keys reads either “On file (provisioned by CropWatch)” or “JoinEUI and AppKey entered”. Edit beside Device, Model or Location takes you back to the step where that is set."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Compare the DevEUI with the label one last time, then press Register device."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/adding-a-sensor/step-3-review.webp",
+				"alt": "Step 3, Review and register: Device, Model, DevEUI, Network keys “On file (provisioned by CropWatch)”, Location Greenhouse 1 with the group, Installed on and License, with Edit links and the Register device button.",
+				"caption": "Everything that will be saved, on one screen.",
+				"side": "right",
+				"width": 1392,
+				"height": 1090
+			}
+		},
+		{
+			"id": "while-it-registers",
+			"heading": "While it registers",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The heading changes to “Registering” followed by the sensor's name, with “This usually takes a few seconds. Please keep this page open.” A list shows the work:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Checked the DevEUI is available:",
+								"bold": true
+							},
+							{
+								"text": " ticked at once; this was done in step 1."
+							}
+						],
+						[
+							{
+								"text": "Registering on the network:",
+								"bold": true
+							},
+							{
+								"text": " CropWatch registers the sensor on The Things Industries, the LoRaWAN network server CropWatch uses, in the location's network region. That registration is what lets the network accept the sensor when it tries to join, and pass its readings on to CropWatch. How readings travel is explained in "
+							},
+							{
+								"text": "What is LoRaWAN?",
+								"href": "page:what-is-lorawan#how-a-reading-reaches-you"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Added to (location name):",
+								"bold": true
+							},
+							{
+								"text": " the sensor is saved in the location."
+							}
+						],
+						[
+							{
+								"text": "Assigned a license:",
+								"bold": true
+							},
+							{
+								"text": " one of your free licences is given to the sensor."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The list fills in once the work is finished. The side panel says “If any step fails, nothing is saved and your license isn't used.”, and that holds: if registering on the network or assigning the licence fails, CropWatch removes what it had started and your licence stays free."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/adding-a-sensor/registering.webp",
+				"alt": "“Registering GH1 Climate, east end” with a list: the DevEUI check is ticked, Registering on the network has a spinner, and Added to Greenhouse 1 and Assigned a license are still waiting.",
+				"caption": "The list while CropWatch registers the sensor.",
+				"side": "left",
+				"width": 1392,
+				"height": 608
+			}
+		},
+		{
+			"id": "when-it-is-set-up",
+			"heading": "When the sensor is set up",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A large tick and “(name) is set up” mean everything worked. The list now says what happened on the network:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Registered on The Things Industries, Asia-Pacific (AS923)”:",
+								"bold": true
+							},
+							{
+								"text": " a new registration was made, in your location's network region (Asia-Pacific in this example)."
+							}
+						],
+						[
+							{
+								"text": "“Linked the existing network registration”:",
+								"bold": true
+							},
+							{
+								"text": " the sensor was already on the network, and CropWatch took over that registration after confirming the sensor is yours."
+							}
+						],
+						[
+							{
+								"text": "“Already registered on the network”, “Already in (location name)” and “License already assigned”:",
+								"bold": true
+							},
+							{
+								"text": " this sensor had already been set up under the same name at the same location, for example when the connection dropped after an earlier press of Register device. Nothing was added twice and no second licence was used."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Under the list: “Power the device on now. Most devices join the network and send their first reading within 5 minutes.” Then:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Switch the sensor on or fit its battery, as described in "
+							},
+							{
+								"text": "Sensor installation and maintenance",
+								"href": "page:sensor-installation-and-maintenance"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Press Open device to go to the new sensor's page, or Add another device to start again for the next sensor. Add another device keeps the group and install date you used and picks your next free licence. The licence count at the top drops by one."
+							}
+						],
+						[
+							{
+								"text": "Until its first reading arrives, the sensor is listed as “Never reported” on the location page."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/adding-a-sensor/set-up-done.webp",
+				"alt": "A large tick and “GH1 Climate, east end is set up”, the instruction to power the device on, four ticked lines including “Registered on The Things Industries, Asia-Pacific (AS923)”, and the buttons Add another device and Open device.",
+				"caption": "The sensor is registered, saved and has its licence.",
+				"side": "right",
+				"width": 1392,
+				"height": 978
+			}
+		},
+		{
+			"id": "registration-messages",
+			"heading": "Messages after Register device",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If the work stops, you stay on the review step and a box above the summary says why. Most boxes end with a short reference such as “Reference CW-1A2B3C”: quote it to support. Key problems take you back to step 1 instead (see "
+						},
+						{
+							"text": "Network keys",
+							"href": "page:adding-a-sensor#network-keys"
+						},
+						{
+							"text": ")."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "What each message means and what to press",
+				"columns": [
+					"Message",
+					"What it means",
+					"What to do"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "“This device is registered to another account”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Another CropWatch account has this DevEUI, or CropWatch supplied the sensor to a different customer."
+								}
+							],
+							[
+								{
+									"text": "Press Check the DevEUI and compare it with the label. If it is right, press Contact support."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“You've already added this device”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "You already have this sensor, under another name or at another location."
+								}
+							],
+							[
+								{
+									"text": "Press Open followed by its name, and change it in its settings instead."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“This device is already being set up”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Another window, or another person, started registering this sensor moments ago."
+								}
+							],
+							[
+								{
+									"text": "Press Open location and look for the sensor there in a minute."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“That license is no longer available”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The licence you chose was used for another sensor in the meantime, perhaps in another window."
+								}
+							],
+							[
+								{
+									"text": "Press Change to reload your free licences and pick one, or Add licenses."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“This model isn't available here yet”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The model has no network settings for this location's region."
+								}
+							],
+							[
+								{
+									"text": "Press Choose another model if you picked the wrong one; otherwise press Contact support."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“This device is registered as a different model”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The sensor is already on the network as another model."
+								}
+							],
+							[
+								{
+									"text": "Press Choose another model and pick the one that matches the sensor, or press Contact support."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“This device is registered on another network”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The DevEUI is registered elsewhere on the network, outside CropWatch. The seller or previous owner may need to release it."
+								}
+							],
+							[
+								{
+									"text": "Press Contact support."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“We couldn't confirm this device automatically”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The sensor is already on CropWatch's network, but its keys cannot be checked automatically."
+								}
+							],
+							[
+								{
+									"text": "Press Contact support and quote the reference. Support adds the sensor for you."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“We couldn't reach the network server”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The Things Industries did not answer. Nothing was saved and no licence was used."
+								}
+							],
+							[
+								{
+									"text": "Wait a minute and press Try again. Everything you entered is kept."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“Please wait a moment”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Your account has reached its hourly limit of registrations."
+								}
+							],
+							[
+								{
+									"text": "Wait up to an hour, then press Register device again."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“You can't add devices to this location”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Your level on the location is below Manager."
+								}
+							],
+							[
+								{
+									"text": "Ask the location's owner or an Admin to raise it."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“Setup couldn't be completed”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Something went wrong on CropWatch's side. Nothing was saved and no licence was used."
+								}
+							],
+							[
+								{
+									"text": "Press Try again, or press Contact support and quote the reference."
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/adding-a-sensor/error-network-unavailable.webp",
+				"alt": "The review step with a red box above the summary: “We couldn't reach the network server”, its explanation, the buttons Try again and Contact support, and “Reference CW-4F7A2C”.",
+				"caption": "A message after Register device, with the reference to quote to support.",
+				"side": "left",
+				"width": 1390,
+				"height": 818
+			}
+		},
+		{
+			"id": "first-reading",
+			"heading": "When the first reading does not arrive",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Most sensors send a first reading within 5 minutes of being switched on. If yours stays “Never reported”, work down this list:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Power:",
+								"bold": true
+							},
+							{
+								"text": " check the battery is fitted the right way round and the sensor is on. Taking the battery out and putting it back makes the sensor try to join the network again."
+							}
+						],
+						[
+							{
+								"text": "Gateway:",
+								"bold": true
+							},
+							{
+								"text": " check that a gateway near the sensor is powered on and online (the Gateways pages are described in "
+							},
+							{
+								"text": "Gateways in the app",
+								"href": "page:gateways-in-the-app"
+							},
+							{
+								"text": "). Move the sensor close to the gateway for a while. If it reports there, its spot is too far away or blocked; see "
+							},
+							{
+								"text": "RSSI and SNR",
+								"href": "page:rssi-and-snr"
+							},
+							{
+								"text": " for reading signal strength."
+							}
+						],
+						[
+							{
+								"text": "Model:",
+								"bold": true
+							},
+							{
+								"text": " a wrong model registers the sensor with the wrong network settings, and only support can change it. If you were unsure of the model, contact support."
+							}
+						],
+						[
+							{
+								"text": "Keys:",
+								"bold": true
+							},
+							{
+								"text": " if you typed the JoinEUI and AppKey, one wrong character stops the sensor from joining, and the app cannot tell when you register. Contact support with the DevEUI."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If there is still no reading 5 hours after installation, contact CropWatch support with the DevEUI and where the sensor is installed, as "
+						},
+						{
+							"text": "Connecting to the network",
+							"href": "page:sensor-installation-and-maintenance#connecting-to-the-network"
+						},
+						{
+							"text": " explains. The quick checks in "
+						},
+						{
+							"text": "Quick checks before contacting support",
+							"href": "page:sensor-installation-and-maintenance#before-contacting-support"
+						},
+						{
+							"text": " go into more detail."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "quick-answers",
+			"heading": "Quick answers",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "I cannot find Add Device:",
+								"bold": true
+							},
+							{
+								"text": " it is on a location's page, not on the dashboard. Open Locations in the menu, choose the location, and look along the buttons at the top."
+							}
+						],
+						[
+							{
+								"text": "Continue on the first step stays grey:",
+								"bold": true
+							},
+							{
+								"text": " the check has not finished, or it found a problem. Read the box under the DevEUI. With fewer than 16 characters, no check runs."
+							}
+						],
+						[
+							{
+								"text": "Continue on the second step stays grey:",
+								"bold": true
+							},
+							{
+								"text": " you have no free licences. See "
+							},
+							{
+								"text": "Choosing the licence",
+								"href": "page:adding-a-sensor#the-licence"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "It says all my licences are in use, but I have free ones:",
+								"bold": true
+							},
+							{
+								"text": " only licences on your own account are offered, so another person's free licences never appear. If your own are free, reload the page: when CropWatch cannot reach the billing service, the screen shows no free licences rather than letting a sensor through unpaid."
+							}
+						],
+						[
+							{
+								"text": "“You've already added this device” for a sensor I never added:",
+								"bold": true
+							},
+							{
+								"text": " someone added it and shared it with you, so it is already in CropWatch. Press Open followed by its name to find it."
+							}
+						],
+						[
+							{
+								"text": "“This device is registered to another account”:",
+								"bold": true
+							},
+							{
+								"text": " the sensor is still on its previous owner's account, or CropWatch supplied it to another customer. Ask the previous owner to remove it, or contact support with your order number."
+							}
+						],
+						[
+							{
+								"text": "The camera opens but never reads the code:",
+								"bold": true
+							},
+							{
+								"text": " hold the code inside the square, steady, closer and in good light. If it still will not read, press Use a photo."
+							}
+						],
+						[
+							{
+								"text": "“Please wait a moment” or “Too many attempts in a short time”:",
+								"bold": true
+							},
+							{
+								"text": " each account can check 150 DevEUIs and register 60 sensors an hour. Wait up to an hour."
+							}
+						],
+						[
+							{
+								"text": "I chose the wrong model:",
+								"bold": true
+							},
+							{
+								"text": " the sensor's settings have no model box. Contact support with the DevEUI."
+							}
+						],
+						[
+							{
+								"text": "I gave it the wrong name or group:",
+								"bold": true
+							},
+							{
+								"text": " change both on the sensor's settings page; see "
+							},
+							{
+								"text": "Sensor settings",
+								"href": "page:sensor-settings"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "I added it to the wrong location:",
+								"bold": true
+							},
+							{
+								"text": " move it from the sensor's settings, but read "
+							},
+							{
+								"text": "Location, and what moving a sensor really does",
+								"href": "page:sensor-settings#location"
+							},
+							{
+								"text": " first: moving changes who can see it."
+							}
+						],
+						[
+							{
+								"text": "Adding several sensors in a row:",
+								"bold": true
+							},
+							{
+								"text": " after each one, press Add another device. The group and install date carry over to the next sensor."
+							}
+						],
+						[
+							{
+								"text": "I closed the page while it was registering:",
+								"bold": true
+							},
+							{
+								"text": " open the location. If the sensor is listed, it finished. If not, add it again. Using the same name and location is safe either way: if the earlier setup did finish, CropWatch says so and uses no second licence, and if it is still running you see “This device is already being set up”."
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "sharing-access"
+		},
+		{
+			"kind": "page",
+			"slug": "sensor-settings"
+		},
+		{
+			"kind": "page",
+			"slug": "sensor-installation-and-maintenance"
+		},
+		{
+			"kind": "page",
+			"slug": "the-location-page"
+		},
+		{
+			"kind": "page",
+			"slug": "gateways-in-the-app"
+		},
+		{
+			"kind": "page",
+			"slug": "installing-a-gateway"
+		}
+	]
+}

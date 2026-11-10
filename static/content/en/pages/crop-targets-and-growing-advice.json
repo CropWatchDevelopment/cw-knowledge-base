@@ -1,0 +1,1358 @@
+{
+	"slug": "crop-targets-and-growing-advice",
+	"topic": "software",
+	"title": "Crop targets and growing advice",
+	"intro": "Tell CropWatch which crop a soil sensor sits in, and the sensor's page judges its readings against that crop's growing targets: soil and air, day and night, and the day's light. Once a day it also writes a Growing advice card about the previous day. This guide covers choosing the crop, reading the targets and the status labels, the light targets, and what the advice card can and cannot tell you.",
+	"sections": [
+		{
+			"id": "what-a-crop-does",
+			"heading": "What choosing a crop changes",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A soil sensor without a crop shows its readings and nothing more. Under the readings panel it carries a notice: “Choose this sensor's crop in the device settings to see its growing targets.”"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Once the sensor has a crop, the same page adds:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "A targets card",
+								"bold": true
+							},
+							{
+								"text": ": titled with the crop, for example “Targets for Tomato”, listing each reading, its target and a status."
+							}
+						],
+						[
+							{
+								"text": "Status chips and target ranges",
+								"bold": true
+							},
+							{
+								"text": ": on each reading in the “Above & below ground” panel at the top of the readings."
+							}
+						],
+						[
+							{
+								"text": "Target lines on the chart",
+								"bold": true
+							},
+							{
+								"text": ": green lines named after the crop, such as “Tomato min” and “Tomato max”, on the “Time series” chart."
+							}
+						],
+						[
+							{
+								"text": "Light and VPD targets",
+								"bold": true
+							},
+							{
+								"text": ": a band on the VPD chart, a target for the current hour on the PPFD gauge and a daily goal on the “DLI Today” card, on sensors that measure air and light."
+							}
+						],
+						[
+							{
+								"text": "The “Growing advice” card",
+								"bold": true
+							},
+							{
+								"text": ": a daily report on the previous day, with what to change."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Only soil sensors take a crop. Air, water and other sensors have no “Crop” box in their settings."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/crop-targets-and-growing-advice/no-crop-notice.webp",
+				"alt": "The Above & below ground panel of a soil sensor without a crop, showing soil temperature, soil moisture, EC and pH with no targets, and under it the notice “Choose this sensor's crop in the device settings to see its growing targets.” with a Choose a crop button",
+				"caption": "Without a crop, the readings have no targets and a notice offers to set one.",
+				"side": "right",
+				"width": 1600,
+				"height": 638
+			}
+		},
+		{
+			"id": "choosing-a-crop",
+			"heading": "Choosing the crop",
+			"body": [
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Open the sensor's settings page. Press “Choose a crop” in the notice on the sensor's page (it is there while no crop is set), press “Settings” at the top of the sensor's page, or use the cog in the location's list of sensors. "
+							},
+							{
+								"text": "Opening the settings page",
+								"href": "page:sensor-settings#getting-there"
+							},
+							{
+								"text": " explains the ways in."
+							}
+						],
+						[
+							{
+								"text": "In the “Device Settings” card, find “Crop”, just below “Location”. The line under it reads “Sets the growing targets this soil sensor's readings are judged against.”"
+							}
+						],
+						[
+							{
+								"text": "Open the list and pick the crop, for example Tomato, Cucumber or Strawberry. Crop names follow the language you use CropWatch in."
+							}
+						],
+						[
+							{
+								"text": "Press “Update Device”. The button stays grey until something on the card has changed."
+							}
+						],
+						[
+							{
+								"text": "A bar reads “Device settings updated.” Press “Back To Device Detail”; the targets card is now on the sensor's page."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "To take the crop off, choose “No crop” at the top of the list and press “Update Device”. The targets card, the target lines and the advice card leave the sensor's page. The readings themselves are not touched."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Changing to a different crop changes the targets card and the chart lines straight away, for past readings as well as new ones. The advice card catches up with the next overnight report."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If a soil sensor's settings page has no “Crop” box, the list of crops did not load. Reload the page. If the box is still missing, contact support."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/crop-targets-and-growing-advice/crop-picker.webp",
+				"alt": "The Device Settings card of a soil sensor with the Crop list open: No crop, Tomato (ticked), Cherry tomato, Cucumber, Sweet pepper (paprika / bell pepper) and Poblano pepper, with more below",
+				"caption": "Pick the crop from the list, then press Update Device.",
+				"side": "left",
+				"width": 1600,
+				"height": 960
+			}
+		},
+		{
+			"id": "who-can-choose",
+			"heading": "Who can choose the crop and who sees the results",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Choosing the crop counts as editing the sensor, so it needs the same level as renaming it: Owner, Admin or Manager. Everyone who can see the sensor sees its targets and its advice. Disabled people cannot see the sensor at all."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "On the sensor's own page, the “Settings” button appears only at Admin level. A Manager reaches the settings page through the “Choose a crop” button, which shows while the sensor has no crop, or through the cog in the location's list of sensors. The levels are explained in "
+						},
+						{
+							"text": "Sharing access",
+							"href": "page:sharing-access#the-six-levels"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "Crop targets and growing advice by permission level",
+				"columns": [
+					"Task",
+					"Owner",
+					"Admin",
+					"Manager",
+					"User",
+					"Viewer"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "See the targets and the Growing advice card"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							true,
+							true
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Choose, change or remove the crop"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							false,
+							false
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "where-targets-come-from",
+			"heading": "Where the target numbers come from",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "CropWatch sets the targets; you only choose the crop. Each crop's values were gathered from published growing guidance and research, such as Japan's Ministry of Agriculture, Forestry and Fisheries, prefectural agricultural research centres, the FAO and university extension services, and each value is stored with the source it came from. Everyone who picks the same crop gets the same numbers, and there is no screen for changing them."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A crop can have targets for these readings:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Soil",
+								"bold": true
+							},
+							{
+								"text": ": soil temperature, soil moisture, soil EC and soil pH, each with one target for the whole day."
+							}
+						],
+						[
+							{
+								"text": "Air",
+								"bold": true
+							},
+							{
+								"text": ": air temperature and air humidity, each with a day target and a night target."
+							}
+						],
+						[
+							{
+								"text": "Daytime only",
+								"bold": true
+							},
+							{
+								"text": ": CO₂ and VPD."
+							}
+						],
+						[
+							{
+								"text": "Light",
+								"bold": true
+							},
+							{
+								"text": ": a daily light goal (DLI), and the light level above which more light adds little (light saturation)."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each target is a best range, and some also have stress limits: the levels past which the crop starts to suffer damage. Where the research gave no reliable number, the value is left blank rather than guessed."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Soil moisture assumes a loam soil",
+								"bold": true
+							},
+							{
+								"text": ". Soils that hold much more water, such as volcanic ash soils, read well above the range even when watering is right. On such a field, treat the soil moisture status as a guide."
+							}
+						],
+						[
+							{
+								"text": "EC often comes from a lab soil test",
+								"bold": true
+							},
+							{
+								"text": ". A lab mixes the soil with five parts water (a 1:5 extract), which gives a different number from a probe in the ground. When the crop only has the lab value, the target shows with “(lab test, 1:5)” after it, and its status is a guide only."
+							}
+						],
+						[
+							{
+								"text": "Targets describe established plants in active growth",
+								"bold": true
+							},
+							{
+								"text": ". Growth stage, variety and rootstock change what is right, so weigh the numbers against your own experience."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "day-and-night",
+			"heading": "Day targets and night targets",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Air temperature and air humidity have one target for the day and another for the night. CropWatch decides which applies from the sun: while the sun is above the horizon at the location's position, the day targets apply, and after sunset the night targets take over. The page checks the time every minute, so the switch happens without reloading."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The line under the targets card's title says which set is in use: “Daytime targets, from the sun's position at this location.” or “Night targets, from the sun's position at this location.”"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "CO₂ and VPD only have daytime targets. At night their rows keep showing the daytime target for reference, and the Status column reads “Daytime only” instead of a verdict."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/crop-targets-and-growing-advice/night-targets.webp",
+				"alt": "The Targets for Tomato card in the evening, headed “Night targets, from the sun's position at this location.”: Air Temperature is judged against the night target of 13 to 18 °C, and VPD and CO₂ read “Daytime only” in the Status column",
+				"caption": "After sunset the night targets apply, and CO₂ and VPD read Daytime only.",
+				"side": "right",
+				"width": 1600,
+				"height": 777
+			}
+		},
+		{
+			"id": "location-position",
+			"heading": "Why the location's position matters",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Sunrise and sunset come from the latitude and longitude of the location the sensor belongs to. Without them CropWatch falls back to fixed hours, and the line under the targets card's title says so and asks you to set the location's position. With no position:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Day and night targets switch at 06:00 and 16:00, whatever the season."
+							}
+						],
+						[
+							{
+								"text": "The daily light goal is spread over 06:00 to 16:00 instead of the real day."
+							}
+						],
+						[
+							{
+								"text": "The “DLI Today” card says the day is assumed to end at 16:00 (“day assumed to end”), and pointing at that line explains that the location has no coordinates."
+							}
+						],
+						[
+							{
+								"text": "The daily advice uses fixed sunrise and sunset times too."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Set the position once in the location's settings, as described in "
+						},
+						{
+							"text": "Location settings",
+							"href": "page:location-settings"
+						},
+						{
+							"text": ". Every sensor at that location uses it."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "targets-card",
+			"heading": "Reading the targets card",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The card sits directly under the “Above & below ground” panel and has four columns:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Reading”",
+								"bold": true
+							},
+							{
+								"text": ": which reading the row is about."
+							}
+						],
+						[
+							{
+								"text": "“Now”",
+								"bold": true
+							},
+							{
+								"text": ": the newest value, in your units (°F if you chose Fahrenheit)."
+							}
+						],
+						[
+							{
+								"text": "“Target”",
+								"bold": true
+							},
+							{
+								"text": ": the crop's best range, for example 20 to 25 %. A target with only one end shows as “≥ 20 %” or “≤ 900 ppm”."
+							}
+						],
+						[
+							{
+								"text": "“Status”",
+								"bold": true
+							},
+							{
+								"text": ": where the reading sits, on the seven-step scale described below."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Rows appear only for readings the sensor sends, in this order: Soil Moisture, Soil Temperature, EC, pH, Air Temperature, Air Humidity, VPD and CO₂. A soil probe on its own shows the soil rows; a soil sensor that also measures the air adds the rest. VPD is worked out from air temperature and humidity."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A dash in the Target column means the crop has no value for that reading. A dash in the Status column means there is nothing to judge against, or the crop only has a limit that the reading has not passed. For example, a crop with only an upper limit for night humidity shows a dash until the humidity goes over the limit, then “Very high”."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/crop-targets-and-growing-advice/targets-card.webp",
+				"alt": "The Targets for Tomato card with Reading, Now, Target and Status columns: Soil Moisture Slightly low, Soil Temperature Optimal, EC High against its lab test range, pH Optimal, Air Temperature Slightly high, Air Humidity Low, VPD Very high and CO₂ Very low",
+				"caption": "Each reading with its target and its place on the seven-step scale.",
+				"side": "left",
+				"width": 1600,
+				"height": 780
+			}
+		},
+		{
+			"id": "seven-step-scale",
+			"heading": "The seven-step status scale",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A reading outside its target range is graded by how far off it is, measured from the nearest end of the range as a share of that end. With a soil moisture target of 20 to 25 %, 10 % below the low end is 2 points (18 %) and 10 % above the high end is 2.5 points (27.5 %)."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On that 20 to 25 % target, 19 % reads “Slightly low”, 17 % “Low” and 14 % “Very low”. On the high side, 27 % reads “Slightly high”, 30 % “High” and 32 % “Very high”. A reading past one of the crop's stress limits is always “Very low” or “Very high”, however close to the range it is."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The “Above & below ground” panel uses a shorter scale: “Too low”, “Low”, “Optimal”, “High” and “Too high”. There, “Low” and “High” (amber) cover anything outside the range, and “Too low” and “Too high” (red) mean past a stress limit. So a reading just under its range reads “Low” in the panel and “Slightly low” in the targets card. The targets card is the more precise of the two."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "Status labels in the targets card",
+				"columns": [
+					"Status",
+					"Colour",
+					"What it means"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "Very low"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Red"
+								}
+							],
+							[
+								{
+									"text": "More than 25 % below the range, or below the crop's lower stress limit."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Low"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Amber"
+								}
+							],
+							[
+								{
+									"text": "Between 10 % and 25 % below the range."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Slightly low"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Blue"
+								}
+							],
+							[
+								{
+									"text": "Up to 10 % below the range."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Optimal"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Green"
+								}
+							],
+							[
+								{
+									"text": "Inside the range."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Slightly high"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Blue"
+								}
+							],
+							[
+								{
+									"text": "Up to 10 % above the range."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "High"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Amber"
+								}
+							],
+							[
+								{
+									"text": "Between 10 % and 25 % above the range."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Very high"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Red"
+								}
+							],
+							[
+								{
+									"text": "More than 25 % above the range, or above the crop's upper stress limit."
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "chart-and-panels",
+			"heading": "Targets on the chart and the panels",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Time series” chart",
+								"bold": true
+							},
+							{
+								"text": ": two green lines named after the crop, for example “Tomato min” and “Tomato max”, mark the ends of the range on the Soil Moisture, Soil Temperature, EC and pH lines, where the crop has a value. Air readings get no lines, because their target changes between day and night."
+							}
+						],
+						[
+							{
+								"text": "“Above & below ground” panel",
+								"bold": true
+							},
+							{
+								"text": ": each reading shows its newest value, the “Low”, “Avg” and “High” for the time range you picked, a bar with the target range shaded, and “Target” followed by the range. At night CO₂ shows “Daytime only” in place of a target. EC with only a lab-test target shows that range as a note and gets no chip."
+							}
+						],
+						[
+							{
+								"text": "VPD chart",
+								"bold": true
+							},
+							{
+								"text": ": the crop's daytime VPD target is drawn as a band. "
+							},
+							{
+								"text": "VPD explained",
+								"href": "page:vpd-explained"
+							},
+							{
+								"text": " covers what the number means."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/crop-targets-and-growing-advice/chart-target-lines.webp",
+				"alt": "The Time series chart with only Soil Moisture switched on: the moisture line falls from 20.9 % to 18.2 % during the day and crosses below the dashed Tomato min line at 19.3 %, with the Tomato max line at 24.2 % above it",
+				"caption": "The Tomato min and Tomato max lines mark the crop's soil moisture range.",
+				"side": "right",
+				"width": 1600,
+				"height": 787
+			}
+		},
+		{
+			"id": "light-targets",
+			"heading": "Light targets: the daily goal and the hour's target",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Light targets appear on soil sensors with a light sensor. They start from the crop's daily light goal in mol/m²/day, its DLI ("
+						},
+						{
+							"text": "PPFD and DLI",
+							"href": "page:dli-and-ppfd#dli"
+						},
+						{
+							"text": " explains the units), and use sunrise and sunset at the location's position."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The PPFD gauge",
+							"bold": true
+						},
+						{
+							"text": " is titled with the crop, for example “Tomato PPFD”. Its target covers the current clock hour only and is labelled “Target” followed by the hour, such as 10:00 to 11:00. CropWatch spreads the daily goal over the day by the sun's height at your location, so a midday hour gets a larger share than the hour after sunrise. The hour's target is its share of the goal, given as the light level the hour needs on average. If the crop's goal has no upper end, the hour's upper end is the crop's light saturation level. At night the label reads “Target (night)” and no band is drawn."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The “DLI Today” card",
+							"bold": true
+						},
+						{
+							"text": " adds up today's light so far and shows:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The daily goal, as “Target for Tomato:” and the range. While the sun is up, it adds how much light should have fallen by now (“expected by now”)."
+							}
+						],
+						[
+							{
+								"text": "At the top right during the day: “Still needed” (light the day still needs), “Room left” (light that still fits inside the goal) or “Over target”, with “Falling short”, “On track”, “Target reached” or “Above target” beside it."
+							}
+						],
+						[
+							{
+								"text": "How much of the day's light is left and the time of sunset, and once 15 % of the day's light has fallen, where today ends at its current pace (“At today's pace”)."
+							}
+						],
+						[
+							{
+								"text": "After sunset, a final “Status:” of “Very low”, “Slightly low”, “Low”, “Good”, “High” or “Very high”."
+							}
+						],
+						[
+							{
+								"text": "“Daily history”: one bar for each of the last 7 full days (days without readings are left out)."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Today's light total is added up from the readings. A gap of more than an hour between readings is not filled in, so a radio outage lowers the total instead of inventing light."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/crop-targets-and-growing-advice/light-targets.webp",
+				"alt": "The Tomato PPFD gauge at 603 µmol/m²/s, below its target of 720 to 1,080 for 01:00 PM to 02:00 PM, and under it the DLI Today card: 11.4 mol/m²/day so far, Still needed 8.6, Falling short, sunset at 04:56 PM and a bar for each of the last 7 days",
+				"caption": "The light target for this hour, and how today's light total is going.",
+				"side": "left",
+				"width": 960,
+				"height": 1882
+			}
+		},
+		{
+			"id": "growing-advice-card",
+			"heading": "The Growing advice card",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A soil sensor with a crop gets a daily report in a card titled “Growing advice”, with a light bulb beside the title, just above the “History” table. The line under the title reads “Daily AI report for” and a date: the day the report covers, which is the day before it was written."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The chip at the top right sums up that day:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Looking good” (green)",
+								"bold": true
+							},
+							{
+								"text": ": everything that could be judged was within or close to its target. The card says no change is needed."
+							}
+						],
+						[
+							{
+								"text": "“Needs attention” (amber)",
+								"bold": true
+							},
+							{
+								"text": ": at least one reading was off by more than a small margin, or the sensor's readings looked wrong."
+							}
+						],
+						[
+							{
+								"text": "“Outside safe limits” (red)",
+								"bold": true
+							},
+							{
+								"text": ": at least one reading was past one of the crop's stress limits for 60 minutes or more in total."
+							}
+						],
+						[
+							{
+								"text": "“Not enough data” (grey)",
+								"bold": true
+							},
+							{
+								"text": ": nothing could be judged, usually because the sensor sent readings for less than three quarters of the day's hours."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The card first appears after the overnight run that follows your choice of crop, so look for it the next morning."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "reading-the-advice",
+			"heading": "What the advice card contains",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a good day the card is short: a headline such as “Looking good: no changes needed” and a sentence saying everything was within or close to the crop's targets. When something needs action, the headline sits above four parts:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "A table",
+								"bold": true
+							},
+							{
+								"text": " with the columns “Measurement”, “Recorded”, “Target” and “Status”, one row per problem. “Recorded” gives the low or high end of the day and the average, for example “Low 6 °C; average 10.8 °C”. The low end leaves out the lowest tenth of the day's readings and the high end the highest tenth, so one brief dip or spike does not count. For daily light the value is the day's total."
+							}
+						],
+						[
+							{
+								"text": "“Recommended actions”",
+								"bold": true
+							},
+							{
+								"text": ": one item per action, with a bold title such as “Warmer nights:” and what to do. When one action also fixes another problem, that problem's item says so: heating at night, for example, also lowers night humidity, and the humidity item gives the level heating should bring it to."
+							}
+						],
+						[
+							{
+								"text": "“On target:”",
+								"bold": true
+							},
+							{
+								"text": " followed by the readings that were within or close to their targets."
+							}
+						],
+						[
+							{
+								"text": "Two panels that open when pressed",
+								"bold": true
+							},
+							{
+								"text": ": “AI summary”, the same findings in plain sentences, and “What each value means”, one line per reading with its average, range, target and verdict. The verdicts are “Within target”, “Close to target”, “Needs attention” and “Outside safe limits”; a reading that was not judged says why."
+							}
+						]
+					]
+				}
+			],
+			"table": {
+				"caption": "Words in the Status column of the advice table",
+				"columns": [
+					"Status",
+					"What happened that day"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "Below target"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The reading spent the day mostly under its target."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Above target"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The reading spent the day mostly over its target."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Low end below target; average within target"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The average was fine, but the low end fell under the target, for example on cold early mornings."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Peak above target; average within target"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The average was fine, but the high end went over the target, for example on a hot afternoon."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Readings look invalid"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Many values were zero or impossible, or the reading stayed exactly the same for 12 hours. The action is to check the sensor: how it is installed, its wiring and its battery."
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/crop-targets-and-growing-advice/growing-advice.webp",
+				"alt": "The Growing advice card for Sun, November 8, marked Outside safe limits: a table of night-time air temperature, night-time relative humidity and daily light integral, the recommended actions Warmer nights, Lower night-time humidity and Increase light, the readings on target, and the What each value means panel opened",
+				"caption": "A day with cold nights and too little light, with the details panel open.",
+				"side": "right",
+				"width": 1600,
+				"height": 2161
+			}
+		},
+		{
+			"id": "how-advice-is-made",
+			"heading": "How the advice is made and when it updates",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Once a day, shortly after midnight Japan time, CropWatch reports on the previous day, midnight to midnight, for every soil sensor that has a crop. The card always shows the newest report, and a report does not change during the day. Today's conditions appear in tomorrow's report; for right now, read the targets card."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Three things go into a report: this sensor's readings for that day (nothing from other sensors), the crop's targets, and sunrise and sunset at the location's position. For the report, daytime starts one hour after sunrise, because a greenhouse takes about an hour to warm up, and ends at sunset."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A fixed set of rules does the judging and works out every number, verdict and recommended action. The AI only words the “AI summary”, and its wording is checked before it is saved: text that adds a number, leaves out an action, or names a chemical or a dose is thrown out and fixed wording is used instead. The AI is never given your sensor's name, your location's name or your notes, and it runs on CropWatch's own computer, so your readings are not sent to an outside AI service."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each reading gets one verdict for the day:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Within target",
+								"bold": true
+							},
+							{
+								"text": ": at least 90 % of the day's readings were inside the range."
+							}
+						],
+						[
+							{
+								"text": "Close to target",
+								"bold": true
+							},
+							{
+								"text": ": off by no more than a small margin, such as 1 °C for temperature or 5 % for humidity."
+							}
+						],
+						[
+							{
+								"text": "Needs attention",
+								"bold": true
+							},
+							{
+								"text": ": further off than that."
+							}
+						],
+						[
+							{
+								"text": "Outside safe limits",
+								"bold": true
+							},
+							{
+								"text": ": past a stress limit for 60 minutes or more in total."
+							}
+						],
+						[
+							{
+								"text": "Not assessed",
+								"bold": true
+							},
+							{
+								"text": ": the readings covered less than 75 % of the day's hours."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The advice gives soil moisture and soil EC no verdict unless CropWatch has set a range for that sensor's own soil, because the crop's moisture target assumes a loam soil and there is no reliable crop target for EC measured in the ground. Their lines under “What each value means” then say a target range needs setting for the field's soil. To have one set, contact CropWatch support. That range is used by the advice only; the targets card keeps using the crop's target. Light is judged on the day's total; the light level at any one moment is shown for reference."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "printing-the-advice",
+			"heading": "Printing the advice",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Press “Print” at the top right of the card. Your browser's print window opens with just this card: both panels open, the Print button left off, and light colours even if you use CropWatch in dark mode. Long reports run onto extra pages."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "To keep a copy as a file, choose Save as PDF in the print window. The file name starts with “Growing advice” and the report's date."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "what-advice-does-not-do",
+			"heading": "What the advice does not do",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "It does not change anything",
+								"bold": true
+							},
+							{
+								"text": ". No heater, vent, valve or relay is switched by it, and no setting is changed."
+							}
+						],
+						[
+							{
+								"text": "It does not warn you",
+								"bold": true
+							},
+							{
+								"text": ". Nothing is sent by email or notification. For a warning when a reading goes out of range, set up an "
+							},
+							{
+								"text": "alert rule",
+								"href": "page:setting-up-alert-rules"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "It does not name products or doses",
+								"bold": true
+							},
+							{
+								"text": ". For EC and pH it tells you to have the soil tested and talk to your extension adviser before changing fertilizer or adding anything to the soil."
+							}
+						],
+						[
+							{
+								"text": "It does not keep a history in the app",
+								"bold": true
+							},
+							{
+								"text": ". Only the newest report is shown."
+							}
+						],
+						[
+							{
+								"text": "It does not see your field",
+								"bold": true
+							},
+							{
+								"text": ". It knows one sensor's readings at one spot, and nothing about plant health, pests or the work done that day."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The advice is a second opinion, not a guarantee. Check the crop yourself before acting on it. The card's own footnote says the same: “Written by CropWatch AI from this sensor's readings. Every number comes from the rules, not the AI; use it alongside your own checks.”"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "quick-answers",
+			"heading": "Quick answers",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "There is no Growing advice card",
+								"bold": true
+							},
+							{
+								"text": ": the sensor needs a crop, and the first report arrives after the next overnight run. If it is still missing a day after you chose the crop, contact support."
+							}
+						],
+						[
+							{
+								"text": "The advice talks about yesterday",
+								"bold": true
+							},
+							{
+								"text": ": each report covers one finished day. The date under the title is that day."
+							}
+						],
+						[
+							{
+								"text": "Soil moisture always reads “Very high”, but the plants look fine",
+								"bold": true
+							},
+							{
+								"text": ": the crop's moisture target assumes a loam soil. Soils that hold more water, such as volcanic ash soils, read above it when watering is right."
+							}
+						],
+						[
+							{
+								"text": "The VPD, PPFD and DLI panels say “Awaiting sensor data”",
+								"bold": true
+							},
+							{
+								"text": ": they need a sensor that measures air and light. On a soil probe without those, they stay that way."
+							}
+						],
+						[
+							{
+								"text": "The line under the targets card mentions 06:00 and 16:00",
+								"bold": true
+							},
+							{
+								"text": ": the location has no position, so sunrise and sunset are assumed. See "
+							},
+							{
+								"text": "Location settings",
+								"href": "page:location-settings"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Can I change a crop's targets?",
+								"bold": true
+							},
+							{
+								"text": ": no. They are the same for everyone who picks that crop. If a value looks wrong for your area or variety, tell support."
+							}
+						],
+						[
+							{
+								"text": "My crop is not in the list",
+								"bold": true
+							},
+							{
+								"text": ": leave the sensor on “No crop” and tell support which crop you grow. Only CropWatch can add crops to the list."
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "soil-moisture-sensors"
+		},
+		{
+			"kind": "page",
+			"slug": "sensor-settings"
+		},
+		{
+			"kind": "page",
+			"slug": "sharing-access"
+		},
+		{
+			"kind": "page",
+			"slug": "dli-and-ppfd"
+		},
+		{
+			"kind": "page",
+			"slug": "vpd-explained"
+		},
+		{
+			"kind": "page",
+			"slug": "location-settings"
+		},
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		}
+	]
+}

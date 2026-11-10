@@ -1,0 +1,1082 @@
+{
+	"slug": "location-settings",
+	"topic": "software",
+	"title": "Location settings",
+	"intro": "A location's settings page is where its name, group and map position are changed, where people are given access, and where the owner can delete it. This guide covers every card on the page, including the map editor and its messages, and points to the guide on sharing for the people cards.",
+	"sections": [
+		{
+			"id": "opening-settings",
+			"heading": "Opening a location's settings",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Open the location and press “Location settings” at the top of its page, beside Refresh (see "
+						},
+						{
+							"text": "The location page",
+							"href": "page:the-location-page"
+						},
+						{
+							"text": "). The settings page opens for two kinds of people:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The location's owner",
+								"bold": true
+							},
+							{
+								"text": ": the account that created it."
+							}
+						],
+						[
+							{
+								"text": "Admins",
+								"bold": true
+							},
+							{
+								"text": ": people with the Admin level on the location."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Everyone else is turned away:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Managers",
+								"bold": true
+							},
+							{
+								"text": ": the Location settings button is there, but pressing it opens a page headed “Forbidden” that says “You do not have permission to access this location settings page.” At the moment only the owner and Admins can use the settings page, so ask one of them to make the change."
+							}
+						],
+						[
+							{
+								"text": "Users and Viewers",
+								"bold": true
+							},
+							{
+								"text": ": the button is not shown. Opening the settings page from a bookmark or a shared link gives them the same Forbidden page."
+							}
+						],
+						[
+							{
+								"text": "Anyone with no access to the location",
+								"bold": true
+							},
+							{
+								"text": ": the page answers “Page Not Found” with “The page you are looking for does not exist or has been moved.” The same happens for a location that has been deleted."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Both of those pages have “Go Home” and “Go Back” buttons. On the settings page itself, “Back To Location” at the top returns you to the location's page, and the browser tab reads “Location Settings - ” followed by the location's name."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "on-this-page",
+			"heading": "What is on the page",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The cards come in this order, from the top:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Location Settings",
+								"bold": true
+							},
+							{
+								"text": ": the name and the group."
+							}
+						],
+						[
+							{
+								"text": "Location on map",
+								"bold": true
+							},
+							{
+								"text": ": the map position."
+							}
+						],
+						[
+							{
+								"text": "Add new user to (location name) with permissions",
+								"bold": true
+							},
+							{
+								"text": ": giving someone access."
+							}
+						],
+						[
+							{
+								"text": "The table of people",
+								"bold": true
+							},
+							{
+								"text": ": everyone with access, and their level."
+							}
+						],
+						[
+							{
+								"text": "Danger zone",
+								"bold": true
+							},
+							{
+								"text": ": deleting the location. Only the owner sees this card."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Each card saves on its own, with its own button. Saving one card neither saves nor wipes changes you are still making in another. If you leave the page without pressing a card's Save Changes, nothing from that card is kept, and there is no warning on the way out."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "name-and-group",
+			"heading": "Renaming a location and changing its group",
+			"body": [
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Type the new name in Location Name, for example “Greenhouse 1, north end”."
+							}
+						],
+						[
+							{
+								"text": "Type a group in Group, for example “Greenhouses”."
+							}
+						],
+						[
+							{
+								"text": "Press Save Changes."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Save Changes stays grey until one of the boxes differs from what is saved, and while Location Name is empty. Spaces at the start and end of each box are trimmed off when it saves."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A green “Location name updated.” confirms the save. It says this even when only the group changed. The new name is used everywhere CropWatch shows the location from then on: the top of its page, the dashboard and the All Locations list. If the save fails, a red message says why; “Unable to update location name.” means it did not go through, so try again a little later."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Both boxes are marked with an asterisk, and both have to be filled in. A location that has never had a group shows an empty Group box, and pressing Save Changes makes your browser point at it and ask you to fill it in. Type a group, even if you only meant to change the name. For the same reason a group cannot be removed here once it is set, only changed to another one."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/location-settings/name-and-group.webp",
+				"alt": "The Location Settings card for Greenhouse 1: Location Name set to Greenhouse 1 and Group set to Greenhouses, both marked with an asterisk, and a grey Save Changes button",
+				"caption": "Save Changes stays grey until one of the boxes changes.",
+				"side": "right",
+				"width": 1600,
+				"height": 464
+			}
+		},
+		{
+			"id": "what-the-group-does",
+			"heading": "Where the group shows up",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A location's group is a free-text label for gathering locations together, such as “Greenhouses”, “Open fields” or “Cold stores”. It appears in four places:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "All Locations",
+								"bold": true
+							},
+							{
+								"text": ": the list under Locations in the side menu puts locations under a heading for each group. Locations without one sit under “Ungrouped”."
+							}
+						],
+						[
+							{
+								"text": "The dashboard filter",
+								"bold": true
+							},
+							{
+								"text": ": on the dashboard, “Dashboard Filters” in the side menu holds a “Location Groups” list. Choosing a group shows only the sensors at locations in that group, and “All location groups” shows everything again."
+							}
+						],
+						[
+							{
+								"text": "The location's page",
+								"bold": true
+							},
+							{
+								"text": ": the line above its name reads “Locations / Greenhouses”."
+							}
+						],
+						[
+							{
+								"text": "Location details",
+								"bold": true
+							},
+							{
+								"text": ": the Group row of the card at the bottom of the location's page."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "CropWatch matches groups by their exact text, so type a group the same way on every location: “Greenhouse” and “Greenhouses” make two separate groups. A location's group has nothing to do with a sensor's group, which is set on the sensor; see "
+						},
+						{
+							"text": "Sensor settings",
+							"href": "page:sensor-settings#group"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "map-position",
+			"heading": "Setting the location's map position",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The “Location on map” card sets where the location is. The position puts the location on the map on its page, and soil sensors use it for sunrise and sunset. The card's own line sums it up: “Click the map or drag the pin, or use one of the options below.”"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "There are five ways to set the position, and you can mix them. Each one moves the pin and fills in the Latitude and Longitude boxes under the map:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Clicking on the map, or dragging the pin."
+							}
+						],
+						[
+							{
+								"text": "The Use my current location button."
+							}
+						],
+						[
+							{
+								"text": "The Centre on my devices button."
+							}
+						],
+						[
+							{
+								"text": "Pasting coordinates or a Google Maps link."
+							}
+						],
+						[
+							{
+								"text": "Typing the latitude and longitude."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Nothing is saved until you press Save Changes at the bottom of the card."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/location-settings/map-position.webp",
+				"alt": "The Location on map card: the Use my current location, Centre on my devices and Clear buttons, the Paste coordinates or a Google Maps link box with Apply, a map with the location's pin, the Latitude and Longitude boxes, and Reset and a grey Save Changes at the bottom",
+				"caption": "Every way of setting the position moves the pin and fills in Latitude and Longitude.",
+				"side": "left",
+				"width": 1600,
+				"height": 1174
+			}
+		},
+		{
+			"id": "using-the-map",
+			"heading": "Placing the pin on the map",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When the location has no position yet, the map shows the whole of Japan with no pin. Zoom in towards your site and click on it: the pin drops where you clicked, and if the map is still zoomed out, it zooms in around the pin."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Clicking the map",
+								"bold": true
+							},
+							{
+								"text": ": moves the pin to where you clicked. Over the map, the pointer becomes a crosshair."
+							}
+						],
+						[
+							{
+								"text": "Dragging the pin",
+								"bold": true
+							},
+							{
+								"text": ": fine-tunes its position."
+							}
+						],
+						[
+							{
+								"text": "Zooming",
+								"bold": true
+							},
+							{
+								"text": ": use the mouse wheel, the plus and minus buttons in the top left corner, or pinch on a phone or tablet."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The Latitude and Longitude boxes follow the pin, to six decimal places, which is about 10 cm."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The zoom is saved with the position. Zooming the map in or out counts as a change, so Save Changes lights up even when the pin has not moved, and the map on the location's page opens at the zoom you saved. If you save while zoomed out a long way, the location's page still opens close enough to see the pin."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "other-ways-to-set-it",
+			"heading": "Using your current location, your sensors, or a pasted link",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Three buttons and a paste box sit above the map."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Use my current location",
+								"bold": true
+							},
+							{
+								"text": ": takes the position of the phone, tablet or computer you are using, so it is meant for when you are standing at the site. Your browser first asks whether CropWatch may know your location; allow it. The button spins while it waits, then the pin moves and a note says how close the position is: “Located to within about 12 m. Drag the pin to adjust before saving.”"
+							}
+						],
+						[
+							{
+								"text": "Centre on my devices",
+								"bold": true
+							},
+							{
+								"text": ": puts the pin in the middle of the sensors at this location that have their own map position, which they get when they are added. Sensors without one are left out. When none of them has a position the button is grey, and pointing at it shows “None of this location's devices have coordinates yet.”"
+							}
+						],
+						[
+							{
+								"text": "Paste coordinates or a Google Maps link",
+								"bold": true
+							},
+							{
+								"text": ": reads a position from text. Paste into the box and press Apply, or press Enter. It understands a pair of numbers such as “31.9147, 131.4232” or “31.9147 131.4232”, degrees with compass letters such as “31.9147° N, 131.4232° E” (S and W count as negative), and a full Google Maps link copied from the browser's address bar."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Short Google Maps share links, the ones starting maps.app.goo.gl, do not contain the coordinates. Pasting one gives “Couldn't find coordinates in that. Paste \"latitude, longitude\" or a full Google Maps link (short maps.app.goo.gl links don't include coordinates).” Open the short link in your browser first, then copy the long address from the address bar."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If Use my current location fails, a yellow note says why:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Location access was blocked. Allow it in your browser's site settings, or set the pin on the map.”",
+								"bold": true
+							},
+							{
+								"text": " Permission was refused. Allow location for CropWatch in the browser's site settings, then press the button again."
+							}
+						],
+						[
+							{
+								"text": "“Couldn't get your current location. Try again, or set the pin on the map.”",
+								"bold": true
+							},
+							{
+								"text": " The device could not work out where it is within 15 seconds. Press the button again, or use another way."
+							}
+						],
+						[
+							{
+								"text": "“This browser can't share its location.”",
+								"bold": true
+							},
+							{
+								"text": " Use another way, or another browser."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "typing-coordinates",
+			"heading": "Typing the latitude and longitude",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The Latitude and Longitude boxes take decimal degrees, the format Google Maps shows. The empty boxes show examples: “e.g. 35.6762” and “e.g. 139.6503”. Use a full stop for the decimal point. Places south of the equator have a negative latitude, and places west of Greenwich a negative longitude."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A wrong value is flagged under its box as you type, and Save Changes stays grey until it is fixed. The table shows what each case looks like."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "Latitude and longitude checks",
+				"columns": [
+					"What is in the boxes",
+					"What happens"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "Two valid numbers"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The pin moves to that spot and Save Changes can be pressed."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "A latitude below -90 or above 90, or one that is not a number"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "“Latitude must be a number between -90 and 90.” appears under Latitude."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "A longitude below -180 or above 180, or one that is not a number"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "“Longitude must be a number between -180 and 180.” appears under Longitude."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "A comma as the decimal point, such as “35,6762”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Counted as not a number, so the message above appears."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "One box filled in and the other empty"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "No message, but Save Changes stays grey. Fill in both, or empty both."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Both boxes empty"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Saving clears the position. See the next section."
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "saving-and-clearing",
+			"heading": "Saving, resetting and clearing the position",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Three buttons finish the card:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Save Changes",
+								"bold": true
+							},
+							{
+								"text": ": saves the position and the zoom. A green “Location coordinates saved.” confirms it, and the location's page shows the new spot from then on."
+							}
+						],
+						[
+							{
+								"text": "Reset",
+								"bold": true
+							},
+							{
+								"text": ": puts the boxes and the pin back to what is saved, without saving anything. It is grey when nothing has changed."
+							}
+						],
+						[
+							{
+								"text": "Clear",
+								"bold": true
+							},
+							{
+								"text": ": empties both boxes and removes the pin. It only shows while there is something in the boxes. Press Save Changes afterwards to remove the saved position; a green “Location coordinates cleared.” confirms it."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Once the position is cleared, the location's page shows the yellow “No coordinates” chip and “This location has no coordinates yet” in place of its map. If a save fails, a red message such as “Unable to save the coordinates.” appears instead, and what you entered stays in the boxes so you can try again."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "sunrise-and-sunset",
+			"heading": "How soil sensors use the position",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a soil sensor with a crop chosen, CropWatch uses the location's position to work out when the sun rises and sets there. That decides when the sensor's day targets give way to its night targets, and how the day's light goal is spread over the hours of daylight. Without a position, CropWatch assumes daylight from 06:00 to 16:00, and the sensor's page says so and asks for the location's position to be set. "
+						},
+						{
+							"text": "Crop targets and growing advice",
+							"href": "page:crop-targets-and-growing-advice"
+						},
+						{
+							"text": " explains the targets."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "people-and-permissions",
+			"heading": "People and permission levels",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The two cards under the map are for people. “Add new user to (location name) with permissions” gives someone access to the location and its sensors, and the table below it lists everyone who has access, with an Edit button on each row (Delete appears once you press Edit). "
+						},
+						{
+							"text": "Sharing access and permission levels",
+							"href": "page:sharing-access"
+						},
+						{
+							"text": " covers them step by step: "
+						},
+						{
+							"text": "giving someone access",
+							"href": "page:sharing-access#adding-someone"
+						},
+						{
+							"text": ", "
+						},
+						{
+							"text": "changing someone's level",
+							"href": "page:sharing-access#changing-a-level"
+						},
+						{
+							"text": " and "
+						},
+						{
+							"text": "taking access away",
+							"href": "page:sharing-access#taking-access-away"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/location-settings/people.webp",
+				"alt": "The card Add new user to Greenhouse 1 with permissions, with the EMAIL box, Permission Level set to Admin, the Apply to all devices in this location switch turned on and Add Permission, and below it the table of people: four rows with ID, email, name, permission level (Admin, Manager, User, Viewer) and an Edit button",
+				"caption": "The card for adding someone, and the table of everyone with access.",
+				"side": "right",
+				"width": 1600,
+				"height": 1171
+			}
+		},
+		{
+			"id": "deleting-a-location",
+			"heading": "Deleting a location",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Only the location's owner can delete it, and only the owner sees the red Danger zone card at the bottom of the page. It reads “Delete this location” and “Permanently deletes this location and everyone's access to it. This cannot be undone.”, above a red “Delete location” button."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The location has to be empty first. While it still holds sensors, a yellow note on the card gives the count, “This location still contains devices (3). Move them to another location or delete them before you can delete this location.”, and the Delete location button stays grey. To empty it:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Move each sensor",
+								"bold": true
+							},
+							{
+								"text": ": change the Location box on its settings page to another location. Moving a sensor changes who can see it, so read "
+							},
+							{
+								"text": "Sensor settings",
+								"href": "page:sensor-settings#location"
+							},
+							{
+								"text": " first."
+							}
+						],
+						[
+							{
+								"text": "Delete sensors you no longer use",
+								"bold": true
+							},
+							{
+								"text": ": the delete button is at the bottom of each sensor's settings page. Only a sensor's owner can delete it."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The count includes every sensor at the location, even ones that are Disabled for you and missing from your list. If the number is higher than you expect, ask the people you share the location with whether they have sensors there. The count is taken when the page opens, so reload the page after moving sensors away."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/location-settings/danger-zone.webp",
+				"alt": "The Danger zone card for Greenhouse 1: a note saying the location still contains devices (4) and that they must be moved or deleted first, the heading Delete this location with its description, and a greyed-out Delete location button",
+				"caption": "While the location has sensors, the note gives their count and the button stays grey.",
+				"side": "left",
+				"width": 1600,
+				"height": 492
+			}
+		},
+		{
+			"id": "confirming-the-delete",
+			"heading": "Confirming the delete",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Pressing Delete location opens a confirmation box headed with the location's name, for example Delete “Old nursery”? Under “This cannot be undone.” it lists what will go:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The location and its details: name, group, description and map position"
+							}
+						],
+						[
+							{
+								"text": "Everyone's access to this location"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "It then says “This location has no devices, so no sensor data is affected.” and shows the Location Name and Location ID, so you can check you have the right one. To go ahead:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Type the location's name in the box labelled “To confirm, type the location name Old nursery”. Capital letters, extra spaces, and full-width or half-width characters do not matter. If what you typed is as long as the name but does not match it, “The name you typed does not match this location.” appears under the box."
+							}
+						],
+						[
+							{
+								"text": "Tick “I understand that this location and everyone's access to it will be permanently deleted.”"
+							}
+						],
+						[
+							{
+								"text": "Press “Delete this location permanently”. It stays grey until the name matches and the box is ticked."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When it is done, CropWatch takes you to All Locations, and the location has gone for everyone who had access to it. Cancel closes the box without deleting anything, and the box starts empty every time it opens."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If the delete is refused, the box closes and the Danger zone card shows a red message. “This location still contains devices. Move them to another location or delete them first.” means a sensor was moved in after you opened the page; reload it and check. “The location could not be deleted.” means it did not go through; try again later."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/location-settings/delete-dialog.webp",
+				"alt": "The box Delete “Old nursery”?: This cannot be undone. above the list of what will be removed, This location has no devices, so no sensor data is affected., Location Name Old nursery and Location ID 105, the confirmation box with the mistyped name Old nursary and The name you typed does not match this location. under it, the ticked acknowledgement, and Cancel beside a grey Delete this location permanently",
+				"caption": "A name that does not match keeps the delete button grey, even with the box ticked.",
+				"side": "right",
+				"width": 1344,
+				"height": 1216
+			}
+		},
+		{
+			"id": "quick-answers",
+			"heading": "Quick answers",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "There is no Location settings button.",
+								"bold": true
+							},
+							{
+								"text": " Your level on the location is User or Viewer. Ask the owner or an Admin."
+							}
+						],
+						[
+							{
+								"text": "I get “Forbidden” when I open the settings.",
+								"bold": true
+							},
+							{
+								"text": " Only the owner and Admins can open this page at the moment. Managers see the button but are turned away."
+							}
+						],
+						[
+							{
+								"text": "Save Changes on the name card is grey.",
+								"bold": true
+							},
+							{
+								"text": " Nothing has changed yet, or Location Name is empty."
+							}
+						],
+						[
+							{
+								"text": "My browser asks me to fill in the Group box.",
+								"bold": true
+							},
+							{
+								"text": " Group cannot be left empty. Type a group, then save."
+							}
+						],
+						[
+							{
+								"text": "How do I remove a group?",
+								"bold": true
+							},
+							{
+								"text": " You cannot empty it on this page; you can only change it to another group."
+							}
+						],
+						[
+							{
+								"text": "Where do I change the description?",
+								"bold": true
+							},
+							{
+								"text": " Nowhere. The description is set when the location is created, and this page has no box for it."
+							}
+						],
+						[
+							{
+								"text": "Save Changes on the map card is grey.",
+								"bold": true
+							},
+							{
+								"text": " Only one of Latitude and Longitude is filled in, one of them has a red message under it, or nothing has changed."
+							}
+						],
+						[
+							{
+								"text": "My Google Maps link did not work.",
+								"bold": true
+							},
+							{
+								"text": " Short maps.app.goo.gl links have no coordinates in them. Open the link, then copy the long address from the browser's address bar."
+							}
+						],
+						[
+							{
+								"text": "Use my current location put the pin in the wrong place.",
+								"bold": true
+							},
+							{
+								"text": " It uses the position of the device you are holding, not of the site. Check the accuracy in the note, then drag the pin or paste the site's coordinates."
+							}
+						],
+						[
+							{
+								"text": "Centre on my devices is grey.",
+								"bold": true
+							},
+							{
+								"text": " None of the sensors at this location has its own map position."
+							}
+						],
+						[
+							{
+								"text": "There is no Danger zone card.",
+								"bold": true
+							},
+							{
+								"text": " Only the location's owner sees it."
+							}
+						],
+						[
+							{
+								"text": "Delete location is grey.",
+								"bold": true
+							},
+							{
+								"text": " The location still has sensors. Move or delete them first; the count includes sensors you cannot see."
+							}
+						],
+						[
+							{
+								"text": "Delete this location permanently is grey.",
+								"bold": true
+							},
+							{
+								"text": " The typed name does not match yet, or the box is not ticked."
+							}
+						],
+						[
+							{
+								"text": "Can I undo a delete?",
+								"bold": true
+							},
+							{
+								"text": " No. You would have to create the location again and give everyone access again."
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "the-location-page"
+		},
+		{
+			"kind": "page",
+			"slug": "sharing-access"
+		},
+		{
+			"kind": "page",
+			"slug": "sensor-settings"
+		},
+		{
+			"kind": "page",
+			"slug": "crop-targets-and-growing-advice"
+		}
+	]
+}

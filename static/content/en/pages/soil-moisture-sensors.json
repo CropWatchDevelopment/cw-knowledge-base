@@ -15,6 +15,14 @@
 							"text": "Soil moisture at the depth of the probe. Depending on the model, also soil temperature and electrical conductivity (EC)."
 						}
 					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Some CropWatch soil sensors also carry sensors above the ground for air temperature, air humidity, CO₂ and light (PPFD). Their readings appear on the same sensor page, as described below."
+						}
+					]
 				}
 			],
 			"image": {
@@ -49,12 +57,308 @@
 					]
 				}
 			]
+		},
+		{
+			"id": "the-sensor-page",
+			"heading": "What the sensor's page shows",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Open a soil sensor and its page runs from top to bottom like this:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "“Time series” chart",
+								"bold": true
+							},
+							{
+								"text": ": every reading over the time range you picked."
+							}
+						],
+						[
+							{
+								"text": "“Above & below ground” panel",
+								"bold": true
+							},
+							{
+								"text": ": the line under the title gives the number of readings in the range and the time of the latest, for example “84 readings · latest 13:52”. Light comes first on sensors with a light sensor, then the “Air” readings, the ground line, and the “Ground” readings. Each reading shows its newest value, a bar, and the “Low”, “Avg” and “High” for the range. A reading the sensor does not measure is left out."
+							}
+						],
+						[
+							{
+								"text": "Crop targets",
+								"bold": true
+							},
+							{
+								"text": ": the targets card when the sensor has a crop, otherwise a notice asking you to choose one."
+							}
+						],
+						[
+							{
+								"text": "VPD chart, PPFD gauge and “DLI Today” card",
+								"bold": true
+							},
+							{
+								"text": ": filled in on sensors that measure the air and light."
+							}
+						],
+						[
+							{
+								"text": "“Growing advice” card",
+								"bold": true
+							},
+							{
+								"text": ": a daily report, on sensors with a crop."
+							}
+						],
+						[
+							{
+								"text": "“History”",
+								"bold": true
+							},
+							{
+								"text": ": a table of every reading in the range, newest first, marked “Searchable, sortable”."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When the range holds no readings, a “No Data” card reads “No soil data available for the selected range.” Pick a longer range at the top of the page."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/soil-moisture-sensors/sensor-page.webp",
+				"alt": "The top of GH1 Soil's page: the time range buttons and the Time series chart with all eight readings switched on, including the Tomato min and max lines, and a chip for each reading with its minimum, average and maximum",
+				"caption": "A soil sensor's page starts with the Time series chart.",
+				"side": "left",
+				"width": 1600,
+				"height": 1070
+			}
+		},
+		{
+			"id": "air-and-light-readings",
+			"heading": "Air, CO₂ and light readings",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a soil sensor with sensors above the ground, the page fills in the parts a soil probe alone leaves empty:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Air",
+								"bold": true
+							},
+							{
+								"text": ": “Air Temperature”, “Air Humidity” and “CO₂” in the “Air” row of the panel, with temperature in the unit you chose."
+							}
+						],
+						[
+							{
+								"text": "Light",
+								"bold": true
+							},
+							{
+								"text": ": a strip at the top of the panel with “PPFD now”, the highest PPFD in the range (“Peak”), “DLI today” and, when the sensor has a crop, the crop's daily goal."
+							}
+						],
+						[
+							{
+								"text": "VPD chart",
+								"bold": true
+							},
+							{
+								"text": ": marks the current air temperature and humidity on the VPD map. "
+							},
+							{
+								"text": "VPD explained",
+								"href": "page:vpd-explained"
+							},
+							{
+								"text": " covers what it means."
+							}
+						],
+						[
+							{
+								"text": "PPFD gauge and “DLI Today” card",
+								"bold": true
+							},
+							{
+								"text": ": the latest light level, today's light total so far, and a bar for each of the last 7 full days. "
+							},
+							{
+								"text": "PPFD and DLI",
+								"href": "page:dli-and-ppfd#dli"
+							},
+							{
+								"text": " explains the units."
+							}
+						],
+						[
+							{
+								"text": "“History” table",
+								"bold": true
+							},
+							{
+								"text": ": extra columns for “CO₂”, “Air Temperature”, “Air Humidity” and “PPFD”."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "On a soil probe without these sensors, the VPD chart, the PPFD gauge and the “DLI Today” card stay on “Awaiting sensor data”, and the table has no air or light columns. That is expected; nothing is wrong with the sensor."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/soil-moisture-sensors/vpd-light-panels.webp",
+				"alt": "The VPD chart marking 26.9 °C and 51 % at 1.74 kPa, above the 0.41 to 0.82 kPa target, beside the Tomato PPFD gauge and the DLI Today card with a bar for each of the last 7 days",
+				"caption": "On a board with air and light sensors, the VPD, PPFD and DLI panels fill in.",
+				"side": "right",
+				"width": 1600,
+				"height": 1543
+			}
+		},
+		{
+			"id": "soil-names",
+			"heading": "Soil readings are labelled as soil",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Because some soil sensors also measure the air, a soil sensor's temperature and moisture are labelled “Soil Temperature” and “Soil Moisture” wherever they appear: on the dashboard's cards and table view (see "
+						},
+						{
+							"text": "Reading the dashboard",
+							"href": "page:reading-the-dashboard"
+						},
+						{
+							"text": "), on the sensor's chart, in the panel and in the “History” table. “Air Temperature” and “Air Humidity” always mean the readings taken above the ground."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "missing-readings",
+			"heading": "Missing values show as blanks, not zeros",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A reading sometimes arrives without one of its values, for example when part of a transmission is lost. The page leaves that value blank rather than showing 0 °C or 0 %:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "In the “History” table, a missing value shows as a dash."
+							}
+						],
+						[
+							{
+								"text": "Missing values are left out of “Low”, “Avg” and “High”, so a gap does not pull the average down."
+							}
+						],
+						[
+							{
+								"text": "The newest value shown for each reading comes from the newest reading that has it, even if a later reading arrived without it."
+							}
+						],
+						[
+							{
+								"text": "Chart lines run from one real reading to the next, with no drops to zero."
+							}
+						],
+						[
+							{
+								"text": "Today's light total does not bridge gaps of more than an hour, so a gap lowers the total instead of inventing light."
+							}
+						]
+					]
+				}
+			],
+			"image": {
+				"src": "images/soil-moisture-sensors/history-blanks.webp",
+				"alt": "The History table, newest first, with columns for soil temperature, soil moisture, EC, CO₂, air temperature and air humidity; the 11:56 AM reading shows dashes for CO₂, air temperature and air humidity",
+				"caption": "A reading that arrived without its air values shows dashes, not zeros.",
+				"side": "left",
+				"width": 1600,
+				"height": 973
+			}
+		},
+		{
+			"id": "crop-targets",
+			"heading": "Crop targets and growing advice",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Tell CropWatch which crop the sensor is in, and the page judges each reading against that crop's targets, draws target lines on the chart, adds light targets, and writes a daily Growing advice card. An Owner, Admin or Manager sets the crop on the sensor's settings page. "
+						},
+						{
+							"text": "Crop targets and growing advice",
+							"href": "page:crop-targets-and-growing-advice"
+						},
+						{
+							"text": " covers choosing the crop, reading the targets and the daily advice."
+						}
+					]
+				}
+			]
 		}
 	],
 	"links": [
 		{
 			"kind": "page",
+			"slug": "crop-targets-and-growing-advice"
+		},
+		{
+			"kind": "page",
 			"slug": "setting-up-alert-rules"
+		},
+		{
+			"kind": "page",
+			"slug": "vwc-and-saturation"
+		},
+		{
+			"kind": "page",
+			"slug": "dli-and-ppfd"
+		},
+		{
+			"kind": "page",
+			"slug": "vpd-explained"
 		}
 	]
 }

@@ -20,7 +20,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Your sensors are grouped by where they are. Each location gets a card of its own, with its sensors inside it, so you read the page site by site rather than sensor by sensor. A sensor with no location set sits under “No location”."
+							"text": "It has two views, chosen with the two buttons at the top. “Table” is a list with one row per sensor. “Sensor Cards” gives each location a card of its own, with its sensors inside it, so you read the page location by location. The first time you open the dashboard on a computer it shows the table, and on a phone it shows the cards. After that it opens on whichever you picked last in that browser."
 						}
 					]
 				},
@@ -28,7 +28,15 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Across the top are a search box and two buttons that change the layout. On a phone the search box is hidden and the sensor cards are chosen for you."
+							"text": "The search box runs the full width of the page, above everything else; on a phone it has a row to itself, with the two buttons underneath. In Sensor Cards view on a larger screen, two small icon buttons beside them change the layout: the first keeps the location cards in tidy rows, the second packs short cards up under each other so less space is left empty."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A sensor with no location set sits under “No location”. The cards load 20 locations at a time; if you have more, a “Load more” button at the bottom brings the next 20."
 						}
 					]
 				}
@@ -50,7 +58,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "A location card carries three things along its top:"
+							"text": "A location card carries four things along its top:"
 						}
 					]
 				},
@@ -60,11 +68,11 @@
 					"items": [
 						[
 							{
-								"text": "A dot and a word",
+								"text": "A coloured dot",
 								"bold": true
 							},
 							{
-								"text": " — how the whole site is doing. The word is the quickest read on the page."
+								"text": ": how the whole location is doing."
 							}
 						],
 						[
@@ -73,7 +81,16 @@
 								"bold": true
 							},
 							{
-								"text": " — where these sensors are."
+								"text": ": where these sensors are."
+							}
+						],
+						[
+							{
+								"text": "A word beside the name",
+								"bold": true
+							},
+							{
+								"text": ": the same state in words, such as “Online” or “Warning”. It is the quickest read on the page."
 							}
 						],
 						[
@@ -82,7 +99,14 @@
 								"bold": true
 							},
 							{
-								"text": " — opens that location on its own."
+								"text": " at the right: opens that location's own page. See "
+							},
+							{
+								"text": "The location page",
+								"href": "page:the-location-page"
+							},
+							{
+								"text": "."
 							}
 						]
 					]
@@ -91,7 +115,14 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Each sensor inside shows its name, its latest readings, and a coloured edge down the left. An air sensor shows temperature and humidity; a water sensor shows a level; a soil sensor shows moisture. The small labels say which is which."
+							"text": "Each sensor inside shows its name, up to two of its latest readings, and a coloured edge down the left. A small symbol beside each number says what it is, such as a thermometer for temperature or a drop for humidity and moisture. A relay shows 🟢 On or 🔴 Off; see "
+						},
+						{
+							"text": "Switching relays",
+							"href": "page:switching-relays"
+						},
+						{
+							"text": ". A reading missing from the last message shows a dash, not a zero."
 						}
 					]
 				},
@@ -99,15 +130,37 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Clicking a sensor card opens “Details”: everything that sensor sent in its last message, and at the bottom “Last Seen”, which is how long ago that was."
+							"text": "Clicking a sensor card opens its “Details”: every reading in its last message, by name, with “Last Seen” at the bottom saying how long ago that message arrived. On a soil sensor the probe's readings are called “Soil Temperature” and “Soil Moisture”, so they are not confused with the air readings some soil boards also send. A card you open stays open the next time you visit."
 						}
 					]
 				},
 				{
-					"type": "note",
+					"type": "paragraph",
 					"content": [
 						{
-							"text": "Battery level is deliberately not shown anywhere in CropWatch, so a sensor running low will not warn you here. A sensor that falls silent is the sign to look for."
+							"text": "Under the details, the “Details” button opens the sensor's own page. On an air sensor you are allowed to write notes on, a small add-note button sits beside it; see "
+						},
+						{
+							"text": "Notes on readings",
+							"href": "page:air-temperature-humidity-sensors#notes-on-readings"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Under the details, the “Details” button opens the sensor's own page. On an air sensor you are allowed to write notes on, a small add-note button sits beside it; see "
+						},
+						{
+							"text": "Notes on readings",
+							"href": "page:air-temperature-humidity-sensors#notes-on-readings"
+						},
+						{
+							"text": "."
 						}
 					]
 				}
@@ -129,7 +182,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The same four states appear twice over: as a word on a location card, and as the colour of the edge on each sensor card."
+							"text": "The same four states appear twice over: as a dot and a word on a location card, and as the colour of the edge on each sensor card."
 						}
 					]
 				},
@@ -139,7 +192,7 @@
 					"items": [
 						[
 							{
-								"text": "Green — Online.",
+								"text": "Green, Online.",
 								"bold": true
 							},
 							{
@@ -148,29 +201,29 @@
 						],
 						[
 							{
-								"text": "Amber — Warning.",
+								"text": "Amber, Warning.",
 								"bold": true
 							},
 							{
-								"text": " Only on a location: some of its sensors are reporting and some are not. Look inside to see which."
+								"text": " Only on a location: some of its sensors have gone quiet and some have not. Look inside to see which."
 							}
 						],
 						[
 							{
-								"text": "Red — Offline.",
+								"text": "Red, Offline.",
 								"bold": true
 							},
 							{
-								"text": " Nothing has arrived for longer than it should have."
+								"text": " Nothing has arrived for longer than it should have. On a location it means every sensor there has gone quiet."
 							}
 						],
 						[
 							{
-								"text": "Blue — Loading.",
+								"text": "Purple, Loading.",
 								"bold": true
 							},
 							{
-								"text": " Either CropWatch is still fetching it, or nothing has ever arrived from it. A newly installed sensor stays blue until its first reading."
+								"text": " Either CropWatch is still fetching it, or nothing has ever arrived from it. A newly installed sensor stays purple until its first reading."
 							}
 						]
 					]
@@ -178,7 +231,7 @@
 			],
 			"image": {
 				"src": "images/reading-the-dashboard/03-status-dots.svg",
-				"alt": "The four states: Online green, Warning amber, Offline red and Loading blue, each shown as a word and as an edge colour",
+				"alt": "The four states: Online green, Warning amber, Offline red and Loading purple, each shown as a word and as an edge colour",
 				"caption": "A word on a location, an edge colour on a sensor.",
 				"side": "right",
 				"width": 680,
@@ -193,7 +246,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Sensors do not report constantly. Each one sends a reading on its own schedule — every ten minutes, every half hour, whatever it was set to. So a gap of twelve minutes is perfectly healthy for a sensor that reports every fifteen."
+							"text": "Sensors do not report constantly. Each one sends a reading on its own schedule: every ten minutes, every half hour, whatever it was set to. So a gap of twelve minutes is perfectly healthy for a sensor that reports every fifteen."
 						}
 					]
 				},
@@ -201,7 +254,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "CropWatch knows each sensor's schedule and turns it red once nothing has arrived for longer than that. If a sensor has no schedule recorded, it allows an hour. You do not have to work out whether a gap is normal; the colour has already done it."
+							"text": "CropWatch knows each sensor's schedule, or failing that the usual schedule for its model, and turns the card red once nothing has arrived for longer than that. If neither is recorded, it allows an hour. When a card goes red its readings fade, and a line under them says how long it has been, such as “Last seen 3h 07m ago”."
 						}
 					]
 				},
@@ -209,7 +262,15 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "“Last Seen” inside Details counts up from the last message — “7m 05s”, “3h 07m”. The table view shows the same thing as a plain date and time instead."
+							"text": "You do not have to reload the page to see a sensor come back. In Sensor Cards view the dashboard checks each sensor again when its next reading is due, and fetches everything again when you come back to the tab or the app, with “Loading devices…” over the cards while it does. The table view fetches again when you come back to the tab."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Last Seen” inside a card's details counts up from the last message: “7m 05s”, “3h 07m”. The table view shows the same thing as a plain date and time instead."
 						}
 					]
 				},
@@ -217,7 +278,7 @@
 					"type": "note",
 					"content": [
 						{
-							"text": "A location's own page judges this more strictly, on a flat eleven minutes. A slow-reporting sensor can therefore read Offline there while the dashboard still calls it Online. The dashboard is the one that knows each sensor's schedule."
+							"text": "A location's own page judges this its own way: it takes the sensor's own schedule plus one minute, and assumes ten minutes when the sensor has none recorded. A sensor that reports every half hour by its model's default can therefore read Offline there after eleven quiet minutes, while the dashboard still calls it Online."
 						}
 					]
 				}
@@ -231,7 +292,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "A red edge, “Sensor Error”, or dashes where the numbers should be all mean the same thing: nothing recent has arrived. Open Details and “Last Seen” tells you how long it has been, which is usually the clue."
+							"text": "A red edge, with faded readings and a “Last seen … ago” line under them, means nothing recent has arrived. Open the card's details and “Last Seen” tells you how long it has been, which is usually the clue."
 						}
 					]
 				},
@@ -239,13 +300,45 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The usual causes, in the order worth checking:"
+							"text": "Two other signs mean something different:"
 						}
 					]
 				},
 				{
 					"type": "list",
-					"ordered": true,
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Sensor Error” in place of the readings",
+								"bold": true
+							},
+							{
+								"text": ": the sensor has reported a fault with itself. Contact support, and give them the DevEUI shown on the sensor's page."
+							}
+						],
+						[
+							{
+								"text": "A dash in place of one number",
+								"bold": true
+							},
+							{
+								"text": ": the last message did not carry that reading."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When a sensor has gone quiet, these are the usual causes, in the order worth checking:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
 					"items": [
 						[
 							{
@@ -259,16 +352,16 @@
 						],
 						[
 							{
-								"text": "Something has changed between the sensor and the gateway — a door closed, a vehicle parked, equipment moved."
+								"text": "Something has changed between the sensor and the gateway: a door closed, a vehicle parked, equipment moved."
 							}
 						]
 					]
 				},
 				{
-					"type": "note",
+					"type": "paragraph",
 					"content": [
 						{
-							"text": "Alert rules cannot help here. A rule watches readings, so when readings stop it has nothing to look at and stays silent. The dashboard is where a quiet sensor shows up."
+							"text": "When a sensor has gone quiet, these are the usual causes, in the order worth checking:"
 						}
 					]
 				}
@@ -276,7 +369,7 @@
 			"image": {
 				"src": "images/reading-the-dashboard/05-not-reporting.svg",
 				"alt": "A sensor card with a red edge reading Sensor Error where the readings would be",
-				"caption": "“Sensor Error” replaces the readings when nothing recent has arrived.",
+				"caption": "“Sensor Error” replaces the readings when the sensor reports a fault with itself.",
 				"side": "left",
 				"width": 680,
 				"height": 290
@@ -290,7 +383,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Once there are more than a screenful of sensors, use the search box at the top. It matches on location, device name or EUI, so any of these work:"
+							"text": "Once there are more than a screenful of sensors, use the search box at the top. It works in both views and matches part of a sensor's name, part of its DevEUI, or part of a location's name; capital letters make no difference. The list narrows a moment after you stop typing. Any of these work:"
 						}
 					]
 				},
@@ -310,9 +403,24 @@
 						],
 						[
 							{
-								"text": "The long serial number, if you are holding the sensor and reading the label."
+								"text": "The long serial number, or just its last few characters, if you are holding the sensor and reading the label."
 							}
 						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If your locations are sorted into groups, the menu on the left shows a “Dashboard Filters” panel while you are on the dashboard. Open it and pick a group under “Location Groups” to see only those locations; “All location groups” brings everything back. A location's group is set in its "
+						},
+						{
+							"text": "location settings",
+							"href": "page:location-settings"
+						},
+						{
+							"text": "."
+						}
 					]
 				}
 			]
@@ -325,7 +433,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "“Table” swaps the cards for a list: Name, Location, Primary, Secondary and Last Updated, one row per sensor."
+							"text": "“Table” swaps the cards for a list, one row per sensor: Name, Location, Group, Primary, Secondary and Last Updated. Press a row to open that sensor."
 						}
 					]
 				},
@@ -333,7 +441,15 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "It is the better view when you have many sensors, when you want them sorted, or when you are printing. “Sensor Cards” brings the cards back, and CropWatch remembers which you chose."
+							"text": "On a narrow screen some columns are left out to make room: Last Updated goes first, then Group, then Secondary, so a phone shows Name, Location and Primary. The list comes in pages of 25, and the controls under it move between pages or show 50 or 100 at a time."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "It is the better view when you have many sensors. “Sensor Cards” brings the cards back, and CropWatch remembers which you chose."
 						}
 					]
 				},
@@ -341,15 +457,15 @@
 					"type": "note",
 					"content": [
 						{
-							"text": "“Primary” and “Secondary” are simply the first and second readings a sensor sends. For an air sensor those are temperature and humidity."
+							"text": "“Primary” and “Secondary” are the first and second readings a sensor sends, and each cell names its reading, such as “Temperature: 21.4 °C”. A relay reads “Relay 1: 🟢 On”, and a soil sensor's temperature is labelled “Soil Temperature”."
 						}
 					]
 				}
 			],
 			"image": {
 				"src": "images/reading-the-dashboard/04-table-view.svg",
-				"alt": "The dashboard in Table view: columns for Name, Location, Primary, Secondary and Last Updated",
-				"caption": "The same sensors as a sortable list.",
+				"alt": "The dashboard in Table view: columns for Name, Location, Group, Primary and Last Updated",
+				"caption": "The same sensors as a list, one row each.",
 				"side": "right",
 				"width": 680,
 				"height": 330
@@ -363,7 +479,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Clicking a sensor opens its own page: the current readings, and a chart of how they have moved over time. Four buttons choose how far back to look — “Today Only”, “Last 24 Hours”, “Last 48 Hours” and “Last 72 Hours”. It opens on Today Only, which is why an early-morning visit can look sparse."
+							"text": "Clicking a sensor opens its own page: the current readings, and a chart of how they have moved over time. Four buttons choose how far back to look: “Today Only”, “Last 24 Hours”, “Last 48 Hours” and “Last 72 Hours”. It opens on Today Only, which is why an early-morning visit can look sparse."
 						}
 					]
 				},
@@ -371,7 +487,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The figures on that page — the highest, the lowest, the average — are worked out for the stretch of time you picked, not for all time. Change the buttons and they change with it."
+							"text": "The figures on that page, the highest, the lowest and the average, are worked out for the stretch of time you picked, not for all time. Change the buttons and they change with it."
 						}
 					]
 				},
@@ -379,15 +495,30 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "This is the screen for questions the dashboard cannot answer — whether last night was colder than the one before, whether the humidity always climbs at four in the morning, whether a problem is new."
+							"text": "On an air temperature and humidity sensor, the table of readings at the bottom also marks each reading taken while an alert rule was set off, and has buttons for adding notes. "
+						},
+						{
+							"text": "What the sensor's page shows",
+							"href": "page:air-temperature-humidity-sensors#the-sensor-page"
+						},
+						{
+							"text": " goes through it."
 						}
 					]
 				},
 				{
-					"type": "note",
+					"type": "paragraph",
 					"content": [
 						{
-							"text": "“No data yet for this device.” means nothing has ever arrived from this sensor. For a sensor that has just been installed, that is expected for the first little while."
+							"text": "This is the screen for questions the dashboard cannot answer: whether last night was colder than the one before, whether the humidity always climbs at four in the morning, whether a problem is new."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "This is the screen for questions the dashboard cannot answer: whether last night was colder than the one before, whether the humidity always climbs at four in the morning, whether a problem is new."
 						}
 					]
 				}
@@ -411,11 +542,27 @@
 					"items": [
 						[
 							{
+								"text": "Overview",
+								"bold": true
+							},
+							{
+								"text": ": how all your sensors, gateways and alerts are doing, summed up on one page. See "
+							},
+							{
+								"text": "The Overview page",
+								"href": "page:the-overview-page"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
 								"text": "Dashboard",
 								"bold": true
 							},
 							{
-								"text": " — this page."
+								"text": ": this page."
 							}
 						],
 						[
@@ -424,7 +571,7 @@
 								"bold": true
 							},
 							{
-								"text": " — your sites and what is installed at each, which is the tidier way in when you have several."
+								"text": ": your locations and what is installed at each, which is the tidier way in when you have several."
 							}
 						],
 						[
@@ -433,7 +580,7 @@
 								"bold": true
 							},
 							{
-								"text": " — being told when a reading crosses a limit. See "
+								"text": ": being told when a reading crosses a limit. See "
 							},
 							{
 								"text": "Creating an alert rule",
@@ -449,7 +596,7 @@
 								"bold": true
 							},
 							{
-								"text": " — regular summaries by email. See "
+								"text": ": regular summaries by email. See "
 							},
 							{
 								"text": "Creating a report",
@@ -465,7 +612,14 @@
 								"bold": true
 							},
 							{
-								"text": " — the boxes that carry your sensors' readings to the internet."
+								"text": ": the boxes that carry your sensors' readings to the internet. See "
+							},
+							{
+								"text": "Gateways in the app",
+								"href": "page:gateways-in-the-app"
+							},
+							{
+								"text": "."
 							}
 						]
 					]
@@ -491,11 +645,20 @@
 						],
 						[
 							{
-								"text": "A card says “No data yet”.",
+								"text": "A card's details say “No data yet”.",
 								"bold": true
 							},
 							{
 								"text": " Nothing has ever arrived from it. New sensors show this until their first reading."
+							}
+						],
+						[
+							{
+								"text": "A card says “Sensor Error”.",
+								"bold": true
+							},
+							{
+								"text": " The sensor has reported a fault with itself. Contact support with its DevEUI."
 							}
 						],
 						[
@@ -513,7 +676,7 @@
 								"bold": true
 							},
 							{
-								"text": " It may be at a location you do not have access to. Ask whoever manages your account."
+								"text": " It may be at a location you do not have access to, or set to Disabled for you. Ask whoever manages your account."
 							}
 						],
 						[
@@ -531,7 +694,7 @@
 								"bold": true
 							},
 							{
-								"text": " Refresh it. The dashboard shows what had arrived when you opened it."
+								"text": " Cards fetch each sensor's next reading when it is due, and both views fetch again when you come back to the tab. If something still looks stale, refresh the page."
 							}
 						]
 					]
@@ -542,11 +705,23 @@
 	"links": [
 		{
 			"kind": "page",
+			"slug": "the-overview-page"
+		},
+		{
+			"kind": "page",
+			"slug": "the-location-page"
+		},
+		{
+			"kind": "page",
 			"slug": "setting-up-alert-rules"
 		},
 		{
 			"kind": "page",
 			"slug": "creating-a-report"
+		},
+		{
+			"kind": "page",
+			"slug": "air-temperature-humidity-sensors"
 		},
 		{
 			"kind": "page",

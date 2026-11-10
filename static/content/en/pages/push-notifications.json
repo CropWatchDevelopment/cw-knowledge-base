@@ -1,0 +1,867 @@
+{
+	"slug": "push-notifications",
+	"topic": "software",
+	"title": "Push notifications on phones and computers",
+	"intro": "Push notifications put CropWatch alerts on your phone's lock screen or your computer's screen, even when CropWatch is closed. You turn them on once on each phone, tablet or computer from your Profile page, and you can stop them on any one of those devices from any other.",
+	"sections": [
+		{
+			"id": "how-push-works",
+			"heading": "How a push alert reaches you",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A push alert arrives on a phone or computer when two things are true:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Push is turned on for your account on that device.",
+								"bold": true
+							},
+							{
+								"text": " You do this on your Profile page, as described below."
+							}
+						],
+						[
+							{
+								"text": "You are one of the rule's push recipients.",
+								"bold": true
+							},
+							{
+								"text": " Turning push on does not add you to any rule. A new rule you create starts with you as its push recipient; on other rules, whoever edits the rule chooses the people. See "
+							},
+							{
+								"text": "Step 4: Choose who is told",
+								"href": "page:setting-up-alert-rules#choose-who-is-told"
+							},
+							{
+								"text": "."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each phone, tablet and computer is set up on its own. On a computer, each browser counts separately: Chrome and Edge on the same Windows PC are two entries in your list, and each needs push turned on."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "CropWatch checks access at the moment it sends. If your access to a sensor has been taken away or set to Disabled, alerts from that sensor stop reaching you, even while your name is still on the rule. The levels are explained in "
+						},
+						{
+							"text": "Sharing access and permission levels",
+							"href": "page:sharing-access#the-six-levels"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "A push alert is sent when a rule sets off. Nothing is pushed when the reading comes back and the rule resets."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "turning-it-on",
+			"heading": "Turning push on for this phone or computer",
+			"body": [
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Open CropWatch on the phone or computer that should get the alerts, and sign in. On an iPhone or iPad, open it from its Home Screen icon first; the iPhone and iPad section below explains why."
+							}
+						],
+						[
+							{
+								"text": "Press your name at the top right of the screen and choose "
+							},
+							{
+								"text": "Profile",
+								"bold": true
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Scroll to the last card, "
+							},
+							{
+								"text": "Push notifications",
+								"bold": true
+							},
+							{
+								"text": ", below "
+							},
+							{
+								"text": "LINE notifications",
+								"bold": true
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Press "
+							},
+							{
+								"text": "Enable push notifications",
+								"bold": true
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Your browser asks whether CropWatch may show notifications. Choose Allow."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A green message reads “Push notifications enabled.”, the card changes to “Push notifications are enabled on this device.”, and the phone or computer appears under "
+						},
+						{
+							"text": "Devices receiving your alerts",
+							"bold": true
+						},
+						{
+							"text": " with a "
+						},
+						{
+							"text": "This device",
+							"bold": true
+						},
+						{
+							"text": " label next to its name."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If you choose Block, or close the browser's question without answering, push stays off. After Block, the card says “Notifications are blocked for this site. Allow notifications in your browser settings, then try again.” and the button disappears. The fix is in the last section of this guide."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/push-notifications/push-card-off.webp",
+				"alt": "The Push notifications card on a computer where push is not on yet: “Push notifications are not enabled on this device yet.”, the Enable push notifications button, and an iPhone already listed under Devices receiving your alerts.",
+				"caption": "Before push is turned on here: the message and the Enable push notifications button.",
+				"side": "right",
+				"width": 1600,
+				"height": 572
+			}
+		},
+		{
+			"id": "several-devices",
+			"heading": "Using several phones and computers",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Repeat the steps on every phone, tablet and computer you want alerts on, signed in with your own account each time. Every device in your list gets every push alert meant for you, so a rule that fires at 2 a.m. rings your phone and also shows on the office PC."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "CropWatch names each entry for you:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Phones and tablets",
+								"bold": true
+							},
+							{
+								"text": ": “iPhone”, “iPad”, “Android phone” or “Android tablet”."
+							}
+						],
+						[
+							{
+								"text": "Computers",
+								"bold": true
+							},
+							{
+								"text": ": the browser and the system, such as “Chrome on Windows”, “Edge on Windows” or “Safari on Mac”."
+							}
+						],
+						[
+							{
+								"text": "Anything else",
+								"bold": true
+							},
+							{
+								"text": ": “Unknown device”, when CropWatch cannot tell what it is."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Under each name, “Added” gives the day push was turned on there, and “Last opened” the last time you opened CropWatch on it while signed in. The device you opened most recently is at the top. A phone you replaced months ago keeps an old “Last opened” date; remove it as described below."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/push-notifications/push-card-on.webp",
+				"alt": "The Push notifications card with push on: “Push notifications are enabled on this device.” and two entries under Devices receiving your alerts, Chrome on Windows with the This device label and a Disable on this device button, and iPhone with a Remove button, each with its Added and Last opened dates.",
+				"caption": "Each phone and computer has its own entry, newest first.",
+				"side": "left",
+				"width": 1600,
+				"height": 611
+			}
+		},
+		{
+			"id": "shared-computers",
+			"heading": "Shared and family computers",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Push belongs to a browser and an account together. On an office PC that three people sign in to, each person signs in, opens Profile and presses "
+						},
+						{
+							"text": "Enable push notifications",
+							"bold": true
+						},
+						{
+							"text": " for themselves. The browser asks for permission only the first time; for the second and third person the button turns push on straight away."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Two things work differently from what people expect:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Logging out does not stop push.",
+								"bold": true
+							},
+							{
+								"text": " Alerts for an account keep arriving on that browser after its owner logs out, and each notification shows the rule name, the sensor and its location to whoever is at the screen. To stop them, press "
+							},
+							{
+								"text": "Disable on this device",
+								"bold": true
+							},
+							{
+								"text": " before logging out, or remove the computer from your list later, from your phone."
+							}
+						],
+						[
+							{
+								"text": "One alert, one notification.",
+								"bold": true
+							},
+							{
+								"text": " When several accounts on the same browser are told about the same alert, the computer shows it once, not once per person."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When one person turns push off on a shared computer, everyone else's alerts keep arriving there."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "On a family computer or a shared tablet, turn push on only if everyone who uses it may see your alerts."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "turning-it-off",
+			"heading": "Turning push off for one device",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Every entry in "
+						},
+						{
+							"text": "Devices receiving your alerts",
+							"bold": true
+						},
+						{
+							"text": " has a button. On the device you are using it reads "
+						},
+						{
+							"text": "Disable on this device",
+							"bold": true
+						},
+						{
+							"text": "; on the others it reads "
+						},
+						{
+							"text": "Remove",
+							"bold": true
+						},
+						{
+							"text": ". Both do the same thing, and they work from anywhere: you can stop alerts on a lost phone from your computer."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Press the button next to the device."
+							}
+						],
+						[
+							{
+								"text": "A box asks “Stop push alerts on iPhone?”, with that device's name, and explains that it will stop receiving your CropWatch push alerts."
+							}
+						],
+						[
+							{
+								"text": "Press "
+							},
+							{
+								"text": "Stop alerts",
+								"bold": true
+							},
+							{
+								"text": " to confirm, or "
+							},
+							{
+								"text": "Cancel",
+								"bold": true
+							},
+							{
+								"text": " to keep it."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A message confirms “Push alerts stopped on iPhone.” and the entry leaves the list."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Stopping your last device takes you off your rules.",
+							"bold": true
+						},
+						{
+							"text": " When it is the only device left, the box warns that stopping it “ends all your push alerts and takes you off the push recipients of every rule.” CropWatch then removes your name from the push recipients of every rule. Turning push on again later does not put it back: open each rule and add yourself, or ask someone with Manager level or higher on the sensors to do it."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Turning push off here leaves the browser's notification permission as it was. To turn push back on, open Profile on that device and press "
+						},
+						{
+							"text": "Enable push notifications",
+							"bold": true
+						},
+						{
+							"text": "; the browser does not ask again."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A phone that has been reset, or a browser whose data was cleared, can no longer receive alerts. CropWatch drops it from your list the next time an alert to it fails, and in that case you stay on your rules."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/push-notifications/stop-alerts-dialog.webp",
+				"alt": "A box titled “Stop push alerts on iPhone?” saying iPhone will stop receiving your CropWatch push alerts, with the buttons Cancel and Stop alerts.",
+				"caption": "Removing a device asks first.",
+				"side": "right",
+				"width": 1280,
+				"height": 496
+			}
+		},
+		{
+			"id": "what-you-see",
+			"heading": "What a notification shows",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A push alert has a title and a few short lines. For a rule called “Greenhouse too cold” it looks like this:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Title",
+								"bold": true
+							},
+							{
+								"text": ": “【CropWatch】” followed by the rule's name, for example “【CropWatch】Greenhouse too cold”."
+							}
+						],
+						[
+							{
+								"text": "First line",
+								"bold": true
+							},
+							{
+								"text": ": the sensor's name, with its location in brackets, such as “Greenhouse 1 north（Main farm）”."
+							}
+						],
+						[
+							{
+								"text": "Condition lines",
+								"bold": true
+							},
+							{
+								"text": ": each condition that was met, written as the data field's internal name, the comparison, the limit, an arrow and the reading: “temperature_c < 5 → 3.8”. Up to three are listed; any more show as “+1”, “+2” and so on."
+							}
+						],
+						[
+							{
+								"text": "Last line",
+								"bold": true
+							},
+							{
+								"text": ": the date and time in Japan time, such as “2026-11-10 02:14 JST”, whatever time zone you have chosen in CropWatch."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If the same rule sets off again for the same sensor while the earlier notification is still on screen, the new one replaces it and sounds again. The list of notifications holds one per rule and sensor."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "tapping-a-notification",
+			"heading": "What tapping a notification opens",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Tapping the notification opens that sensor's page in CropWatch, inside its location. If CropWatch is already open, in a browser window or as the installed app, that window comes to the front and moves to the sensor instead of a second window opening. If it was already showing that sensor, it only comes to the front."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A sensor that does not belong to any location opens the dashboard instead."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "iphone-and-ipad",
+			"heading": "iPhone and iPad",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On an iPhone or iPad, push alerts only reach CropWatch opened from its Home Screen icon. In Safari or any other browser tab, the Push notifications card says “On iPhone or iPad, first add CropWatch to your Home Screen (Share → Add to Home Screen), then open it from there to enable push notifications.” and has no button."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Open CropWatch in Safari and sign in."
+							}
+						],
+						[
+							{
+								"text": "Tap the Share button, then "
+							},
+							{
+								"text": "Add to Home Screen",
+								"bold": true
+							},
+							{
+								"text": ", then "
+							},
+							{
+								"text": "Add",
+								"bold": true
+							},
+							{
+								"text": ". CropWatch shows the same instructions in a card at the bottom right of the screen."
+							}
+						],
+						[
+							{
+								"text": "Close Safari and open CropWatch from its new Home Screen icon. Sign in if it asks."
+							}
+						],
+						[
+							{
+								"text": "Go to Profile, press "
+							},
+							{
+								"text": "Enable push notifications",
+								"bold": true
+							},
+							{
+								"text": " and tap Allow."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The phone then appears in your list as “iPhone”. Installing is explained step by step in "
+						},
+						{
+							"text": "Installing CropWatch as an app",
+							"href": "page:installing-the-app"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If the Home Screen app still says “This browser does not support push notifications.”, the iPhone's system is too old for web push, which Apple added in iOS 16.4. Update it in Settings, General, Software Update, then try again."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/push-notifications/iphone-add-to-home-screen.webp",
+				"alt": "The Push notifications card on an iPhone in Safari, with the message “On iPhone or iPad, first add CropWatch to your Home Screen (Share → Add to Home Screen), then open it from there to enable push notifications.” and no button.",
+				"caption": "In a Safari tab on iPhone, the card asks you to add CropWatch to the Home Screen first.",
+				"side": "left",
+				"width": 1170,
+				"height": 813
+			}
+		},
+		{
+			"id": "troubleshooting",
+			"heading": "When push does not work",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The Push notifications card always tells you what state this device is in. Find its message in the table below. If push is on and alerts still do not come, go through this list:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "You are not on the rule.",
+								"bold": true
+							},
+							{
+								"text": " Open the rule from the Rules page with the pencil button and look at "
+							},
+							{
+								"text": "Push recipients",
+								"bold": true
+							},
+							{
+								"text": ". Add yourself if your name is missing."
+							}
+						],
+						[
+							{
+								"text": "The rule is switched off.",
+								"bold": true
+							},
+							{
+								"text": " Check “Active rule” in the same form."
+							}
+						],
+						[
+							{
+								"text": "The alert has already fired.",
+								"bold": true
+							},
+							{
+								"text": " A rule sends once, then waits until the reading passes the reset value. See "
+							},
+							{
+								"text": "Trigger value and reset value",
+								"href": "page:setting-up-alert-rules#trigger-and-reset"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "The sensor has gone quiet.",
+								"bold": true
+							},
+							{
+								"text": " No readings means no alerts. Check when it last reported on the dashboard."
+							}
+						],
+						[
+							{
+								"text": "The phone is holding it back.",
+								"bold": true
+							},
+							{
+								"text": " Do Not Disturb, Focus modes and the phone's notification settings for the browser or the CropWatch app all silence alerts."
+							}
+						],
+						[
+							{
+								"text": "A colleague shows as “has not subscribed to push”.",
+								"bold": true
+							},
+							{
+								"text": " They have not turned push on on any device. Their name stays greyed out in the rule until they do."
+							}
+						]
+					]
+				}
+			],
+			"table": {
+				"columns": [
+					"Message on the card",
+					"What to do"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "“Push notifications are not enabled on this device yet.”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Press "
+								},
+								{
+									"text": "Enable push notifications",
+									"bold": true
+								},
+								{
+									"text": " under it."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“Push notifications are enabled on this device.”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Push is on here. If alerts still do not arrive, go through the list above."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“Notifications are blocked for this site.”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Allow notifications for CropWatch in the browser's site settings (on iPhone and iPad: the Settings app, Notifications, CropWatch). Then reload the Profile page and press "
+								},
+								{
+									"text": "Enable push notifications",
+									"bold": true
+								},
+								{
+									"text": "."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“On iPhone or iPad, first add CropWatch to your Home Screen…”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Open CropWatch from its Home Screen icon, as described in the iPhone and iPad section."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“This browser does not support push notifications.”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Use a different browser on that computer. On iPhone and iPad, see the note in the iPhone and iPad section."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“Could not enable push notifications. Please try again.” (red message)"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Press the button again. If it fails a second time, contact support."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "“Could not load the devices receiving your alerts.”"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Reload the page. The list and its buttons come back once it loads."
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/push-notifications/push-card-blocked.webp",
+				"alt": "The Push notifications card in a browser where notifications are blocked: “Notifications are blocked for this site. Allow notifications in your browser settings, then try again.” with no enable button, and the iPhone still listed below.",
+				"caption": "Blocked in the browser: the card says so and the button is gone.",
+				"side": "right",
+				"width": 1600,
+				"height": 487
+			}
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		},
+		{
+			"kind": "page",
+			"slug": "installing-the-app"
+		},
+		{
+			"kind": "page",
+			"slug": "sharing-access"
+		},
+		{
+			"kind": "page",
+			"slug": "reading-the-dashboard"
+		}
+	]
+}

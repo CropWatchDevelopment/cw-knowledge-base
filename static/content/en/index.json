@@ -18,10 +18,18 @@
 			"description": "The CropWatch dashboard, alert rules and reports.",
 			"pages": [
 				"resetting-your-password",
+				"installing-the-app",
 				"reading-the-dashboard",
+				"the-overview-page",
+				"the-location-page",
+				"location-settings",
+				"adding-a-sensor",
 				"sensor-settings",
 				"sharing-access",
+				"crop-targets-and-growing-advice",
+				"switching-relays",
 				"setting-up-alert-rules",
+				"push-notifications",
 				"creating-a-report",
 				"reading-a-report"
 			]
@@ -34,7 +42,8 @@
 			"pages": [
 				"installing-a-gateway",
 				"choosing-a-mounting-location",
-				"installing-an-outdoor-gateway"
+				"installing-an-outdoor-gateway",
+				"gateways-in-the-app"
 			]
 		},
 		{
@@ -372,6 +381,194 @@
 				"lorawan",
 				"weak signal",
 				"missing readings"
+			]
+		},
+		"the-overview-page": {
+			"topic": "software",
+			"title": "The Overview page",
+			"summary": "What every card and number on the Overview page means, how each is worked out, and where its links go.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"overview",
+				"fleet",
+				"online",
+				"offline",
+				"needs attention",
+				"alerts",
+				"activity",
+				"uplinks",
+				"gateways",
+				"notes",
+				"reports",
+				"time range"
+			]
+		},
+		"adding-a-sensor": {
+			"topic": "software",
+			"title": "Adding a sensor",
+			"summary": "Add a new sensor to a location: scan its QR code or type its DevEUI, name and place it, and register it on the network with one licence.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"add device",
+				"new sensor",
+				"DevEUI",
+				"QR code",
+				"AppKey",
+				"JoinEUI",
+				"licence",
+				"license",
+				"register",
+				"setup",
+				"camera",
+				"not connecting"
+			]
+		},
+		"crop-targets-and-growing-advice": {
+			"topic": "software",
+			"title": "Crop targets and growing advice",
+			"summary": "Choose a soil sensor's crop to judge its readings against that crop's day, night and light targets, and read the daily Growing advice card.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"crop",
+				"growing targets",
+				"target range",
+				"optimal",
+				"soil moisture",
+				"DLI",
+				"PPFD",
+				"VPD",
+				"sunrise",
+				"AI advice",
+				"growing advice",
+				"print"
+			]
+		},
+		"gateways-in-the-app": {
+			"topic": "gateways",
+			"title": "Gateways in the app",
+			"summary": "What the Gateways list, a gateway's page and a sensor's Signal button show, who sees which gateways, and how to use them to find out why a sensor has stopped reporting.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"gateway",
+				"online",
+				"offline",
+				"connected devices",
+				"last seen",
+				"signal",
+				"signal bars",
+				"RSSI",
+				"SNR",
+				"public gateway",
+				"other gateway",
+				"not reporting"
+			]
+		},
+		"switching-relays": {
+			"topic": "software",
+			"title": "Switching relays",
+			"summary": "How relays show on the dashboard, how to switch or pulse one from its page and confirm it worked, the Relay History, who may switch, and alert rules that switch relays.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"relay",
+				"switch",
+				"turn on",
+				"turn off",
+				"pulse",
+				"timed",
+				"relay history",
+				"pending confirmation",
+				"not confirmed",
+				"remote control",
+				"LoRaWAN action",
+				"pump"
+			]
+		},
+		"the-location-page": {
+			"topic": "software",
+			"title": "The location page",
+			"summary": "What is on a location's page: the status chips and summary cards, the map, Device health, the list of sensors with every column including gateway signal, and what each permission level sees.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"location",
+				"location page",
+				"map",
+				"online",
+				"offline",
+				"never reported",
+				"device health",
+				"signal",
+				"gateway",
+				"sensor list",
+				"refresh",
+				"coordinates"
+			]
+		},
+		"location-settings": {
+			"topic": "software",
+			"title": "Location settings",
+			"summary": "Renaming a location and setting its group, placing it on the map with latitude, longitude and zoom, and deleting an empty location as its owner.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"location settings",
+				"rename location",
+				"location group",
+				"map position",
+				"latitude",
+				"longitude",
+				"coordinates",
+				"google maps",
+				"current location",
+				"delete location",
+				"danger zone",
+				"owner"
+			]
+		},
+		"push-notifications": {
+			"topic": "software",
+			"title": "Push notifications on phones and computers",
+			"summary": "Turn on CropWatch push alerts for each phone, tablet and computer, manage the list of devices that receive them, and fix alerts that do not arrive.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"push",
+				"push notification",
+				"notification",
+				"alert",
+				"phone",
+				"iPhone",
+				"Android",
+				"browser",
+				"shared computer",
+				"device list",
+				"not receiving"
+			]
+		},
+		"installing-the-app": {
+			"topic": "software",
+			"title": "Installing CropWatch as an app",
+			"summary": "Install CropWatch on Android, iPhone, iPad or a computer, see what the installed app does differently, and learn how long you stay signed in.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"install",
+				"app",
+				"home screen",
+				"add to home screen",
+				"iPhone",
+				"Android",
+				"offline",
+				"update",
+				"sign in",
+				"stay signed in",
+				"logout",
+				"session"
 			]
 		}
 	},

@@ -18,10 +18,18 @@
 			"description": "CropWatchのダッシュボード、アラートルール、レポート。",
 			"pages": [
 				"resetting-your-password",
+				"installing-the-app",
 				"reading-the-dashboard",
+				"the-overview-page",
+				"the-location-page",
+				"location-settings",
+				"adding-a-sensor",
 				"sensor-settings",
 				"sharing-access",
+				"crop-targets-and-growing-advice",
+				"switching-relays",
 				"setting-up-alert-rules",
+				"push-notifications",
 				"creating-a-report",
 				"reading-a-report"
 			]
@@ -34,7 +42,8 @@
 			"pages": [
 				"installing-a-gateway",
 				"choosing-a-mounting-location",
-				"installing-an-outdoor-gateway"
+				"installing-an-outdoor-gateway",
+				"gateways-in-the-app"
 			]
 		},
 		{
@@ -516,6 +525,194 @@
 				"noise",
 				"LoRa",
 				"LoRaWAN"
+			]
+		},
+		"the-overview-page": {
+			"topic": "software",
+			"title": "概要ページの見方",
+			"summary": "概要ページの各カードと数値の意味、それぞれの求め方、リンクの移動先を説明します。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"概要",
+				"オンライン",
+				"オフライン",
+				"要確認",
+				"アラート",
+				"アクティビティ",
+				"アップリンク",
+				"ゲートウェイ",
+				"メモ",
+				"レポート",
+				"期間",
+				"overview"
+			]
+		},
+		"adding-a-sensor": {
+			"topic": "software",
+			"title": "センサーを追加する",
+			"summary": "QRコードの読み取りかDevEUIの入力でセンサーを識別し、名前と設置場所を決めて、ライセンス1件でネットワークに登録する手順です。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"デバイスを追加",
+				"新しいセンサー",
+				"DevEUI",
+				"QRコード",
+				"AppKey",
+				"JoinEUI",
+				"ライセンス",
+				"登録",
+				"セットアップ",
+				"カメラ",
+				"接続できない"
+			]
+		},
+		"crop-targets-and-growing-advice": {
+			"topic": "software",
+			"title": "作物の栽培目標と栽培アドバイス",
+			"summary": "土壌センサーに作物を設定すると、日中・夜間・光量の栽培目標で測定値が判定され、毎日の栽培アドバイスを確認できます。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"作物",
+				"栽培目標",
+				"適正範囲",
+				"土壌水分",
+				"DLI",
+				"PPFD",
+				"VPD",
+				"日の出",
+				"AIアドバイス",
+				"栽培アドバイス",
+				"印刷",
+				"黒ボク土"
+			]
+		},
+		"gateways-in-the-app": {
+			"topic": "gateways",
+			"title": "アプリでゲートウェイを確認する",
+			"summary": "ゲートウェイの一覧、ゲートウェイごとの画面、センサーの「電波強度」ボタンの見方、表示されるゲートウェイの範囲、センサーが報告しない原因の調べ方を説明します。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"ゲートウェイ",
+				"オンライン",
+				"オフライン",
+				"接続デバイス",
+				"最終受信",
+				"電波強度",
+				"接続ゲートウェイ",
+				"RSSI",
+				"SNR",
+				"公開ゲートウェイ",
+				"その他のゲートウェイ",
+				"報告しない"
+			]
+		},
+		"switching-relays": {
+			"topic": "software",
+			"title": "リレーを操作する",
+			"summary": "ダッシュボードでのリレーの表示、リレーの画面でのオン・オフとパルス、切り替わったことの確かめ方、リレー履歴、操作できる人、リレーを切り替えるアラートルールを説明します。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"リレー",
+				"スイッチ",
+				"オンにする",
+				"オフにする",
+				"パルス",
+				"時間指定",
+				"リレー履歴",
+				"確認待ち",
+				"未確認",
+				"遠隔操作",
+				"LoRaWAN",
+				"ポンプ"
+			]
+		},
+		"the-location-page": {
+			"topic": "software",
+			"title": "ロケーションのページ",
+			"summary": "ロケーションのページにある状態のチップと概要カード、地図、デバイスの状態、電波強度を含むセンサー一覧の各列、権限レベルごとに見えるものを説明します。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"ロケーション",
+				"ロケーションのページ",
+				"地図",
+				"オンライン",
+				"オフライン",
+				"未受信",
+				"デバイスの状態",
+				"電波強度",
+				"ゲートウェイ",
+				"センサー一覧",
+				"更新",
+				"座標"
+			]
+		},
+		"location-settings": {
+			"topic": "software",
+			"title": "ロケーションの設定",
+			"summary": "ロケーションの名前とグループの変更、緯度・経度・縮尺による地図上の位置の設定、所有者による空のロケーションの削除について説明します。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"ロケーション設定",
+				"名前変更",
+				"ロケーショングループ",
+				"地図上の位置",
+				"緯度",
+				"経度",
+				"座標",
+				"Googleマップ",
+				"現在地",
+				"ロケーション削除",
+				"危険な操作",
+				"所有者"
+			]
+		},
+		"push-notifications": {
+			"topic": "software",
+			"title": "スマートフォンとパソコンでのプッシュ通知",
+			"summary": "端末ごとにCropWatchのプッシュ通知を有効にし、通知を受け取るデバイスを管理し、届かないときの対処を確認します。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"プッシュ通知",
+				"通知",
+				"アラート",
+				"スマートフォン",
+				"iPhone",
+				"Android",
+				"パソコン",
+				"ブラウザー",
+				"共用パソコン",
+				"届かない",
+				"push",
+				"notification"
+			]
+		},
+		"installing-the-app": {
+			"topic": "software",
+			"title": "CropWatchをアプリとしてインストールする",
+			"summary": "Android、iPhone・iPad、パソコンにCropWatchをインストールする方法と、アプリでの違い、サインインが続く期間を説明します。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"インストール",
+				"アプリ",
+				"ホーム画面に追加",
+				"iPhone",
+				"Android",
+				"オフライン",
+				"アップデート",
+				"サインイン",
+				"ログイン",
+				"ログアウト",
+				"install",
+				"app"
 			]
 		}
 	},

@@ -1,0 +1,1183 @@
+{
+	"slug": "gateways-in-the-app",
+	"topic": "gateways",
+	"title": "Gateways in the app",
+	"intro": "CropWatch shows every gateway you have access to, whether it is online, and which of your sensors it heard in the last day. This guide explains each column and figure, what you can and cannot change, and how to use these pages to find out why a sensor has gone quiet.",
+	"sections": [
+		{
+			"id": "what-the-pages-show",
+			"heading": "What the Gateways pages show",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A gateway is the receiver that picks up your sensors' radio messages and passes them to CropWatch over the internet. If a gateway goes offline, every sensor that relies on it stops reporting at the same moment. For how the radio side works, see "
+						},
+						{
+							"text": "What is LoRaWAN?",
+							"href": "page:what-is-lorawan"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Gateway information appears in three places:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The Gateways list",
+								"bold": true
+							},
+							{
+								"text": ": every gateway you can see, whether it is online, and how many sensors it has heard."
+							}
+						],
+						[
+							{
+								"text": "A gateway's own page",
+								"bold": true
+							},
+							{
+								"text": ": its details, and a table of your sensors it heard in the last 24 hours with their signal."
+							}
+						],
+						[
+							{
+								"text": "The Signal button on a sensor's page",
+								"bold": true
+							},
+							{
+								"text": ": the other way round, every gateway that has heard that one sensor."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "All three are for looking only. Nothing on them changes a gateway's settings, and nothing you press here can switch a gateway off or disconnect a sensor."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "opening-the-list",
+			"heading": "Opening the Gateways list",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Press “Gateways” in the menu on the left. It sits under the heading “Connectivity & Hardware”."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The Gateways card on the Overview page counts the same gateways, for example “3” and “of 4 online”, and pressing the card opens this list. See "
+						},
+						{
+							"text": "The Overview page",
+							"href": "page:the-overview-page"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The list sits in a card headed “Your Gateways”. The “Back to Dashboard” button above it takes you back to the dashboard."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "the-list-columns",
+			"heading": "What each column in the list means",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each row is one gateway. Press a column heading to sort by it; every column except Gateway ID can be sorted. Type in the “Search...” box to find a gateway by its name or its Gateway ID. Press a row to open that gateway's page."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "The columns of the Gateways list",
+				"columns": [
+					"Column",
+					"What it tells you"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "Gateway Name"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The name the gateway was registered under."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Status"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "“Online” with a green dot, or “Offline” with a red one. See the next section."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Connected devices"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "How many different sensors the gateway has heard in the last 24 hours. Sensors that belong to other people are counted too, so the number can be larger than the number of sensors you own."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Last seen"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "When the gateway last passed on a message from any sensor, yours or anyone else's. “N/A” means it has never passed one on."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Gateway ID"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The gateway's identifier on the radio network, for example eui-a1b2c3d4e5f60708. Quote it when you contact support."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Public"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "A green tick for a public gateway, a grey “no” symbol for a private one."
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/gateways-in-the-app/gateways-list.webp",
+				"alt": "The Your Gateways card listing three gateways: Greenhouse Gateway and North Field Gateway, both private, and Valley Co-op Gateway, public, each Online with its connected devices count, last seen time and Gateway ID",
+				"caption": "Two of the farm's own gateways and one public gateway, all online.",
+				"side": "right",
+				"width": 1600,
+				"height": 552
+			}
+		},
+		{
+			"id": "online-and-offline",
+			"heading": "Online and Offline",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Online means the gateway is connected to the radio network's servers right now. CropWatch checks every gateway's connection every few minutes, and a gateway's own page shows the time of the latest check under “Last status check”."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Offline means the gateway was not connected at the latest check. The usual reasons are a power cut, an unplugged cable, or a lost internet connection; check them in that order. For an indoor gateway, see "
+						},
+						{
+							"text": "Installing an indoor gateway",
+							"href": "page:installing-a-gateway#confirm-online"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Status and Last seen answer different questions. Read them together:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Online, Last seen a few minutes ago",
+								"bold": true
+							},
+							{
+								"text": ": working normally."
+							}
+						],
+						[
+							{
+								"text": "Online, but Last seen hours ago",
+								"bold": true
+							},
+							{
+								"text": ": the gateway is connected but hears nothing. The sensors near it have either stopped sending or can no longer reach it."
+							}
+						],
+						[
+							{
+								"text": "Offline",
+								"bold": true
+							},
+							{
+								"text": ": nothing gets through this gateway. A sensor that only this gateway can hear stops reporting until it comes back, and Last seen shows roughly when it dropped out."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If the time under “Last status check” is hours old, the Online or Offline you see is out of date. When CropWatch cannot reach the network to check, it keeps the last known status rather than guessing. Tell support if the time stays old."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "which-gateways-you-see",
+			"heading": "Which gateways you see",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Your list holds two kinds of gateway:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Gateways linked to your account",
+								"bold": true
+							},
+							{
+								"text": ": CropWatch staff link a gateway to the people at the site it serves, one person at a time. You cannot add a link yourself."
+							}
+						],
+						[
+							{
+								"text": "Public gateways",
+								"bold": true
+							},
+							{
+								"text": ": a public gateway appears in every CropWatch account's list, so your list includes gateways at farms or sites that are not yours. They count toward the Gateways card on the Overview page too."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Having access to a sensor does not put the gateway that carries it in your list. A colleague you added to a location sees your sensors, but not your gateway, until CropWatch links the gateway to them as well. Until then, that gateway appears to them as “Other gateway” in a sensor's list of gateways."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Public or Private only decides who sees the gateway in CropWatch. A private gateway still passes on messages from other CropWatch sensors in range, and its page counts those as other devices."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "a-gateways-page",
+			"heading": "A gateway's own page",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Press a row in the list to open the gateway. The top card carries the gateway's name and five facts:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Status",
+								"bold": true
+							},
+							{
+								"text": ": Online or Offline, as in the list."
+							}
+						],
+						[
+							{
+								"text": "Gateway ID",
+								"bold": true
+							},
+							{
+								"text": ": with a small copy button beside it. Press the button and the ID is copied, ready to paste into an email to support."
+							}
+						],
+						[
+							{
+								"text": "Public",
+								"bold": true
+							},
+							{
+								"text": ": reads “Public” or “Private”."
+							}
+						],
+						[
+							{
+								"text": "Last seen",
+								"bold": true
+							},
+							{
+								"text": ": when the gateway last passed on a message from any sensor."
+							}
+						],
+						[
+							{
+								"text": "Last status check",
+								"bold": true
+							},
+							{
+								"text": ": when CropWatch last checked whether the gateway is connected."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Back to gateways” at the top returns you to the list."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "“Gateway not found.” means the gateway is not one you can see: it is not linked to your account and it is not public. You will meet this if someone sends you a link to their gateway. Ask CropWatch to link the gateway to your account."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/gateways-in-the-app/gateway-details.webp",
+				"alt": "The details card of Greenhouse Gateway: Status Online, Gateway ID cw-gw-willow-01 with a copy button, Public reads Private, and the Last seen and Last status check times",
+				"caption": "The five facts at the top of a gateway's page.",
+				"side": "left",
+				"width": 1600,
+				"height": 359
+			}
+		},
+		{
+			"id": "connected-devices",
+			"heading": "The Connected devices table",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Below the details, “Connected devices” lists your sensors that this gateway heard in the last 24 hours, the most recently heard first. Search finds a sensor by its name, DevEUI or location, and pressing a row opens that sensor's page. The table shows 50 rows per page."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The RSSI and SNR come from the most recent message this gateway received from the sensor, not an average. One message can be weaker than usual, so check again after the sensor's next report before you move anything."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Two grey notices can appear:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“3 other devices you can't access also use this gateway.”",
+								"bold": true
+							},
+							{
+								"text": ": the gateway also heard sensors that are not shared with you. They count toward Connected devices in the list, but you cannot see their names or readings."
+							}
+						],
+						[
+							{
+								"text": "“No devices have been heard by this gateway in the last 24 hours.”",
+								"bold": true
+							},
+							{
+								"text": ": none of your sensors reached this gateway in that time. If the gateway is Online, the sensors that should use it are switched off or out of range."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The Connected devices figure in the list is the number of sensors in this table plus the “other devices” count."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "The columns of the Connected devices table",
+				"columns": [
+					"Column",
+					"What it tells you"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "Device"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The sensor's name. A sensor without a name shows its DevEUI."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Location"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The location the sensor belongs to."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "RSSI"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "How strong the sensor's message was when this gateway received it, in dBm. Closer to zero is stronger, so -80 beats -110."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "SNR"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "How clearly that message stood out from background radio noise, in dB. Higher is better."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Signal"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Bars that combine RSSI and SNR. See the next section."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Last heard"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "When this gateway last received a message from the sensor."
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/gateways-in-the-app/connected-devices.webp",
+				"alt": "The Connected devices card of Greenhouse Gateway: the grey notice 3 other devices you can't access also use this gateway, above a table of eight sensors with their location, RSSI, SNR, signal bars and Last heard time",
+				"caption": "Most recently heard first. The notice counts the sensors you cannot see.",
+				"side": "right",
+				"width": 1600,
+				"height": 1023
+			}
+		},
+		{
+			"id": "signal-bars",
+			"heading": "Reading the signal bars",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The bars turn the two numbers into one picture. CropWatch grades RSSI and SNR separately and shows the worse of the two grades, so a loud signal buried in noise does not look healthy."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "For example, RSSI -95 dBm earns 4 bars on its own and SNR -7 dB earns 2, so the sensor shows 2 amber bars: Okay."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "On a computer, rest the pointer on the bars to see the word and both numbers, for example “Signal strength: Okay · RSSI -95 dBm · SNR -7 dB”. For what the numbers mean and how to improve them, see "
+						},
+						{
+							"text": "RSSI and SNR",
+							"href": "page:rssi-and-snr"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "How many bars a message gets",
+				"columns": [
+					"Bars",
+					"Colour and word",
+					"RSSI at least",
+					"SNR at least"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "4"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Green, Strong"
+								}
+							],
+							[
+								{
+									"text": "-100 dBm"
+								}
+							],
+							[
+								{
+									"text": "0 dB"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "3"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Green, Strong"
+								}
+							],
+							[
+								{
+									"text": "-110 dBm"
+								}
+							],
+							[
+								{
+									"text": "-5 dB"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "2"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Amber, Okay"
+								}
+							],
+							[
+								{
+									"text": "-118 dBm"
+								}
+							],
+							[
+								{
+									"text": "-10 dB"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "1"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Red, Weak"
+								}
+							],
+							[
+								{
+									"text": "Below -118 dBm"
+								}
+							],
+							[
+								{
+									"text": "Below -10 dB"
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Empty, with a red crossed circle"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "No signal data"
+								}
+							],
+							[
+								{
+									"text": "No reading"
+								}
+							],
+							[
+								{
+									"text": "No reading"
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/gateways-in-the-app/signal-bars.webp",
+				"alt": "Four rows of a Connected devices table: GH1 Climate at RSSI -112 dBm and SNR -8.5 dB with 2 amber bars, North Soil A at -101 dBm and -4.2 dB with 3 green bars, North Soil C at -109 dBm and -6 dB with 2 amber bars, and North Soil B at -116 dBm and -11.5 dB with 1 red bar",
+				"caption": "North Soil C's RSSI alone would earn 3 bars, but its SNR earns 2, so it shows 2.",
+				"side": "left",
+				"width": 1600,
+				"height": 391
+			}
+		},
+		{
+			"id": "which-gateways-heard-a-sensor",
+			"heading": "Which gateways heard a sensor",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Open any sensor. Among the buttons at the top of its page is one marked “Signal”, with bars on it. Everyone who can see the sensor has this button."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The bars on the button are the sensor's current link: the best of the gateways that heard it within a day of its latest message. If the sensor has gone quiet, the button keeps its last known signal. Empty bars with a red crossed circle mean no gateway has ever heard the sensor."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Press the button to open “Connected gateways”. Every gateway that has ever heard the sensor gets a box, the most recent first:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "A green or red dot and the gateway's name",
+								"bold": true
+							},
+							{
+								"text": ": the dot is the gateway's status, Online or Offline. Press the name to open that gateway's page."
+							}
+						],
+						[
+							{
+								"text": "RSSI, SNR and Signal",
+								"bold": true
+							},
+							{
+								"text": ": from the last message that gateway received from this sensor."
+							}
+						],
+						[
+							{
+								"text": "Last heard",
+								"bold": true
+							},
+							{
+								"text": ": when that gateway last received anything from it."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A sensor heard by two or three gateways is normal, and gives it a backup route. A gateway that heard the sensor months ago stays in the window with its old Last heard time, which tells you the sensor no longer reaches it."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Other gateway” in grey stands for a gateway you cannot see, such as someone else's private gateway. When one is listed, the note “Gateways you don't have access to are shown as \"Other gateway\".” appears under the list. Readings that travel through it reach you as normal."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“No gateways have heard this device yet.”",
+								"bold": true
+							},
+							{
+								"text": ": the sensor's messages have never reached a gateway. A new sensor shows this until its first message gets through."
+							}
+						],
+						[
+							{
+								"text": "“Failed to load connected gateways.”",
+								"bold": true
+							},
+							{
+								"text": ": the list could not be fetched. Press “Close” and then “Signal” again."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The location page has a Signal column with the same bars for every sensor there, so you can spot a weak one without opening each sensor. See "
+						},
+						{
+							"text": "The location page",
+							"href": "page:the-location-page"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/gateways-in-the-app/signal-dialog.webp",
+				"alt": "The Connected gateways window for GH1 Climate with three boxes: Greenhouse Gateway with a green dot, RSSI -62 dBm, SNR 9.5 dB and 4 green bars; North Field Gateway with a green dot, -112 dBm, -8.5 dB and 2 amber bars; and Other gateway in grey, last heard on October 18. Below them is the note about gateways you don't have access to",
+				"caption": "Two gateways hear this sensor today. A gateway you cannot see heard it weeks ago.",
+				"side": "right",
+				"width": 1280,
+				"height": 888
+			}
+		},
+		{
+			"id": "what-you-cannot-change",
+			"heading": "What you cannot change",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The Gateways pages have no settings. From the app you cannot:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "rename a gateway; the name comes from when it was registered on the network"
+							}
+						],
+						[
+							{
+								"text": "make a gateway public or private"
+							}
+						],
+						[
+							{
+								"text": "choose who else can see a gateway"
+							}
+						],
+						[
+							{
+								"text": "add a new gateway, or remove one from your list"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "For any of these, contact CropWatch support and quote the Gateway ID from the gateway's page. To set up the hardware itself, see "
+						},
+						{
+							"text": "Installing an indoor gateway",
+							"href": "page:installing-a-gateway"
+						},
+						{
+							"text": "."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "sensor-not-reporting",
+			"heading": "Finding out why a sensor is not reporting",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "When a sensor turns red on the dashboard ("
+						},
+						{
+							"text": "When a sensor stops",
+							"href": "page:reading-the-dashboard#not-reporting"
+						},
+						{
+							"text": "), these pages tell you whether the gateway, the path between them, or the sensor itself is the problem."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Open the sensor, press “Signal”, and compare each gateway's Last heard with the time the sensor stopped reporting. Then match what you see:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“No gateways have heard this device yet.”",
+								"bold": true
+							},
+							{
+								"text": ": the sensor's messages have never got through. Check that the sensor is switched on and that a gateway is installed within range."
+							}
+						],
+						[
+							{
+								"text": "The gateway's dot is red",
+								"bold": true
+							},
+							{
+								"text": ": the gateway is Offline. If several sensors went quiet at the same moment, this is the cause. Restore its power and internet connection; its sensors start reporting again once it is back Online."
+							}
+						],
+						[
+							{
+								"text": "The dot is green, but Last heard for this sensor is old",
+								"bold": true
+							},
+							{
+								"text": ": the gateway works and the sensor is not reaching it. Check the sensor's battery, and look for anything new between the two: a closed door, a parked vehicle, moved equipment, a taller crop."
+							}
+						],
+						[
+							{
+								"text": "The dot is green and Last heard is recent, but the bars are red",
+								"bold": true
+							},
+							{
+								"text": ": messages get through only some of the time. Move the sensor or the gateway, or raise the gateway's antenna, as described in "
+							},
+							{
+								"text": "How to improve a weak signal",
+								"href": "page:rssi-and-snr#improving"
+							},
+							{
+								"text": "."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "You can also start from the gateway. Open its page: a sensor you expect but cannot find under “Connected devices” has not reached that gateway for more than 24 hours."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If a gateway shows Offline although it has power and internet, write down its Gateway ID and the time under Last seen, and contact support."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/gateways-in-the-app/signal-dialog-quiet-sensor.webp",
+				"alt": "The Connected gateways window for North Soil B, which stopped reporting: North Field Gateway with a green dot, RSSI -116 dBm, SNR -11.5 dB, 1 red bar, and a Last heard time more than three hours before the screenshot was taken",
+				"caption": "Green dot but an old Last heard: the gateway works, and the sensor no longer reaches it.",
+				"side": "left",
+				"width": 1280,
+				"height": 532
+			}
+		},
+		{
+			"id": "quick-answers",
+			"heading": "Quick answers",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "My list shows gateways I have never heard of.",
+								"bold": true
+							},
+							{
+								"text": " They are public gateways, which every CropWatch account sees."
+							}
+						],
+						[
+							{
+								"text": "My colleague cannot see our gateway.",
+								"bold": true
+							},
+							{
+								"text": " Gateways are linked to people one at a time, and sharing a location does not include them. Ask CropWatch support to link it."
+							}
+						],
+						[
+							{
+								"text": "Connected devices says 12, but the gateway's page lists 5 sensors.",
+								"bold": true
+							},
+							{
+								"text": " The other 7 belong to other people. The grey notice above the table gives that number."
+							}
+						],
+						[
+							{
+								"text": "How do I rename a gateway?",
+								"bold": true
+							},
+							{
+								"text": " Not in the app. Contact support with the Gateway ID."
+							}
+						],
+						[
+							{
+								"text": "The Overview page says a gateway is offline, but all of mine are online.",
+								"bold": true
+							},
+							{
+								"text": " Look in the list for a public gateway with a red dot; public gateways are counted too."
+							}
+						],
+						[
+							{
+								"text": "A sensor's gateway list shows “Other gateway”.",
+								"bold": true
+							},
+							{
+								"text": " A gateway you do not have access to heard it. Nothing is wrong, and the readings still arrive."
+							}
+						],
+						[
+							{
+								"text": "The gateway is Online but my sensor is still quiet.",
+								"bold": true
+							},
+							{
+								"text": " Press “Signal” on the sensor. If that gateway's Last heard is old, the sensor is not reaching it; check the sensor's battery and what stands between them."
+							}
+						],
+						[
+							{
+								"text": "What is a good signal?",
+								"bold": true
+							},
+							{
+								"text": " Three or four green bars. Two amber bars works. One red bar means the sensor is at the edge of range, so expect gaps in its readings."
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "rssi-and-snr"
+		},
+		{
+			"kind": "page",
+			"slug": "installing-a-gateway"
+		},
+		{
+			"kind": "page",
+			"slug": "what-is-lorawan"
+		},
+		{
+			"kind": "page",
+			"slug": "reading-the-dashboard"
+		},
+		{
+			"kind": "page",
+			"slug": "the-location-page"
+		},
+		{
+			"kind": "page",
+			"slug": "the-overview-page"
+		}
+	]
+}

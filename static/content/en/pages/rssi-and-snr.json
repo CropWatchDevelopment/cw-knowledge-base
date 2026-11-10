@@ -334,7 +334,7 @@
 							"bold": true
 						},
 						{
-							"text": " and choose a gateway. The table lists every device that gateway hears, with its "
+							"text": " and choose a gateway. The table lists your sensors that the gateway heard in the last 24 hours, with each one's "
 						},
 						{
 							"text": "RSSI",
@@ -356,6 +356,9 @@
 						},
 						{
 							"text": " bars, and when the gateway last heard it. This is the view to use when you want to see how one gateway is doing with all of its sensors."
+						},
+						{
+							"text": " Sensors belonging to other accounts are not listed; the page only says how many there were."
 						}
 					]
 				},

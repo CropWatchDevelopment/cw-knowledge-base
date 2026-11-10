@@ -71,6 +71,30 @@
 							{
 								"text": "An answer to four questions: which sensor, which reading, at what number, and who should be told."
 							}
+						],
+						[
+							{
+								"text": "Manager level or higher on every sensor the rule will watch. With a lower level you can open the form and fill it in, but saving answers with a red message: “You do not have permission to manage one or more selected devices”. The levels are explained in "
+							},
+							{
+								"text": "Sharing access and permission levels",
+								"href": "page:sharing-access#the-six-levels"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "For push notifications, push turned on on your own phone or computer first. See "
+							},
+							{
+								"text": "Push notifications on phones and computers",
+								"href": "page:push-notifications"
+							},
+							{
+								"text": "."
+							}
 						]
 					]
 				},
@@ -113,7 +137,7 @@
 								"bold": true
 							},
 							{
-								"text": ", with any rules you already have."
+								"text": ", with any rules you already have, grouped by location. The columns are “Name”, “Assigned Devices”, “Conditions”, “Actions” and the date the rule was made, under the heading “Updated At”. Type in the search box to find a rule."
 							}
 						],
 						[
@@ -125,7 +149,7 @@
 								"bold": true
 							},
 							{
-								"text": " button above the list, on the right."
+								"text": " button above the list, on the right. The form opens under the heading “Create Rule Template”."
 							}
 						]
 					]
@@ -224,6 +248,22 @@
 					]
 				},
 				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The sensors you pick here also decide who can be chosen in step 4. The Push and LINE recipient lists show the people who can see these sensors, and they stay empty until at least one sensor is ticked."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If the card shows “No devices available. Please add a device first.” instead of the box, your account has no sensors yet."
+						}
+					]
+				},
+				{
 					"type": "note",
 					"content": [
 						{
@@ -249,7 +289,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The third card is headed “3. Alert Criteria”. This is where you set the limit, and it has four parts:"
+							"text": "The third card is headed “3. Alert Criteria”. Its first block, “Condition 1”, holds one data field and the limit for it:"
 						}
 					]
 				},
@@ -263,7 +303,7 @@
 								"bold": true
 							},
 							{
-								"text": " — which reading to watch: Temperature (°C), Humidity (%), CO₂ (ppm), Soil Moisture, Water Depth (cm) and others. Pick one your sensor actually measures."
+								"text": ": the reading to watch, such as Temperature (°C), Humidity (%), CO₂ (ppm), Soil Moisture or Water Depth (cm). It starts on Temperature (°C). Pick one your sensor actually measures."
 							}
 						],
 						[
@@ -272,7 +312,7 @@
 								"bold": true
 							},
 							{
-								"text": " — how to compare it: “Less than (<)”, “Greater than (>)”, “Less than or equal (<=)”, “Greater than or equal (>=)” or “Equals (=)”."
+								"text": ": how to compare, one of “Less than (<)”, “Less than or equal (<=)”, “Greater than (>)”, “Greater than or equal (>=)” or “Equals (=)”. A new rule starts on “Greater than (>)”."
 							}
 						],
 						[
@@ -281,7 +321,7 @@
 								"bold": true
 							},
 							{
-								"text": " — the number that sets the alert off."
+								"text": ": the number that sets the alert off."
 							}
 						],
 						[
@@ -290,9 +330,63 @@
 								"bold": true
 							},
 							{
-								"text": " — the number the reading must come back to before the alert can happen again. The next section explains this one properly."
+								"text": ": the number the reading must come back to before the alert can happen again. The next section explains this one properly."
 							}
 						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Above those boxes is a preview: a number line that draws your limit as a coloured line, together with the point where it resets, so you can see which side of the number sets the alert off. Two settings sit above the number line:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Unit",
+								"bold": true
+							},
+							{
+								"text": ": °C, °F or °K. It decides how the numbers you type are read, and the boxes show it in brackets, as in “Trigger Value (C)”. For a temperature you can switch to °F and type Fahrenheit; CropWatch saves the °C equivalent. For every other data field leave it on °C, because CropWatch converts what you type as if it were a temperature."
+							}
+						],
+						[
+							{
+								"text": "Center",
+								"bold": true
+							},
+							{
+								"text": ": where the number line is centred, and the value a new threshold starts with. It is not saved with the rule."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Each threshold also has a "
+						},
+						{
+							"text": "Name",
+							"bold": true
+						},
+						{
+							"text": " and a "
+						},
+						{
+							"text": "Highlight color",
+							"bold": true
+						},
+						{
+							"text": ". They only label the line on the preview. The rule does not keep them, so they are back to “Condition 1” and the first colour when you open the rule again."
+						}
 					]
 				},
 				{
@@ -307,7 +401,7 @@
 					"type": "note",
 					"content": [
 						{
-							"text": "The “Range” choice in the Operator list cannot be saved. If you pick it, the form says “Unsupported operator.” and the save button stays greyed out. To watch a band of values, use two conditions instead — see below."
+							"text": "The “Range” choice in the Operator list cannot be saved. If you pick it, the boxes change to Minimum and Maximum, the form says “Unsupported operator.” and the save button stays greyed out. A band of values cannot be watched with two thresholds either; the section on using more than one condition explains why."
 						}
 					]
 				}
@@ -365,7 +459,7 @@
 						],
 						[
 							{
-								"text": "It climbs back to 7 °C. The rule resets, and you get a message saying it is back to normal."
+								"text": "It climbs back to 7 °C. The rule resets quietly: nothing is sent, but the time appears in the rule's history."
 							}
 						],
 						[
@@ -447,7 +541,7 @@
 			"image": {
 				"src": "images/setting-up-alert-rules/05-trigger-and-reset.svg",
 				"alt": "A temperature line falling through 5 degrees where the alert is sent, then rising back through 7 degrees where the rule resets",
-				"caption": "One message on the way down, one when it is back to normal.",
+				"caption": "One alert on the way down. The rule resets quietly once the reading is back above 7 °C.",
 				"side": "right",
 				"width": 680,
 				"height": 380
@@ -461,15 +555,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "“+ Add Another Condition” adds a second test. Everything you add must be true at the same moment for the alert to happen."
-						}
-					]
-				},
-				{
-					"type": "paragraph",
-					"content": [
-						{
-							"text": "That makes some things easy and one thing impossible, so it is worth knowing which is which."
+							"text": "The criteria card has two add buttons, and they do different things:"
 						}
 					]
 				},
@@ -479,20 +565,50 @@
 					"items": [
 						[
 							{
-								"text": "Both at once",
+								"text": "Add another threshold for this data field",
 								"bold": true
 							},
 							{
-								"text": " — “CO₂ above 1000 and humidity above 80%” is one rule with two conditions."
+								"text": " sits on the preview inside a condition. It adds a second limit for the same reading, as a new card. The card starts on “Equals (=)” with the Center value filled in."
 							}
 						],
 						[
 							{
-								"text": "A band of values",
+								"text": "Add a condition for another data field",
 								"bold": true
 							},
 							{
-								"text": " — “between 20 °C and 30 °C” is one rule with two conditions: Greater than 20, and Less than 30."
+								"text": " sits below the conditions. It adds “Condition 2”, with a Data Field of its own. Once there are two, each condition gets a "
+							},
+							{
+								"text": "Remove",
+								"bold": true
+							},
+							{
+								"text": " button."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Whichever you use, every threshold and every condition in one rule must be true at the same moment for the alert to happen, and every reset value must be reached at the same moment for it to reset. That gives three cases:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Two readings at once",
+								"bold": true
+							},
+							{
+								"text": ": “CO₂ above 1000 and humidity above 80%” is one rule with two conditions, one per data field. It resets when both readings are back past their reset values."
 							}
 						],
 						[
@@ -501,9 +617,26 @@
 								"bold": true
 							},
 							{
-								"text": " — “colder than 5 °C or hotter than 35 °C” cannot be one rule, because the two can never both be true. Make two rules."
+								"text": ": “colder than 5 °C or hotter than 35 °C” cannot be one rule, because the two can never both be true. Make two rules."
+							}
+						],
+						[
+							{
+								"text": "Two limits on one reading",
+								"bold": true
+							},
+							{
+								"text": ": a band such as “between 20 °C and 30 °C” does not work either. The alert can go off, but the two reset values can never both be reached, so the rule fires once and stays set. Keep to one threshold per data field, and make a second rule for a second limit."
 							}
 						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "When a condition has two thresholds, the preview can show “Overlaps with Condition 1.” under the Operator, or “Reset will never happen because every reset value is covered by another alert.” under the Reset Value. The form still lets you save. Take either warning as the sign to split the thresholds into separate rules."
+						}
 					]
 				}
 			]
@@ -516,7 +649,21 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The fourth card is headed “4. Alert Actions”. CropWatch has already added one for you: a push notification to yourself. Change it or add more."
+							"text": "The fourth card is headed “4. Alert Actions”. On a new rule, CropWatch has already added “Action 1”: a push notification with your own name in "
+						},
+						{
+							"text": "Push recipients",
+							"bold": true
+						},
+						{
+							"text": ". Change it, or press "
+						},
+						{
+							"text": "Add Action",
+							"bold": true
+						},
+						{
+							"text": " for more."
 						}
 					]
 				},
@@ -538,7 +685,21 @@
 								"bold": true
 							},
 							{
-								"text": " — a notification on the phone or computer of the people you choose. Anyone who has not set up notifications is shown as “Push not set up” and will not get anything."
+								"text": ": a notification on the phones and computers of the people you choose in "
+							},
+							{
+								"text": "Push recipients",
+								"bold": true
+							},
+							{
+								"text": ". The list fills in once you have chosen sensors in step 2, and shows everyone who can see at least one of them. People who have not turned push on are greyed out with “has not subscribed to push” after their name, and cannot be picked. How to turn it on: "
+							},
+							{
+								"text": "Push notifications on phones and computers",
+								"href": "page:push-notifications"
+							},
+							{
+								"text": "."
 							}
 						],
 						[
@@ -547,7 +708,7 @@
 								"bold": true
 							},
 							{
-								"text": " — type one address in the “Recipient” box. For a second address, add a second action rather than typing two addresses in one box."
+								"text": ": type one address in the “Recipient” box. For a second address, add a second action rather than typing two addresses in one box."
 							}
 						],
 						[
@@ -556,7 +717,14 @@
 								"bold": true
 							},
 							{
-								"text": " — pick people from the list. Anyone shown as “LINE not linked” has not connected LINE to CropWatch yet and will not receive the message."
+								"text": ": pick people in "
+							},
+							{
+								"text": "LINE recipients",
+								"bold": true
+							},
+							{
+								"text": ". Anyone shown with “LINE not linked” after their name has not connected LINE to CropWatch yet and will not receive the message."
 							}
 						],
 						[
@@ -565,9 +733,85 @@
 								"bold": true
 							},
 							{
-								"text": " — switches a relay instead of telling a person: turn on a heater, open a vent. It asks which device to switch and for how long. Ask us before using this one."
+								"text": ": switches a relay instead of telling a person: turn on a heater, open a vent. It is described at the end of this section. Ask us before using this one."
 							}
 						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "About your own name on a new rule: until you choose a sensor, the box only shows your name. Once sensors are chosen, if you have not turned push on yourself, a red message appears under the box: “(your name) has not subscribed to push. Choose someone who has.” The rule cannot be saved like that. Turn push on from your Profile first, pick someone else, or change the Action Type. With nobody picked, the message reads “Select at least one recipient who has subscribed to push.”"
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Editing an existing rule keeps everyone already in its Push recipients, including people who have no working phone or computer at the moment; they receive alerts again once they turn push back on. Someone who stops push on their last device is taken off every rule's Push recipients automatically. When the rule fires, only people who still have access to that sensor are told."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Switching a relay.",
+							"bold": true
+						},
+						{
+							"text": " A LoRaWAN action asks for three things:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Device",
+								"bold": true
+							},
+							{
+								"text": ": the relay controller to switch. The list shows all your sensors, not only relay controllers, so choose carefully."
+							}
+						],
+						[
+							{
+								"text": "Action",
+								"bold": true
+							},
+							{
+								"text": ": “Relay 1 ON for 5 seconds”, “Relay 2 ON for 5 seconds” or “Both relays ON for 5 seconds”, or one relay “permanently ON” or “permanently OFF”. The number of seconds follows the “On time in seconds” box, which appears for the timed choices and takes 1 to 86400 seconds (one day)."
+							}
+						],
+						[
+							{
+								"text": "Revert relay state when the rule resets",
+								"bold": true
+							},
+							{
+								"text": ": available only for the permanent choices, and ticked by default. When the rule resets, CropWatch sends the controller a command that switches both relays off, whichever relay the action changed."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "More about relays is in "
+						},
+						{
+							"text": "the relays guide",
+							"href": "page:switching-relays"
+						},
+						{
+							"text": "."
+						}
 					]
 				},
 				{
@@ -596,7 +840,14 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "The last card shows “Rule Summary”: the name, whether it is active, the sensors it watches and the conditions. Read it once. It is written the way the rule will actually behave, which is the best chance to catch a slip."
+							"text": "The last card is headed “4. Review & Create”. Once everything above is filled in, it shows “Rule Summary”: the name, the status (“Active” or “Inactive”), the assigned sensors and the conditions, written out as, for example, “Temperature (°C) Less than (<) 5 (Reset Value: 7)”. Press "
+						},
+						{
+							"text": "Show details",
+							"bold": true
+						},
+						{
+							"text": " to see the actions and who they go to as well. Read it once. It is written the way the rule will actually behave, which is the best chance to catch a slip."
 						}
 					]
 				},
@@ -624,12 +875,17 @@
 						],
 						[
 							{
-								"text": "A trigger or reset value left empty."
+								"text": "A trigger or reset value left empty, or a condition whose thresholds have all been removed."
 							}
 						],
 						[
 							{
 								"text": "An action with nobody to send to."
+							}
+						],
+						[
+							{
+								"text": "A push action whose only recipient has not turned push on."
 							}
 						],
 						[
@@ -643,7 +899,15 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "Then press “Create Rule”. A green message confirms it and you are taken back to the list, where your rule now appears."
+							"text": "Then press “Create Rule”. A green message confirms it (“Rule template \"Greenhouse too cold\" created successfully.”) and you are taken back to the list, where your rule now appears."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If CropWatch refuses, a red message says why. “You do not have permission to manage one or more selected devices” means your level on at least one of the sensors is below Manager; see Before you start."
 						}
 					]
 				}
@@ -673,7 +937,7 @@
 					"type": "paragraph",
 					"content": [
 						{
-							"text": "When it does fire, everyone on the action list is told, with the rule's name and which sensor it was. When the reading comes back past the reset value, a second message says it is back to normal."
+							"text": "When it does fire, everyone on the action list is told, with the rule's name and which sensor it was. When the reading comes back past the reset value, the rule resets without sending anything: no email, LINE message or push notification says it is back to normal. The only action that does something at a reset is a relay action with “Revert relay state when the rule resets” ticked. Every reset is listed in the rule's history."
 						}
 					]
 				},
@@ -709,7 +973,7 @@
 								"bold": true
 							},
 							{
-								"text": " opens the rule so you can change it. It is the same form; the last button now says “Save Changes”."
+								"text": " opens the rule so you can change it. It is the same form; the last card is headed “4. Review & Save” and its button says “Save Changes”."
 							}
 						],
 						[
@@ -718,7 +982,7 @@
 								"bold": true
 							},
 							{
-								"text": " shows the history: when this rule fired, and for which sensor."
+								"text": " opens “View History”: every time the rule fired, and when it reset. Each event is marked “Active” or “Resolved” and shows when it “Triggered”, the reading at that moment, and how long it lasted. A rule that watches several sensors has a filter, set to “All devices”, for looking at one sensor at a time."
 							}
 						],
 						[
@@ -727,7 +991,7 @@
 								"bold": true
 							},
 							{
-								"text": " deletes the rule. It asks first, and it cannot be undone."
+								"text": " deletes the rule. It asks first (“Are you sure you want to delete the rule \"Greenhouse too cold\"? This action cannot be undone.”) and goes ahead when you press “Delete”."
 							}
 						]
 					]
@@ -737,6 +1001,14 @@
 					"content": [
 						{
 							"text": "To stop a rule for a while without losing it — you are working in the greenhouse and the door is open — open it with the pencil and switch “Active rule” off. Switch it back on when you are done."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Changing, pausing and deleting a rule need the same level as creating one: Manager or higher on every sensor it watches."
 						}
 					]
 				}
@@ -818,6 +1090,56 @@
 							{
 								"text": " A limit set where the reading normally sits means constant messages, and messages people ignore are worse than none."
 							}
+						],
+						[
+							{
+								"text": "Waiting for a “back to normal” message.",
+								"bold": true
+							},
+							{
+								"text": " None is sent. A rule resets quietly; its history shows when."
+							}
+						],
+						[
+							{
+								"text": "Two thresholds for one reading.",
+								"bold": true
+							},
+							{
+								"text": " They must all be true at once, so the rule never fires or never resets. See "
+							},
+							{
+								"text": "Using more than one condition",
+								"href": "page:setting-up-alert-rules#more-than-one-condition"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Unit switched to °F for something that is not a temperature.",
+								"bold": true
+							},
+							{
+								"text": " The number is converted as if it were a temperature. Leave Unit on °C except for temperature."
+							}
+						],
+						[
+							{
+								"text": "Your own push not turned on.",
+								"bold": true
+							},
+							{
+								"text": " A new rule whose only push recipient is you cannot be saved until you turn push on. See "
+							},
+							{
+								"text": "Push notifications on phones and computers",
+								"href": "page:push-notifications"
+							},
+							{
+								"text": "."
+							}
 						]
 					]
 				}
@@ -832,6 +1154,10 @@
 		{
 			"kind": "page",
 			"slug": "air-temperature-humidity-sensors"
+		},
+		{
+			"kind": "page",
+			"slug": "push-notifications"
 		},
 		{
 			"kind": "url",

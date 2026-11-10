@@ -1,0 +1,1140 @@
+{
+	"slug": "switching-relays",
+	"topic": "software",
+	"title": "Switching relays",
+	"intro": "A relay is a switch that CropWatch can turn on and off from your phone or computer. This guide covers how relays look on the dashboard, how to switch one and know that it worked, the timed pulse, the history of every change, who is allowed to switch, and alert rules that switch relays for you.",
+	"sections": [
+		{
+			"id": "what-a-relay-is",
+			"heading": "What a relay is",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A relay board has two outputs, Relay 1 and Relay 2. Each one is a switch that can be wired to something you want to control from a distance: a pump, a heater, a fan, a vent motor."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "CropWatch sends the board a command over the same radio network your sensors use, and the board answers with its new state. A relay board listens all the time, so a command usually reaches it and gets an answer within a few seconds. Between commands the board also reports its state on its own schedule."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The dashboard and the Relay History show what the board reported. Pressing a button sends a request; the board's answer is what confirms it."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "on-the-dashboard",
+			"heading": "Relays on the dashboard",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A relay board appears on the dashboard like any sensor. Its card shows two readings: the first is Relay 1, the second Relay 2. Each reads On or Off with a coloured dot in front, 🟢 On or 🔴 Off. The word always sits next to the dot, so the state can be read without relying on colour."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Open Details on the card to see the two relays by name, “Relay 1” and “Relay 2”, and how long ago the board last reported. In the table view the states appear as text in the Primary and Secondary columns, for example “Relay 1: 🟢 On” and “Relay 2: 🔴 Off”."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "The dashboard shows the board's latest report. A command that is still waiting for an answer does not appear there; open the relay's page to follow it."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/switching-relays/dashboard-card.webp",
+				"alt": "The Greenhouse 1 column of the dashboard in card view. The GH1 Irrigation Relay card shows a green dot with On and a red dot with Off, and its open details list Relay 1 On, Relay 2 Off, Last Seen 6m 32s and a Details button",
+				"caption": "The first reading is Relay 1, the second Relay 2.",
+				"side": "right",
+				"width": 576,
+				"height": 1202
+			}
+		},
+		{
+			"id": "the-relay-page",
+			"heading": "The relay's page",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Open the relay with the Details button on its card, or from the list of sensors at its location. Below the header that every sensor page has, the page holds, from top to bottom:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Two cards, “Relay 1” and “Relay 2”",
+								"bold": true
+							},
+							{
+								"text": ": each headed “Current state”, with a switch picture, a label such as “🟢 ON” or “🔴 OFF”, and the buttons “Turn On” and “Turn Off”. The switch picture only shows the state; you cannot flip it."
+							}
+						],
+						[
+							{
+								"text": "“Timed pulse control”",
+								"bold": true
+							},
+							{
+								"text": ": a panel that opens when you press it, for switching a relay on for a set number of seconds."
+							}
+						],
+						[
+							{
+								"text": "“Last updated”",
+								"bold": true
+							},
+							{
+								"text": ": the date and time of the board's latest report."
+							}
+						],
+						[
+							{
+								"text": "“Relay History”",
+								"bold": true
+							},
+							{
+								"text": ": every state change and every command in the chosen period."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "While the page is open, CropWatch fetches the board's state every 30 seconds, so a change made by a colleague or by an alert rule shows up without reloading."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A card that reads “Unknown”, with “No confirmed relay telemetry yet.” under it, means CropWatch has no report of that relay's state yet. Its buttons still work for anyone allowed to switch, so a command can still be sent."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/switching-relays/relay-page.webp",
+				"alt": "The top of the relay's page: the header with the period buttons and the Signal button, the Relay 1 card showing ON with Turn On greyed out, the Relay 2 card showing OFF with Turn Off greyed out, the closed Timed pulse control panel and the Last updated time",
+				"caption": "Below the header: the two relay cards, the pulse panel and the time of the latest report.",
+				"side": "left",
+				"width": 1600,
+				"height": 760
+			}
+		},
+		{
+			"id": "turning-on-and-off",
+			"heading": "Turning a relay on or off",
+			"body": [
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Open the relay's page."
+							}
+						],
+						[
+							{
+								"text": "On the card for the relay you want, press “Turn On” or “Turn Off”. The button that matches the current state is highlighted and greyed out: a relay that is already on cannot be turned on again."
+							}
+						],
+						[
+							{
+								"text": "The button shows a spinner while the command goes out. Then a message appears: “Relay 1 command sent. Waiting for the device to confirm.”"
+							}
+						],
+						[
+							{
+								"text": "Wait. The board usually answers within seconds, and a green message confirms it: “Relay 1 verified 🟢 ON.”"
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "That green message is the confirmation. Until you see it, the relay has been asked to switch, and that is all you know."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "There is no “are you sure?” step. The command goes the moment you press the button, so check that you are on the right relay's page and the right card first."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/switching-relays/command-confirmed.webp",
+				"alt": "The relay's page right after the board answered: the green message Relay 2 verified ON at the top right, and both relay cards showing ON",
+				"caption": "The green message confirms that the relay switched.",
+				"side": "right",
+				"width": 1600,
+				"height": 667
+			}
+		},
+		{
+			"id": "waiting-for-confirmation",
+			"heading": "While CropWatch waits for an answer",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "As soon as the command is sent, the card shows the state you asked for, with an amber “Pending confirmation” label and the line “Command sent. Waiting for the device to confirm.” What happens next depends on the board:"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "While CropWatch is waiting, every relay button on the page is greyed out, on both cards, for up to 60 seconds. You cannot send a second command to the board until the first one is settled or the 60 seconds are up."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "What the relay card shows after you press a button",
+				"columns": [
+					"When",
+					"What you see",
+					"What it means"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "Straight away"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "“Pending confirmation” on the card."
+								}
+							],
+							[
+								{
+									"text": "CropWatch looks for the board's answer after 5 seconds, then every 4 seconds."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "After 20 seconds with no answer"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "“No reply yet, so the device was asked to report its current state.”"
+								}
+							],
+							[
+								{
+									"text": "The answer was probably lost on the way. CropWatch asks the board to report again."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "The board answers with the new state"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "A green message, “Relay 1 verified 🟢 ON.”, and the amber label goes away."
+								}
+							],
+							[
+								{
+									"text": "The relay switched."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "After 60 seconds, the board answered but still shows the old state"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "An amber message, “Relay 1 still reports 🔴 OFF after the command.” The card shows the state the board reported."
+								}
+							],
+							[
+								{
+									"text": "The relay did not switch."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "After 60 seconds with no answer at all"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "An amber message, “Relay 1 hasn't confirmed yet. It will update when the device next reports.” The label changes to “Not confirmed yet” and the buttons work again."
+								}
+							],
+							[
+								{
+									"text": "CropWatch has stopped waiting actively. The board's next report settles it."
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/switching-relays/waiting-for-confirmation.webp",
+				"alt": "Both relay cards while CropWatch waits for an answer. The Relay 2 card already shows ON, with an amber Pending confirmation label and the line Command sent. Waiting for the device to confirm. All four buttons are greyed out",
+				"caption": "Until the board answers, the card shows the state you asked for and every button is grey.",
+				"side": "left",
+				"width": 1600,
+				"height": 390
+			}
+		},
+		{
+			"id": "when-it-does-not-answer",
+			"heading": "When the relay does not answer",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Not confirmed yet” does not mean the relay failed. Either the command did not arrive, or it worked and only the answer was lost; at this point CropWatch cannot tell which. The card keeps showing the state you asked for, labelled “Not confirmed yet”, with the line “The device hasn't confirmed this yet. It will update automatically when the device next reports.” When the next report arrives, the card shows what the board says, with the green or amber message described above. You can leave the page in the meantime: Relay History records the result either way."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "If the relay stays unconfirmed, or you get “still reports … after the command”:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Check that the relay board has power."
+							}
+						],
+						[
+							{
+								"text": "Press “Signal” on the relay's page and check that a gateway has heard it recently; see "
+							},
+							{
+								"text": "Gateways in the app",
+								"href": "page:gateways-in-the-app"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "Look at Relay History. A result of “Didn't switch” means the board answered and kept its old state."
+							}
+						],
+						[
+							{
+								"text": "Try the command once more. If it fails again, contact support."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Avoid pressing the buttons over and over. Each press is a separate command, and the history records every one."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "timed-pulse",
+			"heading": "Switching on for a set time",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“Timed pulse control” turns a relay on for the number of seconds you choose, and the board turns it off again by itself. Use it to run a pump for five minutes without having to come back and switch it off."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "On the relay's page, press “Timed pulse control” to open the panel."
+							}
+						],
+						[
+							{
+								"text": "Type the length in “Pulse duration (seconds)”. It starts at 60; five minutes is 300."
+							}
+						],
+						[
+							{
+								"text": "Press “Pulse Relay 1” or “Pulse Relay 2”."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The duration and the buttons follow these rules:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Whole seconds from 15 to 4294967",
+								"bold": true
+							},
+							{
+								"text": ": the upper limit is about 49 days. Anything else shows “Enter a whole number of seconds between 15 and 4294967.” and both pulse buttons stay grey."
+							}
+						],
+						[
+							{
+								"text": "The relay must be off",
+								"bold": true
+							},
+							{
+								"text": ": a pulse button is greyed out while its relay shows ON. Turn the relay off first."
+							}
+						],
+						[
+							{
+								"text": "Both relays' states must be known",
+								"bold": true
+							},
+							{
+								"text": ": if CropWatch has no report of a relay's state yet, the pulse is refused with “Timed relay pulse requires a confirmed current state for both relays”. Wait for the board's next report and try again."
+							}
+						],
+						[
+							{
+								"text": "The other relay is left alone",
+								"bold": true
+							},
+							{
+								"text": ": pulsing Relay 1 does not change Relay 2."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "CropWatch waits for an answer as it does for an ordinary command, but it stops waiting when the pulse ends. For a short pulse, the amber label can simply disappear when the time is up, with no green message. The board reports a few seconds after a pulse finishes, and the result then appears in Relay History."
+						}
+					]
+				}
+			],
+			"image": {
+				"src": "images/switching-relays/timed-pulse.webp",
+				"alt": "The Timed pulse control panel opened, with 300 typed in Pulse duration (seconds). Pulse Relay 1 is greyed out because Relay 1 is on, and Pulse Relay 2 can be pressed",
+				"caption": "300 seconds is five minutes. A relay that is on cannot be pulsed.",
+				"side": "right",
+				"width": 1600,
+				"height": 272
+			}
+		},
+		{
+			"id": "relay-history",
+			"heading": "Relay History",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The “Relay History” card lists what happened to the relay, newest first, with the time to the second. The buttons at the top of the page choose the period: “Today Only” (selected when the page opens), “Last 24 Hours”, “Last 48 Hours” and “Last 72 Hours”. The longest you can look back is 72 hours."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The “Event” column has three kinds of row:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Device reported a change”",
+								"bold": true
+							},
+							{
+								"text": ": the board reported that a relay changed state. The Relay 1 and Relay 2 columns show both states after the change, and the relay that changed has a filled label."
+							}
+						],
+						[
+							{
+								"text": "“Relay 1 → 🟢 ON”",
+								"bold": true
+							},
+							{
+								"text": ": a command sent from the relay's page; a pulse reads “Relay 1 → 🟢 ON for 300 s”. Under it are “Requested by” and the person's name. That relay's column shows the state the board reported in answer; the other relay's column shows a dash."
+							}
+						],
+						[
+							{
+								"text": "“Status report requested”",
+								"bold": true
+							},
+							{
+								"text": ": CropWatch asked the board to report because an answer was late. These rows appear by themselves while a command is waiting."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "“No relay changes or commands in this period.” means nothing happened in the chosen period; pick a longer one to look further back. If the history cannot be fetched, a red message says “Unable to load relay history for the selected range.”"
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Commands sent by alert rules are not listed as commands. When a rule switches a relay, the history shows the board's report of it as “Device reported a change”, with no name."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "The Result column, for commands and status requests",
+				"columns": [
+					"Result",
+					"What it means"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "Confirmed"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The board reported the state that was asked for."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Answered"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The board replied to a status request."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Didn't switch"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The board reported after the command and still showed the old state."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Not confirmed"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "No report settled it: the board stayed silent, a pulse ended unseen, or a newer command replaced it."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Waiting"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The command is still within its waiting time, usually the first minute."
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"src": "images/switching-relays/relay-history.webp",
+				"alt": "The Relay History card, newest first: a Device reported a change row, the command Relay 2 to ON requested by Emma Hayes and Confirmed, an earlier Relay 1 to ON command, a Relay 2 to OFF command requested by Liam Chen, and a Status report requested row marked Answered",
+				"caption": "Each command shows who sent it and how the board answered. The board's own reports read Device reported a change.",
+				"side": "left",
+				"width": 1600,
+				"height": 1054
+			}
+		},
+		{
+			"id": "who-can-switch",
+			"heading": "Who can switch a relay",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Your permission level on the relay board decides what you can do. The levels are explained in "
+						},
+						{
+							"text": "The six levels",
+							"href": "page:sharing-access#the-six-levels"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Owner, Admin and Manager",
+								"bold": true
+							},
+							{
+								"text": ": see everything on the relay's page and use every button."
+							}
+						],
+						[
+							{
+								"text": "User and Viewer",
+								"bold": true
+							},
+							{
+								"text": ": see the same states and history, but the buttons and the duration box are greyed out, and a note reads “You need manager access or higher to queue relay commands.”"
+							}
+						],
+						[
+							{
+								"text": "Disabled",
+								"bold": true
+							},
+							{
+								"text": ": cannot see the relay board at all."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "CropWatch checks the level again when each command arrives. If someone lowers your level while you have the page open, pressing a button answers “You do not have permission to control this relay” and nothing is sent."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "rules-that-switch-relays",
+			"heading": "Alert rules that switch a relay",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "An alert rule can switch a relay as well as, or instead of, telling a person: start a fan when the temperature passes 30 °C, for example. In the rule's “4. Alert Actions” card, set “Action Type” to “LoRaWAN”. The rest of the rule is set up as described in "
+						},
+						{
+							"text": "Creating an alert rule",
+							"href": "page:setting-up-alert-rules#choose-who-is-told"
+						},
+						{
+							"text": "."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The action then asks for:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "“Device”",
+								"bold": true
+							},
+							{
+								"text": ": the relay board to switch. The list holds every sensor you have access to, each shown as its name and DevEUI, so pick the relay board by name."
+							}
+						],
+						[
+							{
+								"text": "“Action”",
+								"bold": true
+							},
+							{
+								"text": ": “Relay 1 ON for 5 seconds”, “Relay 2 ON for 5 seconds” or “Both relays ON for 5 seconds” (the number follows the box below), or “Relay 1 permanently ON”, “Relay 1 permanently OFF”, “Relay 2 permanently ON” or “Relay 2 permanently OFF”."
+							}
+						],
+						[
+							{
+								"text": "“On time in seconds”",
+								"bold": true
+							},
+							{
+								"text": ": shown for the timed actions only, from 1 to 86400 (24 hours)."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The tick box “Revert relay state when the rule resets” can only be ticked with the four permanently ON or OFF actions. When the rule resets with the box ticked, CropWatch sends the board one command that switches both relays off. It does not put each relay back the way it was:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "With “Relay 1 permanently ON”, Relay 1 goes off at reset, and so does Relay 2 if it was on."
+							}
+						],
+						[
+							{
+								"text": "With a permanently OFF action, the reset does not turn the relay back on; it switches both relays off."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If the other relay on the same board runs equipment that must stay on, leave the box unticked."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "While a timed switch-on sent by a rule is still running, CropWatch sends that board no other rule command. It waits until the time is up, plus a few seconds."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "messages",
+			"heading": "Messages and what to do",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Some of these messages come from CropWatch's server and are always in English, whatever language you use the app in."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "About “Device is missing a valid TTI device id”: a relay board added with the guided steps in "
+						},
+						{
+							"text": "Adding a sensor",
+							"href": "page:adding-a-sensor"
+						},
+						{
+							"text": " is given its radio network name automatically. For any other board, ask support to set it."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "Messages on the relay page",
+				"columns": [
+					"Message",
+					"What it means",
+					"What to do"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "You need manager access or higher to queue relay commands."
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Your level on this relay board is below Manager."
+								}
+							],
+							[
+								{
+									"text": "Ask an Admin at the location to raise your level."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "You do not have permission to control this relay"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The same, found when the command arrived."
+								}
+							],
+							[
+								{
+									"text": "Ask an Admin at the location to raise your level."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "A relay command is already in progress for device, followed by the DevEUI"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "Someone sent a command to this board at the same moment."
+								}
+							],
+							[
+								{
+									"text": "Wait a few seconds, look at the card, then decide whether to try again."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Timed relay pulse requires the target relay to currently be off"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "CropWatch's latest report says the relay is on."
+								}
+							],
+							[
+								{
+									"text": "Turn it off first, or wait for the next report."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Timed relay pulse requires a confirmed current state for both relays"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "CropWatch has no report of one relay's state."
+								}
+							],
+							[
+								{
+									"text": "Wait for the board's next report."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Device is missing a valid TTI device id"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The board is missing the name that addresses it on the radio network, so CropWatch cannot send it anything."
+								}
+							],
+							[
+								{
+									"text": "Contact support. This cannot be fixed from the app."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "TTI relay request failed"
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The radio network did not accept the command."
+								}
+							],
+							[
+								{
+									"text": "Try again in a minute. If it keeps happening, contact support."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Unable to update the relay right now."
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The command could not be sent, for example because your connection dropped."
+								}
+							],
+							[
+								{
+									"text": "Check your internet connection and try again."
+								}
+							]
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Unable to load relay history for the selected range."
+							}
+						],
+						"cells": [
+							[
+								{
+									"text": "The history could not be fetched."
+								}
+							],
+							[
+								{
+									"text": "Press the period button again, or reload the page."
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "quick-answers",
+			"heading": "Quick answers",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "I pressed Turn On and nothing seems to have happened.",
+								"bold": true
+							},
+							{
+								"text": " Look at the card. “Pending confirmation” means CropWatch is waiting for the board; give it up to a minute."
+							}
+						],
+						[
+							{
+								"text": "All the buttons are grey.",
+								"bold": true
+							},
+							{
+								"text": " Either a command is still waiting for an answer (up to 60 seconds), or your level is below Manager, in which case a note under the controls says so."
+							}
+						],
+						[
+							{
+								"text": "Turn On is grey, but I know the relay is off.",
+								"bold": true
+							},
+							{
+								"text": " CropWatch's latest report says it is on. Wait for the board's next report, or check Relay History for the last change."
+							}
+						],
+						[
+							{
+								"text": "The dashboard still says Off after I turned the relay on.",
+								"bold": true
+							},
+							{
+								"text": " The dashboard follows the board's reports. Open the relay's page to see whether the command has been confirmed."
+							}
+						],
+						[
+							{
+								"text": "Who switched this relay?",
+								"bold": true
+							},
+							{
+								"text": " Relay History shows “Requested by” and a name under each command sent from the relay's page. Changes made by alert rules show as “Device reported a change”."
+							}
+						],
+						[
+							{
+								"text": "Why will the pulse not accept 10 seconds?",
+								"bold": true
+							},
+							{
+								"text": " The shortest pulse is 15 seconds."
+							}
+						],
+						[
+							{
+								"text": "Can I see what happened last week?",
+								"bold": true
+							},
+							{
+								"text": " Not on this page. Relay History goes back at most 72 hours."
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		},
+		{
+			"kind": "page",
+			"slug": "sharing-access"
+		},
+		{
+			"kind": "page",
+			"slug": "gateways-in-the-app"
+		},
+		{
+			"kind": "page",
+			"slug": "reading-the-dashboard"
+		},
+		{
+			"kind": "page",
+			"slug": "adding-a-sensor"
+		}
+	]
+}
