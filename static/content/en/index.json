@@ -20,6 +20,7 @@
 				"resetting-your-password",
 				"reading-the-dashboard",
 				"sensor-settings",
+				"sharing-access",
 				"setting-up-alert-rules",
 				"creating-a-report",
 				"reading-a-report"
@@ -266,6 +267,27 @@
 				"iso17025",
 				"deveui",
 				"tti"
+			]
+		},
+		"sharing-access": {
+			"topic": "software",
+			"title": "Sharing access and permission levels",
+			"summary": "Why access starts at a location, what Owner, Admin, Manager, User, Viewer and Disabled each allow, and how to add, change and remove people.",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"permissions",
+				"permission level",
+				"access",
+				"share",
+				"owner",
+				"admin",
+				"manager",
+				"user",
+				"viewer",
+				"disabled",
+				"add user",
+				"remove user"
 			]
 		},
 		"resetting-your-password": {

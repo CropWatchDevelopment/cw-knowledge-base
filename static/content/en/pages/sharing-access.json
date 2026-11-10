@@ -1,0 +1,618 @@
+{
+	"slug": "sharing-access",
+	"topic": "software",
+	"title": "Sharing access and permission levels",
+	"intro": "CropWatch decides what a person can see in two steps: first the location, then each sensor in it. This guide explains why someone has to be added to a location before they can see any of its sensors, what each of the six levels allows, and how to add, change and remove people.",
+	"sections": [
+		{
+			"id": "locations-come-first",
+			"heading": "Locations come first",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A location is a place: a greenhouse, a field, a cold store. Every sensor belongs to exactly one location, set in the sensor's settings."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Access follows the same shape. You add a person to a location, and that is what lets them see the sensors inside it. There is no way to share one sensor on its own: a sensor's settings page can change the level of people who are already in its location, but it has nowhere to add anyone new."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "If someone needs to see a sensor, start at its location. Adding them there is the only way to share it."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "two-kinds-of-level",
+			"heading": "A level for the location, and one for each sensor",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Adding someone to a location gives them two kinds of level:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Their location level",
+								"bold": true
+							},
+							{
+								"text": ": what they can do with the location itself, such as opening its settings, renaming it, adding sensors to it and adding other people."
+							}
+						],
+						[
+							{
+								"text": "A sensor level for each sensor in it",
+								"bold": true
+							},
+							{
+								"text": ": what they can do with that one sensor, such as reading its data, writing notes and changing its settings."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "The two do not have to match. Someone can be a Manager of the location and a Viewer on one sensor in it. CropWatch checks the level on the thing being changed: renaming a sensor checks the sensor level, and adding a person checks the location level."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "the-six-levels",
+			"heading": "The six levels",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "From most access to least. Owner is not one of the choices in the Permission Level list; the other five are."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "Owner",
+								"bold": true
+							},
+							{
+								"text": ": the owner of a location is the account that created it. The owner of a sensor is the account that added it, or the location's owner if the sensor was moved there later. Owners can do everything, including the two things nobody else can: delete the sensor, or delete the location. Nobody can change or remove an owner's access. In the location's list of people, the owner is shown as Admin."
+							}
+						],
+						[
+							{
+								"text": "Admin",
+								"bold": true
+							},
+							{
+								"text": ": everything a Manager can do, plus changing a person's level on a single sensor with the Device Owner Permissions card on the sensor's settings page. Admins can make other people Admins."
+							}
+						],
+						[
+							{
+								"text": "Manager",
+								"bold": true
+							},
+							{
+								"text": ": can change the settings of the location and its sensors (names, groups, map position, moving a sensor), switch relays, create, edit and delete alert rules and reports, add new sensors to the location, and add or remove people at the location. Managers cannot make anyone an Admin and cannot use the Device Owner Permissions card."
+							}
+						],
+						[
+							{
+								"text": "User",
+								"bold": true
+							},
+							{
+								"text": ": sees everything a Viewer sees, and can add, edit and delete notes on air temperature and humidity sensors. Cannot change any settings."
+							}
+						],
+						[
+							{
+								"text": "Viewer",
+								"bold": true
+							},
+							{
+								"text": ": read-only. Sees the location, its sensors, their readings, charts and relay states, and the alert rules and reports that cover them, and can download reports. Cannot change anything."
+							}
+						],
+						[
+							{
+								"text": "Disabled",
+								"bold": true
+							},
+							{
+								"text": ": no access. A sensor that is Disabled for someone disappears from their dashboard and from the location's list of sensors. Use it to hide one sensor from a person who should keep the rest of the location."
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"id": "at-a-glance",
+			"heading": "Who can do what, at a glance",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "A tick means the level allows it. Tasks on the location go by a person's location level; tasks on a sensor go by their level on that sensor."
+						}
+					]
+				}
+			],
+			"table": {
+				"caption": "What each permission level can do",
+				"columns": [
+					"Task",
+					"Owner",
+					"Admin",
+					"Manager",
+					"User",
+					"Viewer",
+					"Disabled"
+				],
+				"rows": [
+					{
+						"label": [
+							{
+								"text": "See the location, its sensors and their readings"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							true,
+							true,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "See alert rules and reports, and download reports"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							true,
+							true,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Add, edit and delete notes on air temperature and humidity sensors"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							true,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Change location and sensor settings, and move sensors"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							false,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Switch relays"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							false,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Create, edit and delete alert rules and reports"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							false,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Add sensors to the location"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							false,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Add and remove people at the location"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							true,
+							false,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Change a person's level on a single sensor"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							false,
+							false,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Make someone an Admin"
+							}
+						],
+						"cells": [
+							true,
+							true,
+							false,
+							false,
+							false,
+							false
+						]
+					},
+					{
+						"label": [
+							{
+								"text": "Delete a sensor or the location"
+							}
+						],
+						"cells": [
+							true,
+							false,
+							false,
+							false,
+							false,
+							false
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": "adding-someone",
+			"heading": "Giving someone access",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "You need to be the location's owner, an Admin or a Manager. The other person needs a CropWatch account already, because they are found by the email address they signed up with."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						[
+							{
+								"text": "Open the location from Locations."
+							}
+						],
+						[
+							{
+								"text": "Press the cog at the top of its list of sensors. If there is no cog, your level on this location is not high enough."
+							}
+						],
+						[
+							{
+								"text": "Find the card titled “Add new user to (location name) with permissions”, type their email and choose a Permission Level."
+							}
+						],
+						[
+							{
+								"text": "Leave “Apply to all devices in this location” switched on unless you want to choose sensors one by one, then press Add Permission. A green “Location permission created.” confirms it."
+							}
+						]
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "That switch decides what they get on the sensors:"
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "On",
+								"bold": true
+							},
+							{
+								"text": " (the default): every sensor in the location gets the level you chose. They see everything straight away."
+							}
+						],
+						[
+							{
+								"text": "Off",
+								"bold": true
+							},
+							{
+								"text": ": they join the location but are Disabled on every sensor in it. They see the location and none of its sensors until an Admin turns sensors on one at a time."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "You can only give a level equal to or below your own, so a Manager can add Managers, Users and Viewers but not Admins. Nobody can change their own level, and nobody can change the owner's."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "changing-a-level",
+			"heading": "Changing someone's level",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "There are two places to change a level, and they do different things."
+						}
+					]
+				},
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "The table of people in the location's settings",
+								"bold": true
+							},
+							{
+								"text": ", below the card for adding someone. Press Edit on the person's row, pick a level and press Save Changes. This changes their location level only. Their level on each sensor stays as it was."
+							}
+						],
+						[
+							{
+								"text": "The Device Owner Permissions card",
+								"bold": true
+							},
+							{
+								"text": " on a sensor's settings page. This changes their level on that one sensor. Only the owner and Admins can save it."
+							}
+						]
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "This catches people out. Raising a Viewer to Manager in the location's table lets them manage the location, but they are still a Viewer on every sensor they already had. To change their level on all the sensors at once, remove them from the location and add them again with “Apply to all devices in this location” switched on."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "Moving a sensor to another location also resets who can see it: everyone at the old location loses it, the person who moved it becomes its Admin, and everyone at the new location starts as Disabled on it. "
+						},
+						{
+							"text": "Sensor settings",
+							"href": "page:sensor-settings#location"
+						},
+						{
+							"text": " explains this in more detail."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "taking-access-away",
+			"heading": "Taking access away",
+			"body": [
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "To remove someone from a location, open the location's settings, press Edit on their row, then Delete, and confirm in the Remove Permission box. This removes them from every sensor in the location at the same time. You can remove people at your own level or below, but never the owner."
+						}
+					]
+				},
+				{
+					"type": "paragraph",
+					"content": [
+						{
+							"text": "To hide a single sensor from someone who should keep the rest, set them to Disabled on that sensor's Device Owner Permissions card."
+						}
+					]
+				},
+				{
+					"type": "note",
+					"content": [
+						{
+							"text": "Setting someone to Disabled in the location's table is not the same as removing them. It only changes their location level, so the sensors they already had stay on their dashboard. To take everything away, delete their row."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "troubleshooting",
+			"heading": "When someone cannot see something",
+			"body": [
+				{
+					"type": "list",
+					"ordered": false,
+					"items": [
+						[
+							{
+								"text": "They cannot see the location at all.",
+								"bold": true
+							},
+							{
+								"text": " They have not been added to it, or they were removed. Add them as described in "
+							},
+							{
+								"text": "Giving someone access",
+								"href": "page:sharing-access#adding-someone"
+							},
+							{
+								"text": "."
+							}
+						],
+						[
+							{
+								"text": "They can see the location but none of its sensors.",
+								"bold": true
+							},
+							{
+								"text": " They were added with “Apply to all devices in this location” switched off. An Admin can turn sensors on one at a time on each sensor's settings page, or you can remove them and add them again with the switch on."
+							}
+						],
+						[
+							{
+								"text": "They can see most sensors but not one.",
+								"bold": true
+							},
+							{
+								"text": " That sensor is Disabled for them. This is what happens to a sensor moved in from another location. An Admin can change it on that sensor's Device Owner Permissions card."
+							}
+						],
+						[
+							{
+								"text": "They are not listed on the sensor's Device Owner Permissions card.",
+								"bold": true
+							},
+							{
+								"text": " The card only lists people who already have a level on that sensor. Remove them from the location and add them again with the switch on. That sets every sensor in the location to the level you choose, so check afterwards for any that should stay Disabled."
+							}
+						],
+						[
+							{
+								"text": "“User with the provided email not found”",
+								"bold": true
+							},
+							{
+								"text": " They do not have a CropWatch account yet, or they signed up with a different address. Ask them to create an account first."
+							}
+						],
+						[
+							{
+								"text": "“You cannot grant an access level higher than your own”",
+								"bold": true
+							},
+							{
+								"text": " Pick a lower level, or ask the owner or an Admin to add them."
+							}
+						],
+						[
+							{
+								"text": "There is no cog on the location.",
+								"bold": true
+							},
+							{
+								"text": " Your level on that location is User or Viewer. Ask the location's owner or an Admin."
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"kind": "page",
+			"slug": "sensor-settings"
+		},
+		{
+			"kind": "page",
+			"slug": "reading-the-dashboard"
+		},
+		{
+			"kind": "page",
+			"slug": "setting-up-alert-rules"
+		}
+	]
+}

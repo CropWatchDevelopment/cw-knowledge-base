@@ -20,6 +20,7 @@
 				"resetting-your-password",
 				"reading-the-dashboard",
 				"sensor-settings",
+				"sharing-access",
 				"setting-up-alert-rules",
 				"creating-a-report",
 				"reading-a-report"
@@ -449,6 +450,27 @@
 				"iso17025",
 				"deveui",
 				"tti"
+			]
+		},
+		"sharing-access": {
+			"topic": "software",
+			"title": "アクセスの共有と権限レベル",
+			"summary": "アクセスがロケーションから始まる理由、所有者・管理者・マネージャー・ユーザー・閲覧のみ・無効のそれぞれでできること、人の追加・変更・削除の方法。",
+			"image": null,
+			"hasVideo": false,
+			"keywords": [
+				"権限",
+				"権限レベル",
+				"アクセス",
+				"共有",
+				"所有者",
+				"管理者",
+				"マネージャー",
+				"ユーザー",
+				"閲覧のみ",
+				"無効",
+				"ユーザー追加",
+				"ユーザー削除"
 			]
 		},
 		"vwc-and-saturation": {
