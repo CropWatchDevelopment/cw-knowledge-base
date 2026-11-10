@@ -203,7 +203,7 @@
 			"topic": "hardware",
 			"title": "気温・湿度センサー",
 			"summary": "空気センサーが計測するものと、信頼できる計測値を得るための設置場所を説明します。",
-			"image": null,
+			"image": "images/air-temperature-humidity-sensors/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"気温",
@@ -224,7 +224,7 @@
 			"topic": "hardware",
 			"title": "土壌水分センサー",
 			"summary": "根の周りにどれだけ水があるかを確認し、習慣ではなく必要に応じて水やりができます。",
-			"image": null,
+			"image": "images/soil-moisture-sensors/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"土壌",
@@ -465,7 +465,7 @@
 			"topic": "software",
 			"title": "アクセスの共有と権限レベル",
 			"summary": "アクセスがロケーションから始まる理由、所有者・管理者・マネージャー・ユーザー・閲覧のみ・無効のそれぞれでできること、人の追加・変更・削除の方法。",
-			"image": null,
+			"image": "images/sharing-access/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"権限",
@@ -531,7 +531,7 @@
 			"topic": "software",
 			"title": "概要ページの見方",
 			"summary": "概要ページの各カードと数値の意味、それぞれの求め方、リンクの移動先を説明します。",
-			"image": null,
+			"image": "images/the-overview-page/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"概要",
@@ -552,7 +552,7 @@
 			"topic": "software",
 			"title": "センサーを追加する",
 			"summary": "QRコードの読み取りかDevEUIの入力でセンサーを識別し、名前と設置場所を決めて、ライセンス1件でネットワークに登録する手順です。",
-			"image": null,
+			"image": "images/adding-a-sensor/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"デバイスを追加",
@@ -572,7 +572,7 @@
 			"topic": "software",
 			"title": "作物の栽培目標と栽培アドバイス",
 			"summary": "土壌センサーに作物を設定すると、日中・夜間・光量の栽培目標で測定値が判定され、毎日の栽培アドバイスを確認できます。",
-			"image": null,
+			"image": "images/crop-targets-and-growing-advice/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"作物",
@@ -593,7 +593,7 @@
 			"topic": "gateways",
 			"title": "アプリでゲートウェイを確認する",
 			"summary": "ゲートウェイの一覧、ゲートウェイごとの画面、センサーの「電波強度」ボタンの見方、表示されるゲートウェイの範囲、センサーが報告しない原因の調べ方を説明します。",
-			"image": null,
+			"image": "images/gateways-in-the-app/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"ゲートウェイ",
@@ -614,7 +614,7 @@
 			"topic": "software",
 			"title": "リレーを操作する",
 			"summary": "ダッシュボードでのリレーの表示、リレーの画面でのオン・オフとパルス、切り替わったことの確かめ方、リレー履歴、操作できる人、リレーを切り替えるアラートルールを説明します。",
-			"image": null,
+			"image": "images/switching-relays/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"リレー",
@@ -635,7 +635,7 @@
 			"topic": "software",
 			"title": "ロケーションのページ",
 			"summary": "ロケーションのページにある状態のチップと概要カード、地図、デバイスの状態、電波強度を含むセンサー一覧の各列、権限レベルごとに見えるものを説明します。",
-			"image": null,
+			"image": "images/the-location-page/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"ロケーション",
@@ -656,7 +656,7 @@
 			"topic": "software",
 			"title": "ロケーションの設定",
 			"summary": "ロケーションの名前とグループの変更、緯度・経度・縮尺による地図上の位置の設定、所有者による空のロケーションの削除について説明します。",
-			"image": null,
+			"image": "images/location-settings/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"ロケーション設定",
@@ -677,7 +677,7 @@
 			"topic": "software",
 			"title": "スマートフォンとパソコンでのプッシュ通知",
 			"summary": "端末ごとにCropWatchのプッシュ通知を有効にし、通知を受け取るデバイスを管理し、届かないときの対処を確認します。",
-			"image": null,
+			"image": "images/push-notifications/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"プッシュ通知",
@@ -698,7 +698,7 @@
 			"topic": "software",
 			"title": "CropWatchをアプリとしてインストールする",
 			"summary": "Android、iPhone・iPad、パソコンにCropWatchをインストールする方法と、アプリでの違い、サインインが続く期間を説明します。",
-			"image": null,
+			"image": "images/installing-the-app/ja-card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"インストール",

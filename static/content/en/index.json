@@ -139,7 +139,7 @@
 			"topic": "hardware",
 			"title": "Air temperature and humidity sensors",
 			"summary": "What an air sensor measures, and where to place it for readings you can trust.",
-			"image": null,
+			"image": "images/air-temperature-humidity-sensors/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"air",
@@ -153,7 +153,7 @@
 			"topic": "hardware",
 			"title": "Soil moisture sensors",
 			"summary": "See how much water is available around the roots, and water by need instead of by habit.",
-			"image": null,
+			"image": "images/soil-moisture-sensors/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"soil",
@@ -282,7 +282,7 @@
 			"topic": "software",
 			"title": "Sharing access and permission levels",
 			"summary": "Why access starts at a location, what Owner, Admin, Manager, User, Viewer and Disabled each allow, and how to add, change and remove people.",
-			"image": null,
+			"image": "images/sharing-access/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"permissions",
@@ -387,7 +387,7 @@
 			"topic": "software",
 			"title": "The Overview page",
 			"summary": "What every card and number on the Overview page means, how each is worked out, and where its links go.",
-			"image": null,
+			"image": "images/the-overview-page/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"overview",
@@ -408,7 +408,7 @@
 			"topic": "software",
 			"title": "Adding a sensor",
 			"summary": "Add a new sensor to a location: scan its QR code or type its DevEUI, name and place it, and register it on the network with one licence.",
-			"image": null,
+			"image": "images/adding-a-sensor/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"add device",
@@ -429,7 +429,7 @@
 			"topic": "software",
 			"title": "Crop targets and growing advice",
 			"summary": "Choose a soil sensor's crop to judge its readings against that crop's day, night and light targets, and read the daily Growing advice card.",
-			"image": null,
+			"image": "images/crop-targets-and-growing-advice/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"crop",
@@ -450,7 +450,7 @@
 			"topic": "gateways",
 			"title": "Gateways in the app",
 			"summary": "What the Gateways list, a gateway's page and a sensor's Signal button show, who sees which gateways, and how to use them to find out why a sensor has stopped reporting.",
-			"image": null,
+			"image": "images/gateways-in-the-app/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"gateway",
@@ -471,7 +471,7 @@
 			"topic": "software",
 			"title": "Switching relays",
 			"summary": "How relays show on the dashboard, how to switch or pulse one from its page and confirm it worked, the Relay History, who may switch, and alert rules that switch relays.",
-			"image": null,
+			"image": "images/switching-relays/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"relay",
@@ -492,7 +492,7 @@
 			"topic": "software",
 			"title": "The location page",
 			"summary": "What is on a location's page: the status chips and summary cards, the map, Device health, the list of sensors with every column including gateway signal, and what each permission level sees.",
-			"image": null,
+			"image": "images/the-location-page/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"location",
@@ -513,7 +513,7 @@
 			"topic": "software",
 			"title": "Location settings",
 			"summary": "Renaming a location and setting its group, placing it on the map with latitude, longitude and zoom, and deleting an empty location as its owner.",
-			"image": null,
+			"image": "images/location-settings/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"location settings",
@@ -534,7 +534,7 @@
 			"topic": "software",
 			"title": "Push notifications on phones and computers",
 			"summary": "Turn on CropWatch push alerts for each phone, tablet and computer, manage the list of devices that receive them, and fix alerts that do not arrive.",
-			"image": null,
+			"image": "images/push-notifications/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"push",
@@ -554,7 +554,7 @@
 			"topic": "software",
 			"title": "Installing CropWatch as an app",
 			"summary": "Install CropWatch on Android, iPhone, iPad or a computer, see what the installed app does differently, and learn how long you stay signed in.",
-			"image": null,
+			"image": "images/installing-the-app/card.webp",
 			"hasVideo": false,
 			"keywords": [
 				"install",
