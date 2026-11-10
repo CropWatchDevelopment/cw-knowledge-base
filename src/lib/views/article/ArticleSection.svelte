@@ -3,6 +3,7 @@
 	import type { SectionView } from '#lib/controllers/article.controller.ts';
 	import ContentImage from '#lib/views/shared/ContentImage.svelte';
 	import RichText from './RichText.svelte';
+	import SectionTable from './SectionTable.svelte';
 	import SectionHeading from './SectionHeading.svelte';
 
 	type Props = {
@@ -55,4 +56,11 @@
 			<RichText blocks={section.blocks} />
 		</div>
 	</div>
+
+	<!-- Below the text and picture, and wider than the text column, so the first column has room. -->
+	{#if section.table}
+		<div class="max-w-[54rem]">
+			<SectionTable table={section.table} id={section.id} />
+		</div>
+	{/if}
 </section>

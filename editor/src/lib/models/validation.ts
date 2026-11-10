@@ -67,6 +67,15 @@ const block = v.variant('type', [
 	v.object({ type: v.literal('note'), content: v.array(inline) })
 ]);
 
+/** Tables are written by hand in the JSON; the editor only has to carry them through a save. */
+const table = v.object({
+	caption: v.optional(v.string()),
+	columns: v.array(v.string()),
+	rows: v.array(
+		v.object({ label: v.array(inline), cells: v.array(v.union([v.boolean(), v.array(inline)])) })
+	)
+});
+
 /** A picture lives in the page's own folder: `images/<page>/<file>`. */
 const imagePath = v.pipe(v.string(), v.regex(/^images\/[a-z0-9-]+\/[a-z0-9][a-z0-9._-]*$/));
 
@@ -91,7 +100,8 @@ export const pageSaveSchema = v.object({
 						width: v.optional(v.pipe(v.number(), v.integer(), v.minValue(1))),
 						height: v.optional(v.pipe(v.number(), v.integer(), v.minValue(1)))
 					})
-				)
+				),
+				table: v.optional(table)
 			})
 		),
 		links: v.optional(

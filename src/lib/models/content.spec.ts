@@ -57,12 +57,32 @@ for (const lang of LOCALES) {
 			}
 		});
 
+		it('has tables with one cell per column in every row', () => {
+			const problems = page.sections.flatMap((section) => {
+				if (!section.table) return [];
+				const { columns, rows } = section.table;
+				if (columns.length < 2 || rows.length === 0) return [`${section.id}: empty table`];
+				return rows
+					.filter((row) => row.cells.length !== columns.length - 1)
+					.map(
+						(row) =>
+							`${section.id}: "${row.label.map((node) => node.text).join('')}" has ` +
+							`${row.cells.length} cells for ${columns.length - 1} columns`
+					);
+			});
+			expect(problems).toEqual([]);
+		});
+
 		it('links only to pages, sections and pictures in this language', () => {
-			const inline: InlineNode[] = page.sections.flatMap((section) =>
-				section.body.flatMap((block) =>
+			const inline: InlineNode[] = page.sections.flatMap((section) => [
+				...section.body.flatMap((block) =>
 					block.type === 'list' ? block.items.flat() : block.content
-				)
-			);
+				),
+				...(section.table?.rows ?? []).flatMap((row) => [
+					...row.label,
+					...row.cells.flatMap((cell) => (typeof cell === 'boolean' ? [] : cell))
+				])
+			]);
 			const targets = [
 				...inline.flatMap((node) => (node.href?.startsWith('page:') ? [node.href.slice(5)] : [])),
 				...(page.links ?? []).flatMap((link) => (link.kind === 'page' ? [link.slug] : []))

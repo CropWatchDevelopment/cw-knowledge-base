@@ -34,12 +34,27 @@ export type SectionImage = {
 	height?: number;
 };
 
+/** One table cell: text, or `true` / `false` shown as a tick or a dash. */
+export type TableCell = InlineNode[] | boolean;
+
+/**
+ * A table shown under a section's text, such as a permissions matrix. `columns` holds every
+ * heading, the first one heading the row labels, so each row has `columns.length - 1` cells.
+ */
+export type SectionTable = {
+	/** Says what the table shows. Shown above it and read out by screen readers. */
+	caption?: string;
+	columns: string[];
+	rows: { label: InlineNode[]; cells: TableCell[] }[];
+};
+
 export type SectionRecord = {
 	/** The anchor in the URL (`#id`). Shared by every language so external links keep working. */
 	id: string;
 	heading: string;
 	body: Block[];
 	image?: SectionImage;
+	table?: SectionTable;
 };
 
 export type LinkRecord =

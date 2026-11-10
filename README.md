@@ -153,6 +153,16 @@ static/content/
 				"side": "right", // left | right on wide screens; always above the text on a phone
 				"width": 1200,
 				"height": 776
+			},
+			"table": {
+				// optional, shown under the text; scrolls sideways on a phone
+				"caption": "…", // optional
+				"columns": ["Task", "Admin", "Viewer"], // the first heads the row labels
+				"rows": [
+					// one cell per remaining column: text runs, or true / false for a tick or a dash
+					{ "label": [{ "text": "See readings" }], "cells": [true, true] },
+					{ "label": [{ "text": "Change settings" }], "cells": [true, false] }
+				]
 			}
 		}
 	],
@@ -171,6 +181,7 @@ Rules the site relies on:
 - A topic with no pages in a language is hidden from that language's menu and home page, and its address 404s there. It comes back by itself when a page is written for it, so a topic can stay in both `index.json` files with its name already translated.
 - A text run's `href` is either a web address or `page:<slug>` / `page:<slug>#<section-id>`. A link may only point at a page in the same language folder; `content.spec.ts` fails the build otherwise.
 - `related-links` and `video` are reserved anchors; do not use them as section ids.
+- Every table row has one cell per column after the first. `content.spec.ts` checks this, and checks links inside table cells like any other link.
 - Set `hasVideo` in `index.json` to match whether the page file has a `video`. The tests check this.
 - The YouTube player loads only after the reader presses play. Before that the page shows a thumbnail and sends nothing to YouTube.
 
@@ -190,6 +201,7 @@ What it does:
 - **English / 日本語** at the top chooses which language you are working in. Everything below it belongs to that language alone: its pages, its topics, its menu order.
 - **Pages** lists that language's pages and whether each differs from the website. Underneath, guides written in the other language but not this one can be started with one button, which copies the sections, anchors and pictures across and leaves the words to write.
 - **Edit a page** is a form: title, introduction, then sections with a heading, a picture and text. The text has bold, italic, lists, callouts and links; a link to another guide is chosen from a list, so it can never point at a page that does not exist.
+- **Tables** are written by hand in the page's JSON. The editor shows that a section has one and keeps it unchanged when the page is saved, but has no fields for changing it. A translation started from the other language leaves tables out, because their words need writing.
 - **Pictures** are resized to 1600px, saved as WebP in `static/content/images/<page>/`, and the first one becomes the page's card picture. Pictures that are replaced or removed are deleted from the project when the page is saved.
 - **Section links** (`#connect`) are made from the heading for a new section, and never change afterwards, so links people already have keep working. A translation started from the other language inherits its anchors, which is what keeps one shared link working in both. The same holds for a page's address once it has a picture or has been saved.
 - **Save page** writes `static/content/<lang>/pages/<slug>.json` and updates that language's `index.json`. It never touches the other language's files. It refuses to save until anything missing is filled in, and says what it is.

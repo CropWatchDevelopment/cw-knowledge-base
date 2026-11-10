@@ -121,6 +121,15 @@
 					{onpickLink}
 				/>
 			{/key}
+
+			{#if section.table}
+				<p
+					class="rounded-md border border-line-soft bg-muted px-3 py-2 text-[0.8125rem] text-ink-2"
+				>
+					This section also has a table ({section.table.rows.length} rows) under the text. It is kept
+					as it is when you save; change it in the page's JSON file.
+				</p>
+			{/if}
 		</div>
 	</div>
 </section>

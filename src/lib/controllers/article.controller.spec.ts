@@ -47,8 +47,18 @@ const document: PageDocument = {
 						{ text: 'the site', href: 'https://www.cropwatch.io', bold: true }
 					]
 				}
-			]
-		}
+			],
+			table: {
+				columns: ['作業', '管理者', '閲覧のみ'],
+				rows: [
+					{
+						label: [{ text: '設置', href: 'page:mounting' }],
+						cells: [true, [{ text: '一部', italic: true }]]
+					}
+				]
+			}
+		},
+		{ id: 'plain', heading: '表なし', body: [] }
 	],
 	links: [
 		{ kind: 'page', slug: 'mounting' },
@@ -95,6 +105,30 @@ describe('loadArticle', () => {
 			'mounting',
 			'https://www.cropwatch.io'
 		]);
+	});
+
+	it('passes a section table through, resolving links in its cells and keeping ticks', async () => {
+		const article = await loadArticle(content, index, 'ja', 'gateways', 'installing-a-gateway');
+		const [withTable, withoutTable] = article.sections;
+
+		expect(withTable.table).toEqual({
+			caption: null,
+			columns: ['作業', '管理者', '閲覧のみ'],
+			rows: [
+				{
+					label: [
+						{
+							text: '設置',
+							bold: false,
+							italic: false,
+							link: { kind: 'page', topic: 'gateways', slug: 'mounting', hash: '' }
+						}
+					],
+					cells: [true, [{ text: '一部', bold: false, italic: true, link: null }]]
+				}
+			]
+		});
+		expect(withoutTable.table).toBeNull();
 	});
 
 	it('reads the video id and titles the video after the page by default', async () => {

@@ -19,10 +19,17 @@ export type BlockView =
 	| { type: 'list'; ordered: boolean; items: InlineView[][] }
 	| { type: 'note'; content: InlineView[] };
 
+export type TableView = {
+	caption: string | null;
+	columns: string[];
+	rows: { label: InlineView[]; cells: (InlineView[] | boolean)[] }[];
+};
+
 export type SectionView = {
 	id: string;
 	heading: string;
 	blocks: BlockView[];
+	table: TableView | null;
 	image: {
 		src: string | null;
 		alt: string;
@@ -89,6 +96,18 @@ export async function loadArticle(
 			id: section.id,
 			heading: section.heading,
 			blocks: section.body.map(toBlock),
+			table: section.table
+				? {
+						caption: section.table.caption ?? null,
+						columns: section.table.columns,
+						rows: section.table.rows.map((row) => ({
+							label: row.label.map(toInline),
+							cells: row.cells.map((cell) =>
+								typeof cell === 'boolean' ? cell : cell.map(toInline)
+							)
+						}))
+					}
+				: null,
 			image: section.image
 				? {
 						src: section.image.src,

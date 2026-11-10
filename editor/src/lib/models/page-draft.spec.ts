@@ -36,6 +36,11 @@ const page: PageDocument = {
 				side: 'left',
 				width: 1600,
 				height: 900
+			},
+			table: {
+				caption: 'Who can do what',
+				columns: ['Task', 'Admin', 'Viewer'],
+				rows: [{ label: [{ text: 'Install', bold: true }], cells: [true, false] }]
 			}
 		}
 	],
@@ -49,6 +54,14 @@ const page: PageDocument = {
 describe('a page loaded for editing and saved again', () => {
 	it('comes back unchanged when nothing was typed', () => {
 		expect(fromDraft(toDraft(page, index)).page).toEqual(page);
+	});
+
+	it('keeps a section table it has no fields for', () => {
+		const draft = toDraft(page, index);
+		draft.sections[0].heading = 'Renamed';
+
+		expect(fromDraft(draft).page.sections[0].table).toEqual(page.sections[0].table);
+		expect(fromDraft(newDraft('gateways')).page.sections[0]).not.toHaveProperty('table');
 	});
 
 	it('carries the parts that live in index.json', () => {
@@ -112,6 +125,7 @@ describe('emptyCopyOf', () => {
 		expect(copy.sections[0].body).toEqual([]);
 		expect(copy.sections[0].image?.alt).toBe('');
 		expect(copy.sections[0].image).not.toHaveProperty('caption');
+		expect(copy.sections[0]).not.toHaveProperty('table');
 	});
 
 	it('keeps links to other pages but not ones whose text would need translating', () => {

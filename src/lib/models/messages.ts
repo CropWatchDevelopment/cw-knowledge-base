@@ -47,6 +47,8 @@ const en = {
 	pictureComing: 'Picture coming soon',
 	expandPicture: 'Open this picture larger',
 	closePicture: 'Close the picture',
+	tableYes: 'Yes',
+	tableNo: 'No',
 	notInThisLanguage: 'Not in English yet, so this opens the home page',
 
 	notFoundTitle: 'Page not found',
@@ -101,6 +103,8 @@ const ja: Messages = {
 	pictureComing: '画像準備中',
 	expandPicture: 'この画像を拡大する',
 	closePicture: '画像を閉じる',
+	tableYes: 'はい',
+	tableNo: 'いいえ',
 	notInThisLanguage: '日本語版はまだないため、トップページを開きます',
 
 	notFoundTitle: 'ページが見つかりません',

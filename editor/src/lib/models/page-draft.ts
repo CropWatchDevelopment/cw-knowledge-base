@@ -4,7 +4,14 @@
  * A draft holds one language, the one being written. The other language's copy of the same guide
  * is a separate file that this editor does not touch, so nothing typed here can leak into it.
  */
-import type { Block, LinkRecord, PageDocument, PageSummary, SiteIndex } from '#lib/site.ts';
+import type {
+	Block,
+	LinkRecord,
+	PageDocument,
+	PageSummary,
+	SectionTable,
+	SiteIndex
+} from '#lib/site.ts';
 
 export type DraftImage = {
 	/** Path under `static/content/`, or `null` while the picture is still to come. */
@@ -25,6 +32,8 @@ export type DraftSection = {
 	heading: string;
 	body: Block[];
 	image: DraftImage | null;
+	/** Kept as loaded; tables are written by hand in the JSON and the editor has no fields for them. */
+	table: SectionTable | null;
 };
 
 export type DraftLink = { key: string } & (
@@ -68,7 +77,8 @@ export function newSection(): DraftSection {
 		id: '',
 		heading: '',
 		body: [],
-		image: null
+		image: null,
+		table: null
 	};
 }
 
@@ -123,7 +133,8 @@ export function toDraft(page: PageDocument, index: SiteIndex): PageDraft {
 						width: section.image.width,
 						height: section.image.height
 					}
-				: null
+				: null,
+			table: section.table ?? null
 		})),
 		links: (page.links ?? []).map((link) => ({ key: crypto.randomUUID(), ...link })),
 		videoUrl: page.video?.url ?? '',
@@ -160,7 +171,8 @@ export function fromDraft(draft: PageDraft): PageSave {
 						side: image.side,
 						...(image.width && image.height && { width: image.width, height: image.height })
 					}
-				})
+				}),
+				...(section.table && { table: section.table })
 			};
 		}),
 		...(links.length > 0 && { links }),
@@ -185,7 +197,9 @@ export function fromDraft(draft: PageDraft): PageSave {
 
 /**
  * The starting point for translating a guide into another language: the same structure, with the
- * text taken out. Keeping the section anchors means a link written to `#connect` in one language
+ * text taken out. Tables are left out too: their words need translating and the editor has no
+ * fields for them, so they are written into the other language's JSON by hand.
+ * Keeping the section anchors means a link written to `#connect` in one language
  * still lands on the right section in the other.
  */
 export function emptyCopyOf(page: PageDocument): PageDocument {
